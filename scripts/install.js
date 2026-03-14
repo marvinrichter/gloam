@@ -15,7 +15,7 @@
  * iTerm2 and IntelliJ require manual import via their GUIs.
  */
 
-import { copyFileSync, existsSync, globSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, globSync, mkdirSync, readFileSync, realpathSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { homedir, platform } from "node:os";
 
@@ -311,7 +311,7 @@ export function run(themeName, targetName, home = DEFAULT_HOME, repo = DEFAULT_R
 
 // ── CLI ───────────────────────────────────────────────────────────────────────
 
-if (process.argv[1] === import.meta.filename) {
+if (realpathSync(process.argv[1]) === import.meta.filename) {
   const [themeName, targetName] = process.argv.slice(2);
 
   if (!themeName || !targetName) {
