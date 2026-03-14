@@ -63,6 +63,7 @@ themes/<name>/
    | Tungsten | Warm gold-white + cold blue | Filament at operating temperature |
    | Amethyst | Purple + rutile gold | Crystal in dark matrix — mineral light |
    | Parchment | Warm cream (light theme) | Manuscript vellum — iron gall ink |
+
 5. **A concept** — the theme derives from a specific atmospheric or material reference. Color choices must be defensible from that concept, not arbitrary
 6. **Design guide** — `<name>.md` must follow the structure of any existing guide, including the contrast compliance table with luminance calculations
 

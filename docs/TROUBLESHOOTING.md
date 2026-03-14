@@ -65,6 +65,7 @@ Before running the installer, verify:
 gloam themes are calibrated for sRGB displays at 200–300 nits. Wide-gamut (P3) displays may render colors more saturated. High-brightness modes (>400 nits) may reduce perceived contrast. The WCAG 4.5:1 guarantee is measured in sRGB.
 
 If colors look significantly different from the card previews on the website:
+
 1. Check your display color profile (System Settings › Displays on macOS)
 2. Verify your terminal is using sRGB (not P3) color rendering if the setting is available
 

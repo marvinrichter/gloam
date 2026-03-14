@@ -62,7 +62,6 @@ Every token in every theme clears WCAG AA 4.5:1 against its background. The gene
 
 Background `#0D0F1A` · Foreground `#F0EAD6` · Layout: two-line box · Fill: `─` · Cursor: `❯`
 
-
 [Design system guide →](themes/eventide/eventide.md)
 
 ---
@@ -84,7 +83,6 @@ Background `#0D0F1A` · Foreground `#F0EAD6` · Layout: two-line box · Fill: `�
 | error | `#FF6B6B` | solar flare |
 
 Background `#0C0B1A` · Foreground `#D4D8F0` · Layout: two-line box · Fill: `·` · Cursor: `⟫`
-
 
 [Design system guide →](themes/aether/aether.md)
 
@@ -108,7 +106,6 @@ Background `#0C0B1A` · Foreground `#D4D8F0` · Layout: two-line box · Fill: `�
 
 Background `#111008` · Foreground `#F5EDD4` · Layout: two-line box · Fill: `·` · Cursor: `❯`
 
-
 [Design system guide →](themes/ember/ember.md)
 
 ---
@@ -130,7 +127,6 @@ Background `#111008` · Foreground `#F5EDD4` · Layout: two-line box · Fill: `�
 | error | `#E05858` | toxic warning |
 
 Background `#080D0A` · Foreground `#D8E8D4` · Layout: single-line · Fill: `·` · Cursor: `▸`
-
 
 [Design system guide →](themes/absinthe/absinthe.md)
 
@@ -154,7 +150,6 @@ Background `#080D0A` · Foreground `#D8E8D4` · Layout: single-line · Fill: `·
 
 Background `#0D1210` · Foreground `#D4E0D8` · Layout: two-line box · Fill: `─` · Cursor: `›`
 
-
 [Design system guide →](themes/verdigris/verdigris.md)
 
 ---
@@ -176,7 +171,6 @@ Background `#0D1210` · Foreground `#D4E0D8` · Layout: two-line box · Fill: `�
 | error | `#D44848` | crimson |
 
 Background `#080808` · Foreground `#E8E8E8` · Layout: single-line · Fill: ` ` · Cursor: `›`
-
 
 [Design system guide →](themes/sable/sable.md)
 
@@ -200,7 +194,6 @@ Background `#080808` · Foreground `#E8E8E8` · Layout: single-line · Fill: ` `
 
 Background `#0A0F18` · Foreground `#D4E0E8` · Layout: two-line box · Fill: `·` · Cursor: `›`
 
-
 [Design system guide →](themes/fjord/fjord.md)
 
 ---
@@ -222,7 +215,6 @@ Background `#0A0F18` · Foreground `#D4E0E8` · Layout: two-line box · Fill: `�
 | error | `#DC5858` | crimson |
 
 Background `#070708` · Foreground `#E4E8F0` · Layout: single-line · Fill: `·` · Cursor: `▹`
-
 
 [Design system guide →](themes/umbra/umbra.md)
 
@@ -246,7 +238,6 @@ Background `#070708` · Foreground `#E4E8F0` · Layout: single-line · Fill: `·
 
 Background `#120A06` · Foreground `#EAE0D4` · Layout: two-line box · Fill: `─` · Cursor: `❯`
 
-
 [Design system guide →](themes/cordovan/cordovan.md)
 
 ---
@@ -269,7 +260,6 @@ Background `#120A06` · Foreground `#EAE0D4` · Layout: two-line box · Fill: `�
 
 Background `#0E0C09` · Foreground `#F4EED8` · Layout: single-line · Fill: `·` · Cursor: `▸`
 
-
 [Design system guide →](themes/tungsten/tungsten.md)
 
 ---
@@ -291,7 +281,6 @@ Background `#0E0C09` · Foreground `#F4EED8` · Layout: single-line · Fill: `·
 | error | `#E05858` | fault |
 
 Background `#0C0811` · Foreground `#EAD8F8` · Layout: two-line box · Fill: `·` · Cursor: `⟫`
-
 
 [Design system guide →](themes/amethyst/amethyst.md)
 
@@ -316,7 +305,6 @@ Background `#0C0811` · Foreground `#EAD8F8` · Layout: two-line box · Fill: `�
 Background `#EDE0C8` · Foreground `#2A1E12` · Layout: single-line · Fill: `·` · Cursor: `›`
 
 > **Light theme.** All tokens are dark colors on a warm cream background. See [parchment.md](themes/parchment/parchment.md) for light theme setup notes — iTerm2 requires one additional setting.
-
 
 [Design system guide →](themes/parchment/parchment.md)
 
@@ -494,7 +482,7 @@ gloam/
 
 ## Troubleshooting
 
-**Glyphs display as boxes or question marks**
+### Glyphs display as boxes or question marks
 
 The Nerd Font glyphs (language badges, git icon) require JetBrains Mono Nerd Font. Install it and set it as your terminal font:
 
@@ -504,11 +492,11 @@ brew install --cask font-jetbrains-mono-nerd-font
 
 Then set `JetBrainsMono Nerd Font` (exact name) as your terminal's font family.
 
-**Colors look wrong or desaturated**
+### Colors look wrong or desaturated
 
 Verify your terminal's color profile is set to sRGB. On iTerm2: Preferences › Profiles › Colors — ensure "Color Space" is sRGB. On macOS, desaturation can occur when the display profile is set to Display P3 without color management in the terminal.
 
-**Starship config not loading**
+### Starship config not loading
 
 Check that the init line is in your shell config and that you have reloaded the shell:
 
@@ -522,15 +510,15 @@ source ~/.zshrc
 
 The installer copies `starship.toml` to `~/.config/starship.toml`. If `$STARSHIP_CONFIG` is set, it must point to that path.
 
-**iTerm2 theme imported but not applied**
+### iTerm2 theme imported but not applied
 
 After import, the theme must be explicitly selected: Preferences › Profiles › Colors › Color Presets ▾ → select the theme name. Import and selection are separate steps.
 
-**Contrast looks different on different displays**
+### Contrast looks different on different displays
 
 gloam themes are calibrated for sRGB displays at typical brightness (200–300 nits). High-brightness displays and wide-gamut (P3) profiles can shift perceived contrast. The WCAG 4.5:1 guarantee holds under sRGB conditions. If a token looks low-contrast on your display, check display calibration before filing an issue.
 
-**Parchment (light theme) looks wrong in iTerm2**
+### Parchment (light theme) looks wrong in iTerm2
 
 Uncheck **Use bright colors for bold text** in Preferences › Profiles › Colors. Without this, bold text is invisible against the light background.
 

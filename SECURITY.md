@@ -13,6 +13,7 @@ gloam is a static theme collection with no runtime, no authentication, and no ne
 **Generated file safety:** Generated config files are pure text (TOML, Lua, JSON, XML). They contain no executable code. The Starship TOML uses color palette names — these are not evaluated as shell expressions. The Neovim Lua file sets highlight groups — it does not call `os.execute` or equivalent. The IntelliJ `.icls` file is an XML color scheme — it is not executed.
 
 **The attack surface is limited to:**
+
 - The installer writing to user config paths (path traversal risk if theme names are malformed — mitigated by the fact that theme names are discovered from the local `themes/` directory, not from user input)
 - The Node.js generator process reading theme JSON files
 
