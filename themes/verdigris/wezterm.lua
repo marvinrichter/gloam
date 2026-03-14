@@ -1,7 +1,7 @@
 -- verdigris — WezTerm color scheme
 -- Generated from verdigris.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/verdigris.toml
+-- Install: place in ~/.config/wezterm/colors/verdigris.lua
 -- then set color_scheme = "verdigris" in wezterm.lua
 
 return {

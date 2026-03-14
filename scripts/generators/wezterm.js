@@ -10,7 +10,7 @@ export function generateWezterm(theme) {
     `-- ${name} — WezTerm color scheme`,
     `-- Generated from ${name}.json — do not edit by hand`,
     `--`,
-    `-- Install: place in ~/.config/wezterm/colors/${name}.toml`,
+    `-- Install: place in ~/.config/wezterm/colors/${name}.lua`,
     `-- then set color_scheme = "${name}" in wezterm.lua`,
     ``,
     `return {`,

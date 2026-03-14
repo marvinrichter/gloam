@@ -3,19 +3,22 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "engines": { "node": ">=24" },
+  "engines": {
+    "node": ">=22"
+  },
   "bin": "scripts/install.js",
   "scripts": {
-    "test":          "node --test scripts/__tests__/*.test.js",
-    "generate":      "node scripts/generate.js",
+    "test": "node --test --experimental-test-coverage scripts/__tests__/*.test.js",
+    "generate": "node scripts/generate.js",
     "install-theme": "node scripts/install.js",
-    "lint":          "npm run lint:js && npm run lint:md",
-    "lint:js":       "eslint .",
-    "lint:md":       "markdownlint-cli2 '**/*.md' '!.claude/**' '!node_modules/**'"
+    "lint": "npm run lint:js && npm run lint:md",
+    "lint:js": "eslint .",
+    "lint:md": "markdownlint-cli2 '**/*.md' '!.claude/**' '!node_modules/**'"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
     "eslint": "^9.0.0",
+    "globals": "^17.4.0",
     "markdownlint-cli2": "^0.17.0"
   }
 }

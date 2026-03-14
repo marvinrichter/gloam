@@ -66,7 +66,10 @@ export function upsertLine(filePath, pattern, line) {
     return "created";
   }
   if (pattern.test(existing)) {
-    writeText(filePath, existing.replace(pattern, line));
+    // Use a global version of the pattern so all matching occurrences are replaced,
+    // preventing duplicates if a user config has multiple matching lines.
+    const globalPattern = new RegExp(pattern.source, pattern.flags.includes("g") ? pattern.flags : `${pattern.flags}g`);
+    writeText(filePath, existing.replace(globalPattern, line));
     return "updated";
   }
   writeText(filePath, existing.trimEnd() + "\n" + line + "\n");
@@ -109,10 +112,14 @@ export function createInstallers(home, repo) {
   function installKitty(name) {
     const destTheme  = join(home, ".config", "kitty", `${name}.conf`);
     const configPath = join(home, ".config", "kitty", "kitty.conf");
-    const includeLine = `include ${name}.conf`;
+    // Write a "# gloam" marker on the include line so future re-installs can
+    // identify it. Also match lines without the marker to handle upgrades from
+    // older gloam versions or manual installs of the same theme file.
+    const includeLine = `include ${name}.conf  # gloam`;
+    const pattern = new RegExp(`^include\\s+${name}\\.conf(?:\\s.*)?$`, "m");
 
     copy(join(src(name), "kitty.conf"), destTheme);
-    const result = upsertLine(configPath, /^include\s+\S*\.conf/m, includeLine);
+    const result = upsertLine(configPath, pattern, includeLine);
 
     return result === "updated"
       ? `copied → ${destTheme}\n  ~ updated include in ${configPath}`
@@ -183,7 +190,12 @@ export function createInstallers(home, repo) {
 
     copy(join(src(name), "zed.json"), destTheme);
 
-    const settings = readJson(settingsPath) ?? {};
+    let settings = {};
+    try {
+      settings = readJson(settingsPath) ?? {};
+    } catch {
+      return `copied → ${destTheme}\n  ! skipped updating ${settingsPath} — it may contain JSONC comments which are not supported. Set "theme": "${capitalize(name)}" manually.`;
+    }
     settings.theme = capitalize(name);
     writeJson(settingsPath, settings);
 
@@ -203,7 +215,7 @@ export function createInstallers(home, repo) {
     if (!settingsPath) return "skipped — could not find Windows Terminal settings.json";
 
     const scheme   = JSON.parse(readFileSync(join(src(name), "windows-terminal.json"), "utf8"));
-    const settings = readJson(settingsPath);
+    const settings = readJson(settingsPath) ?? {};
 
     settings.schemes ??= [];
     const idx = settings.schemes.findIndex((s) => s.name === scheme.name);

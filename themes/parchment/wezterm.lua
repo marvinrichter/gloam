@@ -1,7 +1,7 @@
 -- parchment — WezTerm color scheme
 -- Generated from parchment.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/parchment.toml
+-- Install: place in ~/.config/wezterm/colors/parchment.lua
 -- then set color_scheme = "parchment" in wezterm.lua
 
 return {

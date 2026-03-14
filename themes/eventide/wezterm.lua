@@ -1,7 +1,7 @@
 -- eventide — WezTerm color scheme
 -- Generated from eventide.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/eventide.toml
+-- Install: place in ~/.config/wezterm/colors/eventide.lua
 -- then set color_scheme = "eventide" in wezterm.lua
 
 return {

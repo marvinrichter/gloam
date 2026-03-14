@@ -1,7 +1,7 @@
 -- sable — WezTerm color scheme
 -- Generated from sable.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/sable.toml
+-- Install: place in ~/.config/wezterm/colors/sable.lua
 -- then set color_scheme = "sable" in wezterm.lua
 
 return {

@@ -4,7 +4,7 @@ export function generateKitty(theme) {
   const { name, background, foreground, ansi, ui } = theme;
 
   const ansiLines = ansi
-    .map((c, i) => `color${i.toString().padStart(i < 10 ? 1 : 2, "")}  #${hex(c)}`)
+    .map((c, i) => `${"color" + i}`.padEnd(7) + `  #${hex(c)}`)
     .join("\n");
 
   return [

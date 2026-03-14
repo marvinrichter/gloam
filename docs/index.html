@@ -28,6 +28,10 @@
       outline-offset: 3px;
     }
 
+    .card--light:focus-visible {
+      outline-color: var(--color-primary-700);
+    }
+
     body {
       background: var(--color-surface);
       color: var(--color-text-primary);
@@ -71,7 +75,7 @@
       color: var(--color-neutral-400);
       text-decoration: none;
       letter-spacing: 0.04em;
-      padding: 0.75rem 0;
+      padding: 0.75rem 0.5rem;
       transition: color 0.15s ease;
     }
 
@@ -115,7 +119,7 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--color-primary-500), transparent);
       margin: 0 auto 2.25rem;
-      opacity: 0.5;
+      opacity: 0.8;
     }
 
     .tagline {
@@ -125,7 +129,7 @@
       font-style: italic;
       font-variation-settings: 'opsz' 72;
       color: var(--color-text-secondary);
-      letter-spacing: 0.01em;
+      letter-spacing: 0;
     }
 
     .header-meta {
@@ -140,7 +144,7 @@
       font-size: 0.75rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--color-neutral-600);
+      color: var(--color-neutral-400);
     }
 
     .meta-item b {
@@ -154,7 +158,7 @@
     }
 
     .section-label {
-      font-size: 0.6875rem;
+      font-size: 0.75rem;
       font-weight: 400;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -242,10 +246,10 @@
 
     .card-tag {
       margin-left: auto;
-      font-size: 0.6875rem;
+      font-size: 0.75rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--color-neutral-600);
+      color: var(--color-neutral-400);
       white-space: nowrap;
     }
 
@@ -268,7 +272,7 @@
     }
 
     .install-intro {
-      font-size: 0.9375rem;
+      font-size: 1rem;
       color: var(--color-text-secondary);
       line-height: 1.65;
       margin-bottom: 3rem;
@@ -308,7 +312,7 @@
       line-height: 1.7;
     }
 
-    .comment { color: var(--color-neutral-700) !important; }
+    .comment { color: var(--color-neutral-500) !important; }
 
     /* ── Design system section ──────────────────────────────────────── */
     .design-section {
@@ -321,7 +325,7 @@
     .design-heading {
       font-family: var(--font-display);
       font-size: clamp(1.75rem, 4vw, 2.25rem);
-      font-weight: 300;
+      font-weight: 400;
       font-variation-settings: 'opsz' 72;
       letter-spacing: var(--tracking-tight);
       color: var(--color-neutral-100);
@@ -366,7 +370,7 @@
 
     .footer-tagline {
       font-family: var(--font-display);
-      font-size: 0.8125rem;
+      font-size: 0.875rem;
       font-weight: 300;
       font-style: italic;
       font-variation-settings: 'opsz' 72;
@@ -382,9 +386,10 @@
 
     .footer-links a {
       font-size: 0.8125rem;
-      color: var(--color-neutral-600);
+      color: var(--color-neutral-400);
       text-decoration: none;
       letter-spacing: 0.04em;
+      padding: 0.75rem 0.5rem;
       transition: color 0.15s ease;
     }
 
@@ -431,7 +436,7 @@
 
 <!-- ── Themes ───────────────────────────────────────────────────────── -->
 <section class="themes-section" id="themes">
-  <h2 class="section-label">The collection</h2>
+  <h2 class="section-label">Twelve atmospheres</h2>
   <div class="themes-grid">
 
     <!-- Eventide ─────────────────────────────────────────────────── -->
