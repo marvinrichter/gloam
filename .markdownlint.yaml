@@ -1,0 +1,24 @@
+# Enable all markdownlint rules by default, then selectively disable below.
+default: true
+
+# MD013 — Line length: disabled. Theme design docs contain long tables and code
+# blocks where line-wrapping would break rendering.
+MD013: false
+
+# MD033 — Inline HTML: disabled. docs/index.html and some theme docs use HTML
+# elements (e.g. <br>, attributes) that are intentional and not linting targets.
+MD033: false
+
+# MD038 — Spaces inside code span: disabled. Color value tables in theme docs
+# use inline code spans like `, ` as visual separators. These intentional spaces
+# would produce false positives on every theme document.
+MD038: false
+
+# MD040 — Fenced code language: disabled. Theme design docs use fenced blocks
+# extensively for ANSI art, Starship format strings, and other display content
+# that has no meaningful language identifier.
+MD040: false
+
+# MD041 — First line heading: disabled. Many docs start with a blockquote
+# tagline or a YAML-style separator rather than an H1.
+MD041: false

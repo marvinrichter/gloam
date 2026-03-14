@@ -135,7 +135,7 @@ Links          #28407A  ink blue — ANSI 4, manuscript annotation color for lin
 Single line. No box frame. The manuscript margin is clean — the illuminated margin of a medieval text is a clear strip of vellum, not a ruled border.
 
 ```
-[ ~/Work/my-repo ][ branch ~2 +1 ]·················[§ 14:32]
+[ ~/my-repo ][ branch ~2 +1 ]·················[§ 14:32]
 ›
 ```
 
@@ -228,16 +228,6 @@ Size:         13pt     (readable density; 14pt for large displays)
 Line spacing: 1.1      (breathing room between lines — the vellum breathes)
 ```
 
-### Install
-
-```bash
-brew install --cask font-jetbrains-mono-nerd-font
-```
-
-In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font`
-
----
-
 ## Visual Hierarchy
 
 Three weights of attention in every rendered prompt line:
@@ -322,14 +312,23 @@ Minimum threshold: 4.5:1 (WCAG AA for normal text). All tokens exceed this. `pri
 ## File Reference
 
 ```
-clarc-starship/
-└── parchment/
-    ├── parchment.toml          starship prompt configuration
-    ├── Parchment.itermcolors   iTerm2 color theme (plist)
-    └── PARCHMENT.md            this file
+themes/parchment/
+├── parchment.json           source of truth
+├── parchment.md             this document
+├── starship.toml          starship prompt configuration
+├── iterm2.itermcolors     iTerm2 color theme (plist)
+├── alacritty.toml         Alacritty
+├── kitty.conf             Kitty
+├── wezterm.lua            WezTerm
+├── ghostty                Ghostty
+├── windows-terminal.json  Windows Terminal
+├── vscode.json            VS Code
+├── neovim.lua             Neovim
+├── intellij.icls          IntelliJ / JetBrains
+└── zed.json               Zed
 ```
 
-### parchment.toml
+### starship.toml
 
 ```toml
 palette = "parchment"
@@ -343,7 +342,7 @@ error   = "#8B2020"
 
 The palette block is the single source of truth. To adapt Parchment to a different base hue, change only this block. All modules reference tokens (`fg:primary`, `fg:accent`, etc.) — nothing is hardcoded in the module configs.
 
-### Parchment.itermcolors
+### iterm2.itermcolors
 
 Standard Apple plist format. Import via:
 
@@ -356,30 +355,95 @@ iTerm2 › Preferences › Profiles › Colors › Color Presets ▾ › Import�
 ## Install
 
 ```bash
-# 1. Font
+# Font — required for all targets
 brew install --cask font-jetbrains-mono-nerd-font
-
-# 2. Prompt
-cp parchment.toml ~/.config/starship.toml
-
-# 3. iTerm2 theme
-#    Preferences › Profiles › Colors › Color Presets › Import › Parchment.itermcolors
-#    Then select "Parchment" from the preset list
-
-# 4. Set font in iTerm2
-#    Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt
-
-# 5. Light background in iTerm2
-#    Preferences › Profiles › Window › Background color will be set by the theme.
-#    If text rendering looks wrong, ensure "Use bright colors for bold text"
-#    is DISABLED — in a light theme, bold should be darker, not lighter.
 ```
 
-All five steps are required. The prompt colors reference named tokens resolved by starship. The terminal colors are resolved by iTerm2. They are designed as a system — either alone is incomplete.
+### Starship
 
-**Important for light themes in iTerm2:** Go to `Preferences › Profiles › Text` and disable "Use bright colors for bold text". In a dark theme this makes bold text brighter. In a light theme it would make bold text lighter — the wrong direction. With it disabled, iTerm2 uses the Bold Color slot (`#1A0E08`) directly, which is darker than the foreground as intended.
+```bash
+npx github:marvinrichter/gloam parchment starship
+```
 
----
+### iTerm2
+
+The installer does not support iTerm2. Import manually:
+
+1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
+2. Select `themes/parchment/iterm2.itermcolors`
+3. `Color Presets ▾` → select `parchment`
+
+In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
+
+The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
+
+**Light theme:** Disable "Use bright colors for bold text" (`Preferences › Profiles › Text`). In a light theme bold text must be darker, not lighter — the Bold Color slot (`#1A0E08`) handles this correctly when the option is off.
+
+### Alacritty
+
+```bash
+npx github:marvinrichter/gloam parchment alacritty
+```
+
+### Kitty
+
+```bash
+npx github:marvinrichter/gloam parchment kitty
+```
+
+### WezTerm
+
+```bash
+npx github:marvinrichter/gloam parchment wezterm
+```
+
+### Ghostty
+
+```bash
+npx github:marvinrichter/gloam parchment ghostty
+```
+
+### Windows Terminal
+
+```bash
+npx github:marvinrichter/gloam parchment windows-terminal
+```
+
+### VS Code
+
+```bash
+npx github:marvinrichter/gloam parchment vscode
+```
+
+Reload VS Code (`Cmd+Shift+P` → **Reload Window**), then select the theme via `Cmd+K Cmd+T`.
+
+### Neovim
+
+```bash
+npx github:marvinrichter/gloam parchment neovim
+```
+
+Add to `init.lua`:
+
+```lua
+vim.cmd("colorscheme parchment")
+```
+
+### IntelliJ / JetBrains IDEs
+
+The installer does not support IntelliJ. Import manually:
+
+```
+Settings › Editor › Color Scheme › ⚙ › Import Scheme
+```
+
+Select `themes/parchment/intellij.icls`.
+
+### Zed
+
+```bash
+npx github:marvinrichter/gloam parchment zed
+```
 
 ## Extending the System
 

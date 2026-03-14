@@ -126,7 +126,7 @@ The cursor amber is the most important UI color decision. In a scene that is alm
 ### Layout
 
 ```
-╭  ~/Work/clarc-starship   main ~2 +1  ···············  ∼ 14:32
+╭  ~/gloam   main ~2 +1  ···············  ∼ 14:32
 ╰─›
 ```
 
@@ -204,18 +204,6 @@ Weight:       Regular  (bold handled per-module by starship)
 Size:         13pt     (readable density; 14pt for large displays)
 Line spacing: 1.1      (breathing room without wasting vertical space)
 ```
-
-### Install
-
-```bash
-brew install --cask font-jetbrains-mono-nerd-font
-```
-
-In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font`
-
-The font must be set in the terminal, not just installed at OS level.
-
----
 
 ## Visual Hierarchy
 
@@ -296,13 +284,23 @@ Minimum threshold: 4.5:1 (WCAG AA for normal text). All tokens exceed this. `pri
 ## File Reference
 
 ```
-clarc-starship/fjord/
-├── fjord.toml          starship prompt configuration
-├── Fjord.itermcolors   iTerm2 color theme (plist)
-└── FJORD.md            this document
+themes/fjord/
+├── fjord.json           source of truth
+├── fjord.md             this document
+├── starship.toml          starship prompt configuration
+├── iterm2.itermcolors     iTerm2 color theme (plist)
+├── alacritty.toml         Alacritty
+├── kitty.conf             Kitty
+├── wezterm.lua            WezTerm
+├── ghostty                Ghostty
+├── windows-terminal.json  Windows Terminal
+├── vscode.json            VS Code
+├── neovim.lua             Neovim
+├── intellij.icls          IntelliJ / JetBrains
+└── zed.json               Zed
 ```
 
-### fjord.toml
+### starship.toml
 
 ```toml
 palette = "fjord"
@@ -316,7 +314,7 @@ error   = "#E06060"
 
 The palette block is the single source of truth. To adapt Fjord to a different base hue, change only this block. All modules reference tokens (`fg:primary`, `fg:accent`, etc.) — nothing is hardcoded in the module configs.
 
-### Fjord.itermcolors
+### iterm2.itermcolors
 
 Standard Apple plist format. Import via:
 
@@ -329,23 +327,93 @@ iTerm2 › Preferences › Profiles › Colors › Color Presets ▾ › Import�
 ## Install
 
 ```bash
-# 1. Font
+# Font — required for all targets
 brew install --cask font-jetbrains-mono-nerd-font
-
-# 2. Prompt
-cp fjord.toml ~/.config/starship.toml
-
-# 3. iTerm2 theme
-#    Preferences › Profiles › Colors › Color Presets › Import › Fjord.itermcolors
-#    Then select "Fjord" from the preset list
-
-# 4. Set font in iTerm2
-#    Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt
 ```
 
-All four steps are required. The prompt colors reference named tokens resolved by starship. The terminal colors (ANSI 0–15, UI slots) are resolved by iTerm2. They are designed as a system — either alone is incomplete.
+### Starship
 
----
+```bash
+npx github:marvinrichter/gloam fjord starship
+```
+
+### iTerm2
+
+The installer does not support iTerm2. Import manually:
+
+1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
+2. Select `themes/fjord/iterm2.itermcolors`
+3. `Color Presets ▾` → select `fjord`
+
+In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
+
+The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
+
+### Alacritty
+
+```bash
+npx github:marvinrichter/gloam fjord alacritty
+```
+
+### Kitty
+
+```bash
+npx github:marvinrichter/gloam fjord kitty
+```
+
+### WezTerm
+
+```bash
+npx github:marvinrichter/gloam fjord wezterm
+```
+
+### Ghostty
+
+```bash
+npx github:marvinrichter/gloam fjord ghostty
+```
+
+### Windows Terminal
+
+```bash
+npx github:marvinrichter/gloam fjord windows-terminal
+```
+
+### VS Code
+
+```bash
+npx github:marvinrichter/gloam fjord vscode
+```
+
+Reload VS Code (`Cmd+Shift+P` → **Reload Window**), then select the theme via `Cmd+K Cmd+T`.
+
+### Neovim
+
+```bash
+npx github:marvinrichter/gloam fjord neovim
+```
+
+Add to `init.lua`:
+
+```lua
+vim.cmd("colorscheme fjord")
+```
+
+### IntelliJ / JetBrains IDEs
+
+The installer does not support IntelliJ. Import manually:
+
+```
+Settings › Editor › Color Scheme › ⚙ › Import Scheme
+```
+
+Select `themes/fjord/intellij.icls`.
+
+### Zed
+
+```bash
+npx github:marvinrichter/gloam fjord zed
+```
 
 ## Extending the System
 
