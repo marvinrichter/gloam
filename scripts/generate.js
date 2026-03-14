@@ -1,6 +1,5 @@
-import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
-import { join, dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { readFileSync, writeFileSync, mkdirSync, globSync } from "node:fs";
+import { join } from "node:path";
 
 import { generateStarship }        from "./generators/starship.js";
 import { generateIterm2 }          from "./generators/iterm2.js";
@@ -51,14 +50,11 @@ export async function generate(themes, themesDir) {
 
 // ── CLI entry point ───────────────────────────────────────────────────────────
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const ROOT       = dirname(dirname(fileURLToPath(import.meta.url)));
-  const THEMES_DIR = join(ROOT, "themes");
+if (process.argv[1] === import.meta.filename) {
+  const THEMES_DIR = join(import.meta.dirname, "../themes");
 
   // Discover theme JSON files: themes/<name>/<name>.json
-  const names = readdirSync(THEMES_DIR, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name);
+  const names = globSync("*/", { cwd: THEMES_DIR }).map((d) => d.replace(/\/$/, ""));
 
   const themes = [];
   for (const name of names) {

@@ -91,6 +91,20 @@ Derived from primary hue (30°) at low saturation. Warmer than pure gray, cooler
 }
 ```
 
+### Neutral — Contrast on dark backgrounds
+
+| Token | On neutral-950 | Permitted use |
+|---|---|---|
+| neutral-300 | ~8.2:1 ✓ AAA | primary body text |
+| neutral-400 | ~4.8:1 ✓ AA  | secondary body text, nav links, footer tagline |
+| neutral-500 | ~3.5:1 ✗     | decorative only — borders, dividers, marks |
+| neutral-600 | ~2.7:1 ✗     | decorative only |
+| neutral-700 | ~2.1:1 ✗     | decorative only |
+
+**Rule:** For any text element on a dark surface, neutral-400 is the minimum. Neutral-500 and below are for non-text decorative elements only.
+
+**Rule:** Never use CSS `opacity` to reduce text contrast. Opacity compounds with the background unpredictably, especially over colored card surfaces. Use explicit color tokens instead.
+
 ### Semantic colors
 
 Adjusted to harmonize with the warm primary — standard greens and reds pulled toward amber.
@@ -180,6 +194,8 @@ Google Fonts: https://fonts.google.com/specimen/DM+Sans
   --tracking-wide:    0.04em;   /* uppercase labels only */
 }
 ```
+
+**Rule:** Only use sizes from this scale. Do not introduce intermediate values. The absolute minimum for any text element is `text-xs` (0.75rem / 12px). If a step feels too large, use the next step down — never invent a new stop.
 
 ### Usage rules
 
@@ -283,7 +299,7 @@ Typography that doesn't perform its weight — optical serifs at large sizes tha
 - One primary-500 amber accent per section — never more
 - Theme previews: the terminal prompt ASCII art from the README, large, Fraunces label beneath
 - Navigation: wordmark left, minimal link list right — no hamburger, no mega-menu
-- Footer: tagline in Fraunces italic, small
+- Footer: tagline in Fraunces italic, `text-sm` (0.875rem), `color: var(--color-neutral-400)` on dark / `var(--color-neutral-500)` on light
 
 ### Color theme files (README badges / headers)
 
