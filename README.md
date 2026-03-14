@@ -334,7 +334,23 @@ Each theme's JSON file is the single source of truth. The generator produces all
 
 ## Install
 
-Each theme's installable configs live in `themes/<name>/`. Files are named by application — `starship.toml`, `alacritty.toml`, `vscode.json`, etc.
+```bash
+npx github:marvinrichter/gloam <theme> <target>
+```
+
+The installer copies the theme config and wires it into your existing config file — no clone required.
+
+**Themes:** `eventide` · `aether` · `ember` · `absinthe` · `verdigris` · `sable` · `fjord` · `umbra` · `cordovan` · `tungsten` · `amethyst` · `parchment`
+
+**Targets:** `starship` · `alacritty` · `kitty` · `wezterm` · `ghostty` · `neovim` · `vscode` · `zed` · `windows-terminal`
+
+Install all themes to one target at once:
+
+```bash
+npx github:marvinrichter/gloam all starship
+```
+
+---
 
 ### Prerequisites
 
@@ -348,121 +364,33 @@ brew install --cask font-jetbrains-mono-nerd-font
 
 ### Starship
 
-```bash
-brew install starship  # if not already installed
-```
-
-Add to your shell config (`~/.zshrc` or `~/.bashrc`):
+Install Starship and add the init line to your shell config once:
 
 ```bash
-eval "$(starship init zsh)"   # zsh
-eval "$(starship init bash)"  # bash
+brew install starship
+echo 'eval "$(starship init zsh)"' >> ~/.zshrc    # zsh
+echo 'eval "$(starship init bash)"' >> ~/.bashrc  # bash
 ```
 
-Copy the config:
+Then install the theme:
 
 ```bash
-cp themes/<name>/starship.toml ~/.config/starship.toml
+npx github:marvinrichter/gloam eventide starship
 ```
-
----
-
-### iTerm2
-
-1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
-2. Select `themes/<name>/iterm2.itermcolors`
-3. `Color Presets ▾` → select the imported theme name
-4. Restart iTerm2
 
 > The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
-
-**Parchment (light theme) only:** after importing, uncheck **Use bright colors for bold text** (`Preferences › Profiles › Colors`). Without this, bold text is invisible against the light background.
-
----
-
-### Alacritty
-
-```bash
-mkdir -p ~/.config/alacritty/themes
-cp themes/<name>/alacritty.toml ~/.config/alacritty/themes/
-```
-
-Add to `~/.config/alacritty/alacritty.toml`:
-
-```toml
-import = ["~/.config/alacritty/themes/alacritty.toml"]
-```
-
----
-
-### Kitty
-
-```bash
-cp themes/<name>/kitty.conf ~/.config/kitty/
-```
-
-Add to `~/.config/kitty/kitty.conf`:
-
-```
-include kitty.conf
-```
-
----
-
-### WezTerm
-
-```bash
-mkdir -p ~/.config/wezterm/colors
-cp themes/<name>/wezterm.lua ~/.config/wezterm/colors/
-```
-
-In `~/.config/wezterm/wezterm.lua`:
-
-```lua
-config.color_scheme = "<name>"
-```
-
----
-
-### Ghostty
-
-```bash
-mkdir -p ~/.config/ghostty/themes
-cp themes/<name>/ghostty ~/.config/ghostty/themes/<name>
-```
-
-In `~/.config/ghostty/config`:
-
-```
-theme = <name>
-```
-
----
-
-### Windows Terminal
-
-Open `settings.json` (`Ctrl+,` → **Open JSON file**). Add the contents of `themes/<name>/windows-terminal.json` to the `"schemes"` array, then set:
-
-```json
-"colorScheme": "<Name>"
-```
 
 ---
 
 ### VS Code
 
-Copy `themes/<name>/vscode.json` to your VS Code extensions themes directory, or install the [Color Theme from File](https://marketplace.visualstudio.com/items?itemName=SombreShadow.color-theme-from-json) extension. Select the theme via `Ctrl+K Ctrl+T`.
+After running the installer, reload VS Code (`Cmd+Shift+P` → **Reload Window**) and select the theme via `Cmd+K Cmd+T`.
 
 ---
 
 ### Neovim
 
-```bash
-mkdir -p ~/.config/nvim/colors
-cp themes/<name>/neovim.lua ~/.config/nvim/colors/<name>.lua
-```
-
-In `init.lua`:
+After running the installer, add to `init.lua`:
 
 ```lua
 vim.cmd("colorscheme <name>")
@@ -470,28 +398,27 @@ vim.cmd("colorscheme <name>")
 
 ---
 
-### IntelliJ / JetBrains IDEs
+### iTerm2 — manual import
+
+The installer does not support iTerm2. Import manually:
+
+1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
+2. Select `themes/<name>/iterm2.itermcolors`
+3. `Color Presets ▾` → select the imported theme name
+
+**Parchment (light theme) only:** uncheck **Use bright colors for bold text** (`Preferences › Profiles › Colors`). Without this, bold text is invisible against the light background.
+
+---
+
+### IntelliJ / JetBrains IDEs — manual import
+
+The installer does not support IntelliJ. Import manually:
 
 ```
 Settings › Editor › Color Scheme › ⚙ › Import Scheme
 ```
 
-Select `themes/<name>/intellij.icls`. The scheme will appear in the color scheme list.
-
----
-
-### Zed
-
-```bash
-mkdir -p ~/.config/zed/themes
-cp themes/<name>/zed.json ~/.config/zed/themes/
-```
-
-In `~/.config/zed/settings.json`:
-
-```json
-"theme": "<Name>"
-```
+Select `themes/<name>/intellij.icls`.
 
 ---
 
@@ -500,7 +427,7 @@ In `~/.config/zed/settings.json`:
 ```
 gloam/
 ├── README.md
-├── package.json               npm test / npm run generate
+├── package.json               npm test / npm run generate / npx entrypoint
 ├── docs/                      GitHub Pages
 │   ├── index.html
 │   ├── brand-guidelines.md
@@ -522,6 +449,7 @@ gloam/
 │       ├── intellij.icls      generated
 │       └── zed.json           generated
 └── scripts/
+    ├── install.js             theme installer — `npx github:marvinrichter/gloam`
     ├── generate.js            regenerate all formats from theme JSON files
     ├── generators/            one module per output format
     │   ├── starship.js

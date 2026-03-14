@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "engines": { "node": ">=24" },
+  "bin": "scripts/install.js",
   "scripts": {
     "test":     "node --test scripts/__tests__/*.test.js",
-    "generate": "node scripts/generate.js"
+    "generate": "node scripts/generate.js",
+    "install-theme": "node scripts/install.js"
   }
 }
