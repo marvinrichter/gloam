@@ -136,7 +136,7 @@ The brand primarily lives on dark backgrounds (terminal context). On GitHub Page
   --color-text-primary:     var(--color-neutral-100);
   --color-text-secondary:   var(--color-neutral-400);
   --color-text-brand:       var(--color-primary-400);
-  --color-border:           rgba(196, 137, 74, 0.14);  /* amber tint — matches tokens.css */
+  --color-border:           color-mix(in srgb, var(--color-primary-500) 14%, transparent);
 }
 
 [data-theme="light"] {
