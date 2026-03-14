@@ -122,7 +122,7 @@ The cursor is blue because the cursor is an instrument. It marks a position with
 ### Layout
 
 ```
-~/Work/project   main ~2 +1  ·····················  ⋄ 23:12
+~/project   main ~2 +1  ·····················  ⋄ 23:12
 ▸
 ```
 
@@ -189,15 +189,92 @@ Line spacing: 1.1      (gives breathing room without wasting vertical space)
 ### Install
 
 ```bash
+# Font — required for all targets
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font`
+### Starship
 
-The font must be set in the terminal, not just installed at OS level.
+```bash
+npx github:marvinrichter/gloam tungsten starship
+```
 
----
+### iTerm2
 
+The installer does not support iTerm2. Import manually:
+
+1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
+2. Select `themes/tungsten/iterm2.itermcolors`
+3. `Color Presets ▾` → select `tungsten`
+
+In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
+
+The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
+### Alacritty
+
+```bash
+npx github:marvinrichter/gloam tungsten alacritty
+```
+
+### Kitty
+
+```bash
+npx github:marvinrichter/gloam tungsten kitty
+```
+
+### WezTerm
+
+```bash
+npx github:marvinrichter/gloam tungsten wezterm
+```
+
+### Ghostty
+
+```bash
+npx github:marvinrichter/gloam tungsten ghostty
+```
+
+### Windows Terminal
+
+```bash
+npx github:marvinrichter/gloam tungsten windows-terminal
+```
+
+### VS Code
+
+```bash
+npx github:marvinrichter/gloam tungsten vscode
+```
+
+Reload VS Code (`Cmd+Shift+P` → **Reload Window**), then select the theme via `Cmd+K Cmd+T`.
+
+### Neovim
+
+```bash
+npx github:marvinrichter/gloam tungsten neovim
+```
+
+Add to `init.lua`:
+
+```lua
+vim.cmd("colorscheme tungsten")
+```
+
+### IntelliJ / JetBrains IDEs
+
+The installer does not support IntelliJ. Import manually:
+
+```
+Settings › Editor › Color Scheme › ⚙ › Import Scheme
+```
+
+Select `themes/tungsten/intellij.icls`.
+
+### Zed
+
+```bash
+npx github:marvinrichter/gloam tungsten zed
+```
 ## Visual Hierarchy
 
 Three weights of attention in every rendered prompt line:
@@ -283,13 +360,23 @@ Minimum threshold: 4.5:1 (WCAG AA for normal text). All tokens exceed this. `pri
 ## File Reference
 
 ```
-clarc-starship/tungsten/
-├── tungsten.toml          starship prompt configuration
-├── Tungsten.itermcolors   iTerm2 color theme (plist)
-└── TUNGSTEN.md            this document
+themes/tungsten/
+├── tungsten.json           source of truth
+├── tungsten.md             this document
+├── starship.toml          starship prompt configuration
+├── iterm2.itermcolors     iTerm2 color theme (plist)
+├── alacritty.toml         Alacritty
+├── kitty.conf             Kitty
+├── wezterm.lua            WezTerm
+├── ghostty                Ghostty
+├── windows-terminal.json  Windows Terminal
+├── vscode.json            VS Code
+├── neovim.lua             Neovim
+├── intellij.icls          IntelliJ / JetBrains
+└── zed.json               Zed
 ```
 
-### tungsten.toml
+### starship.toml
 
 ```toml
 palette = "tungsten"
@@ -303,7 +390,7 @@ error   = "#E05858"
 
 The palette block is the single source of truth. All modules reference tokens (`fg:primary`, `fg:accent`, etc.) — nothing is hardcoded in the module configs. To adapt Tungsten to a different base temperature, change only this block.
 
-### Tungsten.itermcolors
+### iterm2.itermcolors
 
 Standard Apple plist format. Import via:
 
@@ -316,24 +403,92 @@ iTerm2 › Preferences › Profiles › Colors › Color Presets ▾ › Import�
 ## Install
 
 ```bash
-# 1. Font
+# Font — required for all targets
 brew install --cask font-jetbrains-mono-nerd-font
-
-# 2. Prompt
-cp tungsten.toml ~/.config/starship.toml
-
-# 3. iTerm2 theme
-#    Preferences › Profiles › Colors › Color Presets › Import › Tungsten.itermcolors
-#    Then select "Tungsten" from the preset list
-
-# 4. Set font in iTerm2
-#    Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt
 ```
 
-All four steps are required. The prompt colors reference named tokens resolved by starship. The terminal colors (ANSI 0–15, UI slots) are resolved by iTerm2. They are designed as a system — either alone is incomplete.
+### Starship
 
----
+```bash
+npx github:marvinrichter/gloam tungsten starship
+```
 
+### iTerm2
+
+The installer does not support iTerm2. Import manually:
+
+1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
+2. Select `themes/tungsten/iterm2.itermcolors`
+3. `Color Presets ▾` → select `tungsten`
+
+In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
+
+The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
+### Alacritty
+
+```bash
+npx github:marvinrichter/gloam tungsten alacritty
+```
+
+### Kitty
+
+```bash
+npx github:marvinrichter/gloam tungsten kitty
+```
+
+### WezTerm
+
+```bash
+npx github:marvinrichter/gloam tungsten wezterm
+```
+
+### Ghostty
+
+```bash
+npx github:marvinrichter/gloam tungsten ghostty
+```
+
+### Windows Terminal
+
+```bash
+npx github:marvinrichter/gloam tungsten windows-terminal
+```
+
+### VS Code
+
+```bash
+npx github:marvinrichter/gloam tungsten vscode
+```
+
+Reload VS Code (`Cmd+Shift+P` → **Reload Window**), then select the theme via `Cmd+K Cmd+T`.
+
+### Neovim
+
+```bash
+npx github:marvinrichter/gloam tungsten neovim
+```
+
+Add to `init.lua`:
+
+```lua
+vim.cmd("colorscheme tungsten")
+```
+
+### IntelliJ / JetBrains IDEs
+
+The installer does not support IntelliJ. Import manually:
+
+```
+Settings › Editor › Color Scheme › ⚙ › Import Scheme
+```
+
+Select `themes/tungsten/intellij.icls`.
+
+### Zed
+
+```bash
+npx github:marvinrichter/gloam tungsten zed
+```
 ## Extending the System
 
 ### Adding a module

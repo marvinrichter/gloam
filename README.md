@@ -15,7 +15,7 @@ Every token in every theme clears 4.5:1 contrast against its background. Not as 
 > The moment between day and night. Deep indigo sky, warm gold navigation, twilight lavender chrome, sunset coral git.
 
 ```
-╭  user  ~/Work/clarc  ❯  main ~2  ────────────────────────────  ◆ 14:32
+╭  user  ~/gloam  ❯  main ~2  ────────────────────────────  ◆ 14:32
 ╰─❯
 ```
 
@@ -39,7 +39,7 @@ Background `#0D0F1A` · Foreground `#F0EAD6` · Layout: two-line box · Fill: `�
 > Deep space observatory. Running code at the edge of the universe. The background holds residual violet-blue — the void between galaxies.
 
 ```
-╭  user  ~/Work/clarc  ⟫  main ~2  ················  ✦ 14:32
+╭  user  ~/gloam  ⟫  main ~2  ················  ✦ 14:32
 ╰─⟫
 ```
 
@@ -63,7 +63,7 @@ Background `#0C0B1A` · Foreground `#D4D8F0` · Layout: two-line box · Fill: `�
 > The watch fire at 3am. The entire world is orange and black. The background is deep charcoal-brown — not pure black, but warm, like cooling coal.
 
 ```
-╭  user  ~/Work/clarc  ❯  main ~2  ················  ◈ 14:32
+╭  user  ~/gloam  ❯  main ~2  ················  ◈ 14:32
 ╰─❯
 ```
 
@@ -87,7 +87,7 @@ Background `#111008` · Foreground `#F5EDD4` · Layout: two-line box · Fill: `�
 > La fée verte. Vintage chemistry lab, art nouveau, the forbidden liqueur glowing green in candlelight. Single-line layout — alchemical precision.
 
 ```
- ~/Work/clarc   main ~2  ···························  ◇ 14:32
+ ~/gloam   main ~2  ···························  ◇ 14:32
 ▸
 ```
 
@@ -111,7 +111,7 @@ Background `#080D0A` · Foreground `#D8E8D4` · Layout: single-line · Fill: `·
 > Ancient bronze turned sea-green by time and salt air. The color of old statues, copper rooftops, oxidized piping. Two materials: the teal patina and the bronze beneath.
 
 ```
-╭  user  ~/Work/clarc  ›  main ~2  ────────────────────────────  ⌘ 14:32
+╭  user  ~/gloam  ›  main ~2  ────────────────────────────  ⌘ 14:32
 ╰─›
 ```
 
@@ -135,7 +135,7 @@ Background `#0D1210` · Foreground `#D4E0D8` · Layout: two-line box · Fill: `�
 > The heraldic color — black, pure and absolute. Silver and gold on black. No box frames. No decorative chrome. The prompt exists because it must.
 
 ```
- ~/Work/clarc   main ~2                               · 14:32
+ ~/gloam   main ~2                               · 14:32
 ›
 ```
 
@@ -159,7 +159,7 @@ Background `#080808` · Foreground `#E8E8E8` · Layout: single-line · Fill: ` `
 > Norwegian fjord at dusk. Cold deep-blue water, perfectly still. A single amber light from a distant farmhouse. No username — cold, anonymous, Nordic.
 
 ```
-╭  ~/Work/clarc   main ~2  ················  ∼ 14:32
+╭  ~/gloam   main ~2  ················  ∼ 14:32
 ╰─›
 ```
 
@@ -183,7 +183,7 @@ Background `#0A0F18` · Foreground `#D4E0E8` · Layout: two-line box · Fill: `�
 > The penumbra — the partial shadow at the edge of total darkness. A mathematical concept made visible. Pale morning blue at the boundary. Amethyst violet — the color of transition.
 
 ```
- ~/Work/clarc   main ~2  ·····················  · 14:32
+ ~/gloam   main ~2  ·····················  · 14:32
 ▹
 ```
 
@@ -207,7 +207,7 @@ Background `#070708` · Foreground `#E4E8F0` · Layout: single-line · Fill: `·
 > A cordovan leather workshop. Two materials tell the whole story: the tan-caramel of the leather itself and the cold blue-steel of the buckles and clasps.
 
 ```
-╭  user  ~/Work/clarc  ❯  main ~2  ────────────────────────────  ⊕ 14:32
+╭  user  ~/gloam  ❯  main ~2  ────────────────────────────  ⊕ 14:32
 ╰─❯
 ```
 
@@ -231,7 +231,7 @@ Background `#120A06` · Foreground `#EAE0D4` · Layout: two-line box · Fill: `�
 > Tungsten filament at operating temperature — past orange, almost white but holding onto gold. The primary is the filament's light. The accent is the oscilloscope watching it.
 
 ```
- ~/Work/clarc   main ~2  ····················  ⋄ 14:32
+ ~/gloam   main ~2  ····················  ⋄ 14:32
 ▸
 ```
 
@@ -255,7 +255,7 @@ Background `#0E0C09` · Foreground `#F4EED8` · Layout: single-line · Fill: `·
 > Purple quartz crystal grown in a dark matrix. The background is the host rock. The primary is the crystal — violet, translucent. The accent is rutile gold, mineral inclusions catching light from inside.
 
 ```
-╭  user  ~/Work/clarc  ⟫  main ~2  ················  ✧ 14:32
+╭  user  ~/gloam  ⟫  main ~2  ················  ✧ 14:32
 ╰─⟫
 ```
 
@@ -279,7 +279,7 @@ Background `#0C0811` · Foreground `#EAD8F8` · Layout: two-line box · Fill: `�
 > Aged vellum. The material monks copied manuscripts onto. Iron gall ink as primary. Rust-brown as accent. The only light theme in the set — everything inverts.
 
 ```
- ~/Work/clarc   main ~2  ···························  § 14:32
+ ~/gloam   main ~2  ···························  § 14:32
 ›
 ```
 

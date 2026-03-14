@@ -115,7 +115,7 @@ Links          #9EE878  bright starlight — readable, distinct from body text
 ### Layout
 
 ```
-╭  marvin  ~/Work/clarc-starship   main ~2 +1  ·············  ✦ 14:32
+╭  marvin  ~/gloam   main ~2 +1  ·············  ✦ 14:32
 ╰─⟫
 ```
 
@@ -188,15 +188,92 @@ Line spacing: 1.1      (gives breathing room without wasting vertical space)
 ### Install
 
 ```bash
+# Font — required for all targets
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font`
+### Starship
 
-The font must be set in the terminal, not just installed at OS level.
+```bash
+npx github:marvinrichter/gloam aether starship
+```
 
----
+### iTerm2
 
+The installer does not support iTerm2. Import manually:
+
+1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
+2. Select `themes/aether/iterm2.itermcolors`
+3. `Color Presets ▾` → select `aether`
+
+In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
+
+The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
+### Alacritty
+
+```bash
+npx github:marvinrichter/gloam aether alacritty
+```
+
+### Kitty
+
+```bash
+npx github:marvinrichter/gloam aether kitty
+```
+
+### WezTerm
+
+```bash
+npx github:marvinrichter/gloam aether wezterm
+```
+
+### Ghostty
+
+```bash
+npx github:marvinrichter/gloam aether ghostty
+```
+
+### Windows Terminal
+
+```bash
+npx github:marvinrichter/gloam aether windows-terminal
+```
+
+### VS Code
+
+```bash
+npx github:marvinrichter/gloam aether vscode
+```
+
+Reload VS Code (`Cmd+Shift+P` → **Reload Window**), then select the theme via `Cmd+K Cmd+T`.
+
+### Neovim
+
+```bash
+npx github:marvinrichter/gloam aether neovim
+```
+
+Add to `init.lua`:
+
+```lua
+vim.cmd("colorscheme aether")
+```
+
+### IntelliJ / JetBrains IDEs
+
+The installer does not support IntelliJ. Import manually:
+
+```
+Settings › Editor › Color Scheme › ⚙ › Import Scheme
+```
+
+Select `themes/aether/intellij.icls`.
+
+### Zed
+
+```bash
+npx github:marvinrichter/gloam aether zed
+```
 ## Visual Hierarchy
 
 Three weights of attention in every rendered prompt line:
@@ -276,14 +353,23 @@ Minimum threshold: 4.5:1 (WCAG AA for normal text). All tokens exceed this by at
 ## File Reference
 
 ```
-clarc-starship/
-└── aether/
-    ├── aether.toml          starship prompt configuration
-    ├── Aether.itermcolors   iTerm2 color theme (plist)
-    └── AETHER.md            this document
+themes/aether/
+├── aether.json           source of truth
+├── aether.md             this document
+├── starship.toml          starship prompt configuration
+├── iterm2.itermcolors     iTerm2 color theme (plist)
+├── alacritty.toml         Alacritty
+├── kitty.conf             Kitty
+├── wezterm.lua            WezTerm
+├── ghostty                Ghostty
+├── windows-terminal.json  Windows Terminal
+├── vscode.json            VS Code
+├── neovim.lua             Neovim
+├── intellij.icls          IntelliJ / JetBrains
+└── zed.json               Zed
 ```
 
-### aether.toml
+### starship.toml
 
 ```toml
 palette = "aether"
@@ -297,7 +383,7 @@ error   = "#FF6B6B"
 
 The palette block is the single source of truth. To adapt Aether to a different base hue, change only this block. All modules reference tokens (`fg:primary`, `fg:accent`, etc.) — nothing is hardcoded in the module configs.
 
-### Aether.itermcolors
+### iterm2.itermcolors
 
 Standard Apple plist format. Import via:
 
@@ -310,24 +396,92 @@ iTerm2 › Preferences › Profiles › Colors › Color Presets ▾ › Import�
 ## Install
 
 ```bash
-# 1. Font
+# Font — required for all targets
 brew install --cask font-jetbrains-mono-nerd-font
-
-# 2. Prompt
-cp aether.toml ~/.config/starship.toml
-
-# 3. iTerm2 theme
-#    Preferences › Profiles › Colors › Color Presets › Import › Aether.itermcolors
-#    Then select "Aether" from the preset list
-
-# 4. Set font in iTerm2
-#    Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt
 ```
 
-All four steps are required. The prompt colors reference named tokens which are resolved by starship. The terminal colors (ANSI 0–15, UI slots) are resolved by iTerm2. They are designed as a system — either alone is incomplete.
+### Starship
 
----
+```bash
+npx github:marvinrichter/gloam aether starship
+```
 
+### iTerm2
+
+The installer does not support iTerm2. Import manually:
+
+1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
+2. Select `themes/aether/iterm2.itermcolors`
+3. `Color Presets ▾` → select `aether`
+
+In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
+
+The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
+### Alacritty
+
+```bash
+npx github:marvinrichter/gloam aether alacritty
+```
+
+### Kitty
+
+```bash
+npx github:marvinrichter/gloam aether kitty
+```
+
+### WezTerm
+
+```bash
+npx github:marvinrichter/gloam aether wezterm
+```
+
+### Ghostty
+
+```bash
+npx github:marvinrichter/gloam aether ghostty
+```
+
+### Windows Terminal
+
+```bash
+npx github:marvinrichter/gloam aether windows-terminal
+```
+
+### VS Code
+
+```bash
+npx github:marvinrichter/gloam aether vscode
+```
+
+Reload VS Code (`Cmd+Shift+P` → **Reload Window**), then select the theme via `Cmd+K Cmd+T`.
+
+### Neovim
+
+```bash
+npx github:marvinrichter/gloam aether neovim
+```
+
+Add to `init.lua`:
+
+```lua
+vim.cmd("colorscheme aether")
+```
+
+### IntelliJ / JetBrains IDEs
+
+The installer does not support IntelliJ. Import manually:
+
+```
+Settings › Editor › Color Scheme › ⚙ › Import Scheme
+```
+
+Select `themes/aether/intellij.icls`.
+
+### Zed
+
+```bash
+npx github:marvinrichter/gloam aether zed
+```
 ## Extending the System
 
 ### Adding a module
