@@ -1,0 +1,47 @@
+{
+  "name": "amethyst",
+  "displayName": "Amethyst",
+  "type": "dark",
+  "background": "#0C0811",
+  "foreground": "#EAD8F8",
+  "tokens": {
+    "primary": "#C084F0",
+    "accent": "#E8B84A",
+    "muted": "#9080A8",
+    "error": "#E05858"
+  },
+  "ansi": [
+    "#0C0811",
+    "#B04040",
+    "#508058",
+    "#C09840",
+    "#5068B0",
+    "#9060B0",
+    "#4080A8",
+    "#8870A0",
+    "#201428",
+    "#E05858",
+    "#68A870",
+    "#E8B84A",
+    "#9080A8",
+    "#C084F0",
+    "#60A8C0",
+    "#EAD8F8"
+  ],
+  "ui": {
+    "cursor": "#E8B84A",
+    "cursorText": "#0C0811",
+    "selection": "#180E28",
+    "selectionText": "#EAD8F8",
+    "bold": "#F8F0FF",
+    "link": "#C084F0"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "✧",
+    "successSymbol": "⟫",
+    "vimSymbol": "⟪"
+  }
+}

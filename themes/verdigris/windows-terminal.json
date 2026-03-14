@@ -1,0 +1,23 @@
+{
+  "name": "Verdigris",
+  "background": "#0D1210",
+  "foreground": "#D4E0D8",
+  "cursorColor": "#CD8B4A",
+  "selectionBackground": "#182420",
+  "black": "#0D1210",
+  "red": "#884448",
+  "green": "#408068",
+  "yellow": "#887840",
+  "blue": "#386068",
+  "purple": "#785868",
+  "cyan": "#3A7870",
+  "white": "#789488",
+  "brightBlack": "#1A2820",
+  "brightRed": "#D46060",
+  "brightGreen": "#52C4A8",
+  "brightYellow": "#CD8B4A",
+  "brightBlue": "#7A9490",
+  "brightPurple": "#A87888",
+  "brightCyan": "#60B8A8",
+  "brightWhite": "#D4E0D8"
+}

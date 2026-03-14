@@ -1,0 +1,32 @@
+# absinthe — Ghostty color theme
+# Generated from absinthe.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/absinthe
+# then set theme = absinthe in ~/.config/ghostty/config
+
+background         = 080D0A
+foreground         = D8E8D4
+
+cursor-color       = E8C848
+cursor-text        = 080D0A
+
+selection-background = 101810
+selection-foreground = D8E8D4
+
+# ANSI palette (0–15)
+palette = 0=080D0A
+palette = 1=885848
+palette = 2=50986A
+palette = 3=A89040
+palette = 4=384858
+palette = 5=786888
+palette = 6=388070
+palette = 7=889878
+palette = 8=182018
+palette = 9=E05858
+palette = 10=70E0A0
+palette = 11=E8C848
+palette = 12=7A8A7A
+palette = 13=B898A8
+palette = 14=68C8A8
+palette = 15=D8E8D4

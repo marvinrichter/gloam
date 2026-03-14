@@ -1,0 +1,37 @@
+# cordovan — Alacritty color theme
+# Generated from cordovan.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/cordovan.toml
+# then add `import = ["~/.config/alacritty/themes/cordovan.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#120A06"
+foreground = "#EAE0D4"
+
+[colors.cursor]
+cursor = "#6B9AB8"
+text   = "#120A06"
+
+[colors.selection]
+background = "#241408"
+text       = "#EAE0D4"
+
+[colors.normal]
+black   = "#120A06"
+red     = "#A83030"
+green   = "#507840"
+yellow  = "#B08840"
+blue    = "#386898"
+magenta = "#7A5080"
+cyan    = "#3A7878"
+white   = "#887868"
+
+[colors.bright]
+black   = "#281810"
+red     = "#D06060"
+green   = "#608858"
+yellow  = "#C49A6A"
+blue    = "#6B9AB8"
+magenta = "#9880A8"
+cyan    = "#508898"
+white   = "#EAE0D4"

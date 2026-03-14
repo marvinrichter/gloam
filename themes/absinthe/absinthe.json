@@ -1,0 +1,47 @@
+{
+  "name": "absinthe",
+  "displayName": "Absinthe",
+  "type": "dark",
+  "background": "#080D0A",
+  "foreground": "#D8E8D4",
+  "tokens": {
+    "primary": "#70E0A0",
+    "accent": "#E8C848",
+    "muted": "#7A8A7A",
+    "error": "#E05858"
+  },
+  "ansi": [
+    "#080D0A",
+    "#885848",
+    "#50986A",
+    "#A89040",
+    "#384858",
+    "#786888",
+    "#388070",
+    "#889878",
+    "#182018",
+    "#E05858",
+    "#70E0A0",
+    "#E8C848",
+    "#7A8A7A",
+    "#B898A8",
+    "#68C8A8",
+    "#D8E8D4"
+  ],
+  "ui": {
+    "cursor": "#E8C848",
+    "cursorText": "#080D0A",
+    "selection": "#101810",
+    "selectionText": "#D8E8D4",
+    "bold": "#D8E8D4",
+    "link": "#E8C848"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "·",
+    "timePrefix": "◇",
+    "successSymbol": "▸",
+    "vimSymbol": "◂"
+  }
+}

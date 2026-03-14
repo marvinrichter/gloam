@@ -1,0 +1,47 @@
+{
+  "name": "verdigris",
+  "displayName": "Verdigris",
+  "type": "dark",
+  "background": "#0D1210",
+  "foreground": "#D4E0D8",
+  "tokens": {
+    "primary": "#52C4A8",
+    "accent": "#CD8B4A",
+    "muted": "#7A9490",
+    "error": "#D46060"
+  },
+  "ansi": [
+    "#0D1210",
+    "#884448",
+    "#408068",
+    "#887840",
+    "#386068",
+    "#785868",
+    "#3A7870",
+    "#789488",
+    "#1A2820",
+    "#D46060",
+    "#52C4A8",
+    "#CD8B4A",
+    "#7A9490",
+    "#A87888",
+    "#60B8A8",
+    "#D4E0D8"
+  ],
+  "ui": {
+    "cursor": "#CD8B4A",
+    "cursorText": "#0D1210",
+    "selection": "#182420",
+    "selectionText": "#D4E0D8",
+    "bold": "#D4E0D8",
+    "link": "#52C4A8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "─",
+    "timePrefix": "⌘",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

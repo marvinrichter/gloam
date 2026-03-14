@@ -1,0 +1,47 @@
+{
+  "name": "eventide",
+  "displayName": "Eventide",
+  "type": "dark",
+  "background": "#0D0F1A",
+  "foreground": "#F0EAD6",
+  "tokens": {
+    "primary": "#E8B86D",
+    "accent": "#FF7F57",
+    "muted": "#8B84C4",
+    "error": "#E85D5D"
+  },
+  "ansi": [
+    "#0D0F1A",
+    "#C85A5A",
+    "#6BAF8A",
+    "#C4983A",
+    "#6B64A8",
+    "#A870BC",
+    "#4A9CA8",
+    "#B8AFCC",
+    "#2A2D3E",
+    "#E87070",
+    "#7EC99A",
+    "#E8B86D",
+    "#8B84C4",
+    "#C490D1",
+    "#5FB8C0",
+    "#F0EAD6"
+  ],
+  "ui": {
+    "cursor": "#FF7F57",
+    "cursorText": "#0D0F1A",
+    "selection": "#1E2040",
+    "selectionText": "#F0EAD6",
+    "bold": "#F0EAD6",
+    "link": "#B8B4E8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "─",
+    "timePrefix": "◆",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

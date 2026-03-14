@@ -1,0 +1,37 @@
+# absinthe — Alacritty color theme
+# Generated from absinthe.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/absinthe.toml
+# then add `import = ["~/.config/alacritty/themes/absinthe.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#080D0A"
+foreground = "#D8E8D4"
+
+[colors.cursor]
+cursor = "#E8C848"
+text   = "#080D0A"
+
+[colors.selection]
+background = "#101810"
+text       = "#D8E8D4"
+
+[colors.normal]
+black   = "#080D0A"
+red     = "#885848"
+green   = "#50986A"
+yellow  = "#A89040"
+blue    = "#384858"
+magenta = "#786888"
+cyan    = "#388070"
+white   = "#889878"
+
+[colors.bright]
+black   = "#182018"
+red     = "#E05858"
+green   = "#70E0A0"
+yellow  = "#E8C848"
+blue    = "#7A8A7A"
+magenta = "#B898A8"
+cyan    = "#68C8A8"
+white   = "#D8E8D4"

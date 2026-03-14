@@ -1,0 +1,23 @@
+{
+  "name": "Cordovan",
+  "background": "#120A06",
+  "foreground": "#EAE0D4",
+  "cursorColor": "#6B9AB8",
+  "selectionBackground": "#241408",
+  "black": "#120A06",
+  "red": "#A83030",
+  "green": "#507840",
+  "yellow": "#B08840",
+  "blue": "#386898",
+  "purple": "#7A5080",
+  "cyan": "#3A7878",
+  "white": "#887868",
+  "brightBlack": "#281810",
+  "brightRed": "#D06060",
+  "brightGreen": "#608858",
+  "brightYellow": "#C49A6A",
+  "brightBlue": "#6B9AB8",
+  "brightPurple": "#9880A8",
+  "brightCyan": "#508898",
+  "brightWhite": "#EAE0D4"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "umbra",
+  "displayName": "Umbra",
+  "type": "dark",
+  "background": "#070708",
+  "foreground": "#E4E8F0",
+  "tokens": {
+    "primary": "#A0B4C8",
+    "accent": "#8B6CF0",
+    "muted": "#728090",
+    "error": "#DC5858"
+  },
+  "ansi": [
+    "#070708",
+    "#9A3838",
+    "#487850",
+    "#907840",
+    "#3858A0",
+    "#7858A8",
+    "#387880",
+    "#707880",
+    "#1A1C20",
+    "#DC5858",
+    "#607870",
+    "#A09060",
+    "#728090",
+    "#8B6CF0",
+    "#507878",
+    "#E4E8F0"
+  ],
+  "ui": {
+    "cursor": "#8B6CF0",
+    "cursorText": "#070708",
+    "selection": "#121420",
+    "selectionText": "#E4E8F0",
+    "bold": "#F0F4FF",
+    "link": "#A0B4C8"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "·",
+    "timePrefix": "·",
+    "successSymbol": "▹",
+    "vimSymbol": "◃"
+  }
+}

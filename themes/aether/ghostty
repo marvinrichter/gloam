@@ -1,0 +1,32 @@
+# aether — Ghostty color theme
+# Generated from aether.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/aether
+# then set theme = aether in ~/.config/ghostty/config
+
+background         = 0C0B1A
+foreground         = D4D8F0
+
+cursor-color       = C084FC
+cursor-text        = 0C0B1A
+
+selection-background = 1C1B3A
+selection-foreground = D4D8F0
+
+# ANSI palette (0–15)
+palette = 0=0C0B1A
+palette = 1=9B4F6C
+palette = 2=4AC88A
+palette = 3=A8B870
+palette = 4=6B5ED8
+palette = 5=B060C8
+palette = 6=48A8CC
+palette = 7=9098C0
+palette = 8=252448
+palette = 9=E87090
+palette = 10=5EE8B8
+palette = 11=9EE878
+palette = 12=8886B0
+palette = 13=C084FC
+palette = 14=58C8E8
+palette = 15=D4D8F0

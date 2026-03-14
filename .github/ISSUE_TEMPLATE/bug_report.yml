@@ -1,0 +1,97 @@
+name: Bug Report
+description: A theme file is incorrect, a generated format is broken, or a glyph renders wrong
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme
+      description: Which theme is affected?
+      options:
+        - Eventide
+        - Aether
+        - Ember
+        - Absinthe
+        - Verdigris
+        - Sable
+        - Fjord
+        - Umbra
+        - Cordovan
+        - Tungsten
+        - Amethyst
+        - Parchment
+        - All themes
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target
+    attributes:
+      label: Target application
+      description: Which format or application is affected?
+      options:
+        - Starship
+        - iTerm2
+        - Alacritty
+        - Kitty
+        - WezTerm
+        - Ghostty
+        - Windows Terminal
+        - VS Code
+        - Neovim
+        - IntelliJ / JetBrains
+        - Zed
+        - Theme JSON source
+        - Generator (npm run generate)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What is wrong?
+      description: A clear description of the issue — wrong color, missing glyph, broken contrast, generation error, etc.
+      placeholder: "The primary token in Eventide's Alacritty config renders as..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should it look like?
+      description: Expected colour, glyph, or behaviour. Hex values or screenshots are helpful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      value: |
+        1. Install font (`brew install --cask font-jetbrains-mono-nerd-font`)
+        2. Copy `themes/<name>/<file>` to the correct location
+        3. Observe...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: ["macOS", "Linux", "Windows"]
+    validations:
+      required: true
+
+  - type: input
+    id: terminal
+    attributes:
+      label: Terminal version
+      placeholder: "e.g. iTerm2 3.5.4, Alacritty 0.13.2"
+
+  - type: input
+    id: font
+    attributes:
+      label: Font in use
+      placeholder: "JetBrains Mono NF 3.3.0"

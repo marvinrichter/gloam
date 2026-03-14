@@ -1,0 +1,32 @@
+# umbra — Ghostty color theme
+# Generated from umbra.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/umbra
+# then set theme = umbra in ~/.config/ghostty/config
+
+background         = 070708
+foreground         = E4E8F0
+
+cursor-color       = 8B6CF0
+cursor-text        = 070708
+
+selection-background = 121420
+selection-foreground = E4E8F0
+
+# ANSI palette (0–15)
+palette = 0=070708
+palette = 1=9A3838
+palette = 2=487850
+palette = 3=907840
+palette = 4=3858A0
+palette = 5=7858A8
+palette = 6=387880
+palette = 7=707880
+palette = 8=1A1C20
+palette = 9=DC5858
+palette = 10=607870
+palette = 11=A09060
+palette = 12=728090
+palette = 13=8B6CF0
+palette = 14=507878
+palette = 15=E4E8F0

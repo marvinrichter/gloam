@@ -1,0 +1,32 @@
+# cordovan — Ghostty color theme
+# Generated from cordovan.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/cordovan
+# then set theme = cordovan in ~/.config/ghostty/config
+
+background         = 120A06
+foreground         = EAE0D4
+
+cursor-color       = 6B9AB8
+cursor-text        = 120A06
+
+selection-background = 241408
+selection-foreground = EAE0D4
+
+# ANSI palette (0–15)
+palette = 0=120A06
+palette = 1=A83030
+palette = 2=507840
+palette = 3=B08840
+palette = 4=386898
+palette = 5=7A5080
+palette = 6=3A7878
+palette = 7=887868
+palette = 8=281810
+palette = 9=D06060
+palette = 10=608858
+palette = 11=C49A6A
+palette = 12=6B9AB8
+palette = 13=9880A8
+palette = 14=508898
+palette = 15=EAE0D4

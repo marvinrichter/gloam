@@ -1,0 +1,37 @@
+# verdigris — Alacritty color theme
+# Generated from verdigris.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/verdigris.toml
+# then add `import = ["~/.config/alacritty/themes/verdigris.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0D1210"
+foreground = "#D4E0D8"
+
+[colors.cursor]
+cursor = "#CD8B4A"
+text   = "#0D1210"
+
+[colors.selection]
+background = "#182420"
+text       = "#D4E0D8"
+
+[colors.normal]
+black   = "#0D1210"
+red     = "#884448"
+green   = "#408068"
+yellow  = "#887840"
+blue    = "#386068"
+magenta = "#785868"
+cyan    = "#3A7870"
+white   = "#789488"
+
+[colors.bright]
+black   = "#1A2820"
+red     = "#D46060"
+green   = "#52C4A8"
+yellow  = "#CD8B4A"
+blue    = "#7A9490"
+magenta = "#A87888"
+cyan    = "#60B8A8"
+white   = "#D4E0D8"

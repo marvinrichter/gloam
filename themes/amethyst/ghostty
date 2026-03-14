@@ -1,0 +1,32 @@
+# amethyst — Ghostty color theme
+# Generated from amethyst.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/amethyst
+# then set theme = amethyst in ~/.config/ghostty/config
+
+background         = 0C0811
+foreground         = EAD8F8
+
+cursor-color       = E8B84A
+cursor-text        = 0C0811
+
+selection-background = 180E28
+selection-foreground = EAD8F8
+
+# ANSI palette (0–15)
+palette = 0=0C0811
+palette = 1=B04040
+palette = 2=508058
+palette = 3=C09840
+palette = 4=5068B0
+palette = 5=9060B0
+palette = 6=4080A8
+palette = 7=8870A0
+palette = 8=201428
+palette = 9=E05858
+palette = 10=68A870
+palette = 11=E8B84A
+palette = 12=9080A8
+palette = 13=C084F0
+palette = 14=60A8C0
+palette = 15=EAD8F8

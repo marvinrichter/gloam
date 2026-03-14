@@ -1,0 +1,47 @@
+{
+  "name": "ember",
+  "displayName": "Ember",
+  "type": "dark",
+  "background": "#111008",
+  "foreground": "#F5EDD4",
+  "tokens": {
+    "primary": "#FFAB40",
+    "accent": "#FF6D00",
+    "muted": "#9E8E78",
+    "error": "#FF4040"
+  },
+  "ansi": [
+    "#111008",
+    "#8B2828",
+    "#4A7840",
+    "#C87C28",
+    "#384868",
+    "#784868",
+    "#386068",
+    "#A89880",
+    "#282418",
+    "#FF4040",
+    "#68A858",
+    "#FFAB40",
+    "#9E8E78",
+    "#E87868",
+    "#88A888",
+    "#F5EDD4"
+  ],
+  "ui": {
+    "cursor": "#FF6D00",
+    "cursorText": "#111008",
+    "selection": "#201C10",
+    "selectionText": "#F5EDD4",
+    "bold": "#F5EDD4",
+    "link": "#FFAB40"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "◈",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

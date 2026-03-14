@@ -1,0 +1,32 @@
+# fjord — Ghostty color theme
+# Generated from fjord.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/fjord
+# then set theme = fjord in ~/.config/ghostty/config
+
+background         = 0A0F18
+foreground         = D4E0E8
+
+cursor-color       = E8C46A
+cursor-text        = 0A0F18
+
+selection-background = 0E1828
+selection-foreground = D4E0E8
+
+# ANSI palette (0–15)
+palette = 0=0A0F18
+palette = 1=B84040
+palette = 2=4A9860
+palette = 3=B09040
+palette = 4=3868A8
+palette = 5=8060A0
+palette = 6=3A8898
+palette = 7=788898
+palette = 8=1E2A38
+palette = 9=E06060
+palette = 10=60B878
+palette = 11=E8C46A
+palette = 12=6EB5E0
+palette = 13=B090C8
+palette = 14=60C0C8
+palette = 15=D4E0E8

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme name="Eventide" version="142" parent_scheme="Darcula">
+  <!-- Generated from eventide.json — do not edit by hand -->
+  <!-- Install: copy to ~/.config/JetBrains/<IDE>/colors/eventide.icls -->
+
+  <metaInfo>
+    <property name="created">generated</property>
+    <property name="ideVersion">2024.1.0.0</property>
+    <property name="originalScheme">Eventide</property>
+  </metaInfo>
+
+  <colors>
+    <option name="CONSOLE_BACKGROUND_KEY" value="0D0F1A" />
+    <option name="GUTTER_BACKGROUND" value="2A2D3E" />
+    <option name="SELECTION_BACKGROUND" value="1E2040" />
+    <option name="SELECTION_FOREGROUND" value="F0EAD6" />
+    <option name="CARET_COLOR" value="FF7F57" />
+    <option name="LINE_NUMBERS_COLOR" value="8B84C4" />
+    <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="F0EAD6" />
+    <option name="ANSI_COLOR_0" value="0D0F1A" />
+    <option name="ANSI_COLOR_1" value="C85A5A" />
+    <option name="ANSI_COLOR_2" value="6BAF8A" />
+    <option name="ANSI_COLOR_3" value="C4983A" />
+    <option name="ANSI_COLOR_4" value="6B64A8" />
+    <option name="ANSI_COLOR_5" value="A870BC" />
+    <option name="ANSI_COLOR_6" value="4A9CA8" />
+    <option name="ANSI_COLOR_7" value="B8AFCC" />
+    <option name="ANSI_COLOR_8" value="2A2D3E" />
+    <option name="ANSI_COLOR_9" value="E87070" />
+    <option name="ANSI_COLOR_10" value="7EC99A" />
+    <option name="ANSI_COLOR_11" value="E8B86D" />
+    <option name="ANSI_COLOR_12" value="8B84C4" />
+    <option name="ANSI_COLOR_13" value="C490D1" />
+    <option name="ANSI_COLOR_14" value="5FB8C0" />
+    <option name="ANSI_COLOR_15" value="F0EAD6" />
+  </colors>
+
+  <attributes>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="F0EAD6" />
+        <option name="BACKGROUND" value="0D0F1A" />
+      </value>
+    </option>
+
+    <option name="KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="FF7F57" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+
+    <option name="STRING">
+      <value>
+        <option name="FOREGROUND" value="7EC99A" />
+      </value>
+    </option>
+
+    <option name="NUMBER">
+      <value>
+        <option name="FOREGROUND" value="E8B86D" />
+      </value>
+    </option>
+
+    <option name="COMMENT">
+      <value>
+        <option name="FOREGROUND" value="8B84C4" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+
+    <option name="LINE_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="8B84C4" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+
+    <option name="BLOCK_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="8B84C4" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+
+    <option name="CLASS_NAME_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="E8B86D" />
+      </value>
+    </option>
+
+    <option name="INTERFACE_NAME_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="E8B86D" />
+      </value>
+    </option>
+
+    <option name="METHOD_DECLARATION_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="E8B86D" />
+      </value>
+    </option>
+
+    <option name="FUNCTION_CALL_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="E8B86D" />
+      </value>
+    </option>
+
+    <option name="VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="F0EAD6" />
+      </value>
+    </option>
+
+    <option name="LOCAL_VARIABLE_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="F0EAD6" />
+      </value>
+    </option>
+
+    <option name="PARAMETER_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="F0EAD6" />
+      </value>
+    </option>
+
+    <option name="CONSTANT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="C490D1" />
+      </value>
+    </option>
+
+    <option name="INSTANCE_FIELD_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="E8B86D" />
+      </value>
+    </option>
+
+    <option name="STATIC_FIELD_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="C490D1" />
+      </value>
+    </option>
+
+    <option name="OPERATION_SIGN_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="8B84C4" />
+      </value>
+    </option>
+
+    <option name="BRACKETS_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="8B84C4" />
+      </value>
+    </option>
+
+    <option name="ERROR_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="E85D5D" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+
+    <option name="WARNING_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="C4983A" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+
+    <option name="TERMINAL_COMMAND_TO_RUN_USING_IDE_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="E8B86D" />
+      </value>
+    </option>
+  </attributes>
+</scheme>

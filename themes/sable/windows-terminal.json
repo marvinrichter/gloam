@@ -1,0 +1,23 @@
+{
+  "name": "Sable",
+  "background": "#080808",
+  "foreground": "#E8E8E8",
+  "cursorColor": "#D4AA6A",
+  "selectionBackground": "#181818",
+  "black": "#080808",
+  "red": "#804040",
+  "green": "#407840",
+  "yellow": "#886820",
+  "blue": "#384870",
+  "purple": "#704870",
+  "cyan": "#387878",
+  "white": "#C0C8D4",
+  "brightBlack": "#202020",
+  "brightRed": "#D44848",
+  "brightGreen": "#58A858",
+  "brightYellow": "#D4AA6A",
+  "brightBlue": "#7A8294",
+  "brightPurple": "#A868A8",
+  "brightCyan": "#60A8A8",
+  "brightWhite": "#E8E8E8"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Fjord",
+  "background": "#0A0F18",
+  "foreground": "#D4E0E8",
+  "cursorColor": "#E8C46A",
+  "selectionBackground": "#0E1828",
+  "black": "#0A0F18",
+  "red": "#B84040",
+  "green": "#4A9860",
+  "yellow": "#B09040",
+  "blue": "#3868A8",
+  "purple": "#8060A0",
+  "cyan": "#3A8898",
+  "white": "#788898",
+  "brightBlack": "#1E2A38",
+  "brightRed": "#E06060",
+  "brightGreen": "#60B878",
+  "brightYellow": "#E8C46A",
+  "brightBlue": "#6EB5E0",
+  "brightPurple": "#B090C8",
+  "brightCyan": "#60C0C8",
+  "brightWhite": "#D4E0E8"
+}

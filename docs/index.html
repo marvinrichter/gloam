@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gloam — twelve atmospheres</title>
+  <meta name="description" content="Twelve terminal and editor theme design systems. Each built from a single atmospheric concept.">
+  <meta property="og:title" content="gloam">
+  <meta property="og:description" content="Twelve atmospheres. Each one complete.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://marvinrichter.github.io/gloam/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="gloam">
+  <meta name="twitter:description" content="Twelve atmospheres. Each one complete.">
+  <meta name="twitter:image" content="https://marvinrichter.github.io/gloam/assets/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/tokens.css">
+  <style>
+    /* ── Reset ─────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+    body {
+      background: var(--color-surface);
+      color: var(--color-text-primary);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: var(--leading-normal);
+    }
+
+    /* ── Nav ────────────────────────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 3.5rem;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-wordmark {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 300;
+      font-variation-settings: 'opsz' 72;
+      letter-spacing: var(--tracking-tight);
+      color: var(--color-primary-500);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.8125rem;
+      color: var(--color-neutral-500);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover { color: var(--color-neutral-200); }
+
+    /* ── Header ─────────────────────────────────────────────────────── */
+    header {
+      padding: 7rem 2rem 5.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+    }
+
+    /* Horizon glow behind wordmark */
+    header::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 200px;
+      background: radial-gradient(ellipse at 50% 100%, color-mix(in srgb, var(--color-primary-500) 8%, transparent) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .wordmark {
+      display: block;
+      font-family: var(--font-display);
+      font-size: clamp(3.5rem, 10vw, 5.5rem);
+      font-weight: 300;
+      font-variation-settings: 'opsz' 144;
+      letter-spacing: var(--tracking-tight);
+      color: var(--color-primary-500);
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+
+    .wordmark-rule {
+      width: clamp(120px, 30vw, 240px);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-primary-500), transparent);
+      margin: 0 auto 2.25rem;
+      opacity: 0.5;
+    }
+
+    .tagline {
+      font-family: var(--font-display);
+      font-size: clamp(0.9375rem, 2vw, 1.125rem);
+      font-weight: 300;
+      font-style: italic;
+      font-variation-settings: 'opsz' 72;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.01em;
+    }
+
+    .header-meta {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-neutral-600);
+    }
+
+    .meta-item b {
+      color: var(--color-primary-400);
+      font-weight: 500;
+    }
+
+    /* ── Themes section ─────────────────────────────────────────────── */
+    .themes-section {
+      padding: 4.5rem 0;
+    }
+
+    .section-label {
+      font-size: 0.6875rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-neutral-600);
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: color-mix(in srgb, var(--color-primary-500) 8%, transparent);
+    }
+
+    /* ── Theme card ─────────────────────────────────────────────────── */
+    .card {
+      padding: 2rem 2rem 1.75rem;
+      position: relative;
+      transition: filter 0.2s ease;
+      overflow: hidden;
+      display: block;
+      text-decoration: none;
+    }
+
+    .card:hover {
+      filter: brightness(1.06);
+      z-index: 1;
+    }
+
+    .card--light:hover {
+      filter: brightness(0.96);
+    }
+
+    /* Subtle inner glow on hover matching the theme's accent */
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      background: radial-gradient(ellipse at 50% 100%, var(--card-accent-glow, transparent) 0%, transparent 65%);
+    }
+
+    .card:hover::after { opacity: 1; }
+
+    .card-terminal {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      white-space: pre;
+      overflow: hidden;
+    }
+
+    .card-name {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 300;
+      font-variation-settings: 'opsz' 72;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-desc {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      opacity: 0.65;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .token-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .card-tag {
+      margin-left: auto;
+      font-size: 0.625rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.4;
+      white-space: nowrap;
+    }
+
+    /* ── Install section ────────────────────────────────────────────── */
+    .install-section {
+      padding: 5rem 2rem 5rem;
+      border-top: 1px solid var(--color-border);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .install-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 300;
+      font-variation-settings: 'opsz' 72;
+      letter-spacing: var(--tracking-tight);
+      color: var(--color-neutral-100);
+      margin-bottom: 0.75rem;
+    }
+
+    .install-intro {
+      font-size: 0.9375rem;
+      color: var(--color-text-secondary);
+      line-height: 1.65;
+      margin-bottom: 3rem;
+    }
+
+    .install-block {
+      margin-bottom: 2rem;
+    }
+
+    .install-app {
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-primary-500);
+      margin-bottom: 0.625rem;
+    }
+
+    .install-note {
+      font-size: 0.875rem;
+      color: var(--color-neutral-500);
+      margin-bottom: 0.625rem;
+      line-height: 1.5;
+    }
+
+    pre {
+      background: var(--color-surface-raised);
+      border: 1px solid var(--color-border);
+      padding: 0.875rem 1.125rem;
+      border-radius: 2px;
+      overflow-x: auto;
+    }
+
+    pre code {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--color-neutral-300);
+      line-height: 1.7;
+    }
+
+    .comment { color: var(--color-neutral-700) !important; }
+
+    /* ── Design system section ──────────────────────────────────────── */
+    .design-section {
+      padding: 5rem 2rem;
+      border-top: 1px solid var(--color-border);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .design-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-weight: 300;
+      font-variation-settings: 'opsz' 72;
+      letter-spacing: var(--tracking-tight);
+      color: var(--color-neutral-100);
+      margin-bottom: 2.5rem;
+    }
+
+    .token-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    .token-table th {
+      text-align: left;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-neutral-600);
+      padding: 0 0 0.875rem;
+      font-weight: 400;
+    }
+
+    .token-table td {
+      padding: 0.625rem 0;
+      color: var(--color-neutral-300);
+      border-top: 1px solid color-mix(in srgb, var(--color-primary-500) 7%, transparent);
+      vertical-align: middle;
+    }
+
+    .token-table td:first-child { color: var(--color-primary-500); font-family: var(--font-mono); font-size: 0.8125rem; }
+    .token-table td:nth-child(2) { color: var(--color-neutral-500); font-size: 0.8125rem; }
+
+    .swatch-cell { display: flex; align-items: center; gap: 0.625rem; }
+    .swatch { width: 20px; height: 20px; border-radius: 3px; flex-shrink: 0; }
+
+    /* ── Footer ─────────────────────────────────────────────────────── */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 300;
+      font-style: italic;
+      font-variation-settings: 'opsz' 72;
+      color: var(--color-neutral-700);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      font-size: 0.8125rem;
+      color: var(--color-neutral-600);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover { color: var(--color-primary-400); }
+
+    /* ── Responsive ─────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .themes-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .themes-grid { grid-template-columns: 1fr; gap: 1px; }
+      header { padding: 4rem 1.5rem 3.5rem; }
+      .card { padding: 1.5rem; }
+      .card-terminal { font-size: 0.6875rem; }
+      nav { padding: 0 1.5rem; }
+      .nav-links { gap: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ──────────────────────────────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-wordmark">gloam</a>
+  <ul class="nav-links">
+    <li><a href="#themes">Themes</a></li>
+    <li><a href="#install">Install</a></li>
+    <li><a href="https://github.com/marvinrichter/gloam">GitHub</a></li>
+  </ul>
+</nav>
+
+<!-- ── Header ───────────────────────────────────────────────────────── -->
+<header>
+  <h1 class="wordmark">gloam</h1>
+  <div class="wordmark-rule"></div>
+  <p class="tagline">Twelve atmospheres. Each one complete.</p>
+  <div class="header-meta">
+    <span class="meta-item"><b>12</b> themes</span>
+    <span class="meta-item"><b>11</b> formats per theme</span>
+    <span class="meta-item">WCAG <b>AA</b> verified</span>
+  </div>
+</header>
+
+<!-- ── Themes ───────────────────────────────────────────────────────── -->
+<section class="themes-section" id="themes">
+  <h2 class="section-label">The collection</h2>
+  <div class="themes-grid">
+
+    <!-- Eventide ─────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/eventide/eventide.md" style="background:#0D0F1A;color:#F0EAD6;--card-accent-glow:rgba(232,184,109,0.06);">
+      <div class="card-terminal"><span style="color:#8B84C4">╭  user  </span><span style="color:#E8B86D">~/Work/clarc</span>  <span style="color:#FF7F57"> </span> <span style="color:#FF7F57">main ~2</span>  <span style="color:#8B84C4">────────────────</span>  <span style="color:#8B84C4">◆ 14:32</span>
+<span style="color:#8B84C4">╰─</span><span style="color:#FF7F57">❯</span></div>
+      <div class="card-name" style="color:#E8B86D">Eventide</div>
+      <div class="card-desc" style="color:#F0EAD6">The moment between day and night. Deep indigo sky, warm gold navigation, twilight lavender chrome.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#E8B86D"></div>
+        <div class="token-dot" style="background:#FF7F57"></div>
+        <div class="token-dot" style="background:#8B84C4"></div>
+        <div class="token-dot" style="background:#E85D5D"></div>
+        <span class="card-tag">two-line layout</span>
+      </div>
+    </a>
+
+    <!-- Aether ───────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/aether/aether.md" style="background:#0C0B1A;color:#D4D8F0;--card-accent-glow:rgba(94,232,184,0.05);">
+      <div class="card-terminal"><span style="color:#8886B0">╭  user  </span><span style="color:#5EE8B8">~/Work/clarc</span>  <span style="color:#C084FC">⟫</span>  <span style="color:#C084FC">main ~2</span>  <span style="color:#8886B0">················</span>  <span style="color:#8886B0">✦ 14:32</span>
+<span style="color:#8886B0">╰─</span><span style="color:#C084FC">⟫</span></div>
+      <div class="card-name" style="color:#5EE8B8">Aether</div>
+      <div class="card-desc" style="color:#D4D8F0">Deep space observatory. Running code at the edge of the universe. The void between galaxies.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#5EE8B8"></div>
+        <div class="token-dot" style="background:#C084FC"></div>
+        <div class="token-dot" style="background:#8886B0"></div>
+        <div class="token-dot" style="background:#FF6B6B"></div>
+        <span class="card-tag">two-line layout</span>
+      </div>
+    </a>
+
+    <!-- Ember ────────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/ember/ember.md" style="background:#111008;color:#F5EDD4;--card-accent-glow:rgba(255,171,64,0.06);">
+      <div class="card-terminal"><span style="color:#9E8E78">╭  user  </span><span style="color:#FFAB40">~/Work/clarc</span>  <span style="color:#FF6D00">❯</span>  <span style="color:#FF6D00">main ~2</span>  <span style="color:#9E8E78">················</span>  <span style="color:#9E8E78">◈ 14:32</span>
+<span style="color:#9E8E78">╰─</span><span style="color:#FF6D00">❯</span></div>
+      <div class="card-name" style="color:#FFAB40">Ember</div>
+      <div class="card-desc" style="color:#F5EDD4">The watch fire at 3am. The entire world is orange and black. Warm, like cooling coal.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#FFAB40"></div>
+        <div class="token-dot" style="background:#FF6D00"></div>
+        <div class="token-dot" style="background:#9E8E78"></div>
+        <div class="token-dot" style="background:#FF4040"></div>
+        <span class="card-tag">two-line layout</span>
+      </div>
+    </a>
+
+    <!-- Absinthe ─────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/absinthe/absinthe.md" style="background:#080D0A;color:#D8E8D4;--card-accent-glow:rgba(112,224,160,0.05);">
+      <div class="card-terminal"> <span style="color:#70E0A0">~/Work/clarc</span>   <span style="color:#E8C848">main ~2</span>  <span style="color:#7A8A7A">···························</span>  <span style="color:#7A8A7A">◇ 14:32</span>
+<span style="color:#E8C848">▸</span></div>
+      <div class="card-name" style="color:#70E0A0">Absinthe</div>
+      <div class="card-desc" style="color:#D8E8D4">La fée verte. Vintage chemistry lab, art nouveau, the forbidden liqueur glowing green in candlelight.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#70E0A0"></div>
+        <div class="token-dot" style="background:#E8C848"></div>
+        <div class="token-dot" style="background:#7A8A7A"></div>
+        <div class="token-dot" style="background:#E05858"></div>
+        <span class="card-tag">single-line layout</span>
+      </div>
+    </a>
+
+    <!-- Verdigris ────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/verdigris/verdigris.md" style="background:#0D1210;color:#D4E0D8;--card-accent-glow:rgba(82,196,168,0.05);">
+      <div class="card-terminal"><span style="color:#7A9490">╭  user  </span><span style="color:#52C4A8">~/Work/clarc</span>  <span style="color:#CD8B4A">›</span>  <span style="color:#CD8B4A">main ~2</span>  <span style="color:#7A9490">────────────────</span>  <span style="color:#7A9490">⌘ 14:32</span>
+<span style="color:#7A9490">╰─</span><span style="color:#CD8B4A">›</span></div>
+      <div class="card-name" style="color:#52C4A8">Verdigris</div>
+      <div class="card-desc" style="color:#D4E0D8">Ancient bronze turned sea-green by time and salt air. The color of old statues, copper rooftops.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#52C4A8"></div>
+        <div class="token-dot" style="background:#CD8B4A"></div>
+        <div class="token-dot" style="background:#7A9490"></div>
+        <div class="token-dot" style="background:#D46060"></div>
+        <span class="card-tag">two-line layout</span>
+      </div>
+    </a>
+
+    <!-- Sable ────────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/sable/sable.md" style="background:#080808;color:#E8E8E8;--card-accent-glow:rgba(192,200,212,0.04);">
+      <div class="card-terminal"> <span style="color:#C0C8D4">~/Work/clarc</span>   <span style="color:#D4AA6A">main ~2</span>                               <span style="color:#7A8294">· 14:32</span>
+<span style="color:#D4AA6A">›</span></div>
+      <div class="card-name" style="color:#C0C8D4">Sable</div>
+      <div class="card-desc" style="color:#E8E8E8">The heraldic color — black, pure and absolute. Silver and gold. The prompt exists because it must.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#C0C8D4"></div>
+        <div class="token-dot" style="background:#D4AA6A"></div>
+        <div class="token-dot" style="background:#7A8294"></div>
+        <div class="token-dot" style="background:#D44848"></div>
+        <span class="card-tag">single-line layout</span>
+      </div>
+    </a>
+
+    <!-- Fjord ────────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/fjord/fjord.md" style="background:#0A0F18;color:#D4E0E8;--card-accent-glow:rgba(110,181,224,0.05);">
+      <div class="card-terminal"><span style="color:#688EAA">╭  </span><span style="color:#6EB5E0">~/Work/clarc</span>   <span style="color:#E8C46A">main ~2</span>  <span style="color:#688EAA">················</span>  <span style="color:#688EAA">∼ 14:32</span>
+<span style="color:#688EAA">╰─</span><span style="color:#E8C46A">›</span></div>
+      <div class="card-name" style="color:#6EB5E0">Fjord</div>
+      <div class="card-desc" style="color:#D4E0E8">Norwegian fjord at dusk. Cold deep-blue water, perfectly still. A single amber light from a distant farmhouse.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#6EB5E0"></div>
+        <div class="token-dot" style="background:#E8C46A"></div>
+        <div class="token-dot" style="background:#688EAA"></div>
+        <div class="token-dot" style="background:#E06060"></div>
+        <span class="card-tag">two-line layout</span>
+      </div>
+    </a>
+
+    <!-- Umbra ────────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/umbra/umbra.md" style="background:#070708;color:#E4E8F0;--card-accent-glow:rgba(139,108,240,0.05);">
+      <div class="card-terminal"> <span style="color:#A0B4C8">~/Work/clarc</span>   <span style="color:#8B6CF0">main ~2</span>  <span style="color:#728090">·····················</span>  <span style="color:#728090">· 14:32</span>
+<span style="color:#8B6CF0">▹</span></div>
+      <div class="card-name" style="color:#A0B4C8">Umbra</div>
+      <div class="card-desc" style="color:#E4E8F0">The partial shadow at the edge of total darkness. Amethyst violet — the color of transition.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#A0B4C8"></div>
+        <div class="token-dot" style="background:#8B6CF0"></div>
+        <div class="token-dot" style="background:#728090"></div>
+        <div class="token-dot" style="background:#DC5858"></div>
+        <span class="card-tag">single-line layout</span>
+      </div>
+    </a>
+
+    <!-- Cordovan ─────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/cordovan/cordovan.md" style="background:#120A06;color:#EAE0D4;--card-accent-glow:rgba(196,154,106,0.06);">
+      <div class="card-terminal"><span style="color:#9A7D6A">╭  user  </span><span style="color:#C49A6A">~/Work/clarc</span>  <span style="color:#6B9AB8">❯</span>  <span style="color:#6B9AB8">main ~2</span>  <span style="color:#9A7D6A">────────────────</span>  <span style="color:#9A7D6A">⊕ 14:32</span>
+<span style="color:#9A7D6A">╰─</span><span style="color:#6B9AB8">❯</span></div>
+      <div class="card-name" style="color:#C49A6A">Cordovan</div>
+      <div class="card-desc" style="color:#EAE0D4">A cordovan leather workshop. Tan-caramel leather. Cold blue-steel buckles and clasps.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#C49A6A"></div>
+        <div class="token-dot" style="background:#6B9AB8"></div>
+        <div class="token-dot" style="background:#9A7D6A"></div>
+        <div class="token-dot" style="background:#D06060"></div>
+        <span class="card-tag">two-line layout</span>
+      </div>
+    </a>
+
+    <!-- Tungsten ─────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/tungsten/tungsten.md" style="background:#0E0C09;color:#F4EED8;--card-accent-glow:rgba(240,216,144,0.05);">
+      <div class="card-terminal"> <span style="color:#F0D890">~/Work/clarc</span>   <span style="color:#5A90C8">main ~2</span>  <span style="color:#887A60">····················</span>  <span style="color:#887A60">⋄ 14:32</span>
+<span style="color:#5A90C8">▸</span></div>
+      <div class="card-name" style="color:#F0D890">Tungsten</div>
+      <div class="card-desc" style="color:#F4EED8">Tungsten filament at operating temperature — past orange, almost white but holding onto gold.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#F0D890"></div>
+        <div class="token-dot" style="background:#5A90C8"></div>
+        <div class="token-dot" style="background:#887A60"></div>
+        <div class="token-dot" style="background:#E05858"></div>
+        <span class="card-tag">single-line layout</span>
+      </div>
+    </a>
+
+    <!-- Amethyst ─────────────────────────────────────────────────── -->
+    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/amethyst/amethyst.md" style="background:#0C0811;color:#EAD8F8;--card-accent-glow:rgba(192,132,240,0.05);">
+      <div class="card-terminal"><span style="color:#9080A8">╭  user  </span><span style="color:#C084F0">~/Work/clarc</span>  <span style="color:#E8B84A">⟫</span>  <span style="color:#E8B84A">main ~2</span>  <span style="color:#9080A8">················</span>  <span style="color:#9080A8">✧ 14:32</span>
+<span style="color:#9080A8">╰─</span><span style="color:#E8B84A">⟫</span></div>
+      <div class="card-name" style="color:#C084F0">Amethyst</div>
+      <div class="card-desc" style="color:#EAD8F8">Purple quartz crystal in a dark matrix. Rutile gold inclusions catching light from inside.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#C084F0"></div>
+        <div class="token-dot" style="background:#E8B84A"></div>
+        <div class="token-dot" style="background:#9080A8"></div>
+        <div class="token-dot" style="background:#E05858"></div>
+        <span class="card-tag">two-line layout</span>
+      </div>
+    </a>
+
+    <!-- Parchment ────────────────────────────────────────────────── -->
+    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/parchment/parchment.md" style="background:#EDE0C8;color:#2A1E12;--card-accent-glow:rgba(74,46,18,0.04);">
+      <div class="card-terminal" style="color:#6B5A48"> <span style="color:#4A2E12">~/Work/clarc</span>   <span style="color:#7A3A10">main ~2</span>  <span style="color:#6B5A48">···························</span>  <span style="color:#6B5A48">§ 14:32</span>
+<span style="color:#7A3A10">›</span></div>
+      <div class="card-name" style="color:#4A2E12">Parchment</div>
+      <div class="card-desc" style="color:#2A1E12">Aged vellum. The material monks copied manuscripts onto. Iron gall ink on warm cream.</div>
+      <div class="card-footer">
+        <div class="token-dot" style="background:#4A2E12"></div>
+        <div class="token-dot" style="background:#7A3A10"></div>
+        <div class="token-dot" style="background:#6B5A48"></div>
+        <div class="token-dot" style="background:#8B2020"></div>
+        <span class="card-tag" style="color:#2A1E12">single-line · light</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ── Install ───────────────────────────────────────────────────────── -->
+<section class="install-section" id="install">
+  <h2 class="install-heading">Install</h2>
+  <p class="install-intro">All eleven formats live in each theme directory, named after their target application.</p>
+
+  <div class="install-block">
+    <div class="install-app">Prerequisite</div>
+    <div class="install-note">JetBrains Mono Nerd Font — required for all Nerd Font glyphs.</div>
+    <pre><code>brew install --cask font-jetbrains-mono-nerd-font</code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">Starship</div>
+    <pre><code>cp themes/&lt;name&gt;/starship.toml ~/.config/starship.toml</code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">iTerm2</div>
+    <div class="install-note">Preferences › Profiles › Colors › Color Presets ▾ › Import…</div>
+    <pre><code>themes/&lt;name&gt;/iterm2.itermcolors</code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">Alacritty</div>
+    <pre><code>cp themes/&lt;name&gt;/alacritty.toml ~/.config/alacritty/themes/
+<span class="comment"># alacritty.toml → import = ["~/.config/alacritty/themes/alacritty.toml"]</span></code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">Kitty</div>
+    <pre><code>cp themes/&lt;name&gt;/kitty.conf ~/.config/kitty/
+<span class="comment"># kitty.conf → include kitty.conf</span></code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">WezTerm</div>
+    <pre><code>mkdir -p ~/.config/wezterm/colors
+cp themes/&lt;name&gt;/wezterm.lua ~/.config/wezterm/colors/
+<span class="comment"># wezterm.lua → config.color_scheme = "&lt;name&gt;"</span></code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">Ghostty</div>
+    <pre><code>mkdir -p ~/.config/ghostty/themes
+cp themes/&lt;name&gt;/ghostty ~/.config/ghostty/themes/&lt;name&gt;
+<span class="comment"># config → theme = &lt;name&gt;</span></code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">Windows Terminal</div>
+    <div class="install-note">Open <code style="font-family:var(--font-mono);font-size:0.8125rem;color:var(--color-neutral-300)">settings.json</code> (Ctrl+,  › Open JSON file). Add the contents of <code style="font-family:var(--font-mono);font-size:0.8125rem;color:var(--color-neutral-300)">windows-terminal.json</code> to the <code style="font-family:var(--font-mono);font-size:0.8125rem;color:var(--color-neutral-300)">"schemes"</code> array, then set the color scheme.</div>
+    <pre><code><span class="comment"># settings.json → "colorScheme": "&lt;Name&gt;"</span></code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">VS Code</div>
+    <div class="install-note">Place the theme file in a local extension's themes directory, then select via Ctrl+K Ctrl+T. The Color Theme from File extension can also load it directly.</div>
+    <pre><code>themes/&lt;name&gt;/vscode.json</code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">Neovim</div>
+    <pre><code>cp themes/&lt;name&gt;/neovim.lua ~/.config/nvim/colors/&lt;name&gt;.lua
+<span class="comment"># init.lua → vim.cmd("colorscheme &lt;name&gt;")</span></code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">IntelliJ / JetBrains IDEs</div>
+    <div class="install-note">Settings › Editor › Color Scheme › ⚙ › Import Scheme</div>
+    <pre><code>themes/&lt;name&gt;/intellij.icls</code></pre>
+  </div>
+
+  <div class="install-block">
+    <div class="install-app">Zed</div>
+    <pre><code>mkdir -p ~/.config/zed/themes
+cp themes/&lt;name&gt;/zed.json ~/.config/zed/themes/
+<span class="comment"># settings.json → "theme": "&lt;Name&gt;"</span></code></pre>
+  </div>
+</section>
+
+<!-- ── Design system ─────────────────────────────────────────────────── -->
+<section class="design-section">
+  <h2 class="design-heading">One source. Eleven formats.</h2>
+  <p style="color:var(--color-text-secondary);font-size:0.9375rem;line-height:1.65;margin-bottom:2.5rem;">
+    Every theme is a single <code style="font-family:var(--font-mono);font-size:0.875rem;color:var(--color-primary-400)">name.json</code> — the source of truth for its entire system. Eleven formats are derived from it, all living in the same directory as the source.
+  </p>
+
+  <table class="token-table">
+    <thead>
+      <tr>
+        <th>Token</th>
+        <th>Role</th>
+        <th style="padding-left:1rem">Eventide</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>primary</td>
+        <td>directory path, language badges</td>
+        <td style="padding-left:1rem"><div class="swatch-cell"><div class="swatch" style="background:#E8B86D"></div></div></td>
+      </tr>
+      <tr>
+        <td>accent</td>
+        <td>git branch, prompt character, cursor</td>
+        <td style="padding-left:1rem"><div class="swatch-cell"><div class="swatch" style="background:#FF7F57"></div></div></td>
+      </tr>
+      <tr>
+        <td>muted</td>
+        <td>username, time, structural chrome</td>
+        <td style="padding-left:1rem"><div class="swatch-cell"><div class="swatch" style="background:#8B84C4"></div></div></td>
+      </tr>
+      <tr>
+        <td>error</td>
+        <td>fail state only</td>
+        <td style="padding-left:1rem"><div class="swatch-cell"><div class="swatch" style="background:#E85D5D"></div></div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="color:var(--color-neutral-600);font-size:0.8125rem;margin-top:1.5rem;line-height:1.6;">
+    Four tokens. Consistent across all twelve themes. WCAG AA ≥ 4.5:1 on every background.
+  </p>
+</section>
+
+<!-- ── Footer ───────────────────────────────────────────────────────── -->
+<footer>
+  <p class="footer-tagline">Every token in every theme verified ≥ 4.5:1 against its background.</p>
+  <div class="footer-links">
+    <a href="https://github.com/marvinrichter/gloam">GitHub</a>
+    <a href="https://github.com/marvinrichter/gloam#readme">README</a>
+    <a href="brand-guidelines.md">Brand</a>
+  </div>
+</footer>
+
+</body>
+</html>

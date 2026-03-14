@@ -1,0 +1,47 @@
+{
+  "name": "cordovan",
+  "displayName": "Cordovan",
+  "type": "dark",
+  "background": "#120A06",
+  "foreground": "#EAE0D4",
+  "tokens": {
+    "primary": "#C49A6A",
+    "accent": "#6B9AB8",
+    "muted": "#9A7D6A",
+    "error": "#D06060"
+  },
+  "ansi": [
+    "#120A06",
+    "#A83030",
+    "#507840",
+    "#B08840",
+    "#386898",
+    "#7A5080",
+    "#3A7878",
+    "#887868",
+    "#281810",
+    "#D06060",
+    "#608858",
+    "#C49A6A",
+    "#6B9AB8",
+    "#9880A8",
+    "#508898",
+    "#EAE0D4"
+  ],
+  "ui": {
+    "cursor": "#6B9AB8",
+    "cursorText": "#120A06",
+    "selection": "#241408",
+    "selectionText": "#EAE0D4",
+    "bold": "#FAF0E4",
+    "link": "#6B9AB8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "─",
+    "timePrefix": "⊕",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

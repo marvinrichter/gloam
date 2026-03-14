@@ -1,0 +1,37 @@
+# parchment — Alacritty color theme
+# Generated from parchment.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/parchment.toml
+# then add `import = ["~/.config/alacritty/themes/parchment.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#EDE0C8"
+foreground = "#2A1E12"
+
+[colors.cursor]
+cursor = "#7A3A10"
+text   = "#EDE0C8"
+
+[colors.selection]
+background = "#D8C8A8"
+text       = "#2A1E12"
+
+[colors.normal]
+black   = "#1A0E08"
+red     = "#7A2020"
+green   = "#285820"
+yellow  = "#785A10"
+blue    = "#28407A"
+magenta = "#58285A"
+cyan    = "#1A5050"
+white   = "#C0A888"
+
+[colors.bright]
+black   = "#4A3828"
+red     = "#9A3030"
+green   = "#387830"
+yellow  = "#7A3A10"
+blue    = "#6B5A48"
+magenta = "#784890"
+cyan    = "#287878"
+white   = "#F0E8D8"

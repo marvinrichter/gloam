@@ -1,0 +1,23 @@
+{
+  "name": "Umbra",
+  "background": "#070708",
+  "foreground": "#E4E8F0",
+  "cursorColor": "#8B6CF0",
+  "selectionBackground": "#121420",
+  "black": "#070708",
+  "red": "#9A3838",
+  "green": "#487850",
+  "yellow": "#907840",
+  "blue": "#3858A0",
+  "purple": "#7858A8",
+  "cyan": "#387880",
+  "white": "#707880",
+  "brightBlack": "#1A1C20",
+  "brightRed": "#DC5858",
+  "brightGreen": "#607870",
+  "brightYellow": "#A09060",
+  "brightBlue": "#728090",
+  "brightPurple": "#8B6CF0",
+  "brightCyan": "#507878",
+  "brightWhite": "#E4E8F0"
+}

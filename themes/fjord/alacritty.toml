@@ -1,0 +1,37 @@
+# fjord — Alacritty color theme
+# Generated from fjord.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/fjord.toml
+# then add `import = ["~/.config/alacritty/themes/fjord.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0A0F18"
+foreground = "#D4E0E8"
+
+[colors.cursor]
+cursor = "#E8C46A"
+text   = "#0A0F18"
+
+[colors.selection]
+background = "#0E1828"
+text       = "#D4E0E8"
+
+[colors.normal]
+black   = "#0A0F18"
+red     = "#B84040"
+green   = "#4A9860"
+yellow  = "#B09040"
+blue    = "#3868A8"
+magenta = "#8060A0"
+cyan    = "#3A8898"
+white   = "#788898"
+
+[colors.bright]
+black   = "#1E2A38"
+red     = "#E06060"
+green   = "#60B878"
+yellow  = "#E8C46A"
+blue    = "#6EB5E0"
+magenta = "#B090C8"
+cyan    = "#60C0C8"
+white   = "#D4E0E8"

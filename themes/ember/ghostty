@@ -1,0 +1,32 @@
+# ember — Ghostty color theme
+# Generated from ember.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/ember
+# then set theme = ember in ~/.config/ghostty/config
+
+background         = 111008
+foreground         = F5EDD4
+
+cursor-color       = FF6D00
+cursor-text        = 111008
+
+selection-background = 201C10
+selection-foreground = F5EDD4
+
+# ANSI palette (0–15)
+palette = 0=111008
+palette = 1=8B2828
+palette = 2=4A7840
+palette = 3=C87C28
+palette = 4=384868
+palette = 5=784868
+palette = 6=386068
+palette = 7=A89880
+palette = 8=282418
+palette = 9=FF4040
+palette = 10=68A858
+palette = 11=FFAB40
+palette = 12=9E8E78
+palette = 13=E87868
+palette = 14=88A888
+palette = 15=F5EDD4

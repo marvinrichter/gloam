@@ -1,0 +1,32 @@
+# verdigris — Ghostty color theme
+# Generated from verdigris.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/verdigris
+# then set theme = verdigris in ~/.config/ghostty/config
+
+background         = 0D1210
+foreground         = D4E0D8
+
+cursor-color       = CD8B4A
+cursor-text        = 0D1210
+
+selection-background = 182420
+selection-foreground = D4E0D8
+
+# ANSI palette (0–15)
+palette = 0=0D1210
+palette = 1=884448
+palette = 2=408068
+palette = 3=887840
+palette = 4=386068
+palette = 5=785868
+palette = 6=3A7870
+palette = 7=789488
+palette = 8=1A2820
+palette = 9=D46060
+palette = 10=52C4A8
+palette = 11=CD8B4A
+palette = 12=7A9490
+palette = 13=A87888
+palette = 14=60B8A8
+palette = 15=D4E0D8

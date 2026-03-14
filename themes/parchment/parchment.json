@@ -1,0 +1,47 @@
+{
+  "name": "parchment",
+  "displayName": "Parchment",
+  "type": "light",
+  "background": "#EDE0C8",
+  "foreground": "#2A1E12",
+  "tokens": {
+    "primary": "#4A2E12",
+    "accent": "#7A3A10",
+    "muted": "#6B5A48",
+    "error": "#8B2020"
+  },
+  "ansi": [
+    "#1A0E08",
+    "#7A2020",
+    "#285820",
+    "#785A10",
+    "#28407A",
+    "#58285A",
+    "#1A5050",
+    "#C0A888",
+    "#4A3828",
+    "#9A3030",
+    "#387830",
+    "#7A3A10",
+    "#6B5A48",
+    "#784890",
+    "#287878",
+    "#F0E8D8"
+  ],
+  "ui": {
+    "cursor": "#7A3A10",
+    "cursorText": "#EDE0C8",
+    "selection": "#D8C8A8",
+    "selectionText": "#2A1E12",
+    "bold": "#1A0E08",
+    "link": "#28407A"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "·",
+    "timePrefix": "§",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

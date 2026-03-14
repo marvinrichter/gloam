@@ -1,0 +1,32 @@
+# tungsten — Ghostty color theme
+# Generated from tungsten.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/tungsten
+# then set theme = tungsten in ~/.config/ghostty/config
+
+background         = 0E0C09
+foreground         = F4EED8
+
+cursor-color       = 5A90C8
+cursor-text        = 0E0C09
+
+selection-background = 1C1810
+selection-foreground = F4EED8
+
+# ANSI palette (0–15)
+palette = 0=0E0C09
+palette = 1=B03838
+palette = 2=508048
+palette = 3=C0A840
+palette = 4=4068A8
+palette = 5=8050A8
+palette = 6=308898
+palette = 7=907868
+palette = 8=1E1A14
+palette = 9=E05858
+palette = 10=68A860
+palette = 11=F0D890
+palette = 12=5A90C8
+palette = 13=A078C8
+palette = 14=50A0B0
+palette = 15=F4EED8

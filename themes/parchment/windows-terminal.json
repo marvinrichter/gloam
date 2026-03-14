@@ -1,0 +1,23 @@
+{
+  "name": "Parchment",
+  "background": "#EDE0C8",
+  "foreground": "#2A1E12",
+  "cursorColor": "#7A3A10",
+  "selectionBackground": "#D8C8A8",
+  "black": "#1A0E08",
+  "red": "#7A2020",
+  "green": "#285820",
+  "yellow": "#785A10",
+  "blue": "#28407A",
+  "purple": "#58285A",
+  "cyan": "#1A5050",
+  "white": "#C0A888",
+  "brightBlack": "#4A3828",
+  "brightRed": "#9A3030",
+  "brightGreen": "#387830",
+  "brightYellow": "#7A3A10",
+  "brightBlue": "#6B5A48",
+  "brightPurple": "#784890",
+  "brightCyan": "#287878",
+  "brightWhite": "#F0E8D8"
+}

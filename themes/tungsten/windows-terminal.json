@@ -1,0 +1,23 @@
+{
+  "name": "Tungsten",
+  "background": "#0E0C09",
+  "foreground": "#F4EED8",
+  "cursorColor": "#5A90C8",
+  "selectionBackground": "#1C1810",
+  "black": "#0E0C09",
+  "red": "#B03838",
+  "green": "#508048",
+  "yellow": "#C0A840",
+  "blue": "#4068A8",
+  "purple": "#8050A8",
+  "cyan": "#308898",
+  "white": "#907868",
+  "brightBlack": "#1E1A14",
+  "brightRed": "#E05858",
+  "brightGreen": "#68A860",
+  "brightYellow": "#F0D890",
+  "brightBlue": "#5A90C8",
+  "brightPurple": "#A078C8",
+  "brightCyan": "#50A0B0",
+  "brightWhite": "#F4EED8"
+}

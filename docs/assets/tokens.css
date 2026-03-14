@@ -1,0 +1,96 @@
+/**
+ * gloam — design tokens
+ * Brand: still · precise · poetic
+ */
+
+:root {
+
+  /* ── Primary: Dusk Amber ────────────────────────────────────────── */
+  --color-primary-50:  hsl(30, 42%, 96%);   /* #FAF3EC */
+  --color-primary-100: hsl(30, 40%, 92%);   /* #F5EAE0 */
+  --color-primary-200: hsl(29, 44%, 82%);   /* #EAD0B8 */
+  --color-primary-300: hsl(30, 44%, 68%);   /* #D9B088 */
+  --color-primary-400: hsl(30, 48%, 60%);   /* #D09A68 */
+  --color-primary-500: hsl(30, 50%, 53%);   /* #C4894A  ← brand color */
+  --color-primary-600: hsl(29, 52%, 44%);   /* #A97038 */
+  --color-primary-700: hsl(28, 54%, 35%);   /* #8B5A28  ← text on light */
+  --color-primary-800: hsl(27, 56%, 24%);   /* #5E3A18 */
+  --color-primary-900: hsl(26, 58%, 16%);   /* #3E250F */
+  --color-primary-950: hsl(25, 60%,  9%);   /* #231407 */
+
+  /* ── Neutral: Warm Gray ─────────────────────────────────────────── */
+  --color-neutral-50:  hsl(30,  8%, 97%);   /* #F8F6F4 */
+  --color-neutral-100: hsl(30,  7%, 93%);   /* #EEECEA */
+  --color-neutral-200: hsl(30,  6%, 86%);   /* #DDD9D6 */
+  --color-neutral-300: hsl(30,  5%, 74%);   /* #BDB9B6 */
+  --color-neutral-400: hsl(30,  5%, 60%);   /* #9A9693 */
+  --color-neutral-500: hsl(30,  5%, 46%);   /* #787470 */
+  --color-neutral-600: hsl(30,  6%, 34%);   /* #585350 */
+  --color-neutral-700: hsl(30,  7%, 24%);   /* #3E3A37 */
+  --color-neutral-800: hsl(30,  7%, 16%);   /* #2A2724 */
+  --color-neutral-900: hsl(30,  8%, 10%);   /* #1A1816 */
+  --color-neutral-950: hsl(30,  8%,  6%);   /* #0F0E0C */
+
+  /* ── Semantic ───────────────────────────────────────────────────── */
+  --color-success: hsl(148, 38%, 42%);      /* #3E9463 */
+  --color-warning: hsl( 38, 72%, 52%);      /* #DBA030 */
+  --color-error:   hsl(  4, 58%, 52%);      /* #CC3B2E */
+  --color-info:    hsl(205, 44%, 48%);      /* #4589B0 */
+
+  /* ── Typography ─────────────────────────────────────────────────── */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono NF', 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+
+  --leading-tight:   1.1;
+  --leading-snug:    1.25;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.06em;
+
+  /* ── Spacing ────────────────────────────────────────────────────── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-28: 7rem;
+
+  /* ── Surface (dark default) ─────────────────────────────────────── */
+  --color-surface:          var(--color-neutral-950);
+  --color-surface-raised:   var(--color-neutral-900);
+  --color-surface-overlay:  var(--color-neutral-800);
+  --color-text-primary:     var(--color-neutral-100);
+  --color-text-secondary:   var(--color-neutral-400);
+  --color-text-brand:       var(--color-primary-400);
+  --color-border:           rgba(196, 137, 74, 0.14);
+}
+
+/* ── Light mode override ──────────────────────────────────────────── */
+[data-theme="light"] {
+  --color-surface:          var(--color-neutral-50);
+  --color-surface-raised:   var(--color-neutral-100);
+  --color-surface-overlay:  var(--color-neutral-200);
+  --color-text-primary:     var(--color-neutral-900);
+  --color-text-secondary:   var(--color-neutral-500);
+  --color-text-brand:       var(--color-primary-700);
+  --color-border:           var(--color-neutral-200);
+}

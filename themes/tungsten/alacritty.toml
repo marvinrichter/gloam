@@ -1,0 +1,37 @@
+# tungsten — Alacritty color theme
+# Generated from tungsten.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/tungsten.toml
+# then add `import = ["~/.config/alacritty/themes/tungsten.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0E0C09"
+foreground = "#F4EED8"
+
+[colors.cursor]
+cursor = "#5A90C8"
+text   = "#0E0C09"
+
+[colors.selection]
+background = "#1C1810"
+text       = "#F4EED8"
+
+[colors.normal]
+black   = "#0E0C09"
+red     = "#B03838"
+green   = "#508048"
+yellow  = "#C0A840"
+blue    = "#4068A8"
+magenta = "#8050A8"
+cyan    = "#308898"
+white   = "#907868"
+
+[colors.bright]
+black   = "#1E1A14"
+red     = "#E05858"
+green   = "#68A860"
+yellow  = "#F0D890"
+blue    = "#5A90C8"
+magenta = "#A078C8"
+cyan    = "#50A0B0"
+white   = "#F4EED8"

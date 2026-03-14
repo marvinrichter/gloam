@@ -1,0 +1,47 @@
+{
+  "name": "tungsten",
+  "displayName": "Tungsten",
+  "type": "dark",
+  "background": "#0E0C09",
+  "foreground": "#F4EED8",
+  "tokens": {
+    "primary": "#F0D890",
+    "accent": "#5A90C8",
+    "muted": "#887A60",
+    "error": "#E05858"
+  },
+  "ansi": [
+    "#0E0C09",
+    "#B03838",
+    "#508048",
+    "#C0A840",
+    "#4068A8",
+    "#8050A8",
+    "#308898",
+    "#907868",
+    "#1E1A14",
+    "#E05858",
+    "#68A860",
+    "#F0D890",
+    "#5A90C8",
+    "#A078C8",
+    "#50A0B0",
+    "#F4EED8"
+  ],
+  "ui": {
+    "cursor": "#5A90C8",
+    "cursorText": "#0E0C09",
+    "selection": "#1C1810",
+    "selectionText": "#F4EED8",
+    "bold": "#FFFDF4",
+    "link": "#5A90C8"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "·",
+    "timePrefix": "⋄",
+    "successSymbol": "▸",
+    "vimSymbol": "◂"
+  }
+}

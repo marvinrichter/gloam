@@ -1,0 +1,37 @@
+# sable — Alacritty color theme
+# Generated from sable.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/sable.toml
+# then add `import = ["~/.config/alacritty/themes/sable.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#080808"
+foreground = "#E8E8E8"
+
+[colors.cursor]
+cursor = "#D4AA6A"
+text   = "#080808"
+
+[colors.selection]
+background = "#181818"
+text       = "#E8E8E8"
+
+[colors.normal]
+black   = "#080808"
+red     = "#804040"
+green   = "#407840"
+yellow  = "#886820"
+blue    = "#384870"
+magenta = "#704870"
+cyan    = "#387878"
+white   = "#C0C8D4"
+
+[colors.bright]
+black   = "#202020"
+red     = "#D44848"
+green   = "#58A858"
+yellow  = "#D4AA6A"
+blue    = "#7A8294"
+magenta = "#A868A8"
+cyan    = "#60A8A8"
+white   = "#E8E8E8"

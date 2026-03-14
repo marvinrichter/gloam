@@ -1,0 +1,23 @@
+{
+  "name": "Amethyst",
+  "background": "#0C0811",
+  "foreground": "#EAD8F8",
+  "cursorColor": "#E8B84A",
+  "selectionBackground": "#180E28",
+  "black": "#0C0811",
+  "red": "#B04040",
+  "green": "#508058",
+  "yellow": "#C09840",
+  "blue": "#5068B0",
+  "purple": "#9060B0",
+  "cyan": "#4080A8",
+  "white": "#8870A0",
+  "brightBlack": "#201428",
+  "brightRed": "#E05858",
+  "brightGreen": "#68A870",
+  "brightYellow": "#E8B84A",
+  "brightBlue": "#9080A8",
+  "brightPurple": "#C084F0",
+  "brightCyan": "#60A8C0",
+  "brightWhite": "#EAD8F8"
+}

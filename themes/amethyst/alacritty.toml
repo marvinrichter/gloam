@@ -1,0 +1,37 @@
+# amethyst — Alacritty color theme
+# Generated from amethyst.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/amethyst.toml
+# then add `import = ["~/.config/alacritty/themes/amethyst.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0C0811"
+foreground = "#EAD8F8"
+
+[colors.cursor]
+cursor = "#E8B84A"
+text   = "#0C0811"
+
+[colors.selection]
+background = "#180E28"
+text       = "#EAD8F8"
+
+[colors.normal]
+black   = "#0C0811"
+red     = "#B04040"
+green   = "#508058"
+yellow  = "#C09840"
+blue    = "#5068B0"
+magenta = "#9060B0"
+cyan    = "#4080A8"
+white   = "#8870A0"
+
+[colors.bright]
+black   = "#201428"
+red     = "#E05858"
+green   = "#68A870"
+yellow  = "#E8B84A"
+blue    = "#9080A8"
+magenta = "#C084F0"
+cyan    = "#60A8C0"
+white   = "#EAD8F8"

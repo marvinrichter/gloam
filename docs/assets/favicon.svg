@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- gloam mark: horizon line with sun half-set -->
+  <rect width="32" height="32" rx="4" fill="#0F0E0C"/>
+  <!-- sun arc below horizon -->
+  <path d="M 10 17 A 6 6 0 0 0 22 17" fill="none" stroke="#C4894A" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- horizon -->
+  <line x1="5" y1="17" x2="27" y2="17" stroke="#C4894A" stroke-width="1" opacity="0.5"/>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "name": "Ember",
+  "background": "#111008",
+  "foreground": "#F5EDD4",
+  "cursorColor": "#FF6D00",
+  "selectionBackground": "#201C10",
+  "black": "#111008",
+  "red": "#8B2828",
+  "green": "#4A7840",
+  "yellow": "#C87C28",
+  "blue": "#384868",
+  "purple": "#784868",
+  "cyan": "#386068",
+  "white": "#A89880",
+  "brightBlack": "#282418",
+  "brightRed": "#FF4040",
+  "brightGreen": "#68A858",
+  "brightYellow": "#FFAB40",
+  "brightBlue": "#9E8E78",
+  "brightPurple": "#E87868",
+  "brightCyan": "#88A888",
+  "brightWhite": "#F5EDD4"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Aether",
+  "background": "#0C0B1A",
+  "foreground": "#D4D8F0",
+  "cursorColor": "#C084FC",
+  "selectionBackground": "#1C1B3A",
+  "black": "#0C0B1A",
+  "red": "#9B4F6C",
+  "green": "#4AC88A",
+  "yellow": "#A8B870",
+  "blue": "#6B5ED8",
+  "purple": "#B060C8",
+  "cyan": "#48A8CC",
+  "white": "#9098C0",
+  "brightBlack": "#252448",
+  "brightRed": "#E87090",
+  "brightGreen": "#5EE8B8",
+  "brightYellow": "#9EE878",
+  "brightBlue": "#8886B0",
+  "brightPurple": "#C084FC",
+  "brightCyan": "#58C8E8",
+  "brightWhite": "#D4D8F0"
+}

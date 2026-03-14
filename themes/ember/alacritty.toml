@@ -1,0 +1,37 @@
+# ember — Alacritty color theme
+# Generated from ember.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/ember.toml
+# then add `import = ["~/.config/alacritty/themes/ember.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#111008"
+foreground = "#F5EDD4"
+
+[colors.cursor]
+cursor = "#FF6D00"
+text   = "#111008"
+
+[colors.selection]
+background = "#201C10"
+text       = "#F5EDD4"
+
+[colors.normal]
+black   = "#111008"
+red     = "#8B2828"
+green   = "#4A7840"
+yellow  = "#C87C28"
+blue    = "#384868"
+magenta = "#784868"
+cyan    = "#386068"
+white   = "#A89880"
+
+[colors.bright]
+black   = "#282418"
+red     = "#FF4040"
+green   = "#68A858"
+yellow  = "#FFAB40"
+blue    = "#9E8E78"
+magenta = "#E87868"
+cyan    = "#88A888"
+white   = "#F5EDD4"

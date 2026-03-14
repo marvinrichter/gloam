@@ -1,0 +1,37 @@
+# umbra — Alacritty color theme
+# Generated from umbra.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/umbra.toml
+# then add `import = ["~/.config/alacritty/themes/umbra.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#070708"
+foreground = "#E4E8F0"
+
+[colors.cursor]
+cursor = "#8B6CF0"
+text   = "#070708"
+
+[colors.selection]
+background = "#121420"
+text       = "#E4E8F0"
+
+[colors.normal]
+black   = "#070708"
+red     = "#9A3838"
+green   = "#487850"
+yellow  = "#907840"
+blue    = "#3858A0"
+magenta = "#7858A8"
+cyan    = "#387880"
+white   = "#707880"
+
+[colors.bright]
+black   = "#1A1C20"
+red     = "#DC5858"
+green   = "#607870"
+yellow  = "#A09060"
+blue    = "#728090"
+magenta = "#8B6CF0"
+cyan    = "#507878"
+white   = "#E4E8F0"

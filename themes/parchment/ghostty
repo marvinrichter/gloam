@@ -1,0 +1,32 @@
+# parchment — Ghostty color theme
+# Generated from parchment.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/parchment
+# then set theme = parchment in ~/.config/ghostty/config
+
+background         = EDE0C8
+foreground         = 2A1E12
+
+cursor-color       = 7A3A10
+cursor-text        = EDE0C8
+
+selection-background = D8C8A8
+selection-foreground = 2A1E12
+
+# ANSI palette (0–15)
+palette = 0=1A0E08
+palette = 1=7A2020
+palette = 2=285820
+palette = 3=785A10
+palette = 4=28407A
+palette = 5=58285A
+palette = 6=1A5050
+palette = 7=C0A888
+palette = 8=4A3828
+palette = 9=9A3030
+palette = 10=387830
+palette = 11=7A3A10
+palette = 12=6B5A48
+palette = 13=784890
+palette = 14=287878
+palette = 15=F0E8D8

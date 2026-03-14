@@ -1,0 +1,32 @@
+# eventide — Ghostty color theme
+# Generated from eventide.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/eventide
+# then set theme = eventide in ~/.config/ghostty/config
+
+background         = 0D0F1A
+foreground         = F0EAD6
+
+cursor-color       = FF7F57
+cursor-text        = 0D0F1A
+
+selection-background = 1E2040
+selection-foreground = F0EAD6
+
+# ANSI palette (0–15)
+palette = 0=0D0F1A
+palette = 1=C85A5A
+palette = 2=6BAF8A
+palette = 3=C4983A
+palette = 4=6B64A8
+palette = 5=A870BC
+palette = 6=4A9CA8
+palette = 7=B8AFCC
+palette = 8=2A2D3E
+palette = 9=E87070
+palette = 10=7EC99A
+palette = 11=E8B86D
+palette = 12=8B84C4
+palette = 13=C490D1
+palette = 14=5FB8C0
+palette = 15=F0EAD6

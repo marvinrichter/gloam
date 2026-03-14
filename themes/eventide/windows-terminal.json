@@ -1,0 +1,23 @@
+{
+  "name": "Eventide",
+  "background": "#0D0F1A",
+  "foreground": "#F0EAD6",
+  "cursorColor": "#FF7F57",
+  "selectionBackground": "#1E2040",
+  "black": "#0D0F1A",
+  "red": "#C85A5A",
+  "green": "#6BAF8A",
+  "yellow": "#C4983A",
+  "blue": "#6B64A8",
+  "purple": "#A870BC",
+  "cyan": "#4A9CA8",
+  "white": "#B8AFCC",
+  "brightBlack": "#2A2D3E",
+  "brightRed": "#E87070",
+  "brightGreen": "#7EC99A",
+  "brightYellow": "#E8B86D",
+  "brightBlue": "#8B84C4",
+  "brightPurple": "#C490D1",
+  "brightCyan": "#5FB8C0",
+  "brightWhite": "#F0EAD6"
+}

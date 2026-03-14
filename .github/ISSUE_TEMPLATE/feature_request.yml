@@ -1,0 +1,50 @@
+name: Feature Request
+description: Propose a new theme, a new target format, or an improvement to an existing theme
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of request is this?
+      options:
+        - New theme
+        - New target format (terminal / editor)
+        - Change to an existing theme
+        - Generator / tooling improvement
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is missing or not working well?
+      description: Describe the gap. For a new theme, describe the atmospheric concept. For a new format, describe the application and how many people use it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: |
+        For a new theme: describe the concept, the 4 tokens (primary, accent, muted, error) with hex values, and why it occupies distinct territory from the existing twelve.
+        For a new format: link to the application's color scheme documentation.
+        For other requests: describe the change.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you consider?
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Are you willing to contribute this?
+      options:
+        - label: "I'd like to submit a PR for this"

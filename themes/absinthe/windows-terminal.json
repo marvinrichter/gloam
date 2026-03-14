@@ -1,0 +1,23 @@
+{
+  "name": "Absinthe",
+  "background": "#080D0A",
+  "foreground": "#D8E8D4",
+  "cursorColor": "#E8C848",
+  "selectionBackground": "#101810",
+  "black": "#080D0A",
+  "red": "#885848",
+  "green": "#50986A",
+  "yellow": "#A89040",
+  "blue": "#384858",
+  "purple": "#786888",
+  "cyan": "#388070",
+  "white": "#889878",
+  "brightBlack": "#182018",
+  "brightRed": "#E05858",
+  "brightGreen": "#70E0A0",
+  "brightYellow": "#E8C848",
+  "brightBlue": "#7A8A7A",
+  "brightPurple": "#B898A8",
+  "brightCyan": "#68C8A8",
+  "brightWhite": "#D8E8D4"
+}

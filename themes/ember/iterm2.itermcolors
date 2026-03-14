@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<!--
+  Ember — iTerm2 color theme
+  Generated from ember.json — do not edit by hand
+
+  Install: Preferences › Profiles › Colors › Color Presets ▾ › Import…
+  then select "Ember" from the preset list
+-->
+
+<dict>
+
+	<!-- ── ANSI Normal ──────────────────────────────────────────────────────── -->
+
+	<key>Ansi 0 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.03137</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.06275</real>
+		<key>Red Component</key>
+		<real>0.06667</real>
+	</dict>
+
+	<key>Ansi 1 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.15686</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.15686</real>
+		<key>Red Component</key>
+		<real>0.54510</real>
+	</dict>
+
+	<key>Ansi 2 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.25098</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.47059</real>
+		<key>Red Component</key>
+		<real>0.29020</real>
+	</dict>
+
+	<key>Ansi 3 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.15686</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.48627</real>
+		<key>Red Component</key>
+		<real>0.78431</real>
+	</dict>
+
+	<key>Ansi 4 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.40784</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.28235</real>
+		<key>Red Component</key>
+		<real>0.21961</real>
+	</dict>
+
+	<key>Ansi 5 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.40784</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.28235</real>
+		<key>Red Component</key>
+		<real>0.47059</real>
+	</dict>
+
+	<key>Ansi 6 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.40784</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.37647</real>
+		<key>Red Component</key>
+		<real>0.21961</real>
+	</dict>
+
+	<key>Ansi 7 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.50196</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.59608</real>
+		<key>Red Component</key>
+		<real>0.65882</real>
+	</dict>
+
+	<!-- ── ANSI Bright ──────────────────────────────────────────────────────── -->
+
+	<key>Ansi 8 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.09412</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.14118</real>
+		<key>Red Component</key>
+		<real>0.15686</real>
+	</dict>
+
+	<key>Ansi 9 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.25098</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.25098</real>
+		<key>Red Component</key>
+		<real>1.00000</real>
+	</dict>
+
+	<key>Ansi 10 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.34510</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.65882</real>
+		<key>Red Component</key>
+		<real>0.40784</real>
+	</dict>
+
+	<key>Ansi 11 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.25098</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.67059</real>
+		<key>Red Component</key>
+		<real>1.00000</real>
+	</dict>
+
+	<key>Ansi 12 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.47059</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.55686</real>
+		<key>Red Component</key>
+		<real>0.61961</real>
+	</dict>
+
+	<key>Ansi 13 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.40784</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.47059</real>
+		<key>Red Component</key>
+		<real>0.90980</real>
+	</dict>
+
+	<key>Ansi 14 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.53333</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.65882</real>
+		<key>Red Component</key>
+		<real>0.53333</real>
+	</dict>
+
+	<key>Ansi 15 Color</key>
+	<dict>
+		<key>Blue Component</key>
+		<real>0.83137</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.92941</real>
+		<key>Red Component</key>
+		<real>0.96078</real>
+	</dict>
+
+	<!-- ── UI Colors ────────────────────────────────────────────────────────── -->
+
+	<key>Background Color</key>
+	<!-- #111008 -->
+	<dict>
+		<key>Blue Component</key>
+		<real>0.03137</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.06275</real>
+		<key>Red Component</key>
+		<real>0.06667</real>
+	</dict>
+
+	<key>Foreground Color</key>
+	<!-- #F5EDD4 -->
+	<dict>
+		<key>Blue Component</key>
+		<real>0.83137</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.92941</real>
+		<key>Red Component</key>
+		<real>0.96078</real>
+	</dict>
+
+	<key>Bold Color</key>
+	<!-- same as foreground — weight carries bold, not hue -->
+	<dict>
+		<key>Blue Component</key>
+		<real>0.83137</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.92941</real>
+		<key>Red Component</key>
+		<real>0.96078</real>
+	</dict>
+
+	<key>Cursor Color</key>
+	<!-- #FF6D00 — accent color, stands out immediately -->
+	<dict>
+		<key>Blue Component</key>
+		<real>0.00000</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.42745</real>
+		<key>Red Component</key>
+		<real>1.00000</real>
+	</dict>
+
+	<key>Cursor Text Color</key>
+	<!-- dark bg inside cursor block for contrast -->
+	<dict>
+		<key>Blue Component</key>
+		<real>0.03137</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.06275</real>
+		<key>Red Component</key>
+		<real>0.06667</real>
+	</dict>
+
+	<key>Link Color</key>
+	<!-- #FFAB40 -->
+	<dict>
+		<key>Blue Component</key>
+		<real>0.25098</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.67059</real>
+		<key>Red Component</key>
+		<real>1.00000</real>
+	</dict>
+
+	<key>Selected Text Color</key>
+	<!-- keep foreground color on selection -->
+	<dict>
+		<key>Blue Component</key>
+		<real>0.83137</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.92941</real>
+		<key>Red Component</key>
+		<real>0.96078</real>
+	</dict>
+
+	<key>Selection Color</key>
+	<!-- #201C10 — visible but not jarring -->
+	<dict>
+		<key>Blue Component</key>
+		<real>0.06275</real>
+		<key>Color Space</key>
+		<string>Calibrated</string>
+		<key>Green Component</key>
+		<real>0.10980</real>
+		<key>Red Component</key>
+		<real>0.12549</real>
+	</dict>
+
+</dict>
+</plist>

@@ -1,0 +1,47 @@
+{
+  "name": "fjord",
+  "displayName": "Fjord",
+  "type": "dark",
+  "background": "#0A0F18",
+  "foreground": "#D4E0E8",
+  "tokens": {
+    "primary": "#6EB5E0",
+    "accent": "#E8C46A",
+    "muted": "#688EAA",
+    "error": "#E06060"
+  },
+  "ansi": [
+    "#0A0F18",
+    "#B84040",
+    "#4A9860",
+    "#B09040",
+    "#3868A8",
+    "#8060A0",
+    "#3A8898",
+    "#788898",
+    "#1E2A38",
+    "#E06060",
+    "#60B878",
+    "#E8C46A",
+    "#6EB5E0",
+    "#B090C8",
+    "#60C0C8",
+    "#D4E0E8"
+  ],
+  "ui": {
+    "cursor": "#E8C46A",
+    "cursorText": "#0A0F18",
+    "selection": "#0E1828",
+    "selectionText": "#D4E0E8",
+    "bold": "#F0EEE8",
+    "link": "#6EB5E0"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "·",
+    "timePrefix": "∼",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "sable",
+  "displayName": "Sable",
+  "type": "dark",
+  "background": "#080808",
+  "foreground": "#E8E8E8",
+  "tokens": {
+    "primary": "#C0C8D4",
+    "accent": "#D4AA6A",
+    "muted": "#7A8294",
+    "error": "#D44848"
+  },
+  "ansi": [
+    "#080808",
+    "#804040",
+    "#407840",
+    "#886820",
+    "#384870",
+    "#704870",
+    "#387878",
+    "#C0C8D4",
+    "#202020",
+    "#D44848",
+    "#58A858",
+    "#D4AA6A",
+    "#7A8294",
+    "#A868A8",
+    "#60A8A8",
+    "#E8E8E8"
+  ],
+  "ui": {
+    "cursor": "#D4AA6A",
+    "cursorText": "#080808",
+    "selection": "#181818",
+    "selectionText": "#E8E8E8",
+    "bold": "#E8E8E8",
+    "link": "#D4AA6A"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": " ",
+    "timePrefix": "·",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

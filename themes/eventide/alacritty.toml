@@ -1,0 +1,37 @@
+# eventide — Alacritty color theme
+# Generated from eventide.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/eventide.toml
+# then add `import = ["~/.config/alacritty/themes/eventide.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0D0F1A"
+foreground = "#F0EAD6"
+
+[colors.cursor]
+cursor = "#FF7F57"
+text   = "#0D0F1A"
+
+[colors.selection]
+background = "#1E2040"
+text       = "#F0EAD6"
+
+[colors.normal]
+black   = "#0D0F1A"
+red     = "#C85A5A"
+green   = "#6BAF8A"
+yellow  = "#C4983A"
+blue    = "#6B64A8"
+magenta = "#A870BC"
+cyan    = "#4A9CA8"
+white   = "#B8AFCC"
+
+[colors.bright]
+black   = "#2A2D3E"
+red     = "#E87070"
+green   = "#7EC99A"
+yellow  = "#E8B86D"
+blue    = "#8B84C4"
+magenta = "#C490D1"
+cyan    = "#5FB8C0"
+white   = "#F0EAD6"
