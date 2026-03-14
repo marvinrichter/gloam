@@ -228,98 +228,6 @@ Size:         13pt     (readable density; 14pt for large displays)
 Line spacing: 1.1      (breathing room between lines — the vellum breathes)
 ```
 
-### Install
-
-```bash
-# Font — required for all targets
-brew install --cask font-jetbrains-mono-nerd-font
-```
-
-### Starship
-
-```bash
-npx github:marvinrichter/gloam parchment starship
-```
-
-### iTerm2
-
-The installer does not support iTerm2. Import manually:
-
-1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
-2. Select `themes/parchment/iterm2.itermcolors`
-3. `Color Presets ▾` → select `parchment`
-
-In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
-
-The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
-
-**Light theme:** Disable "Use bright colors for bold text" (`Preferences › Profiles › Text`). In a light theme bold text must be darker, not lighter — the Bold Color slot (`#1A0E08`) handles this correctly when the option is off.
-
-### Alacritty
-
-```bash
-npx github:marvinrichter/gloam parchment alacritty
-```
-
-### Kitty
-
-```bash
-npx github:marvinrichter/gloam parchment kitty
-```
-
-### WezTerm
-
-```bash
-npx github:marvinrichter/gloam parchment wezterm
-```
-
-### Ghostty
-
-```bash
-npx github:marvinrichter/gloam parchment ghostty
-```
-
-### Windows Terminal
-
-```bash
-npx github:marvinrichter/gloam parchment windows-terminal
-```
-
-### VS Code
-
-```bash
-npx github:marvinrichter/gloam parchment vscode
-```
-
-Reload VS Code (`Cmd+Shift+P` → **Reload Window**), then select the theme via `Cmd+K Cmd+T`.
-
-### Neovim
-
-```bash
-npx github:marvinrichter/gloam parchment neovim
-```
-
-Add to `init.lua`:
-
-```lua
-vim.cmd("colorscheme parchment")
-```
-
-### IntelliJ / JetBrains IDEs
-
-The installer does not support IntelliJ. Import manually:
-
-```
-Settings › Editor › Color Scheme › ⚙ › Import Scheme
-```
-
-Select `themes/parchment/intellij.icls`.
-
-### Zed
-
-```bash
-npx github:marvinrichter/gloam parchment zed
-```
 ## Visual Hierarchy
 
 Three weights of attention in every rendered prompt line:
@@ -536,6 +444,7 @@ Select `themes/parchment/intellij.icls`.
 ```bash
 npx github:marvinrichter/gloam parchment zed
 ```
+
 ## Extending the System
 
 ### Adding a module

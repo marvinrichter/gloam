@@ -202,95 +202,6 @@ Size:         13pt     (readable density; 14pt for large displays)
 Line spacing: 1.1      (gives breathing room without wasting vertical space)
 ```
 
-### Install
-
-```bash
-# Font — required for all targets
-brew install --cask font-jetbrains-mono-nerd-font
-```
-
-### Starship
-
-```bash
-npx github:marvinrichter/gloam verdigris starship
-```
-
-### iTerm2
-
-The installer does not support iTerm2. Import manually:
-
-1. `Preferences › Profiles › Colors › Color Presets ▾ › Import…`
-2. Select `themes/verdigris/iterm2.itermcolors`
-3. `Color Presets ▾` → select `verdigris`
-
-In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
-
-The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
-### Alacritty
-
-```bash
-npx github:marvinrichter/gloam verdigris alacritty
-```
-
-### Kitty
-
-```bash
-npx github:marvinrichter/gloam verdigris kitty
-```
-
-### WezTerm
-
-```bash
-npx github:marvinrichter/gloam verdigris wezterm
-```
-
-### Ghostty
-
-```bash
-npx github:marvinrichter/gloam verdigris ghostty
-```
-
-### Windows Terminal
-
-```bash
-npx github:marvinrichter/gloam verdigris windows-terminal
-```
-
-### VS Code
-
-```bash
-npx github:marvinrichter/gloam verdigris vscode
-```
-
-Reload VS Code (`Cmd+Shift+P` → **Reload Window**), then select the theme via `Cmd+K Cmd+T`.
-
-### Neovim
-
-```bash
-npx github:marvinrichter/gloam verdigris neovim
-```
-
-Add to `init.lua`:
-
-```lua
-vim.cmd("colorscheme verdigris")
-```
-
-### IntelliJ / JetBrains IDEs
-
-The installer does not support IntelliJ. Import manually:
-
-```
-Settings › Editor › Color Scheme › ⚙ › Import Scheme
-```
-
-Select `themes/verdigris/intellij.icls`.
-
-### Zed
-
-```bash
-npx github:marvinrichter/gloam verdigris zed
-```
 ## Visual Hierarchy
 
 Three weights of attention in every rendered prompt line:
@@ -434,6 +345,7 @@ The installer does not support iTerm2. Import manually:
 In iTerm2: `Preferences › Profiles › Text › Font → JetBrainsMono Nerd Font, 13pt`
 
 The Starship config and iTerm2 theme are a pair. Using one without the other will work, but ANSI-based syntax highlighting (`ls`, `git log`, `grep`) will not harmonize with the prompt.
+
 ### Alacritty
 
 ```bash
@@ -499,6 +411,7 @@ Select `themes/verdigris/intellij.icls`.
 ```bash
 npx github:marvinrichter/gloam verdigris zed
 ```
+
 ## Extending the System
 
 ### Adding a module

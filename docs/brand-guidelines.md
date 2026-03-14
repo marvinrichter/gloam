@@ -22,11 +22,13 @@ gloam
 Letter-spacing: `−0.02em`. The optical serif at large sizes gives the word weight without loudness.
 
 **Logo variants:**
+
 - **Wordmark** — `gloam` in Fraunces Light, primary-500 on dark, primary-700 on light
 - **Mark** — a thin horizontal rule (`─────`) below the wordmark in muted amber, recalling the fill character used across themes
 - **Favicon** — `g` in Fraunces at `opsz` 144, on neutral-950 background
 
 ### Prohibited uses
+
 1. Do not set the wordmark in all-caps
 2. Do not set in any typeface other than Fraunces
 3. Do not add a drop shadow or glow effect
@@ -153,10 +155,11 @@ The brand primarily lives on dark backgrounds (terminal context). On GitHub Page
 **Display — Fraunces**
 Variable optical serif. Use for headlines, the wordmark, pull quotes.
 `'Fraunces', Georgia, 'Times New Roman', serif`
-Google Fonts: https://fonts.google.com/specimen/Fraunces
+Google Fonts: <https://fonts.google.com/specimen/Fraunces>
 Variable axes: `opsz` (optical size), `wght` (weight), `SOFT`, `WONK`
 
 Recommended settings:
+
 - Headlines: `opsz` 144, `wght` 300 — large and light, maximum optical quality
 - Subheadings: `opsz` 72, `wght` 400
 - Pull quotes / tagline: `opsz` 144, `wght` 300, `font-style: italic`
@@ -164,7 +167,7 @@ Recommended settings:
 **Body — DM Sans**
 Clean humanist sans. Use for all body copy, UI labels, navigation.
 `'DM Sans', system-ui, -apple-system, sans-serif`
-Google Fonts: https://fonts.google.com/specimen/DM+Sans
+Google Fonts: <https://fonts.google.com/specimen/DM+Sans>
 
 ### Type scale
 
@@ -215,6 +218,7 @@ Google Fonts: https://fonts.google.com/specimen/DM+Sans
 
 ### Personality
 
+<!-- markdownlint-disable-next-line MD036 -->
 **still · precise · poetic**
 
 - **Still** — no urgency, no hype, no call-to-action desperation. The work speaks.
@@ -267,18 +271,23 @@ Google Fonts: https://fonts.google.com/specimen/DM+Sans
 ## 5. Mood Board Direction
 
 ### Environment / Setting
+
 A study or workshop at the threshold of dusk — the moment when ambient light and artificial light reach equilibrium. Neither fully day nor fully night. A desk lamp is on, the window still shows color. The space is used but ordered.
 
 ### Color Feeling
+
 Warm ambers and oranges in tension with cool indigos and slate blues. Neither wins — they coexist at the edge of each other's territory. Backgrounds are near-black but warm, not cold. Highlights are restrained to one note at a time.
 
 ### Texture / Material
+
 Laid paper with visible grain. Worn linen. Darkened oak. Hammered copper. Materials that have been used and have absorbed that use. Nothing pristine. Nothing glossy. Matte surfaces that absorb light rather than reflect it.
 
 ### Aesthetic Focus
+
 No people. The workspace as subject — the terminal, the tools, the configured environment. An aesthetic that belongs to whoever inhabits it, not to a photographer's model. Evidence of work, not performance of it.
 
 ### Typography / UI Feel
+
 Typography that doesn't perform its weight — optical serifs at large sizes that feel light despite their presence. Body copy with breathing room. Generous line height. No visual clutter. Interface elements that recede until needed. Monospaced output treated with the same care as display type.
 
 ---
