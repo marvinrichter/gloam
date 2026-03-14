@@ -27,15 +27,19 @@ describe("validateTheme() — unit", () => {
     assert.deepStrictEqual(validateTheme(light), []);
   });
 
+  function omit(obj, ...keys) {
+    const copy = { ...obj };
+    for (const k of keys) delete copy[k];
+    return copy;
+  }
+
   it("reports error for missing 'name'", () => {
-    const { name: _n, ...noName } = validTheme;
-    const errors = validateTheme(noName);
+    const errors = validateTheme(omit(validTheme, "name"));
     assert.ok(errors.some((e) => e.includes('"name"')), `expected "name" error in: ${errors}`);
   });
 
   it("reports error for missing 'type'", () => {
-    const { type: _t, ...noType } = validTheme;
-    const errors = validateTheme(noType);
+    const errors = validateTheme(omit(validTheme, "type"));
     assert.ok(errors.some((e) => e.includes('"type"')));
   });
 
@@ -45,8 +49,7 @@ describe("validateTheme() — unit", () => {
   });
 
   it("reports error for missing 'background'", () => {
-    const { background: _b, ...noBg } = validTheme;
-    const errors = validateTheme(noBg);
+    const errors = validateTheme(omit(validTheme, "background"));
     assert.ok(errors.some((e) => e.includes('"background"')));
   });
 
@@ -56,14 +59,12 @@ describe("validateTheme() — unit", () => {
   });
 
   it("reports error for missing 'foreground'", () => {
-    const { foreground: _f, ...noFg } = validTheme;
-    const errors = validateTheme(noFg);
+    const errors = validateTheme(omit(validTheme, "foreground"));
     assert.ok(errors.some((e) => e.includes('"foreground"')));
   });
 
   it("reports error for missing 'ansi'", () => {
-    const { ansi: _a, ...noAnsi } = validTheme;
-    const errors = validateTheme(noAnsi);
+    const errors = validateTheme(omit(validTheme, "ansi"));
     assert.ok(errors.some((e) => e.includes('"ansi"')));
   });
 
@@ -85,14 +86,12 @@ describe("validateTheme() — unit", () => {
   });
 
   it("reports error for missing 'tokens'", () => {
-    const { tokens: _t, ...noTokens } = validTheme;
-    const errors = validateTheme(noTokens);
+    const errors = validateTheme(omit(validTheme, "tokens"));
     assert.ok(errors.some((e) => e.includes('"tokens"')));
   });
 
   it("reports error for missing tokens.error", () => {
-    const { error: _e, ...noError } = validTheme.tokens;
-    const errors = validateTheme({ ...validTheme, tokens: noError });
+    const errors = validateTheme({ ...validTheme, tokens: omit(validTheme.tokens, "error") });
     assert.ok(errors.some((e) => e.includes('"tokens.error"')));
   });
 
