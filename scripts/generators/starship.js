@@ -235,7 +235,7 @@ format = "[ $symbol$context ]($style)"
 disabled    = false
 time_format = "%R"
 style       = "fg:muted"
-format      = "[${timePrefix} $time ]($style)"
+format      = "[ ${timePrefix} $time ]($style)"
 
 # ─── Prompt character ────────────────────────────────────────────────────────
 
