@@ -1,7 +1,7 @@
 -- tungsten — WezTerm color scheme
 -- Generated from tungsten.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/tungsten.toml
+-- Install: place in ~/.config/wezterm/colors/tungsten.lua
 -- then set color_scheme = "tungsten" in wezterm.lua
 
 return {

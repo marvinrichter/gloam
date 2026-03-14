@@ -1,7 +1,7 @@
 -- aether — WezTerm color scheme
 -- Generated from aether.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/aether.toml
+-- Install: place in ~/.config/wezterm/colors/aether.lua
 -- then set color_scheme = "aether" in wezterm.lua
 
 return {

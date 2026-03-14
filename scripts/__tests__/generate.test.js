@@ -23,10 +23,15 @@ const THEME_DIR  = join(THEMES_DIR, "testtheme");
 before(() => mkdirSync(THEMES_DIR, { recursive: true }));
 after(() => rmSync(TMP, { recursive: true, force: true }));
 
-// Helper — call generate once, then assert paths
+// Helper — call generate once, then assert paths.
+// The flag is set before the call so concurrent test runners cannot trigger
+// a second invocation while the first is in progress.
 let generated = false;
-async function ensureGenerated() {
-  if (!generated) { await generate([theme], THEMES_DIR); generated = true; }
+function ensureGenerated() {
+  if (!generated) {
+    generated = true;
+    generate([theme], THEMES_DIR);
+  }
 }
 
 // Expected output files inside themes/testtheme/

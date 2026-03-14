@@ -1,7 +1,7 @@
 -- absinthe — WezTerm color scheme
 -- Generated from absinthe.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/absinthe.toml
+-- Install: place in ~/.config/wezterm/colors/absinthe.lua
 -- then set color_scheme = "absinthe" in wezterm.lua
 
 return {

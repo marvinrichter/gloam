@@ -8,6 +8,40 @@ Every token in every theme clears 4.5:1 contrast against its background. Not as 
 
 ---
 
+## Contents
+
+- [Themes](#themes)
+  - [Eventide](#eventide)
+  - [Aether](#aether)
+  - [Ember](#ember)
+  - [Absinthe](#absinthe)
+  - [Verdigris](#verdigris)
+  - [Sable](#sable)
+  - [Fjord](#fjord)
+  - [Umbra](#umbra)
+  - [Cordovan](#cordovan)
+  - [Tungsten](#tungsten)
+  - [Amethyst](#amethyst)
+  - [Parchment](#parchment)
+- [Design System](#design-system)
+- [Install](#install)
+  - [Prerequisites](#prerequisites)
+  - [Starship](#starship)
+  - [VS Code](#vs-code)
+  - [Neovim](#neovim)
+  - [iTerm2](#iterm2--manual-import)
+  - [IntelliJ / JetBrains IDEs](#intellij--jetbrains-ides--manual-import)
+- [Structure](#structure)
+- [Contributing](#contributing)
+
+## What makes gloam different
+
+Each theme starts with a specific atmospheric or material moment — not a color preference, but a concept with constraints. Color choices must be defensible from that concept. The four-token semantic model (`primary`, `accent`, `muted`, `error`) keeps prompt elements consistent across every theme: wherever you expect the directory, the git branch, the time — they are always in the same token role, with different colors but the same structure.
+
+Every token in every theme clears WCAG AA 4.5:1 against its background. The generator produces all 11 format files from a single JSON source, so themes are never hand-tuned per-target. Change one value in the JSON and every format regenerates in sync.
+
+---
+
 ## Themes
 
 ### Eventide
@@ -27,8 +61,6 @@ Every token in every theme clears 4.5:1 contrast against its background. Not as 
 | error | `#E85D5D` | aurora red |
 
 Background `#0D0F1A` · Foreground `#F0EAD6` · Layout: two-line box · Fill: `─` · Cursor: `❯`
-
-<!-- screenshot: themes/eventide/screenshot.png -->
 
 [Design system guide →](themes/eventide/eventide.md)
 
@@ -52,8 +84,6 @@ Background `#0D0F1A` · Foreground `#F0EAD6` · Layout: two-line box · Fill: `�
 
 Background `#0C0B1A` · Foreground `#D4D8F0` · Layout: two-line box · Fill: `·` · Cursor: `⟫`
 
-<!-- screenshot: themes/aether/screenshot.png -->
-
 [Design system guide →](themes/aether/aether.md)
 
 ---
@@ -75,8 +105,6 @@ Background `#0C0B1A` · Foreground `#D4D8F0` · Layout: two-line box · Fill: `�
 | error | `#FF4040` | sudden flare |
 
 Background `#111008` · Foreground `#F5EDD4` · Layout: two-line box · Fill: `·` · Cursor: `❯`
-
-<!-- screenshot: themes/ember/screenshot.png -->
 
 [Design system guide →](themes/ember/ember.md)
 
@@ -100,8 +128,6 @@ Background `#111008` · Foreground `#F5EDD4` · Layout: two-line box · Fill: `�
 
 Background `#080D0A` · Foreground `#D8E8D4` · Layout: single-line · Fill: `·` · Cursor: `▸`
 
-<!-- screenshot: themes/absinthe/screenshot.png -->
-
 [Design system guide →](themes/absinthe/absinthe.md)
 
 ---
@@ -123,8 +149,6 @@ Background `#080D0A` · Foreground `#D8E8D4` · Layout: single-line · Fill: `·
 | error | `#D46060` | oxidation red |
 
 Background `#0D1210` · Foreground `#D4E0D8` · Layout: two-line box · Fill: `─` · Cursor: `›`
-
-<!-- screenshot: themes/verdigris/screenshot.png -->
 
 [Design system guide →](themes/verdigris/verdigris.md)
 
@@ -148,8 +172,6 @@ Background `#0D1210` · Foreground `#D4E0D8` · Layout: two-line box · Fill: `�
 
 Background `#080808` · Foreground `#E8E8E8` · Layout: single-line · Fill: ` ` · Cursor: `›`
 
-<!-- screenshot: themes/sable/screenshot.png -->
-
 [Design system guide →](themes/sable/sable.md)
 
 ---
@@ -171,8 +193,6 @@ Background `#080808` · Foreground `#E8E8E8` · Layout: single-line · Fill: ` `
 | error | `#E06060` | warning light |
 
 Background `#0A0F18` · Foreground `#D4E0E8` · Layout: two-line box · Fill: `·` · Cursor: `›`
-
-<!-- screenshot: themes/fjord/screenshot.png -->
 
 [Design system guide →](themes/fjord/fjord.md)
 
@@ -196,8 +216,6 @@ Background `#0A0F18` · Foreground `#D4E0E8` · Layout: two-line box · Fill: `�
 
 Background `#070708` · Foreground `#E4E8F0` · Layout: single-line · Fill: `·` · Cursor: `▹`
 
-<!-- screenshot: themes/umbra/screenshot.png -->
-
 [Design system guide →](themes/umbra/umbra.md)
 
 ---
@@ -219,8 +237,6 @@ Background `#070708` · Foreground `#E4E8F0` · Layout: single-line · Fill: `·
 | error | `#D06060` | warning |
 
 Background `#120A06` · Foreground `#EAE0D4` · Layout: two-line box · Fill: `─` · Cursor: `❯`
-
-<!-- screenshot: themes/cordovan/screenshot.png -->
 
 [Design system guide →](themes/cordovan/cordovan.md)
 
@@ -244,8 +260,6 @@ Background `#120A06` · Foreground `#EAE0D4` · Layout: two-line box · Fill: `�
 
 Background `#0E0C09` · Foreground `#F4EED8` · Layout: single-line · Fill: `·` · Cursor: `▸`
 
-<!-- screenshot: themes/tungsten/screenshot.png -->
-
 [Design system guide →](themes/tungsten/tungsten.md)
 
 ---
@@ -267,8 +281,6 @@ Background `#0E0C09` · Foreground `#F4EED8` · Layout: single-line · Fill: `·
 | error | `#E05858` | fault |
 
 Background `#0C0811` · Foreground `#EAD8F8` · Layout: two-line box · Fill: `·` · Cursor: `⟫`
-
-<!-- screenshot: themes/amethyst/screenshot.png -->
 
 [Design system guide →](themes/amethyst/amethyst.md)
 
@@ -293,8 +305,6 @@ Background `#0C0811` · Foreground `#EAD8F8` · Layout: two-line box · Fill: `�
 Background `#EDE0C8` · Foreground `#2A1E12` · Layout: single-line · Fill: `·` · Cursor: `›`
 
 > **Light theme.** All tokens are dark colors on a warm cream background. See [parchment.md](themes/parchment/parchment.md) for light theme setup notes — iTerm2 requires one additional setting.
-
-<!-- screenshot: themes/parchment/screenshot.png -->
 
 [Design system guide →](themes/parchment/parchment.md)
 
@@ -467,6 +477,50 @@ gloam/
     │   └── utils.js           hex/float color utilities
     └── __tests__/             TDD test suite (node:test)
 ```
+
+---
+
+## Troubleshooting
+
+### Glyphs display as boxes or question marks
+
+The Nerd Font glyphs (language badges, git icon) require JetBrains Mono Nerd Font. Install it and set it as your terminal font:
+
+```bash
+brew install --cask font-jetbrains-mono-nerd-font
+```
+
+Then set `JetBrainsMono Nerd Font` (exact name) as your terminal's font family.
+
+### Colors look wrong or desaturated
+
+Verify your terminal's color profile is set to sRGB. On iTerm2: Preferences › Profiles › Colors — ensure "Color Space" is sRGB. On macOS, desaturation can occur when the display profile is set to Display P3 without color management in the terminal.
+
+### Starship config not loading
+
+Check that the init line is in your shell config and that you have reloaded the shell:
+
+```bash
+# Verify the init line is present
+grep starship ~/.zshrc     # or ~/.bashrc
+
+# Reload
+source ~/.zshrc
+```
+
+The installer copies `starship.toml` to `~/.config/starship.toml`. If `$STARSHIP_CONFIG` is set, it must point to that path.
+
+### iTerm2 theme imported but not applied
+
+After import, the theme must be explicitly selected: Preferences › Profiles › Colors › Color Presets ▾ → select the theme name. Import and selection are separate steps.
+
+### Contrast looks different on different displays
+
+gloam themes are calibrated for sRGB displays at typical brightness (200–300 nits). High-brightness displays and wide-gamut (P3) profiles can shift perceived contrast. The WCAG 4.5:1 guarantee holds under sRGB conditions. If a token looks low-contrast on your display, check display calibration before filing an issue.
+
+### Parchment (light theme) looks wrong in iTerm2
+
+Uncheck **Use bright colors for bold text** in Preferences › Profiles › Colors. Without this, bold text is invisible against the light background.
 
 ---
 

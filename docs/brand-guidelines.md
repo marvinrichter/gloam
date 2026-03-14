@@ -23,9 +23,13 @@ Letter-spacing: `−0.02em`. The optical serif at large sizes gives the word wei
 
 **Logo variants:**
 
-- **Wordmark** — `gloam` in Fraunces Light, primary-500 on dark, primary-700 on light
-- **Mark** — a thin horizontal rule (`─────`) below the wordmark in muted amber, recalling the fill character used across themes
-- **Favicon** — `g` in Fraunces at `opsz` 144, on neutral-950 background
+- **Wordmark** — `gloam` in Fraunces Light, primary-500 on dark, primary-700 on light. Asset: `docs/assets/wordmark.svg`
+- **Mark** — a thin horizontal rule (`─────`) below the wordmark in muted amber, recalling the fill character used across themes. Asset: `docs/assets/mark.svg`
+- **Favicon** — `g` in Fraunces at `opsz` 144, on neutral-950 background. Asset: `docs/assets/favicon.svg`
+
+**Permitted structural background treatment:**
+
+The header may use a radial-gradient horizon glow (`header::before`) positioned behind and below the wordmark. This is a structural page element — not an effect applied to the wordmark itself. The wordmark prohibition ("no drop shadow or glow effect") applies only to styles on the wordmark element directly, not to background pseudo-elements. Any horizon glow must use `pointer-events: none` and must not exceed 8% primary-500 opacity.
 
 ### Prohibited uses
 
@@ -71,7 +75,7 @@ The palette is built around dusk amber — the last warm light before the sky go
 | primary-600 | 4.9:1 ✓ AA | 4.1:1 ✗ |
 | primary-700 | — | 7.2:1 ✓ AAA |
 
-**Rule:** Use primary-500 on dark backgrounds. Use primary-700 on light backgrounds. Never use primary-300 through primary-500 as text on light.
+**Rule:** Use primary-500 on dark backgrounds. Use primary-700 on light backgrounds. Never use primary-300 through primary-500 as text on light backgrounds — their contrast ratios on white are below 3:1 and fail WCAG AA for all text sizes.
 
 ### Neutral — Warm Gray
 
@@ -105,7 +109,7 @@ Derived from primary hue (30°) at low saturation. Warmer than pure gray, cooler
 
 **Rule:** For any text element on a dark surface, neutral-400 is the minimum. Neutral-500 and below are for non-text decorative elements only.
 
-**Rule:** Never use CSS `opacity` to reduce text contrast. Opacity compounds with the background unpredictably, especially over colored card surfaces. Use explicit color tokens instead.
+**Rule:** Never use CSS `opacity` to reduce text contrast. Opacity compounds with the background unpredictably, especially over colored card surfaces. Use explicit color tokens instead. For example, use `color: var(--color-neutral-500)` rather than `color: var(--color-neutral-300); opacity: 0.6`.
 
 ### Semantic colors
 
@@ -132,7 +136,7 @@ The brand primarily lives on dark backgrounds (terminal context). On GitHub Page
   --color-text-primary:     var(--color-neutral-100);
   --color-text-secondary:   var(--color-neutral-400);
   --color-text-brand:       var(--color-primary-400);
-  --color-border:           var(--color-neutral-800);
+  --color-border:           color-mix(in srgb, var(--color-primary-500) 14%, transparent);
 }
 
 [data-theme="light"] {
@@ -198,7 +202,7 @@ Google Fonts: <https://fonts.google.com/specimen/DM+Sans>
 }
 ```
 
-**Rule:** Only use sizes from this scale. Do not introduce intermediate values. The absolute minimum for any text element is `text-xs` (0.75rem / 12px). If a step feels too large, use the next step down — never invent a new stop.
+**Rule:** This scale is exhaustive. Only use sizes from this scale. Do not introduce intermediate values (e.g. 0.6875rem, 0.8125rem). The absolute minimum for any rendered text is `text-xs` (0.75rem / 12px). If a step feels too large, use the next step down — never invent a new stop.
 
 ### Usage rules
 
@@ -308,7 +312,7 @@ Typography that doesn't perform its weight — optical serifs at large sizes tha
 - One primary-500 amber accent per section — never more
 - Theme previews: the terminal prompt ASCII art from the README, large, Fraunces label beneath
 - Navigation: wordmark left, minimal link list right — no hamburger, no mega-menu
-- Footer: tagline in Fraunces italic, `text-sm` (0.875rem), `color: var(--color-neutral-400)` on dark / `var(--color-neutral-500)` on light
+- Footer: tagline in Fraunces italic, `text-sm` (0.875rem), `color: var(--color-neutral-400)` on dark backgrounds / `var(--color-neutral-500)` on light backgrounds. Do not use neutral-600 or lower — it fails WCAG AA contrast on `neutral-950`.
 
 ### Color theme files (README badges / headers)
 

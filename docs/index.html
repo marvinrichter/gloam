@@ -28,6 +28,10 @@
       outline-offset: 3px;
     }
 
+    .card--light:focus-visible {
+      outline-color: var(--color-primary-700);
+    }
+
     body {
       background: var(--color-surface);
       color: var(--color-text-primary);
@@ -52,7 +56,7 @@
 
     .nav-wordmark {
       font-family: var(--font-display);
-      font-size: 1.125rem;
+      font-size: var(--text-lg);
       font-weight: 300;
       font-variation-settings: 'opsz' 72;
       letter-spacing: var(--tracking-tight);
@@ -67,11 +71,11 @@
     }
 
     .nav-links a {
-      font-size: 0.8125rem;
+      font-size: var(--text-sm);
       color: var(--color-neutral-400);
       text-decoration: none;
       letter-spacing: 0.04em;
-      padding: 0.75rem 0;
+      padding: 0.75rem 0.5rem;
       transition: color 0.15s ease;
     }
 
@@ -101,7 +105,7 @@
     .wordmark {
       display: block;
       font-family: var(--font-display);
-      font-size: clamp(3.5rem, 10vw, 5.5rem);
+      font-size: clamp(var(--text-4xl), 10vw, var(--text-6xl));
       font-weight: 300;
       font-variation-settings: 'opsz' 144;
       letter-spacing: var(--tracking-tight);
@@ -115,17 +119,17 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--color-primary-500), transparent);
       margin: 0 auto 2.25rem;
-      opacity: 0.5;
+      opacity: 0.8;
     }
 
     .tagline {
       font-family: var(--font-display);
-      font-size: clamp(0.9375rem, 2vw, 1.125rem);
+      font-size: clamp(var(--text-base), 2vw, var(--text-lg));
       font-weight: 300;
       font-style: italic;
       font-variation-settings: 'opsz' 72;
       color: var(--color-text-secondary);
-      letter-spacing: 0.01em;
+      letter-spacing: 0;
     }
 
     .header-meta {
@@ -137,10 +141,10 @@
     }
 
     .meta-item {
-      font-size: 0.75rem;
+      font-size: var(--text-xs);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--color-neutral-600);
+      color: var(--color-neutral-400);
     }
 
     .meta-item b {
@@ -154,7 +158,7 @@
     }
 
     .section-label {
-      font-size: 0.6875rem;
+      font-size: var(--text-xs);
       font-weight: 400;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -203,7 +207,7 @@
 
     .card-terminal {
       font-family: var(--font-mono);
-      font-size: 0.75rem;
+      font-size: var(--text-xs);
       line-height: 1.65;
       margin-bottom: 1.5rem;
       white-space: pre;
@@ -212,7 +216,7 @@
 
     .card-name {
       font-family: var(--font-display);
-      font-size: 1.25rem;
+      font-size: var(--text-xl);
       font-weight: 300;
       font-variation-settings: 'opsz' 72;
       letter-spacing: -0.01em;
@@ -221,7 +225,7 @@
     }
 
     .card-desc {
-      font-size: 0.8125rem;
+      font-size: var(--text-sm);
       line-height: 1.6;
       margin-bottom: 1.5rem;
       color: var(--card-text-muted);
@@ -242,10 +246,10 @@
 
     .card-tag {
       margin-left: auto;
-      font-size: 0.6875rem;
+      font-size: var(--text-xs);
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--color-neutral-600);
+      color: var(--color-neutral-400);
       white-space: nowrap;
     }
 
@@ -259,7 +263,7 @@
 
     .install-heading {
       font-family: var(--font-display);
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
       font-weight: 300;
       font-variation-settings: 'opsz' 72;
       letter-spacing: var(--tracking-tight);
@@ -268,7 +272,7 @@
     }
 
     .install-intro {
-      font-size: 0.9375rem;
+      font-size: var(--text-base);
       color: var(--color-text-secondary);
       line-height: 1.65;
       margin-bottom: 3rem;
@@ -279,7 +283,7 @@
     }
 
     .install-app {
-      font-size: 0.6875rem;
+      font-size: var(--text-xs);
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--color-primary-500);
@@ -287,7 +291,7 @@
     }
 
     .install-note {
-      font-size: 0.8125rem;
+      font-size: var(--text-sm);
       color: var(--color-neutral-500);
       margin-bottom: 0.625rem;
       line-height: 1.5;
@@ -303,12 +307,12 @@
 
     pre code {
       font-family: var(--font-mono);
-      font-size: 0.8125rem;
+      font-size: var(--text-sm);
       color: var(--color-neutral-300);
       line-height: 1.7;
     }
 
-    .comment { color: var(--color-neutral-700) !important; }
+    .comment { color: var(--color-neutral-500) !important; }
 
     /* ── Design system section ──────────────────────────────────────── */
     .design-section {
@@ -320,8 +324,8 @@
 
     .design-heading {
       font-family: var(--font-display);
-      font-size: clamp(1.75rem, 4vw, 2.25rem);
-      font-weight: 300;
+      font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+      font-weight: 400;
       font-variation-settings: 'opsz' 72;
       letter-spacing: var(--tracking-tight);
       color: var(--color-neutral-100);
@@ -331,12 +335,12 @@
     .token-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.8125rem;
+      font-size: var(--text-sm);
     }
 
     .token-table th {
       text-align: left;
-      font-size: 0.6875rem;
+      font-size: var(--text-xs);
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--color-neutral-600);
@@ -351,8 +355,8 @@
       vertical-align: middle;
     }
 
-    .token-table td:first-child { color: var(--color-primary-500); font-family: var(--font-mono); font-size: 0.8125rem; }
-    .token-table td:nth-child(2) { color: var(--color-neutral-500); font-size: 0.8125rem; }
+    .token-table td:first-child { color: var(--color-primary-500); font-family: var(--font-mono); font-size: var(--text-sm); }
+    .token-table td:nth-child(2) { color: var(--color-neutral-500); font-size: var(--text-sm); }
 
     .swatch-cell { display: flex; align-items: center; gap: 0.625rem; }
     .swatch { width: 20px; height: 20px; border-radius: 3px; flex-shrink: 0; }
@@ -366,7 +370,7 @@
 
     .footer-tagline {
       font-family: var(--font-display);
-      font-size: 0.8125rem;
+      font-size: var(--text-sm);
       font-weight: 300;
       font-style: italic;
       font-variation-settings: 'opsz' 72;
@@ -381,10 +385,11 @@
     }
 
     .footer-links a {
-      font-size: 0.8125rem;
-      color: var(--color-neutral-600);
+      font-size: var(--text-sm);
+      color: var(--color-neutral-400);
       text-decoration: none;
       letter-spacing: 0.04em;
+      padding: 0.75rem 0.5rem;
       transition: color 0.15s ease;
     }
 
@@ -399,7 +404,7 @@
       .themes-grid { grid-template-columns: 1fr; gap: 1px; }
       header { padding: 4rem 1.5rem 3.5rem; }
       .card { padding: 1.5rem; }
-      .card-terminal { font-size: 0.6875rem; }
+      .card-terminal { font-size: var(--text-xs); }
       nav { padding: 0 1.5rem; }
       .nav-links { gap: 1.25rem; }
     }
@@ -431,7 +436,7 @@
 
 <!-- ── Themes ───────────────────────────────────────────────────────── -->
 <section class="themes-section" id="themes">
-  <h2 class="section-label">The collection</h2>
+  <h2 class="section-label">Twelve atmospheres</h2>
   <div class="themes-grid">
 
     <!-- Eventide ─────────────────────────────────────────────────── -->
@@ -680,8 +685,8 @@ npx github:marvinrichter/gloam eventide starship</code></pre>
 <!-- ── Design system ─────────────────────────────────────────────────── -->
 <section class="design-section">
   <h2 class="design-heading">One source. Eleven formats.</h2>
-  <p style="color:var(--color-text-secondary);font-size:0.9375rem;line-height:1.65;margin-bottom:2.5rem;">
-    Every theme is a single <code style="font-family:var(--font-mono);font-size:0.875rem;color:var(--color-primary-400)">name.json</code> — the source of truth for its entire system. Eleven formats are derived from it, all living in the same directory as the source.
+  <p style="color:var(--color-text-secondary);font-size:var(--text-base);line-height:1.65;margin-bottom:2.5rem;">
+    Every theme is a single <code style="font-family:var(--font-mono);font-size:var(--text-sm);color:var(--color-primary-400)">name.json</code> — the source of truth for its entire system. Eleven formats are derived from it, all living in the same directory as the source.
   </p>
 
   <table class="token-table">
@@ -716,7 +721,7 @@ npx github:marvinrichter/gloam eventide starship</code></pre>
     </tbody>
   </table>
 
-  <p style="color:var(--color-neutral-600);font-size:0.8125rem;margin-top:1.5rem;line-height:1.6;">
+  <p style="color:var(--color-neutral-600);font-size:var(--text-sm);margin-top:1.5rem;line-height:1.6;">
     Four tokens. Consistent across all twelve themes. WCAG AA ≥ 4.5:1 on every background.
   </p>
 </section>

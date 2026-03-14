@@ -21,7 +21,7 @@ export function generateZed(theme) {
   const obj = {
     "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
     name: displayName || name,
-    author: "starship-themes",
+    author: "gloam",
     themes: [
       {
         name: displayName || name,

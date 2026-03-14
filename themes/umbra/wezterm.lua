@@ -1,7 +1,7 @@
 -- umbra — WezTerm color scheme
 -- Generated from umbra.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/umbra.toml
+-- Install: place in ~/.config/wezterm/colors/umbra.lua
 -- then set color_scheme = "umbra" in wezterm.lua
 
 return {

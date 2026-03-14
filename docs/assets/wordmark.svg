@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 66" width="210" height="66" role="img" aria-label="gloam">
   <title>gloam</title>
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300&amp;display=swap');
-      .g {
+      .wm {
         font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
-        font-size: 22px;
+        font-size: 56px;
         font-weight: 300;
         font-variation-settings: 'opsz' 144;
+        letter-spacing: -0.02em;
         fill: #C4894A;
       }
     </style>
   </defs>
-  <rect width="32" height="32" rx="4" fill="#0F0E0C"/>
-  <text class="g" x="16" y="22" text-anchor="middle">g</text>
+  <text class="wm" x="2" y="50">gloam</text>
 </svg>

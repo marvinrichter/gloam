@@ -1,7 +1,7 @@
 -- amethyst — WezTerm color scheme
 -- Generated from amethyst.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/amethyst.toml
+-- Install: place in ~/.config/wezterm/colors/amethyst.lua
 -- then set color_scheme = "amethyst" in wezterm.lua
 
 return {

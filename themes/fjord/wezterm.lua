@@ -1,7 +1,7 @@
 -- fjord — WezTerm color scheme
 -- Generated from fjord.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/fjord.toml
+-- Install: place in ~/.config/wezterm/colors/fjord.lua
 -- then set color_scheme = "fjord" in wezterm.lua
 
 return {

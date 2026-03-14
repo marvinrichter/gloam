@@ -1,7 +1,7 @@
 -- ember — WezTerm color scheme
 -- Generated from ember.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/ember.toml
+-- Install: place in ~/.config/wezterm/colors/ember.lua
 -- then set color_scheme = "ember" in wezterm.lua
 
 return {

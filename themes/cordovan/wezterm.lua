@@ -1,7 +1,7 @@
 -- cordovan — WezTerm color scheme
 -- Generated from cordovan.json — do not edit by hand
 --
--- Install: place in ~/.config/wezterm/colors/cordovan.toml
+-- Install: place in ~/.config/wezterm/colors/cordovan.lua
 -- then set color_scheme = "cordovan" in wezterm.lua
 
 return {

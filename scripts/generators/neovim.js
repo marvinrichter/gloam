@@ -26,7 +26,7 @@ export function generateNeovim(theme) {
     `vim.cmd("highlight clear")`,
     `if vim.fn.exists("syntax_on") == 1 then vim.cmd("syntax reset") end`,
     ``,
-    `vim.o.background = "${vimBg}"`,
+    `vim.opt.background = "${vimBg}"`,
     `vim.g.colors_name = "${name}"`,
     ``,
     `-- ── Base groups ──────────────────────────────────────────────────────────────`,
