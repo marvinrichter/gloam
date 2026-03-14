@@ -43,6 +43,7 @@ function scaffoldFakeTheme(repoDir, meta) {
 before(() => {
   TMP_HOME = mkdtempSync(join(tmpdir(), "gloam-install-home-"));
   TMP_REPO = mkdtempSync(join(tmpdir(), "gloam-install-repo-"));
+  writeFileSync(join(TMP_REPO, "package.json"), JSON.stringify({ name: "gloam", version: "0.0.0-test" }));
   scaffoldFakeTheme(TMP_REPO, FAKE_THEME);
   scaffoldFakeTheme(TMP_REPO, FAKE_LIGHT_THEME);
 });
