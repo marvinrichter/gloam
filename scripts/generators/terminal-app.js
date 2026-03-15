@@ -28,11 +28,13 @@ function encodeObject(val, type) {
     if (val < 0x100) return Buffer.from([0x10, val]);
     if (val < 0x10000) {
       const b = Buffer.alloc(3);
-      b[0] = 0x11; b.writeUInt16BE(val, 1);
+      b[0] = 0x11;
+      b.writeUInt16BE(val, 1);
       return b;
     }
     const b = Buffer.alloc(5);
-    b[0] = 0x12; b.writeUInt32BE(val, 1);
+    b[0] = 0x12;
+    b.writeUInt32BE(val, 1);
     return b;
   }
   if (type === "data") {
@@ -54,9 +56,8 @@ function encodeObject(val, type) {
   if (type === "dict") {
     // val is {keys: [], values: []} arrays of ref indices
     const n = val.keys.length;
-    const header = n < 15
-      ? Buffer.from([0xd0 | n])
-      : Buffer.concat([Buffer.from([0xdf]), encodeIntLen(n)]);
+    const header =
+      n < 15 ? Buffer.from([0xd0 | n]) : Buffer.concat([Buffer.from([0xdf]), encodeIntLen(n)]);
     const refs = Buffer.from([...val.keys, ...val.values]);
     return Buffer.concat([header, refs]);
   }
@@ -65,8 +66,16 @@ function encodeObject(val, type) {
 
 function encodeIntLen(n) {
   if (n < 0x100) return Buffer.from([0x10, n]);
-  if (n < 0x10000) { const b = Buffer.alloc(3); b[0] = 0x11; b.writeUInt16BE(n, 1); return b; }
-  const b = Buffer.alloc(5); b[0] = 0x12; b.writeUInt32BE(n, 1); return b;
+  if (n < 0x10000) {
+    const b = Buffer.alloc(3);
+    b[0] = 0x11;
+    b.writeUInt16BE(n, 1);
+    return b;
+  }
+  const b = Buffer.alloc(5);
+  b[0] = 0x12;
+  b.writeUInt32BE(n, 1);
+  return b;
 }
 
 function prefixed(typeNibble, bytes) {
@@ -206,10 +215,10 @@ function nsColorBplist(hexColor) {
   // Trailer: 6 fill bytes, sortVersion(1), offsetSize(1), refSize(1),
   //          nObjects(8), topObject(8), offsetTableOffset(8)
   const trailer = Buffer.alloc(32, 0);
-  trailer[6] = 0;                           // sort version
+  trailer[6] = 0; // sort version
   trailer[7] = offsetSize;
-  trailer[8] = 1;                           // refSize = 1 byte
-  trailer.writeBigUInt64BE(BigInt(nObjs), 9 - 1);  // nObjects at offset 8
+  trailer[8] = 1; // refSize = 1 byte
+  trailer.writeBigUInt64BE(BigInt(nObjs), 9 - 1); // nObjects at offset 8
   // Actually trailer layout:
   //   [0..5]  = fill (0x00)
   //   [6]     = sort version
@@ -305,16 +314,32 @@ export function generateTerminalApp(theme) {
   const title = displayName || name;
 
   const ansiNames = [
-    "ANSIBlackColor",     "ANSIRedColor",     "ANSIGreenColor",    "ANSIYellowColor",
-    "ANSIBlueColor",      "ANSIMagentaColor", "ANSICyanColor",     "ANSIWhiteColor",
-    "ANSIBrightBlackColor","ANSIBrightRedColor","ANSIBrightGreenColor","ANSIBrightYellowColor",
-    "ANSIBrightBlueColor","ANSIBrightMagentaColor","ANSIBrightCyanColor","ANSIBrightWhiteColor",
+    "ANSIBlackColor",
+    "ANSIRedColor",
+    "ANSIGreenColor",
+    "ANSIYellowColor",
+    "ANSIBlueColor",
+    "ANSIMagentaColor",
+    "ANSICyanColor",
+    "ANSIWhiteColor",
+    "ANSIBrightBlackColor",
+    "ANSIBrightRedColor",
+    "ANSIBrightGreenColor",
+    "ANSIBrightYellowColor",
+    "ANSIBrightBlueColor",
+    "ANSIBrightMagentaColor",
+    "ANSIBrightCyanColor",
+    "ANSIBrightWhiteColor",
   ];
 
-  const ansiEntries = ansi.map((c, i) => `\t\t<key>${ansiNames[i]}</key>
+  const ansiEntries = ansi
+    .map(
+      (c, i) => `\t\t<key>${ansiNames[i]}</key>
 \t\t<data>
 \t\t${colorData(c)}
-\t\t</data>`).join("\n\n");
+\t\t</data>`,
+    )
+    .join("\n\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

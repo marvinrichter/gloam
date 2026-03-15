@@ -3,7 +3,7 @@ import { copy, upsertLine, capitalize } from "./_helpers.js";
 
 export function create({ src, home }) {
   return function installWezterm(name) {
-    const destTheme  = join(home, ".config", "wezterm", "colors", `${name}.lua`);
+    const destTheme = join(home, ".config", "wezterm", "colors", `${name}.lua`);
     const configPath = join(home, ".config", "wezterm", "wezterm.lua");
     const schemeLine = `config.color_scheme = "${capitalize(name)}"`;
 

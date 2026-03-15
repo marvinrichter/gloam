@@ -50,7 +50,10 @@ export function upsertLine(filePath, pattern, line) {
     // preventing duplicates if a user config has multiple matching lines.
     let globalPattern;
     try {
-      globalPattern = new RegExp(pattern.source, pattern.flags.includes("g") ? pattern.flags : `${pattern.flags}g`);
+      globalPattern = new RegExp(
+        pattern.source,
+        pattern.flags.includes("g") ? pattern.flags : `${pattern.flags}g`,
+      );
     } catch (err) {
       throw new Error(`upsertLine: invalid regex pattern (${pattern}): ${err.message}`);
     }

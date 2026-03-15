@@ -7,12 +7,12 @@ import { theme, lightTheme } from "./fixture.js";
 const t = {
   ...theme,
   prompt: {
-    layout:        "two-line-box",
-    showUsername:  true,
-    fill:          "─",
-    timePrefix:    "◆",
+    layout: "two-line-box",
+    showUsername: true,
+    fill: "─",
+    timePrefix: "◆",
     successSymbol: "❯",
-    vimSymbol:     "❮",
+    vimSymbol: "❮",
   },
 };
 
@@ -20,12 +20,12 @@ const tSingle = {
   ...theme,
   name: "testtheme-single",
   prompt: {
-    layout:        "single-line",
-    showUsername:  false,
-    fill:          "·",
-    timePrefix:    "⋄",
+    layout: "single-line",
+    showUsername: false,
+    fill: "·",
+    timePrefix: "⋄",
     successSymbol: "▸",
-    vimSymbol:     "◂",
+    vimSymbol: "◂",
   },
 };
 

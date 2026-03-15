@@ -38,9 +38,12 @@ describe("validateTheme() — unit", () => {
     tokens: { primary: "#FF0000", accent: "#00FF00", muted: "#0000FF", error: "#FFFF00" },
     ansi: Array(16).fill("#000000"),
     ui: {
-      cursor: "#FF0000", cursorText: "#000000",
-      selection: "#111111", selectionText: "#FFFFFF",
-      bold: "#FFFFFF", link: "#00FF00",
+      cursor: "#FF0000",
+      cursorText: "#000000",
+      selection: "#111111",
+      selectionText: "#FFFFFF",
+      bold: "#FFFFFF",
+      link: "#00FF00",
     },
     prompt: {
       layout: "single-line",
@@ -69,7 +72,10 @@ describe("validateTheme() — unit", () => {
 
   it("reports error for missing 'name'", () => {
     const errors = validateTheme(omit(validTheme, "name"));
-    assert.ok(errors.some((e) => e.includes('"name"')), `expected "name" error in: ${errors}`);
+    assert.ok(
+      errors.some((e) => e.includes('"name"')),
+      `expected "name" error in: ${errors}`,
+    );
   });
 
   it("reports error for missing 'type'", () => {
@@ -130,7 +136,10 @@ describe("validateTheme() — unit", () => {
   });
 
   it("reports error for invalid hex in tokens.primary", () => {
-    const errors = validateTheme({ ...validTheme, tokens: { ...validTheme.tokens, primary: "red" } });
+    const errors = validateTheme({
+      ...validTheme,
+      tokens: { ...validTheme.tokens, primary: "red" },
+    });
     assert.ok(errors.some((e) => e.includes('"tokens.primary"')));
   });
 
@@ -171,7 +180,7 @@ function hexToHue(hex) {
   if (max === r) h = ((g - b) / d) % 6;
   else if (max === g) h = (b - r) / d + 2;
   else h = (r - g) / d + 4;
-  return ((h * 60) + 360) % 360;
+  return (h * 60 + 360) % 360;
 }
 
 /** Angular distance between two hues (0–180). */
@@ -188,14 +197,24 @@ describe("hue uniqueness — no two same-type themes share primary hue within 10
   // that happen to live in the same part of the color wheel.
   const KNOWN_CLOSE = new Set([
     // Warm-gold band (30–47°): cordovan/ember/eventide/nocturne/tungsten
-    "cordovan|ember", "cordovan|eventide", "cordovan|nocturne", "cordovan|tungsten",
-    "ember|eventide", "ember|nocturne", "ember|tungsten",
-    "eventide|nocturne", "eventide|tungsten",
+    "cordovan|ember",
+    "cordovan|eventide",
+    "cordovan|nocturne",
+    "cordovan|tungsten",
+    "ember|eventide",
+    "ember|nocturne",
+    "ember|tungsten",
+    "eventide|nocturne",
+    "eventide|tungsten",
     "nocturne|tungsten",
     // Teal/cyan band (161–175°): aether/nacreous/verdigris
-    "aether|nacreous", "aether|verdigris", "nacreous|verdigris",
+    "aether|nacreous",
+    "aether|verdigris",
+    "nacreous|verdigris",
     // Blue-gray band (200–215°): fjord/sable/umbra
-    "fjord|sable", "fjord|umbra", "sable|umbra",
+    "fjord|sable",
+    "fjord|umbra",
+    "sable|umbra",
     // Navy (216°): cirrus/daybook (light)
     "cirrus|daybook",
     // Red band (5–10°): ochre/solano (light)

@@ -18,23 +18,25 @@
 export function syntaxColors(theme) {
   const { tokens, ansi, foreground } = theme;
   if (!Array.isArray(ansi) || ansi.length < 16) {
-    throw new Error(`syntaxColors: theme "${theme.name}" ansi array must have at least 16 entries, got ${ansi?.length ?? 0}`);
+    throw new Error(
+      `syntaxColors: theme "${theme.name}" ansi array must have at least 16 entries, got ${ansi?.length ?? 0}`,
+    );
   }
   return {
-    keyword:     tokens.accent,
-    type:        tokens.primary,
-    class:       tokens.primary,
-    function:    tokens.primary,
-    string:      ansi[10],
-    number:      ansi[11],
-    comment:     tokens.muted,
-    variable:    foreground,
-    constant:    ansi[13],
-    operator:    tokens.muted,
+    keyword: tokens.accent,
+    type: tokens.primary,
+    class: tokens.primary,
+    function: tokens.primary,
+    string: ansi[10],
+    number: ansi[11],
+    comment: tokens.muted,
+    variable: foreground,
+    constant: ansi[13],
+    operator: tokens.muted,
     punctuation: tokens.muted,
-    tag:         tokens.accent,
-    attribute:   tokens.primary,
-    error:       tokens.error,
-    warning:     ansi[3],
+    tag: tokens.accent,
+    attribute: tokens.primary,
+    error: tokens.error,
+    warning: ansi[3],
   };
 }

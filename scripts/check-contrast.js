@@ -131,7 +131,9 @@ if (jsonMode) {
   const passed = results.reduce((sum, r) => sum + (r.tokens?.filter((t) => t.pass).length ?? 0), 0);
   const failed = total - passed;
 
-  console.log(`\n${passed}/${total} checks passed (min ${minRatio}:1)${failed > 0 ? ` — ${failed} FAILED` : ""}`);
+  console.log(
+    `\n${passed}/${total} checks passed (min ${minRatio}:1)${failed > 0 ? ` — ${failed} FAILED` : ""}`,
+  );
 }
 
 process.exitCode = anyFail ? 1 : 0;

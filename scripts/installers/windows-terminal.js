@@ -7,15 +7,27 @@ export function create({ src, home, IS_WIN }) {
     if (!IS_WIN) return "skipped (Windows only)";
 
     const localAppData = process.env.LOCALAPPDATA ?? join(home, "AppData", "Local");
-    const candidates   = [
-      join(localAppData, "Packages", "Microsoft.WindowsTerminal_8wekyb3d8bbwe", "LocalState", "settings.json"),
-      join(localAppData, "Packages", "Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe", "LocalState", "settings.json"),
+    const candidates = [
+      join(
+        localAppData,
+        "Packages",
+        "Microsoft.WindowsTerminal_8wekyb3d8bbwe",
+        "LocalState",
+        "settings.json",
+      ),
+      join(
+        localAppData,
+        "Packages",
+        "Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe",
+        "LocalState",
+        "settings.json",
+      ),
     ];
     const settingsPath = candidates.find(existsSync);
 
     if (!settingsPath) return "skipped — could not find Windows Terminal settings.json";
 
-    const scheme   = JSON.parse(readFileSync(join(src(name), "windows-terminal.json"), "utf8"));
+    const scheme = JSON.parse(readFileSync(join(src(name), "windows-terminal.json"), "utf8"));
     const settings = readJson(settingsPath) ?? {};
 
     settings.schemes ??= [];

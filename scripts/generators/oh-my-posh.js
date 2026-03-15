@@ -1,4 +1,3 @@
-
 /**
  * Oh My Posh theme generator.
  * Produces a .omp.json file for ~/.config/oh-my-posh/themes/<name>.omp.json
@@ -18,7 +17,7 @@ export function generateOhMyPosh(theme) {
   const t = tokens;
 
   const omp = {
-    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    $schema: "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     version: 2,
     final_space: true,
     console_title_template: "{{ .Shell }} in {{ .Folder }}",
@@ -31,21 +30,25 @@ export function generateOhMyPosh(theme) {
         segments: [
           // Opening bracket
           ...(prompt.layout === "two-line-box"
-            ? [{
-                type: "text",
-                style: "plain",
-                foreground: t.muted,
-                template: "╭",
-              }]
+            ? [
+                {
+                  type: "text",
+                  style: "plain",
+                  foreground: t.muted,
+                  template: "╭",
+                },
+              ]
             : []),
           // Session (user) — only when showUsername is true
           ...(prompt.showUsername
-            ? [{
-                type: "session",
-                style: "plain",
-                foreground: t.muted,
-                template: " {{ .UserName }} ",
-              }]
+            ? [
+                {
+                  type: "session",
+                  style: "plain",
+                  foreground: t.muted,
+                  template: " {{ .UserName }} ",
+                },
+              ]
             : []),
           // Path
           {
@@ -68,7 +71,8 @@ export function generateOhMyPosh(theme) {
               branch_icon: " ",
               fetch_status: true,
             },
-            template: " {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} ",
+            template:
+              " {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} ",
           },
           // Command duration
           {
@@ -106,20 +110,20 @@ export function generateOhMyPosh(theme) {
         newline: true,
         segments: [
           ...(prompt.layout === "two-line-box"
-            ? [{
-                type: "text",
-                style: "plain",
-                foreground: t.muted,
-                template: "╰─",
-              }]
+            ? [
+                {
+                  type: "text",
+                  style: "plain",
+                  foreground: t.muted,
+                  template: "╰─",
+                },
+              ]
             : []),
           {
             type: "status",
             style: "plain",
             foreground: t.accent,
-            foreground_templates: [
-              "{{ if gt .Code 0 }}${t.error}{{ end }}",
-            ],
+            foreground_templates: ["{{ if gt .Code 0 }}${t.error}{{ end }}"],
             properties: {
               always_enabled: true,
             },

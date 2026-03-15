@@ -10,15 +10,19 @@ import { theme as _theme } from "./fixture.js";
 const theme = {
   ..._theme,
   prompt: {
-    layout: "two-line-box", showUsername: true, fill: "─",
-    timePrefix: "◆", successSymbol: "❯", vimSymbol: "❮",
+    layout: "two-line-box",
+    showUsername: true,
+    fill: "─",
+    timePrefix: "◆",
+    successSymbol: "❯",
+    vimSymbol: "❮",
   },
 };
 
 // generate() writes into themes/<name>/ — all files for one theme in one place.
-const TMP        = join(tmpdir(), `starship-test-${Date.now()}`);
+const TMP = join(tmpdir(), `starship-test-${Date.now()}`);
 const THEMES_DIR = join(TMP, "themes");
-const THEME_DIR  = join(THEMES_DIR, "testtheme");
+const THEME_DIR = join(THEMES_DIR, "testtheme");
 
 before(() => mkdirSync(THEMES_DIR, { recursive: true }));
 after(() => rmSync(TMP, { recursive: true, force: true }));
@@ -36,17 +40,17 @@ function ensureGenerated() {
 
 // Expected output files inside themes/testtheme/
 const EXPECTED = [
-  ["starship.toml",           "toml"],
-  ["iterm2.itermcolors",      "text"],
-  ["alacritty.toml",          "toml"],
-  ["kitty.conf",              "text"],
-  ["wezterm.lua",             "text"],
-  ["ghostty",                 "text"],
-  ["windows-terminal.json",   "json"],
-  ["vscode.json",             "json"],
-  ["neovim.lua",              "text"],
-  ["intellij.icls",           "text"],
-  ["zed.json",                "json"],
+  ["starship.toml", "toml"],
+  ["iterm2.itermcolors", "text"],
+  ["alacritty.toml", "toml"],
+  ["kitty.conf", "text"],
+  ["wezterm.lua", "text"],
+  ["ghostty", "text"],
+  ["windows-terminal.json", "json"],
+  ["vscode.json", "json"],
+  ["neovim.lua", "text"],
+  ["intellij.icls", "text"],
+  ["zed.json", "json"],
 ];
 
 describe("generate()", () => {
@@ -68,7 +72,7 @@ describe("generate()", () => {
     const { readdirSync } = await import("node:fs");
     const entries = readdirSync(THEME_DIR, { withFileTypes: true });
     const subdirs = entries.filter((e) => e.isDirectory());
-    assert.strictEqual(subdirs.length, 0, `unexpected subdirs: ${subdirs.map(d=>d.name)}`);
+    assert.strictEqual(subdirs.length, 0, `unexpected subdirs: ${subdirs.map((d) => d.name)}`);
   });
 
   it("all JSON output files are valid JSON", async () => {

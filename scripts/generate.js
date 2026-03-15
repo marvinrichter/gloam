@@ -1,42 +1,42 @@
 import { readFileSync, writeFileSync, mkdirSync, globSync } from "node:fs";
 import { join } from "node:path";
 
-import { generateStarship }        from "./generators/starship.js";
-import { generateIterm2 }          from "./generators/iterm2.js";
-import { generateAlacritty }       from "./generators/alacritty.js";
-import { generateKitty }           from "./generators/kitty.js";
-import { generateWezterm }         from "./generators/wezterm.js";
-import { generateGhostty }         from "./generators/ghostty.js";
+import { generateStarship } from "./generators/starship.js";
+import { generateIterm2 } from "./generators/iterm2.js";
+import { generateAlacritty } from "./generators/alacritty.js";
+import { generateKitty } from "./generators/kitty.js";
+import { generateWezterm } from "./generators/wezterm.js";
+import { generateGhostty } from "./generators/ghostty.js";
 import { generateWindowsTerminal } from "./generators/windows-terminal.js";
-import { generateVscode }          from "./generators/vscode.js";
-import { generateNeovim }          from "./generators/neovim.js";
-import { generateIntellij }        from "./generators/intellij.js";
-import { generateZed }             from "./generators/zed.js";
-import { generateHelix }           from "./generators/helix.js";
-import { generateTmux }            from "./generators/tmux.js";
-import { generateTerminalApp }     from "./generators/terminal-app.js";
-import { generateOhMyPosh }        from "./generators/oh-my-posh.js";
-import { generateSublimeText }     from "./generators/sublime-text.js";
+import { generateVscode } from "./generators/vscode.js";
+import { generateNeovim } from "./generators/neovim.js";
+import { generateIntellij } from "./generators/intellij.js";
+import { generateZed } from "./generators/zed.js";
+import { generateHelix } from "./generators/helix.js";
+import { generateTmux } from "./generators/tmux.js";
+import { generateTerminalApp } from "./generators/terminal-app.js";
+import { generateOhMyPosh } from "./generators/oh-my-posh.js";
+import { generateSublimeText } from "./generators/sublime-text.js";
 
 // Each entry is { filename, fn }.
 // The filename is the app name + its native extension — lives alongside the
 // theme source in themes/<name>/<filename>.
 const TARGETS = [
-  { filename: "starship.toml",          fn: generateStarship },
-  { filename: "iterm2.itermcolors",     fn: generateIterm2 },
-  { filename: "alacritty.toml",         fn: generateAlacritty },
-  { filename: "kitty.conf",             fn: generateKitty },
-  { filename: "wezterm.lua",            fn: generateWezterm },
-  { filename: "ghostty",                fn: generateGhostty },
-  { filename: "windows-terminal.json",  fn: generateWindowsTerminal },
-  { filename: "vscode.json",            fn: generateVscode },
-  { filename: "neovim.lua",             fn: generateNeovim },
-  { filename: "intellij.icls",          fn: generateIntellij },
-  { filename: "zed.json",               fn: generateZed },
-  { filename: "helix.toml",             fn: generateHelix },
-  { filename: "tmux.conf",              fn: generateTmux },
-  { filename: "terminal.terminal",      fn: generateTerminalApp },
-  { filename: "oh-my-posh.omp.json",   fn: generateOhMyPosh },
+  { filename: "starship.toml", fn: generateStarship },
+  { filename: "iterm2.itermcolors", fn: generateIterm2 },
+  { filename: "alacritty.toml", fn: generateAlacritty },
+  { filename: "kitty.conf", fn: generateKitty },
+  { filename: "wezterm.lua", fn: generateWezterm },
+  { filename: "ghostty", fn: generateGhostty },
+  { filename: "windows-terminal.json", fn: generateWindowsTerminal },
+  { filename: "vscode.json", fn: generateVscode },
+  { filename: "neovim.lua", fn: generateNeovim },
+  { filename: "intellij.icls", fn: generateIntellij },
+  { filename: "zed.json", fn: generateZed },
+  { filename: "helix.toml", fn: generateHelix },
+  { filename: "tmux.conf", fn: generateTmux },
+  { filename: "terminal.terminal", fn: generateTerminalApp },
+  { filename: "oh-my-posh.omp.json", fn: generateOhMyPosh },
   { filename: "sublime-text.sublime-color-scheme", fn: generateSublimeText },
 ];
 
@@ -82,7 +82,9 @@ export function validateTheme(obj) {
       if (obj.tokens[token] === undefined) {
         errors.push(`"tokens.${token}" is required`);
       } else if (!HEX_RE.test(obj.tokens[token])) {
-        errors.push(`"tokens.${token}" must be a 6-digit hex color (#RRGGBB), got "${obj.tokens[token]}"`);
+        errors.push(
+          `"tokens.${token}" must be a 6-digit hex color (#RRGGBB), got "${obj.tokens[token]}"`,
+        );
       }
     }
   }
@@ -105,10 +107,16 @@ export function validateTheme(obj) {
     errors.push(`missing required field "prompt"`);
   } else {
     if (obj.prompt.layout !== "two-line-box" && obj.prompt.layout !== "single-line") {
-      errors.push(`"prompt.layout" must be "two-line-box" or "single-line", got "${obj.prompt.layout}"`);
+      errors.push(
+        `"prompt.layout" must be "two-line-box" or "single-line", got "${obj.prompt.layout}"`,
+      );
     }
     for (const field of PROMPT_STRING_FIELDS) {
-      if (obj.prompt[field] === undefined || typeof obj.prompt[field] !== "string" || obj.prompt[field].length < 1) {
+      if (
+        obj.prompt[field] === undefined ||
+        typeof obj.prompt[field] !== "string" ||
+        obj.prompt[field].length < 1
+      ) {
         errors.push(`"prompt.${field}" must be a non-empty string`);
       }
     }

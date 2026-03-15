@@ -5,27 +5,29 @@ import { copy, writeJson, readJson, capitalize } from "./_helpers.js";
 
 export function create({ src, loadMeta, home, repo }) {
   return function installVscode(name) {
-    const meta    = loadMeta(name);
+    const meta = loadMeta(name);
     const uiTheme = meta.type === "light" ? "vs" : "vs-dark";
     const display = capitalize(name);
-    const extDir  = join(home, ".vscode", "extensions", `gloam-${name}`);
+    const extDir = join(home, ".vscode", "extensions", `gloam-${name}`);
     const { version } = JSON.parse(readFileSync(join(repo, "package.json"), "utf8"));
 
     copy(join(src(name), "vscode.json"), join(extDir, "themes", `${name}.json`));
 
     writeJson(join(extDir, "package.json"), {
-      name:        `gloam-${name}`,
-      publisher:   "gloam",
+      name: `gloam-${name}`,
+      publisher: "gloam",
       displayName: `Gloam \u2014 ${display}`,
       version,
-      engines:     { vscode: "^1.70.0" },
-      categories:  ["Themes"],
+      engines: { vscode: "^1.70.0" },
+      categories: ["Themes"],
       contributes: {
-        themes: [{
-          label:   `Gloam ${display}`,
-          uiTheme,
-          path:    `./themes/${name}.json`,
-        }],
+        themes: [
+          {
+            label: `Gloam ${display}`,
+            uiTheme,
+            path: `./themes/${name}.json`,
+          },
+        ],
       },
     });
 
@@ -38,11 +40,11 @@ export function create({ src, loadMeta, home, repo }) {
     const extId = `gloam.gloam-${name}`;
     const filtered = registry.filter((e) => e.identifier?.id !== extId);
     filtered.push({
-      identifier:       { id: extId },
+      identifier: { id: extId },
       version,
-      location:         { $mid: 1, path: extDir, scheme: "file" },
+      location: { $mid: 1, path: extDir, scheme: "file" },
       relativeLocation: `gloam-${name}`,
-      metadata:         { installedTimestamp: Date.now(), source: "local" },
+      metadata: { installedTimestamp: Date.now(), source: "local" },
     });
     const tmpRegistryPath = registryPath + ".tmp";
     writeJson(tmpRegistryPath, filtered);

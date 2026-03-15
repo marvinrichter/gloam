@@ -52,10 +52,22 @@ describe("generateVscode", () => {
   it("sets all 16 terminal ANSI colors", () => {
     const obj = JSON.parse(generateVscode(theme));
     const expected = [
-      "terminal.ansiBlack",   "terminal.ansiRed",       "terminal.ansiGreen",  "terminal.ansiYellow",
-      "terminal.ansiBlue",    "terminal.ansiMagenta",   "terminal.ansiCyan",   "terminal.ansiWhite",
-      "terminal.ansiBrightBlack", "terminal.ansiBrightRed", "terminal.ansiBrightGreen", "terminal.ansiBrightYellow",
-      "terminal.ansiBrightBlue",  "terminal.ansiBrightMagenta", "terminal.ansiBrightCyan", "terminal.ansiBrightWhite",
+      "terminal.ansiBlack",
+      "terminal.ansiRed",
+      "terminal.ansiGreen",
+      "terminal.ansiYellow",
+      "terminal.ansiBlue",
+      "terminal.ansiMagenta",
+      "terminal.ansiCyan",
+      "terminal.ansiWhite",
+      "terminal.ansiBrightBlack",
+      "terminal.ansiBrightRed",
+      "terminal.ansiBrightGreen",
+      "terminal.ansiBrightYellow",
+      "terminal.ansiBrightBlue",
+      "terminal.ansiBrightMagenta",
+      "terminal.ansiBrightCyan",
+      "terminal.ansiBrightWhite",
     ];
     expected.forEach((k) => assert.ok(k in obj.colors, `missing ${k}`));
   });
@@ -76,18 +88,14 @@ describe("generateVscode", () => {
 
   it("keywords use accent color", () => {
     const obj = JSON.parse(generateVscode(theme));
-    const kw = obj.tokenColors.find((tc) =>
-      [].concat(tc.scope).some((s) => s.includes("keyword"))
-    );
+    const kw = obj.tokenColors.find((tc) => [].concat(tc.scope).some((s) => s.includes("keyword")));
     assert.ok(kw, "no keyword token found");
     assert.strictEqual(kw.settings.foreground.toLowerCase(), "#ff7f57");
   });
 
   it("comments use muted color", () => {
     const obj = JSON.parse(generateVscode(theme));
-    const cm = obj.tokenColors.find((tc) =>
-      [].concat(tc.scope).some((s) => s.includes("comment"))
-    );
+    const cm = obj.tokenColors.find((tc) => [].concat(tc.scope).some((s) => s.includes("comment")));
     assert.ok(cm, "no comment token found");
     assert.strictEqual(cm.settings.foreground.toLowerCase(), "#8b84c4");
   });
@@ -95,7 +103,7 @@ describe("generateVscode", () => {
   it("types/classes use primary color", () => {
     const obj = JSON.parse(generateVscode(theme));
     const tp = obj.tokenColors.find((tc) =>
-      [].concat(tc.scope).some((s) => s.includes("entity.name.type"))
+      [].concat(tc.scope).some((s) => s.includes("entity.name.type")),
     );
     assert.ok(tp, "no type token found");
     assert.strictEqual(tp.settings.foreground.toLowerCase(), "#e8b86d");

@@ -77,22 +77,22 @@ function buildThemeJson(data) {
       error: data.error,
     },
     ansi: [
-      data.background,          // 0  black = background
-      "#602020",                 // 1  muted red
-      "#206030",                 // 2  muted green
-      "#604820",                 // 3  muted yellow
-      "#202060",                 // 4  muted blue
-      "#482060",                 // 5  muted magenta
-      "#206060",                 // 6  muted cyan
-      "#606060",                 // 7  muted white
-      data.type === "dark" ? "#2A2A2A" : "#D0C8B8",  // 8  bright-black = dim bg
-      data.error,               // 9  bright red ≈ error
-      "#30A050",                 // 10 bright green (string color)
-      data.primary,             // 11 bright yellow = primary
-      data.muted,               // 12 bright blue = muted
-      "#A070C0",                 // 13 bright magenta (constant)
-      "#30A0A0",                 // 14 bright cyan
-      data.foreground,          // 15 bright white = foreground
+      data.background, // 0  black = background
+      "#602020", // 1  muted red
+      "#206030", // 2  muted green
+      "#604820", // 3  muted yellow
+      "#202060", // 4  muted blue
+      "#482060", // 5  muted magenta
+      "#206060", // 6  muted cyan
+      "#606060", // 7  muted white
+      data.type === "dark" ? "#2A2A2A" : "#D0C8B8", // 8  bright-black = dim bg
+      data.error, // 9  bright red ≈ error
+      "#30A050", // 10 bright green (string color)
+      data.primary, // 11 bright yellow = primary
+      data.muted, // 12 bright blue = muted
+      "#A070C0", // 13 bright magenta (constant)
+      "#30A0A0", // 14 bright cyan
+      data.foreground, // 15 bright white = foreground
     ],
     ui: {
       cursor: data.accent,
@@ -183,7 +183,7 @@ gloam new-theme scaffold
 ─────────────────────────
 `);
 
-const name = (cliName || await ask("Theme slug (lowercase, no spaces)", "my-theme"))
+const name = (cliName || (await ask("Theme slug (lowercase, no spaces)", "my-theme")))
   .toLowerCase()
   .replace(/\s+/g, "-");
 
@@ -202,10 +202,22 @@ const background = await ask("Background hex (#RRGGBB)", type === "dark" ? "#0D1
 const foreground = await ask("Foreground hex (#RRGGBB)", type === "dark" ? "#E0D8C8" : "#2A1C10");
 
 console.log(`\nSemantic tokens (must each achieve ≥4.5:1 against background ${background}):`);
-const primary = await ask("primary hex (navigation — directory, languages)", type === "dark" ? "#80C0E0" : "#4A2010");
-const accent = await ask("accent hex  (action — git, cursor, prompt char)", type === "dark" ? "#E0A060" : "#1A3A70");
-const muted = await ask("muted hex   (chrome — time, fill, box corners)  ", type === "dark" ? "#7080A0" : "#6A5040");
-const error = await ask("error hex   (fail state only)                    ", type === "dark" ? "#E06060" : "#7A1820");
+const primary = await ask(
+  "primary hex (navigation — directory, languages)",
+  type === "dark" ? "#80C0E0" : "#4A2010",
+);
+const accent = await ask(
+  "accent hex  (action — git, cursor, prompt char)",
+  type === "dark" ? "#E0A060" : "#1A3A70",
+);
+const muted = await ask(
+  "muted hex   (chrome — time, fill, box corners)  ",
+  type === "dark" ? "#7080A0" : "#6A5040",
+);
+const error = await ask(
+  "error hex   (fail state only)                    ",
+  type === "dark" ? "#E06060" : "#7A1820",
+);
 
 console.log(`\nPrompt personality:`);
 const layout = await askChoice("Layout", ["two-line-box", "single-line"], "two-line-box");
@@ -230,16 +242,34 @@ for (const [token, hex] of Object.entries(tokenChecks)) {
   }
   const pass = ratio >= 4.5;
   if (!pass) anyFail = true;
-  console.log(`  ${pass ? "✓" : "✗"}  tokens.${token.padEnd(8)} ${hex}  ${ratio.toFixed(2)}:1  ${pass ? "AA" : "FAIL"}`);
+  console.log(
+    `  ${pass ? "✓" : "✗"}  tokens.${token.padEnd(8)} ${hex}  ${ratio.toFixed(2)}:1  ${pass ? "AA" : "FAIL"}`,
+  );
 }
 
 if (anyFail) {
-  console.log(`\nWarning: one or more tokens fail WCAG AA. Adjust token colors before running 'npm test'.`);
+  console.log(
+    `\nWarning: one or more tokens fail WCAG AA. Adjust token colors before running 'npm test'.`,
+  );
 }
 
 // ── Write files ───────────────────────────────────────────────────────────────
 
-const data = { name, displayName, concept, type, background, foreground, primary, accent, muted, error, layout, fill, timePrefix };
+const data = {
+  name,
+  displayName,
+  concept,
+  type,
+  background,
+  foreground,
+  primary,
+  accent,
+  muted,
+  error,
+  layout,
+  fill,
+  timePrefix,
+};
 const themeDir = join(THEMES_DIR, name);
 mkdirSync(themeDir, { recursive: true });
 

@@ -6,12 +6,12 @@
 export function generateStarship(theme) {
   const { name, tokens, prompt } = theme;
   const {
-    layout        = "two-line-box",
-    showUsername  = false,
-    fill          = "·",
-    timePrefix    = "◆",
+    layout = "two-line-box",
+    showUsername = false,
+    fill = "·",
+    timePrefix = "◆",
     successSymbol = "❯",
-    vimSymbol     = "❮",
+    vimSymbol = "❮",
   } = prompt;
 
   const isTwoLine = layout === "two-line-box";
@@ -20,9 +20,7 @@ export function generateStarship(theme) {
 
   const usernameModule = showUsername ? `$username\\\n` : ``;
 
-  const formatBlock = isTwoLine
-    ? buildTwoLineBox(usernameModule)
-    : buildSingleLine(usernameModule);
+  const formatBlock = isTwoLine ? buildTwoLineBox(usernameModule) : buildSingleLine(usernameModule);
 
   // ── username block ───────────────────────────────────────────────────────
 

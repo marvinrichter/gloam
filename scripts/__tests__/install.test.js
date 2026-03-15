@@ -18,11 +18,30 @@ const FAKE_THEME = {
   foreground: "#F0EAD6",
   tokens: { primary: "#E8B86D", accent: "#FF7F57", muted: "#8B84C4", error: "#E85D5D" },
   ansi: Array(16).fill("#000000"),
-  ui: { cursor: "#FF7F57", cursorText: "#0D0F1A", selection: "#1E2040", selectionText: "#F0EAD6", bold: "#F0EAD6", link: "#B8B4E8" },
-  prompt: { layout: "two-line-box", showUsername: true, fill: "─", timePrefix: "◆", successSymbol: "❯", vimSymbol: "❮" },
+  ui: {
+    cursor: "#FF7F57",
+    cursorText: "#0D0F1A",
+    selection: "#1E2040",
+    selectionText: "#F0EAD6",
+    bold: "#F0EAD6",
+    link: "#B8B4E8",
+  },
+  prompt: {
+    layout: "two-line-box",
+    showUsername: true,
+    fill: "─",
+    timePrefix: "◆",
+    successSymbol: "❯",
+    vimSymbol: "❮",
+  },
 };
 
-const FAKE_LIGHT_THEME = { ...FAKE_THEME, name: "lighttest", displayName: "Light Test", type: "light" };
+const FAKE_LIGHT_THEME = {
+  ...FAKE_THEME,
+  name: "lighttest",
+  displayName: "Light Test",
+  type: "light",
+};
 
 function scaffoldFakeTheme(repoDir, meta) {
   const themeDir = join(repoDir, "themes", meta.name);
@@ -31,19 +50,34 @@ function scaffoldFakeTheme(repoDir, meta) {
   writeFileSync(join(themeDir, `${meta.name}.json`), JSON.stringify(meta));
   writeFileSync(join(themeDir, "starship.toml"), `# ${meta.name} starship config\n`);
   writeFileSync(join(themeDir, "alacritty.toml"), `# ${meta.name} alacritty config\n`);
-  writeFileSync(join(themeDir, "kitty.conf"),     `# ${meta.name} kitty config\n`);
-  writeFileSync(join(themeDir, "wezterm.lua"),    `-- ${meta.name} wezterm config\n`);
-  writeFileSync(join(themeDir, "ghostty"),        `# ${meta.name} ghostty config\n`);
-  writeFileSync(join(themeDir, "neovim.lua"),     `-- ${meta.name} neovim config\n`);
-  writeFileSync(join(themeDir, "vscode.json"),    JSON.stringify({ name: meta.displayName, type: meta.type, colors: {}, tokenColors: [] }));
-  writeFileSync(join(themeDir, "zed.json"),       JSON.stringify({ name: meta.displayName, themes: [{ name: meta.displayName, appearance: meta.type === "light" ? "light" : "dark" }] }));
-  writeFileSync(join(themeDir, "windows-terminal.json"), JSON.stringify({ name: meta.displayName, background: meta.background }));
+  writeFileSync(join(themeDir, "kitty.conf"), `# ${meta.name} kitty config\n`);
+  writeFileSync(join(themeDir, "wezterm.lua"), `-- ${meta.name} wezterm config\n`);
+  writeFileSync(join(themeDir, "ghostty"), `# ${meta.name} ghostty config\n`);
+  writeFileSync(join(themeDir, "neovim.lua"), `-- ${meta.name} neovim config\n`);
+  writeFileSync(
+    join(themeDir, "vscode.json"),
+    JSON.stringify({ name: meta.displayName, type: meta.type, colors: {}, tokenColors: [] }),
+  );
+  writeFileSync(
+    join(themeDir, "zed.json"),
+    JSON.stringify({
+      name: meta.displayName,
+      themes: [{ name: meta.displayName, appearance: meta.type === "light" ? "light" : "dark" }],
+    }),
+  );
+  writeFileSync(
+    join(themeDir, "windows-terminal.json"),
+    JSON.stringify({ name: meta.displayName, background: meta.background }),
+  );
 }
 
 before(() => {
   TMP_HOME = mkdtempSync(join(tmpdir(), "gloam-install-home-"));
   TMP_REPO = mkdtempSync(join(tmpdir(), "gloam-install-repo-"));
-  writeFileSync(join(TMP_REPO, "package.json"), JSON.stringify({ name: "gloam", version: "0.0.0-test" }));
+  writeFileSync(
+    join(TMP_REPO, "package.json"),
+    JSON.stringify({ name: "gloam", version: "0.0.0-test" }),
+  );
   scaffoldFakeTheme(TMP_REPO, FAKE_THEME);
   scaffoldFakeTheme(TMP_REPO, FAKE_LIGHT_THEME);
 });
@@ -248,12 +282,21 @@ describe("installVscode", async () => {
 
   it("copies vscode.json into the extension themes subdirectory", () => {
     installVscode("testtheme");
-    assert.ok(existsSync(join(TMP_HOME, ".vscode", "extensions", "gloam-testtheme", "themes", "testtheme.json")));
+    assert.ok(
+      existsSync(
+        join(TMP_HOME, ".vscode", "extensions", "gloam-testtheme", "themes", "testtheme.json"),
+      ),
+    );
   });
 
   it("generates a valid package.json", () => {
     installVscode("testtheme");
-    const pkg = JSON.parse(readFileSync(join(TMP_HOME, ".vscode", "extensions", "gloam-testtheme", "package.json"), "utf8"));
+    const pkg = JSON.parse(
+      readFileSync(
+        join(TMP_HOME, ".vscode", "extensions", "gloam-testtheme", "package.json"),
+        "utf8",
+      ),
+    );
     assert.strictEqual(pkg.name, "gloam-testtheme");
     assert.ok(Array.isArray(pkg.contributes.themes));
     assert.strictEqual(pkg.contributes.themes[0].uiTheme, "vs-dark");
@@ -261,7 +304,12 @@ describe("installVscode", async () => {
 
   it("uses uiTheme vs for light themes", () => {
     installVscode("lighttest");
-    const pkg = JSON.parse(readFileSync(join(TMP_HOME, ".vscode", "extensions", "gloam-lighttest", "package.json"), "utf8"));
+    const pkg = JSON.parse(
+      readFileSync(
+        join(TMP_HOME, ".vscode", "extensions", "gloam-lighttest", "package.json"),
+        "utf8",
+      ),
+    );
     assert.strictEqual(pkg.contributes.themes[0].uiTheme, "vs");
   });
 });
@@ -299,10 +347,14 @@ describe("installZed", async () => {
 describe("installWindowsTerminal", async () => {
   const { installWindowsTerminal } = await installers();
 
-  it("returns a skip message on non-Windows platforms", { skip: process.platform === "win32" }, () => {
-    const msg = installWindowsTerminal("testtheme");
-    assert.match(msg, /skip/i);
-  });
+  it(
+    "returns a skip message on non-Windows platforms",
+    { skip: process.platform === "win32" },
+    () => {
+      const msg = installWindowsTerminal("testtheme");
+      assert.match(msg, /skip/i);
+    },
+  );
 });
 
 // ── error handling ────────────────────────────────────────────────────────────
@@ -311,23 +363,14 @@ describe("run — error handling", async () => {
   const { run } = await import("../install.js");
 
   it("throws on unknown theme name", () => {
-    assert.throws(
-      () => run("nonexistent", "starship", TMP_HOME, TMP_REPO),
-      /unknown theme/i,
-    );
+    assert.throws(() => run("nonexistent", "starship", TMP_HOME, TMP_REPO), /unknown theme/i);
   });
 
   it("throws on unknown target name", () => {
-    assert.throws(
-      () => run("testtheme", "nonexistent", TMP_HOME, TMP_REPO),
-      /unknown target/i,
-    );
+    assert.throws(() => run("testtheme", "nonexistent", TMP_HOME, TMP_REPO), /unknown target/i);
   });
 
   it("throws when target is 'all' (unknown target)", () => {
-    assert.throws(
-      () => run("testtheme", "all", TMP_HOME, TMP_REPO),
-      /unknown target/i,
-    );
+    assert.throws(() => run("testtheme", "all", TMP_HOME, TMP_REPO), /unknown target/i);
   });
 });

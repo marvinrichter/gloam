@@ -3,9 +3,7 @@ import { hex } from "./utils.js";
 export function generateGhostty(theme) {
   const { name, background, foreground, ansi, ui } = theme;
 
-  const paletteLines = ansi
-    .map((c, i) => `palette = ${i}=${hex(c)}`)
-    .join("\n");
+  const paletteLines = ansi.map((c, i) => `palette = ${i}=${hex(c)}`).join("\n");
 
   return [
     `# ${name} — Ghostty color theme`,

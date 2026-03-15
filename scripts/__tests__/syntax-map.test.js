@@ -4,9 +4,21 @@ import { syntaxColors } from "../generators/syntax-map.js";
 import { theme } from "./fixture.js";
 
 const EXPECTED_KEYS = [
-  "keyword", "type", "class", "function", "string", "number",
-  "comment", "variable", "constant", "operator", "punctuation",
-  "tag", "attribute", "error", "warning",
+  "keyword",
+  "type",
+  "class",
+  "function",
+  "string",
+  "number",
+  "comment",
+  "variable",
+  "constant",
+  "operator",
+  "punctuation",
+  "tag",
+  "attribute",
+  "error",
+  "warning",
 ];
 
 describe("syntaxColors()", () => {
@@ -87,7 +99,10 @@ describe("syntaxColors()", () => {
   it("all values are non-empty strings", () => {
     const result = syntaxColors(theme);
     for (const [key, value] of Object.entries(result)) {
-      assert.ok(typeof value === "string" && value.length > 0, `"${key}" is not a non-empty string`);
+      assert.ok(
+        typeof value === "string" && value.length > 0,
+        `"${key}" is not a non-empty string`,
+      );
     }
   });
 });
