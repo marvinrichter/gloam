@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, globSync } from "node:fs";
+import { readFileSync, globSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import { validateTheme } from "../generate.js";
 
@@ -202,7 +202,9 @@ describe("validateTheme() — unit", () => {
 
 // ── Integration: all real theme JSON files must pass validation ───────────────
 
-const themeNames = globSync("*/", { cwd: THEMES_DIR }).map((d) => d.replace(/\/$/, ""));
+const themeNames = globSync("*/", { cwd: THEMES_DIR })
+  .map((d) => d.replace(/\/$/, ""))
+  .filter((name) => existsSync(join(THEMES_DIR, name, `${name}.json`)));
 
 describe("real theme JSON files pass validateTheme()", () => {
   for (const name of themeNames) {

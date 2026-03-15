@@ -129,4 +129,16 @@ describe("generate() — invalid theme is skipped", () => {
     process.exitCode = savedCode;
     assert.ok(existsSync(join(TMP_ERR, "goodtheme")));
   });
+
+  it("catches per-file generator errors and sets exitCode=1", () => {
+    // Pre-create starship.toml as a directory so writeFileSync throws EISDIR
+    const themeDir = join(TMP_ERR, theme.name);
+    mkdirSync(join(themeDir, "starship.toml"), { recursive: true });
+    const savedCode = process.exitCode;
+    generate([theme], TMP_ERR);
+    const result = process.exitCode;
+    process.exitCode = savedCode;
+    assert.strictEqual(result, 1);
+    rmSync(themeDir, { recursive: true, force: true });
+  });
 });

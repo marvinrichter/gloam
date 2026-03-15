@@ -19,7 +19,7 @@ import { component } from "./utils.js";
  * Encode a value into a binary plist object byte sequence.
  * Returns a Buffer.
  */
-function encodeObject(val, type) {
+export function encodeObject(val, type) {
   if (type === "string") {
     const bytes = Buffer.from(val, "ascii");
     return prefixed(0x50, bytes);
@@ -64,7 +64,7 @@ function encodeObject(val, type) {
   throw new Error(`Unknown bplist type: ${type}`);
 }
 
-function encodeIntLen(n) {
+export function encodeIntLen(n) {
   if (n < 0x100) return Buffer.from([0x10, n]);
   if (n < 0x10000) {
     const b = Buffer.alloc(3);

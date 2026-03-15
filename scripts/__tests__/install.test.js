@@ -432,6 +432,35 @@ describe("installWindowsTerminal — IS_WIN=true paths", async () => {
     assert.match(msg, /skip/i);
   });
 
+  it("treats missing readJson result as empty object (settings.json empty)", () => {
+    const settingsDir = join(
+      TMP_HOME,
+      "AppData",
+      "Local",
+      "Packages",
+      "Microsoft.WindowsTerminal_8wekyb3d8bbwe",
+      "LocalState",
+    );
+    mkdirSync(settingsDir, { recursive: true });
+    const settingsPath = join(settingsDir, "settings.json");
+    // Empty file → readJson returns null → settings = {} via ??
+    writeFileSync(settingsPath, "");
+
+    const install = create({
+      src: (name) => join(TMP_REPO, "themes", name),
+      home: TMP_HOME,
+      IS_WIN: true,
+    });
+    const original = process.env.LOCALAPPDATA;
+    process.env.LOCALAPPDATA = join(TMP_HOME, "AppData", "Local");
+    install("testtheme");
+    if (original === undefined) delete process.env.LOCALAPPDATA;
+    else process.env.LOCALAPPDATA = original;
+
+    const settings = JSON.parse(readFileSync(settingsPath, "utf8"));
+    assert.ok(Array.isArray(settings.schemes));
+  });
+
   it("adds scheme when settings.json exists but has no schemes array", () => {
     const settingsDir = join(
       TMP_HOME,
@@ -509,5 +538,129 @@ describe("run — error handling", async () => {
 
   it("throws when target is 'all' (unknown target)", () => {
     assert.throws(() => run("testtheme", "all", TMP_HOME, TMP_REPO), /unknown target/i);
+  });
+
+  it("dispatches MANUAL targets without throwing (iterm2)", () => {
+    assert.doesNotThrow(() => run("testtheme", "iterm2", TMP_HOME, TMP_REPO));
+  });
+
+  it("dispatches MANUAL targets without throwing (intellij)", () => {
+    assert.doesNotThrow(() => run("testtheme", "intellij", TMP_HOME, TMP_REPO));
+  });
+
+  it("dispatches MANUAL targets without throwing (terminal-app)", () => {
+    assert.doesNotThrow(() => run("testtheme", "terminal-app", TMP_HOME, TMP_REPO));
+  });
+
+  it("dispatches MANUAL targets without throwing (oh-my-posh)", () => {
+    assert.doesNotThrow(() => run("testtheme", "oh-my-posh", TMP_HOME, TMP_REPO));
+  });
+
+  it("dispatches MANUAL targets without throwing (sublime-text)", () => {
+    assert.doesNotThrow(() => run("testtheme", "sublime-text", TMP_HOME, TMP_REPO));
+  });
+
+  it("catches installer errors and does not throw", () => {
+    // Create a theme dir missing the required file so the installer throws
+    const brokenDir = join(TMP_REPO, "themes", "broken-install-tmp");
+    mkdirSync(brokenDir, { recursive: true });
+    writeFileSync(join(brokenDir, "broken-install-tmp.json"), JSON.stringify(FAKE_THEME));
+    // No starship.toml — installStarship will throw when trying to copy it
+    try {
+      assert.doesNotThrow(() => run("broken-install-tmp", "starship", TMP_HOME, TMP_REPO));
+    } finally {
+      rmSync(brokenDir, { recursive: true, force: true });
+    }
+  });
+
+  it("run('all', target) installs the target for all available themes", () => {
+    assert.doesNotThrow(() => run("all", "starship", TMP_HOME, TMP_REPO));
+  });
+});
+
+// ── createInstallers — path traversal and invalid JSON ────────────────────────
+
+describe("createInstallers — src() and loadMeta() error paths", async () => {
+  const { createInstallers } = await import("../install.js");
+
+  it("src() throws on path traversal attempt", () => {
+    const inst = createInstallers(TMP_HOME, TMP_REPO);
+    assert.throws(() => inst.installStarship("../escape"), /Unsafe theme path/);
+  });
+
+  it("loadMeta() throws when theme JSON is malformed", () => {
+    const badDir = join(TMP_REPO, "themes", "badjson-tmp");
+    mkdirSync(badDir, { recursive: true });
+    writeFileSync(join(badDir, "badjson-tmp.json"), "not valid json {{{");
+    try {
+      const inst = createInstallers(TMP_HOME, TMP_REPO);
+      assert.throws(() => inst.installVscode("badjson-tmp"), /invalid JSON/i);
+    } finally {
+      rmSync(badDir, { recursive: true, force: true });
+    }
+  });
+});
+
+// ── upsertLine — invalid regex ────────────────────────────────────────────────
+
+describe("upsertLine — invalid regex pattern", async () => {
+  const { upsertLine } = await import("../install.js");
+
+  it("throws when the reconstructed global pattern is invalid", () => {
+    const p = join(TMP_HOME, "upsert-invalid-regex.conf");
+    writeFileSync(p, "some existing content");
+    // Fake pattern: test() returns true to enter the replace branch,
+    // but source is an invalid regex string so new RegExp(source, "g") throws.
+    const fakePattern = { test: () => true, source: "[invalid(", flags: "" };
+    assert.throws(() => upsertLine(p, fakePattern, "replacement"), /invalid regex pattern/);
+  });
+
+  it("uses existing flags unchanged when pattern already has the 'g' flag", () => {
+    const p = join(TMP_HOME, "upsert-global-flag.conf");
+    writeFileSync(p, "theme = old\n");
+    // Pattern with flags already including "g" — the ternary must use the existing flags
+    const result = upsertLine(p, /^theme\s*=.*/gm, "theme = new");
+    assert.strictEqual(result, "updated");
+    assert.match(readFileSync(p, "utf8"), /theme = new/);
+  });
+});
+
+// ── installZed — JSONC fallback ───────────────────────────────────────────────
+
+describe("installZed — JSONC settings fallback", async () => {
+  const { installZed } = await installers();
+
+  it("returns a skip message when settings.json contains non-parseable content", () => {
+    const settingsPath = join(TMP_HOME, ".config", "zed", "settings.json");
+    // JSONC with a comment — not valid JSON
+    writeFileSync(settingsPath, '// comment\n{ "theme": "old" }');
+    const msg = installZed("testtheme");
+    assert.match(msg, /skipped updating/i);
+  });
+});
+
+// ── installWindowsTerminal — LOCALAPPDATA nullish fallback ────────────────────
+
+describe("installWindowsTerminal — LOCALAPPDATA fallback", async () => {
+  const { create } = await import("../installers/windows-terminal.js");
+
+  it("falls back to home/AppData/Local when LOCALAPPDATA is not set", () => {
+    // Use a fresh home dir with no Windows Terminal settings so the fallback skips
+    const freshHome = mkdtempSync(join(tmpdir(), "gloam-wt-fallback-"));
+    try {
+      const install = create({
+        src: (name) => join(TMP_REPO, "themes", name),
+        home: freshHome,
+        IS_WIN: true,
+      });
+      const original = process.env.LOCALAPPDATA;
+      delete process.env.LOCALAPPDATA;
+      const msg = install("testtheme");
+      if (original === undefined) delete process.env.LOCALAPPDATA;
+      else process.env.LOCALAPPDATA = original;
+      assert.match(msg, /skip/i);
+    } finally {
+      rmSync(freshHome, { recursive: true, force: true });
+    }
   });
 });

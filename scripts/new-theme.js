@@ -134,6 +134,64 @@ npx github:marvinrichter/gloam ${data.name} starship
 `;
 }
 
+// ── WCAG contrast (exported for testing) ──────────────────────────────────────
+
+export function luminance(hex) {
+  const c = hex.replace(/^#/, "");
+  const toLinear = (v) => {
+    const s = parseInt(c.slice(v, v + 2), 16) / 255;
+    return s <= 0.04045 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+  };
+  return 0.2126 * toLinear(0) + 0.7152 * toLinear(2) + 0.0722 * toLinear(4);
+}
+
+export function contrast(hex1, hex2) {
+  const l1 = luminance(hex1);
+  const l2 = luminance(hex2);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+// ── Scaffold (exported for testing) ───────────────────────────────────────────
+
+/**
+ * Write theme JSON + MD files and run the WCAG pre-check.
+ * Returns { wcagResults, anyFail } so callers can format output however they like.
+ */
+export function scaffoldTheme(data, themesDir) {
+  const tokenChecks = {
+    primary: data.primary,
+    accent: data.accent,
+    muted: data.muted,
+    error: data.error,
+  };
+  let anyFail = false;
+  const wcagResults = [];
+  for (const [token, hex] of Object.entries(tokenChecks)) {
+    const ratio = contrast(hex, data.background);
+    if (isNaN(ratio)) {
+      wcagResults.push({ token, hex, pass: false, invalid: true });
+      anyFail = true;
+      continue;
+    }
+    const pass = ratio >= 4.5;
+    if (!pass) anyFail = true;
+    wcagResults.push({ token, hex, ratio, pass });
+  }
+
+  const themeDir = join(themesDir, data.name);
+  mkdirSync(themeDir, { recursive: true });
+  writeFileSync(
+    join(themeDir, `${data.name}.json`),
+    JSON.stringify(buildThemeJson(data), null, 2) + "\n",
+    "utf8",
+  );
+  writeFileSync(join(themeDir, `${data.name}.md`), buildThemeMd(data), "utf8");
+
+  return { wcagResults, anyFail };
+}
+
 // ── CLI (only runs when executed directly, not when imported as a module) ──────
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
@@ -157,25 +215,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
       return defaultVal;
     }
     return answer;
-  }
-
-  // ── WCAG contrast ─────────────────────────────────────────────────────────────
-
-  function luminance(hex) {
-    const c = hex.replace(/^#/, "");
-    const toLinear = (v) => {
-      const s = parseInt(c.slice(v, v + 2), 16) / 255;
-      return s <= 0.04045 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
-    };
-    return 0.2126 * toLinear(0) + 0.7152 * toLinear(2) + 0.0722 * toLinear(4);
-  }
-
-  function contrast(hex1, hex2) {
-    const l1 = luminance(hex1);
-    const l2 = luminance(hex2);
-    const lighter = Math.max(l1, l2);
-    const darker = Math.min(l1, l2);
-    return (lighter + 0.05) / (darker + 0.05);
   }
 
   // ── Main ──────────────────────────────────────────────────────────────────────
@@ -230,35 +269,6 @@ gloam new-theme scaffold
 
   rl.close();
 
-  // ── WCAG pre-check ────────────────────────────────────────────────────────────
-
-  const tokenChecks = { primary, accent, muted, error };
-  let anyFail = false;
-  console.log(`\nWCAG AA pre-check (≥4.5:1 vs ${background}):`);
-  for (const [token, hex] of Object.entries(tokenChecks)) {
-    let ratio;
-    try {
-      ratio = contrast(hex, background);
-    } catch {
-      console.log(`  ✗  tokens.${token} = ${hex} — invalid hex`);
-      anyFail = true;
-      continue;
-    }
-    const pass = ratio >= 4.5;
-    if (!pass) anyFail = true;
-    console.log(
-      `  ${pass ? "✓" : "✗"}  tokens.${token.padEnd(8)} ${hex}  ${ratio.toFixed(2)}:1  ${pass ? "AA" : "FAIL"}`,
-    );
-  }
-
-  if (anyFail) {
-    console.log(
-      `\nWarning: one or more tokens fail WCAG AA. Adjust token colors before running 'npm test'.`,
-    );
-  }
-
-  // ── Write files ───────────────────────────────────────────────────────────────
-
   const data = {
     name,
     displayName,
@@ -274,14 +284,26 @@ gloam new-theme scaffold
     fill,
     timePrefix,
   };
-  const themeDir = join(THEMES_DIR, name);
-  mkdirSync(themeDir, { recursive: true });
 
-  const jsonPath = join(themeDir, `${name}.json`);
-  writeFileSync(jsonPath, JSON.stringify(buildThemeJson(data), null, 2) + "\n", "utf8");
+  // ── WCAG pre-check + file writing (via exported scaffoldTheme) ────────────────
 
-  const mdPath = join(themeDir, `${name}.md`);
-  writeFileSync(mdPath, buildThemeMd(data), "utf8");
+  console.log(`\nWCAG AA pre-check (≥4.5:1 vs ${background}):`);
+  const { wcagResults, anyFail } = scaffoldTheme(data, THEMES_DIR);
+  for (const r of wcagResults) {
+    if (r.invalid) {
+      console.log(`  ✗  tokens.${r.token} = ${r.hex} — invalid hex`);
+    } else {
+      console.log(
+        `  ${r.pass ? "✓" : "✗"}  tokens.${r.token.padEnd(8)} ${r.hex}  ${r.ratio.toFixed(2)}:1  ${r.pass ? "AA" : "FAIL"}`,
+      );
+    }
+  }
+
+  if (anyFail) {
+    console.log(
+      `\nWarning: one or more tokens fail WCAG AA. Adjust token colors before running 'npm test'.`,
+    );
+  }
 
   console.log(`
 Created:

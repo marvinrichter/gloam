@@ -1,10 +1,11 @@
-import { describe, it } from "node:test";
+import { describe, it, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { spawnSync } from "node:child_process";
-import { mkdirSync, rmSync } from "node:fs";
+import { spawnSync, spawn } from "node:child_process";
+import { mkdirSync, rmSync, existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
-import { buildThemeJson, buildThemeMd } from "../new-theme.js";
+import { buildThemeJson, buildThemeMd, luminance, contrast, scaffoldTheme } from "../new-theme.js";
 
 const SCRIPT = join(fileURLToPath(import.meta.url), "..", "..", "new-theme.js");
 
@@ -154,6 +155,57 @@ describe("buildThemeMd", () => {
   });
 });
 
+// ── luminance ─────────────────────────────────────────────────────────────────
+
+describe("luminance", () => {
+  it("black returns 0", () => {
+    assert.strictEqual(luminance("#000000"), 0);
+  });
+
+  it("white returns 1", () => {
+    assert.ok(Math.abs(luminance("#FFFFFF") - 1) < 0.0001);
+  });
+
+  it("mid-gray returns ~0.2158", () => {
+    assert.ok(Math.abs(luminance("#808080") - 0.2158) < 0.001);
+  });
+
+  it("works without leading #", () => {
+    assert.strictEqual(luminance("000000"), 0);
+  });
+
+  it("red channel contributes 0.2126 weight", () => {
+    // Pure red #FF0000: sRGB linear ≈ 0.2126 * 1 = 0.2126
+    assert.ok(Math.abs(luminance("#FF0000") - 0.2126) < 0.0001);
+  });
+});
+
+// ── contrast ──────────────────────────────────────────────────────────────────
+
+describe("contrast", () => {
+  it("black on white returns 21", () => {
+    assert.ok(Math.abs(contrast("#000000", "#FFFFFF") - 21) < 0.01);
+  });
+
+  it("white on black returns 21 (symmetric)", () => {
+    assert.ok(Math.abs(contrast("#FFFFFF", "#000000") - 21) < 0.01);
+  });
+
+  it("same color returns 1", () => {
+    assert.ok(Math.abs(contrast("#808080", "#808080") - 1) < 0.001);
+  });
+
+  it("gloam dark primary clears WCAG AA (≥4.5:1)", () => {
+    // eventide: primary #E8B86D on background #0D0F1A
+    assert.ok(contrast("#E8B86D", "#0D0F1A") >= 4.5);
+  });
+
+  it("very low contrast pair is below 4.5:1", () => {
+    // #505050 on #0D1020 is ~2.5:1
+    assert.ok(contrast("#505050", "#0D1020") < 4.5);
+  });
+});
+
 // ── CLI — error paths (no stdin required) ─────────────────────────────────────
 
 describe("new-theme.js CLI — error paths", () => {
@@ -169,6 +221,208 @@ describe("new-theme.js CLI — error paths", () => {
       });
       assert.strictEqual(result.status, 1);
       assert.match(result.stderr, /already exists/i);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
+});
+
+// ── scaffoldTheme ─────────────────────────────────────────────────────────────
+
+describe("scaffoldTheme", () => {
+  const TMP = join(tmpdir(), `scaffold-test-${Date.now()}`);
+
+  before(() => mkdirSync(TMP, { recursive: true }));
+  after(() => rmSync(TMP, { recursive: true, force: true }));
+
+  it("creates the theme directory", () => {
+    scaffoldTheme(DATA, TMP);
+    assert.ok(existsSync(join(TMP, DATA.name)));
+  });
+
+  it("writes a valid JSON file", () => {
+    const content = readFileSync(join(TMP, DATA.name, `${DATA.name}.json`), "utf8");
+    assert.doesNotThrow(() => JSON.parse(content));
+    const obj = JSON.parse(content);
+    assert.strictEqual(obj.name, DATA.name);
+    assert.ok(Array.isArray(obj.ansi) && obj.ansi.length === 16);
+  });
+
+  it("writes an MD file", () => {
+    const content = readFileSync(join(TMP, DATA.name, `${DATA.name}.md`), "utf8");
+    assert.match(content, /## Color System/);
+  });
+
+  it("returns wcagResults array with one entry per token", () => {
+    const { wcagResults } = scaffoldTheme(DATA, TMP);
+    assert.strictEqual(wcagResults.length, 4);
+    assert.ok(wcagResults.every((r) => "token" in r && "hex" in r && "pass" in r));
+  });
+
+  it("returns anyFail=false when all tokens pass WCAG AA", () => {
+    const { anyFail } = scaffoldTheme(DATA, TMP);
+    assert.strictEqual(anyFail, false);
+  });
+
+  it("all tokens pass for default dark DATA", () => {
+    const { wcagResults } = scaffoldTheme(DATA, TMP);
+    assert.ok(wcagResults.every((r) => r.pass));
+  });
+
+  it("returns anyFail=true when a token fails WCAG AA", () => {
+    const failData = { ...DATA, name: "scaffold-fail-tmp", primary: "#505050" };
+    const { anyFail, wcagResults } = scaffoldTheme(failData, TMP);
+    assert.strictEqual(anyFail, true);
+    const primary = wcagResults.find((r) => r.token === "primary");
+    assert.strictEqual(primary.pass, false);
+    rmSync(join(TMP, failData.name), { recursive: true, force: true });
+  });
+
+  it("marks token as invalid when hex is malformed", () => {
+    const badData = { ...DATA, name: "scaffold-bad-hex-tmp", primary: "notahex" };
+    const { wcagResults, anyFail } = scaffoldTheme(badData, TMP);
+    const primary = wcagResults.find((r) => r.token === "primary");
+    assert.ok(primary.invalid);
+    assert.strictEqual(anyFail, true);
+    rmSync(join(TMP, badData.name), { recursive: true, force: true });
+  });
+});
+
+// ── CLI — happy path (spawn, delayed stdin so readline initialises first) ──────
+
+describe("new-theme.js CLI — happy path", () => {
+  // Answers for each readline prompt (all defaults, except concept which has no default)
+  const ANSWERS = ["", "test concept", "", "", "", "", "", "", "", "", "", ""];
+
+  function runCli(slug, answers) {
+    return new Promise((resolve, reject) => {
+      const realDir = join(fileURLToPath(import.meta.url), "..", "..", "..", "themes", slug);
+      const child = spawn(process.execPath, [SCRIPT, "--name", slug], {
+        stdio: ["pipe", "pipe", "pipe"],
+      });
+
+      let stdout = "";
+      child.stdout.on("data", (d) => (stdout += d));
+
+      // Write answers one at a time with a gap between each so the async chain
+      // has time to call rl.question() before the next answer arrives.
+      // Sending all answers at once causes readline to fire all 'line' events
+      // before later question() calls can register their listeners.
+      const INTERVAL_MS = 60;
+      const timers = [];
+      const initial = setTimeout(() => {
+        answers.forEach((answer, i) => {
+          const t = setTimeout(() => child.stdin.write(answer + "\n"), i * INTERVAL_MS);
+          timers.push(t);
+        });
+      }, 100);
+      timers.push(initial);
+
+      child.on("close", (code) => {
+        timers.forEach(clearTimeout);
+        resolve({ code, stdout, realDir });
+      });
+
+      child.on("error", (err) => {
+        timers.forEach(clearTimeout);
+        reject(err);
+      });
+    });
+  }
+
+  it("exits 0 and creates JSON + MD files", async () => {
+    const slug = "test-cli-happy-tmp";
+    const { code, realDir } = await runCli(slug, ANSWERS);
+    try {
+      assert.strictEqual(code, 0);
+      assert.ok(existsSync(join(realDir, `${slug}.json`)));
+      assert.ok(existsSync(join(realDir, `${slug}.md`)));
+      const obj = JSON.parse(readFileSync(join(realDir, `${slug}.json`), "utf8"));
+      assert.strictEqual(obj.name, slug);
+      assert.ok(Array.isArray(obj.ansi) && obj.ansi.length === 16);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
+
+  it("stdout includes 'Created:' summary", async () => {
+    const slug = "test-cli-created-tmp";
+    const { stdout, realDir } = await runCli(slug, ANSWERS);
+    try {
+      assert.match(stdout, /Created:/);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
+
+  it("stdout includes WCAG AA check output", async () => {
+    const slug = "test-cli-wcag-pass-tmp";
+    const { stdout, realDir } = await runCli(slug, ANSWERS);
+    try {
+      assert.match(stdout, /WCAG AA pre-check/);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
+
+  it("stdout includes FAIL and Warning when a token fails WCAG AA", async () => {
+    const slug = "test-cli-wcag-fail-tmp";
+    // answer[5] = primary — send a low-contrast color (#505050 ~2.5:1 on dark bg)
+    const FAIL_ANSWERS = ["", "test concept", "", "", "", "#505050", "", "", "", "", "", ""];
+    const { stdout, realDir } = await runCli(slug, FAIL_ANSWERS);
+    try {
+      assert.match(stdout, /FAIL/);
+      assert.match(stdout, /Warning/);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
+
+  it("stdout includes invalid-hex marker when a non-hex color is entered", async () => {
+    const slug = "test-cli-invalid-hex-tmp";
+    // answer[5] = primary — send a non-hex string
+    const INVALID_HEX_ANSWERS = [
+      "",
+      "test concept",
+      "",
+      "",
+      "",
+      "notahexcolor",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ];
+    const { stdout, realDir } = await runCli(slug, INVALID_HEX_ANSWERS);
+    try {
+      assert.match(stdout, /invalid hex/i);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
+
+  it("stdout includes 'Invalid choice' when an invalid option is entered for askChoice", async () => {
+    const slug = "test-cli-bad-choice-tmp";
+    // answer[2] = type — send an invalid choice; answer[9] = layout — also invalid
+    const INVALID_ANSWERS = [
+      "",
+      "test concept",
+      "notdark",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "notlayout",
+      "",
+      "",
+    ];
+    const { stdout, realDir } = await runCli(slug, INVALID_ANSWERS);
+    try {
+      assert.match(stdout, /Invalid choice/);
     } finally {
       rmSync(realDir, { recursive: true, force: true });
     }

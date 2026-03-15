@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { generateTerminalApp } from "../generators/terminal-app.js";
+import { generateTerminalApp, encodeObject, encodeIntLen } from "../generators/terminal-app.js";
 import { theme, lightTheme } from "./fixture.js";
 
 describe("generateTerminalApp", () => {
@@ -98,5 +98,66 @@ describe("generateTerminalApp", () => {
       const b64 = m[1].replace(/\s/g, "");
       assert.ok(Buffer.from(b64, "base64").length > 0);
     }
+  });
+});
+
+// ── encodeIntLen ──────────────────────────────────────────────────────────────
+
+describe("encodeIntLen", () => {
+  it("encodes n < 256 as 2-byte [0x10, n]", () => {
+    const buf = encodeIntLen(10);
+    assert.strictEqual(buf.length, 2);
+    assert.strictEqual(buf[0], 0x10);
+    assert.strictEqual(buf[1], 10);
+  });
+
+  it("encodes 256 <= n < 65536 as 3-byte big-endian", () => {
+    const buf = encodeIntLen(0x0200);
+    assert.strictEqual(buf.length, 3);
+    assert.strictEqual(buf[0], 0x11);
+    assert.strictEqual(buf.readUInt16BE(1), 0x0200);
+  });
+
+  it("encodes n >= 65536 as 5-byte big-endian", () => {
+    const buf = encodeIntLen(0x10000);
+    assert.strictEqual(buf.length, 5);
+    assert.strictEqual(buf[0], 0x12);
+    assert.strictEqual(buf.readUInt32BE(1), 0x10000);
+  });
+});
+
+// ── encodeObject ──────────────────────────────────────────────────────────────
+
+describe("encodeObject", () => {
+  it("encodes int in [256, 65535] range as 3-byte value", () => {
+    const buf = encodeObject(0x0100, "int");
+    assert.strictEqual(buf.length, 3);
+    assert.strictEqual(buf[0], 0x11);
+    assert.strictEqual(buf.readUInt16BE(1), 0x0100);
+  });
+
+  it("encodes array with >= 15 elements using long-form header (0xaf)", () => {
+    const arr = Array.from({ length: 15 }, (_, i) => i);
+    const buf = encodeObject(arr, "array");
+    assert.strictEqual(buf[0], 0xaf);
+    // followed by encodeIntLen(15) which is [0x10, 15], then the 15 ref bytes
+    assert.strictEqual(buf[1], 0x10);
+    assert.strictEqual(buf[2], 15);
+    assert.strictEqual(buf.length, 1 + 2 + 15);
+  });
+
+  it("encodes dict with >= 15 key-value pairs using long-form header (0xdf)", () => {
+    const keys = Array.from({ length: 15 }, (_, i) => i);
+    const values = Array.from({ length: 15 }, (_, i) => i + 15);
+    const buf = encodeObject({ keys, values }, "dict");
+    // Long-form dict header: 0xdf followed by encodeIntLen(15) = [0x10, 15]
+    assert.strictEqual(buf[0], 0xdf);
+    assert.strictEqual(buf[1], 0x10);
+    assert.strictEqual(buf[2], 15);
+    assert.strictEqual(buf.length, 1 + 2 + 15 + 15);
+  });
+
+  it("throws on unknown type", () => {
+    assert.throws(() => encodeObject(null, "unknown"), /Unknown bplist type/);
   });
 });
