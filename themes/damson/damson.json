@@ -1,0 +1,47 @@
+{
+  "name": "damson",
+  "displayName": "Damson",
+  "type": "dark",
+  "background": "#090610",
+  "foreground": "#E8D8F8",
+  "tokens": {
+    "primary": "#D428BC",
+    "accent": "#FF60D8",
+    "muted": "#887898",
+    "error": "#C86060"
+  },
+  "ansi": [
+    "#130B18",
+    "#601828",
+    "#285030",
+    "#604018",
+    "#202860",
+    "#602060",
+    "#204848",
+    "#A898B8",
+    "#382848",
+    "#E06070",
+    "#68C880",
+    "#C8A050",
+    "#6878D0",
+    "#C840B0",
+    "#70B8D8",
+    "#F0E8FF"
+  ],
+  "ui": {
+    "cursor": "#D428BC",
+    "cursorText": "#090610",
+    "selection": "#201030",
+    "selectionText": "#E8D8F8",
+    "bold": "#FF60D8",
+    "link": "#FF60D8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "∙",
+    "timePrefix": "✦",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

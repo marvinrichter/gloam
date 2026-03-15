@@ -107,7 +107,7 @@ The exported `upsertLine()` function handles idempotent config line replacement.
 Two test suites in one file:
 
 1. Unit tests for `validateTheme()` with constructed invalid inputs
-2. Integration: reads all 44 real theme JSON files and asserts they pass validation
+2. Integration: reads all 45 real theme JSON files and asserts they pass validation
 
 If you add a new required field to a theme's JSON schema, add it to `validateTheme()` in `generate.js`, add a unit test here, and add the field to all 44 existing theme JSONs.
 

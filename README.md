@@ -1,6 +1,6 @@
 # gloam
 
-Forty-four terminal and editor theme design systems. Each built from a single atmospheric concept: semantic color tokens, a matched 16-color ANSI palette, and generated configs for every major terminal emulator and IDE.
+Forty-five terminal and editor theme design systems. Each built from a single atmospheric concept: semantic color tokens, a matched 16-color ANSI palette, and generated configs for every major terminal emulator and IDE.
 
 Every token in every theme clears 4.5:1 contrast against its background. Not as a selling point — as a baseline.
 
@@ -441,6 +441,28 @@ Background `#F2EEE6` · Foreground `#1E1A14` · Layout: single-line · Fill: `·
 Background `#282834` · Foreground `#C8C4BC` · Layout: two-line box · Fill: `⋰` · Cursor: `❯`
 
 [Design system guide →](themes/dusk/dusk.md)
+
+---
+
+### Damson
+
+> The small oval plum that stains your fingers before you can put it down. Not quite blue, not quite red — the color that exists between violet and magenta without resolving into either.
+
+```
+╭─ ✦ 09:41  ~/gloam ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙╮
+╰─  main ❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#D428BC` | damson skin — directory, languages |
+| accent | `#FF60D8` | bright cerise — git, cursor |
+| muted | `#887898` | bloom on the skin — chrome, time |
+| error | `#C86060` | coral red |
+
+Background `#090610` · Foreground `#E8D8F8` · Layout: two-line box · Fill: `∙` · Cursor: `❯`
+
+[Design system guide →](themes/damson/damson.md)
 
 ---
 
@@ -1069,7 +1091,7 @@ Background `#F4F0F8` · Foreground `#2A1A40` · Layout: single-line · Fill: `·
 
 ## Choosing a theme
 
-All 44 themes share the same structural model — four semantic tokens, 16-color ANSI palette, identical targets. The differences are concept, color temperature, and prompt layout.
+All 45 themes share the same structural model — four semantic tokens, 16-color ANSI palette, identical targets. The differences are concept, color temperature, and prompt layout.
 
 ### By color temperature
 
@@ -1078,7 +1100,7 @@ All 44 themes share the same structural model — four semantic tokens, 16-color
 | Eventide, Ember, Cordovan, Nocturne | Aether, Fjord, Basalt, Verdigris | Tungsten, Sable, Umbra, Absinthe |
 | Solano, Saffron, Ochre, Tallow | Nacreous, Petrichor, Amethyst, Cobalt | Noir, Cast, Graphite, Weld |
 | Bamboo, Carmine, Rosewater, Madder | Ironcast, Sumi, Synthwave, Dusk | Stark |
-| Bloom | Boreal, Iris, Canopy, Cirrus | |
+| Bloom | Boreal, Iris, Damson, Canopy, Cirrus | |
 | | Fern, Brume, Wisteria, Verdure | |
 
 ### By background type
@@ -1091,7 +1113,7 @@ All 44 themes share the same structural model — four semantic tokens, 16-color
 | Bamboo, Canopy, Carmine, Cast, Cobalt | Brume, Wisteria |
 | Dusk, Graphite, Ironcast, Noir, Rosewater | |
 | Sumi, Synthwave, Tallow, Weld, Madder | |
-| Boreal, Verdure, Iris | |
+| Boreal, Verdure, Iris, Damson | |
 
 ### By prompt layout
 
@@ -1102,7 +1124,7 @@ All 44 themes share the same structural model — four semantic tokens, 16-color
 | Saffron, Aether, Canopy, Carmine | Cirrus, Solano, Ochre, Bamboo |
 | Cast, Cobalt, Dusk, Graphite | Bloom, Fern, Noir, Sumi |
 | Ironcast, Rosewater, Stark, Synthwave | Tallow, Brume, Wisteria |
-| Weld, Boreal, Iris, Madder, Verdure | |
+| Weld, Boreal, Iris, Madder, Verdure, Damson | |
 
 ### Picking a light theme
 
@@ -1155,6 +1177,7 @@ Structural and layout choices vary per theme:
 | Cirrus | single-line | — | `·` | `›` |
 | Cobalt | two-line | `╭╰─` | `╍` | `❯` |
 | Cordovan | two-line | `╭╰─` | `─` | `❯` |
+| Damson | two-line | `╭╰─` | `∙` | `❯` |
 | Daybook | single-line | — | `·` | `›` |
 | Dusk | two-line | `╭╰─` | `⋰` | `❯` |
 | Ember | two-line | `╭╰─` | `·` | `❯` |
@@ -1198,7 +1221,7 @@ npx github:marvinrichter/gloam <theme> <target>
 
 The installer copies the theme config and wires it into your existing config file — no clone required.
 
-**Themes:** `absinthe` · `aether` · `amethyst` · `bamboo` · `basalt` · `bloom` · `boreal` · `brume` · `canopy` · `carmine` · `cast` · `cirrus` · `cobalt` · `cordovan` · `daybook` · `dusk` · `ember` · `eventide` · `fern` · `fjord` · `graphite` · `iris` · `ironcast` · `madder` · `nacreous` · `noir` · `nocturne` · `ochre` · `parchment` · `petrichor` · `rosewater` · `sable` · `saffron` · `solano` · `stark` · `sumi` · `synthwave` · `tallow` · `tungsten` · `umbra` · `verdure` · `verdigris` · `weld` · `wisteria`
+**Themes:** `absinthe` · `aether` · `amethyst` · `bamboo` · `basalt` · `bloom` · `boreal` · `brume` · `canopy` · `carmine` · `cast` · `cirrus` · `cobalt` · `cordovan` · `damson` · `daybook` · `dusk` · `ember` · `eventide` · `fern` · `fjord` · `graphite` · `iris` · `ironcast` · `madder` · `nacreous` · `noir` · `nocturne` · `ochre` · `parchment` · `petrichor` · `rosewater` · `sable` · `saffron` · `solano` · `stark` · `sumi` · `synthwave` · `tallow` · `tungsten` · `umbra` · `verdure` · `verdigris` · `weld` · `wisteria`
 
 **Targets:** `vscode` · `starship` · `neovim` · `alacritty` · `kitty` · `wezterm` · `ghostty` · `tmux` · `zed` · `windows-terminal` · `helix`
 

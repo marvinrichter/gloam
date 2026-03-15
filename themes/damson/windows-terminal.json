@@ -1,0 +1,23 @@
+{
+  "name": "Damson",
+  "background": "#090610",
+  "foreground": "#E8D8F8",
+  "cursorColor": "#D428BC",
+  "selectionBackground": "#201030",
+  "black": "#130B18",
+  "red": "#601828",
+  "green": "#285030",
+  "yellow": "#604018",
+  "blue": "#202860",
+  "purple": "#602060",
+  "cyan": "#204848",
+  "white": "#A898B8",
+  "brightBlack": "#382848",
+  "brightRed": "#E06070",
+  "brightGreen": "#68C880",
+  "brightYellow": "#C8A050",
+  "brightBlue": "#6878D0",
+  "brightPurple": "#C840B0",
+  "brightCyan": "#70B8D8",
+  "brightWhite": "#F0E8FF"
+}
