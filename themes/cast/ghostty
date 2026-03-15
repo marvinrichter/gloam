@@ -1,0 +1,32 @@
+# cast — Ghostty color theme
+# Generated from cast.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/cast
+# then set theme = cast in ~/.config/ghostty/config
+
+background         = 101010
+foreground         = C8C8C0
+
+cursor-color       = D8C040
+cursor-text        = 101010
+
+selection-background = 1C1C1C
+selection-foreground = C8C8C0
+
+# ANSI palette (0–15)
+palette = 0=101010
+palette = 1=A06060
+palette = 2=508060
+palette = 3=909050
+palette = 4=506080
+palette = 5=786080
+palette = 6=407880
+palette = 7=909088
+palette = 8=202020
+palette = 9=D85858
+palette = 10=68A068
+palette = 11=C8C060
+palette = 12=888880
+palette = 13=908090
+palette = 14=50A0A8
+palette = 15=C8C8C0

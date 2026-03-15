@@ -1,0 +1,32 @@
+# noir — Ghostty color theme
+# Generated from noir.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/noir
+# then set theme = noir in ~/.config/ghostty/config
+
+background         = 0A0A0A
+foreground         = E8E0D0
+
+cursor-color       = E89048
+cursor-text        = 0A0A0A
+
+selection-background = 181818
+selection-foreground = E8E0D0
+
+# ANSI palette (0–15)
+palette = 0=0A0A0A
+palette = 1=A85050
+palette = 2=506848
+palette = 3=A09050
+palette = 4=484858
+palette = 5=786068
+palette = 6=487080
+palette = 7=A09888
+palette = 8=1A1A1A
+palette = 9=D05050
+palette = 10=609850
+palette = 11=E8D080
+palette = 12=909090
+palette = 13=A07880
+palette = 14=5898A8
+palette = 15=E8E0D0

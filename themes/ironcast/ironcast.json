@@ -1,0 +1,47 @@
+{
+  "name": "ironcast",
+  "displayName": "Ironcast",
+  "type": "dark",
+  "background": "#0B0D10",
+  "foreground": "#CDD4DC",
+  "tokens": {
+    "primary": "#78A8C8",
+    "accent": "#C8D838",
+    "muted": "#7090A8",
+    "error": "#D05858"
+  },
+  "ansi": [
+    "#0B0D10",
+    "#B05050",
+    "#487858",
+    "#9A9050",
+    "#4868A0",
+    "#786890",
+    "#407888",
+    "#909898",
+    "#1C2028",
+    "#D05858",
+    "#60A878",
+    "#78A8C8",
+    "#7090A8",
+    "#9880B8",
+    "#50A0B8",
+    "#CDD4DC"
+  ],
+  "ui": {
+    "cursor": "#C8D838",
+    "cursorText": "#0B0D10",
+    "selection": "#181C24",
+    "selectionText": "#CDD4DC",
+    "bold": "#CDD4DC",
+    "link": "#90C8E0"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "═",
+    "timePrefix": "▪",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

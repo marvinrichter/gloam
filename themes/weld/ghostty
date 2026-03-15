@@ -1,0 +1,32 @@
+# weld — Ghostty color theme
+# Generated from weld.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/weld
+# then set theme = weld in ~/.config/ghostty/config
+
+background         = 0E0E08
+foreground         = E8E0C0
+
+cursor-color       = E8B040
+cursor-text        = 0E0E08
+
+selection-background = 1C1C10
+selection-foreground = E8E0C0
+
+# ANSI palette (0–15)
+palette = 0=0E0E08
+palette = 1=A86050
+palette = 2=7A9848
+palette = 3=B09040
+palette = 4=5A7870
+palette = 5=8870A0
+palette = 6=4A8870
+palette = 7=9A9870
+palette = 8=202018
+palette = 9=D06060
+palette = 10=90C058
+palette = 11=98B838
+palette = 12=909060
+palette = 13=A888C0
+palette = 14=60A880
+palette = 15=E8E0C0

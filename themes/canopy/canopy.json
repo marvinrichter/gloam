@@ -1,0 +1,47 @@
+{
+  "name": "canopy",
+  "displayName": "Canopy",
+  "type": "dark",
+  "background": "#080E0A",
+  "foreground": "#D4E0C8",
+  "tokens": {
+    "primary": "#90C860",
+    "accent": "#C8A060",
+    "muted": "#709068",
+    "error": "#D06868"
+  },
+  "ansi": [
+    "#080E0A",
+    "#A05858",
+    "#4EA858",
+    "#A88840",
+    "#406080",
+    "#8058A0",
+    "#3A8878",
+    "#909880",
+    "#182018",
+    "#D06868",
+    "#60C870",
+    "#90C860",
+    "#709068",
+    "#A070B8",
+    "#50A890",
+    "#D4E0C8"
+  ],
+  "ui": {
+    "cursor": "#C8A060",
+    "cursorText": "#080E0A",
+    "selection": "#101A12",
+    "selectionText": "#D4E0C8",
+    "bold": "#D4E0C8",
+    "link": "#70C898"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "⋅",
+    "timePrefix": "❧",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

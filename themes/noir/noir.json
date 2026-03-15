@@ -1,0 +1,47 @@
+{
+  "name": "noir",
+  "displayName": "Noir",
+  "type": "dark",
+  "background": "#0A0A0A",
+  "foreground": "#E8E0D0",
+  "tokens": {
+    "primary": "#E8D080",
+    "accent": "#E89048",
+    "muted": "#909090",
+    "error": "#D05050"
+  },
+  "ansi": [
+    "#0A0A0A",
+    "#A85050",
+    "#506848",
+    "#A09050",
+    "#484858",
+    "#786068",
+    "#487080",
+    "#A09888",
+    "#1A1A1A",
+    "#D05050",
+    "#609850",
+    "#E8D080",
+    "#909090",
+    "#A07880",
+    "#5898A8",
+    "#E8E0D0"
+  ],
+  "ui": {
+    "cursor": "#E89048",
+    "cursorText": "#0A0A0A",
+    "selection": "#181818",
+    "selectionText": "#E8E0D0",
+    "bold": "#F0E8D8",
+    "link": "#A8C0D0"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "∶",
+    "timePrefix": "●",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

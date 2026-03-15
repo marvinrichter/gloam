@@ -1,0 +1,37 @@
+# tallow — Alacritty color theme
+# Generated from tallow.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/tallow.toml
+# then add `import = ["~/.config/alacritty/themes/tallow.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#120E08"
+foreground = "#F0E8D8"
+
+[colors.cursor]
+cursor = "#D4905A"
+text   = "#120E08"
+
+[colors.selection]
+background = "#201808"
+text       = "#F0E8D8"
+
+[colors.normal]
+black   = "#120E08"
+red     = "#B06050"
+green   = "#608050"
+yellow  = "#C09858"
+blue    = "#606870"
+magenta = "#907868"
+cyan    = "#488078"
+white   = "#B0A088"
+
+[colors.bright]
+black   = "#282018"
+red     = "#D86060"
+green   = "#70A860"
+yellow  = "#E8C888"
+blue    = "#9A8870"
+magenta = "#B088A0"
+cyan    = "#5898A8"
+white   = "#F0E8D8"

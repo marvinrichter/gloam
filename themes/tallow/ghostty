@@ -1,0 +1,32 @@
+# tallow — Ghostty color theme
+# Generated from tallow.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/tallow
+# then set theme = tallow in ~/.config/ghostty/config
+
+background         = 120E08
+foreground         = F0E8D8
+
+cursor-color       = D4905A
+cursor-text        = 120E08
+
+selection-background = 201808
+selection-foreground = F0E8D8
+
+# ANSI palette (0–15)
+palette = 0=120E08
+palette = 1=B06050
+palette = 2=608050
+palette = 3=C09858
+palette = 4=606870
+palette = 5=907868
+palette = 6=488078
+palette = 7=B0A088
+palette = 8=282018
+palette = 9=D86060
+palette = 10=70A860
+palette = 11=E8C888
+palette = 12=9A8870
+palette = 13=B088A0
+palette = 14=5898A8
+palette = 15=F0E8D8

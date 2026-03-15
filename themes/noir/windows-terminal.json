@@ -1,0 +1,23 @@
+{
+  "name": "Noir",
+  "background": "#0A0A0A",
+  "foreground": "#E8E0D0",
+  "cursorColor": "#E89048",
+  "selectionBackground": "#181818",
+  "black": "#0A0A0A",
+  "red": "#A85050",
+  "green": "#506848",
+  "yellow": "#A09050",
+  "blue": "#484858",
+  "purple": "#786068",
+  "cyan": "#487080",
+  "white": "#A09888",
+  "brightBlack": "#1A1A1A",
+  "brightRed": "#D05050",
+  "brightGreen": "#609850",
+  "brightYellow": "#E8D080",
+  "brightBlue": "#909090",
+  "brightPurple": "#A07880",
+  "brightCyan": "#5898A8",
+  "brightWhite": "#E8E0D0"
+}

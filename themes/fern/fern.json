@@ -1,0 +1,47 @@
+{
+  "name": "fern",
+  "displayName": "Fern",
+  "type": "light",
+  "background": "#EEF2EC",
+  "foreground": "#1A2E1A",
+  "tokens": {
+    "primary": "#1A4A2A",
+    "accent": "#604A10",
+    "muted": "#4A5E50",
+    "error": "#6A1818"
+  },
+  "ansi": [
+    "#0E1A0E",
+    "#6A2020",
+    "#2A5828",
+    "#684A10",
+    "#284068",
+    "#505270",
+    "#1A5048",
+    "#C8D4C0",
+    "#30403A",
+    "#6A1818",
+    "#3A6828",
+    "#1A4A2A",
+    "#4A5E50",
+    "#584878",
+    "#287858",
+    "#F0F4EE"
+  ],
+  "ui": {
+    "cursor": "#604A10",
+    "cursorText": "#EEF2EC",
+    "selection": "#D4DED0",
+    "selectionText": "#1A2E1A",
+    "bold": "#0E1A0E",
+    "link": "#284068"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "≀",
+    "timePrefix": "❄",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

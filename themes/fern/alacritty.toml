@@ -1,0 +1,37 @@
+# fern — Alacritty color theme
+# Generated from fern.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/fern.toml
+# then add `import = ["~/.config/alacritty/themes/fern.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#EEF2EC"
+foreground = "#1A2E1A"
+
+[colors.cursor]
+cursor = "#604A10"
+text   = "#EEF2EC"
+
+[colors.selection]
+background = "#D4DED0"
+text       = "#1A2E1A"
+
+[colors.normal]
+black   = "#0E1A0E"
+red     = "#6A2020"
+green   = "#2A5828"
+yellow  = "#684A10"
+blue    = "#284068"
+magenta = "#505270"
+cyan    = "#1A5048"
+white   = "#C8D4C0"
+
+[colors.bright]
+black   = "#30403A"
+red     = "#6A1818"
+green   = "#3A6828"
+yellow  = "#1A4A2A"
+blue    = "#4A5E50"
+magenta = "#584878"
+cyan    = "#287858"
+white   = "#F0F4EE"

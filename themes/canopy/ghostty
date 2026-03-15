@@ -1,0 +1,32 @@
+# canopy — Ghostty color theme
+# Generated from canopy.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/canopy
+# then set theme = canopy in ~/.config/ghostty/config
+
+background         = 080E0A
+foreground         = D4E0C8
+
+cursor-color       = C8A060
+cursor-text        = 080E0A
+
+selection-background = 101A12
+selection-foreground = D4E0C8
+
+# ANSI palette (0–15)
+palette = 0=080E0A
+palette = 1=A05858
+palette = 2=4EA858
+palette = 3=A88840
+palette = 4=406080
+palette = 5=8058A0
+palette = 6=3A8878
+palette = 7=909880
+palette = 8=182018
+palette = 9=D06868
+palette = 10=60C870
+palette = 11=90C860
+palette = 12=709068
+palette = 13=A070B8
+palette = 14=50A890
+palette = 15=D4E0C8

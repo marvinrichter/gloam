@@ -1,0 +1,37 @@
+# rosewater — Alacritty color theme
+# Generated from rosewater.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/rosewater.toml
+# then add `import = ["~/.config/alacritty/themes/rosewater.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#100A0F"
+foreground = "#F0E0E8"
+
+[colors.cursor]
+cursor = "#C8A0D8"
+text   = "#100A0F"
+
+[colors.selection]
+background = "#201018"
+text       = "#F0E0E8"
+
+[colors.normal]
+black   = "#100A0F"
+red     = "#C86070"
+green   = "#5A9068"
+yellow  = "#C09068"
+blue    = "#6858A0"
+magenta = "#B06090"
+cyan    = "#508098"
+white   = "#B09898"
+
+[colors.bright]
+black   = "#2A1828"
+red     = "#E05A5A"
+green   = "#70B880"
+yellow  = "#E868A0"
+blue    = "#9A7890"
+magenta = "#D080C8"
+cyan    = "#60A8C0"
+white   = "#F0E0E8"

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scheme name="Ironcast" version="142" parent_scheme="Darcula">
+  <!-- Generated from ironcast.json — do not edit by hand -->
+  <!-- Install: copy to ~/.config/JetBrains/<IDE>/colors/ironcast.icls -->
+
+  <metaInfo>
+    <property name="created">generated</property>
+    <property name="ideVersion">2024.1.0.0</property>
+    <property name="originalScheme">Ironcast</property>
+  </metaInfo>
+
+  <colors>
+    <option name="CONSOLE_BACKGROUND_KEY" value="0B0D10" />
+    <option name="GUTTER_BACKGROUND" value="1C2028" />
+    <option name="SELECTION_BACKGROUND" value="181C24" />
+    <option name="SELECTION_FOREGROUND" value="CDD4DC" />
+    <option name="CARET_COLOR" value="C8D838" />
+    <option name="LINE_NUMBERS_COLOR" value="7090A8" />
+    <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="CDD4DC" />
+    <option name="ANSI_COLOR_0" value="0B0D10" />
+    <option name="ANSI_COLOR_1" value="B05050" />
+    <option name="ANSI_COLOR_2" value="487858" />
+    <option name="ANSI_COLOR_3" value="9A9050" />
+    <option name="ANSI_COLOR_4" value="4868A0" />
+    <option name="ANSI_COLOR_5" value="786890" />
+    <option name="ANSI_COLOR_6" value="407888" />
+    <option name="ANSI_COLOR_7" value="909898" />
+    <option name="ANSI_COLOR_8" value="1C2028" />
+    <option name="ANSI_COLOR_9" value="D05858" />
+    <option name="ANSI_COLOR_10" value="60A878" />
+    <option name="ANSI_COLOR_11" value="78A8C8" />
+    <option name="ANSI_COLOR_12" value="7090A8" />
+    <option name="ANSI_COLOR_13" value="9880B8" />
+    <option name="ANSI_COLOR_14" value="50A0B8" />
+    <option name="ANSI_COLOR_15" value="CDD4DC" />
+  </colors>
+
+  <attributes>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="CDD4DC" />
+        <option name="BACKGROUND" value="0B0D10" />
+      </value>
+    </option>
+
+    <option name="KEYWORD">
+      <value>
+        <option name="FOREGROUND" value="C8D838" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+
+    <option name="STRING">
+      <value>
+        <option name="FOREGROUND" value="60A878" />
+      </value>
+    </option>
+
+    <option name="NUMBER">
+      <value>
+        <option name="FOREGROUND" value="78A8C8" />
+      </value>
+    </option>
+
+    <option name="COMMENT">
+      <value>
+        <option name="FOREGROUND" value="7090A8" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+
+    <option name="LINE_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="7090A8" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+
+    <option name="BLOCK_COMMENT">
+      <value>
+        <option name="FOREGROUND" value="7090A8" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+
+    <option name="CLASS_NAME_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="78A8C8" />
+      </value>
+    </option>
+
+    <option name="INTERFACE_NAME_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="78A8C8" />
+      </value>
+    </option>
+
+    <option name="METHOD_DECLARATION_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="78A8C8" />
+      </value>
+    </option>
+
+    <option name="FUNCTION_CALL_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="78A8C8" />
+      </value>
+    </option>
+
+    <option name="VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="CDD4DC" />
+      </value>
+    </option>
+
+    <option name="LOCAL_VARIABLE_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="CDD4DC" />
+      </value>
+    </option>
+
+    <option name="PARAMETER_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="CDD4DC" />
+      </value>
+    </option>
+
+    <option name="CONSTANT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="9880B8" />
+      </value>
+    </option>
+
+    <option name="INSTANCE_FIELD_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="78A8C8" />
+      </value>
+    </option>
+
+    <option name="STATIC_FIELD_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="9880B8" />
+      </value>
+    </option>
+
+    <option name="OPERATION_SIGN_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="7090A8" />
+      </value>
+    </option>
+
+    <option name="BRACKETS_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="7090A8" />
+      </value>
+    </option>
+
+    <option name="ERROR_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="D05858" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+
+    <option name="WARNING_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="9A9050" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+
+    <option name="TERMINAL_COMMAND_TO_RUN_USING_IDE_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="78A8C8" />
+      </value>
+    </option>
+  </attributes>
+</scheme>

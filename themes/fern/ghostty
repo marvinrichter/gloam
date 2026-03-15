@@ -1,0 +1,32 @@
+# fern — Ghostty color theme
+# Generated from fern.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/fern
+# then set theme = fern in ~/.config/ghostty/config
+
+background         = EEF2EC
+foreground         = 1A2E1A
+
+cursor-color       = 604A10
+cursor-text        = EEF2EC
+
+selection-background = D4DED0
+selection-foreground = 1A2E1A
+
+# ANSI palette (0–15)
+palette = 0=0E1A0E
+palette = 1=6A2020
+palette = 2=2A5828
+palette = 3=684A10
+palette = 4=284068
+palette = 5=505270
+palette = 6=1A5048
+palette = 7=C8D4C0
+palette = 8=30403A
+palette = 9=6A1818
+palette = 10=3A6828
+palette = 11=1A4A2A
+palette = 12=4A5E50
+palette = 13=584878
+palette = 14=287858
+palette = 15=F0F4EE

@@ -1,0 +1,37 @@
+# noir — Alacritty color theme
+# Generated from noir.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/noir.toml
+# then add `import = ["~/.config/alacritty/themes/noir.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0A0A0A"
+foreground = "#E8E0D0"
+
+[colors.cursor]
+cursor = "#E89048"
+text   = "#0A0A0A"
+
+[colors.selection]
+background = "#181818"
+text       = "#E8E0D0"
+
+[colors.normal]
+black   = "#0A0A0A"
+red     = "#A85050"
+green   = "#506848"
+yellow  = "#A09050"
+blue    = "#484858"
+magenta = "#786068"
+cyan    = "#487080"
+white   = "#A09888"
+
+[colors.bright]
+black   = "#1A1A1A"
+red     = "#D05050"
+green   = "#609850"
+yellow  = "#E8D080"
+blue    = "#909090"
+magenta = "#A07880"
+cyan    = "#5898A8"
+white   = "#E8E0D0"

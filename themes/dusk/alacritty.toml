@@ -1,0 +1,37 @@
+# dusk — Alacritty color theme
+# Generated from dusk.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/dusk.toml
+# then add `import = ["~/.config/alacritty/themes/dusk.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#282834"
+foreground = "#C8C4BC"
+
+[colors.cursor]
+cursor = "#E8A860"
+text   = "#282834"
+
+[colors.selection]
+background = "#363648"
+text       = "#C8C4BC"
+
+[colors.normal]
+black   = "#282834"
+red     = "#A87070"
+green   = "#608870"
+yellow  = "#A89868"
+blue    = "#6880A8"
+magenta = "#9068A0"
+cyan    = "#488898"
+white   = "#A0A0A0"
+
+[colors.bright]
+black   = "#3A3A48"
+red     = "#DC7878"
+green   = "#70B878"
+yellow  = "#C490C8"
+blue    = "#9098A8"
+magenta = "#A880C0"
+cyan    = "#60A8C0"
+white   = "#C8C4BC"

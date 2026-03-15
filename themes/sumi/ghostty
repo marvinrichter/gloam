@@ -1,0 +1,32 @@
+# sumi — Ghostty color theme
+# Generated from sumi.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/sumi
+# then set theme = sumi in ~/.config/ghostty/config
+
+background         = 0A0B0D
+foreground         = D8D0C0
+
+cursor-color       = 7898B8
+cursor-text        = 0A0B0D
+
+selection-background = 181A20
+selection-foreground = D8D0C0
+
+# ANSI palette (0–15)
+palette = 0=0A0B0D
+palette = 1=9A5050
+palette = 2=4A8860
+palette = 3=A09060
+palette = 4=587080
+palette = 5=806878
+palette = 6=407880
+palette = 7=909090
+palette = 8=202428
+palette = 9=B86868
+palette = 10=60A870
+palette = 11=8878C8
+palette = 12=788090
+palette = 13=9078A0
+palette = 14=5898A8
+palette = 15=D8D0C0

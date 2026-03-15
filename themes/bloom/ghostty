@@ -1,0 +1,32 @@
+# bloom — Ghostty color theme
+# Generated from bloom.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/bloom
+# then set theme = bloom in ~/.config/ghostty/config
+
+background         = FFF0F0
+foreground         = 2A1420
+
+cursor-color       = 5A2080
+cursor-text        = FFF0F0
+
+selection-background = F0C8D0
+selection-foreground = 2A1420
+
+# ANSI palette (0–15)
+palette = 0=1A0810
+palette = 1=7A2020
+palette = 2=286020
+palette = 3=705A10
+palette = 4=28287A
+palette = 5=58285A
+palette = 6=1A5058
+palette = 7=D8B8C0
+palette = 8=3A2030
+palette = 9=8A1020
+palette = 10=386028
+palette = 11=7A1840
+palette = 12=7A5868
+palette = 13=703888
+palette = 14=285878
+palette = 15=F8E8F0

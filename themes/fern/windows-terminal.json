@@ -1,0 +1,23 @@
+{
+  "name": "Fern",
+  "background": "#EEF2EC",
+  "foreground": "#1A2E1A",
+  "cursorColor": "#604A10",
+  "selectionBackground": "#D4DED0",
+  "black": "#0E1A0E",
+  "red": "#6A2020",
+  "green": "#2A5828",
+  "yellow": "#684A10",
+  "blue": "#284068",
+  "purple": "#505270",
+  "cyan": "#1A5048",
+  "white": "#C8D4C0",
+  "brightBlack": "#30403A",
+  "brightRed": "#6A1818",
+  "brightGreen": "#3A6828",
+  "brightYellow": "#1A4A2A",
+  "brightBlue": "#4A5E50",
+  "brightPurple": "#584878",
+  "brightCyan": "#287858",
+  "brightWhite": "#F0F4EE"
+}

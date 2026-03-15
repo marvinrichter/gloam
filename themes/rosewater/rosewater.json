@@ -1,0 +1,47 @@
+{
+  "name": "rosewater",
+  "displayName": "Rosewater",
+  "type": "dark",
+  "background": "#100A0F",
+  "foreground": "#F0E0E8",
+  "tokens": {
+    "primary": "#E868A0",
+    "accent": "#C8A0D8",
+    "muted": "#9A7890",
+    "error": "#E05A5A"
+  },
+  "ansi": [
+    "#100A0F",
+    "#C86070",
+    "#5A9068",
+    "#C09068",
+    "#6858A0",
+    "#B06090",
+    "#508098",
+    "#B09898",
+    "#2A1828",
+    "#E05A5A",
+    "#70B880",
+    "#E868A0",
+    "#9A7890",
+    "#D080C8",
+    "#60A8C0",
+    "#F0E0E8"
+  ],
+  "ui": {
+    "cursor": "#C8A0D8",
+    "cursorText": "#100A0F",
+    "selection": "#201018",
+    "selectionText": "#F0E0E8",
+    "bold": "#F0E0E8",
+    "link": "#C0A0E8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "≈",
+    "timePrefix": "✿",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

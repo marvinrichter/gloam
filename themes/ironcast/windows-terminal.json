@@ -1,0 +1,23 @@
+{
+  "name": "Ironcast",
+  "background": "#0B0D10",
+  "foreground": "#CDD4DC",
+  "cursorColor": "#C8D838",
+  "selectionBackground": "#181C24",
+  "black": "#0B0D10",
+  "red": "#B05050",
+  "green": "#487858",
+  "yellow": "#9A9050",
+  "blue": "#4868A0",
+  "purple": "#786890",
+  "cyan": "#407888",
+  "white": "#909898",
+  "brightBlack": "#1C2028",
+  "brightRed": "#D05858",
+  "brightGreen": "#60A878",
+  "brightYellow": "#78A8C8",
+  "brightBlue": "#7090A8",
+  "brightPurple": "#9880B8",
+  "brightCyan": "#50A0B8",
+  "brightWhite": "#CDD4DC"
+}

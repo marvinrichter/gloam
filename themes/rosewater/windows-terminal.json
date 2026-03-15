@@ -1,0 +1,23 @@
+{
+  "name": "Rosewater",
+  "background": "#100A0F",
+  "foreground": "#F0E0E8",
+  "cursorColor": "#C8A0D8",
+  "selectionBackground": "#201018",
+  "black": "#100A0F",
+  "red": "#C86070",
+  "green": "#5A9068",
+  "yellow": "#C09068",
+  "blue": "#6858A0",
+  "purple": "#B06090",
+  "cyan": "#508098",
+  "white": "#B09898",
+  "brightBlack": "#2A1828",
+  "brightRed": "#E05A5A",
+  "brightGreen": "#70B880",
+  "brightYellow": "#E868A0",
+  "brightBlue": "#9A7890",
+  "brightPurple": "#D080C8",
+  "brightCyan": "#60A8C0",
+  "brightWhite": "#F0E0E8"
+}

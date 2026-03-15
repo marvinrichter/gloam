@@ -1,0 +1,23 @@
+{
+  "name": "Weld",
+  "background": "#0E0E08",
+  "foreground": "#E8E0C0",
+  "cursorColor": "#E8B040",
+  "selectionBackground": "#1C1C10",
+  "black": "#0E0E08",
+  "red": "#A86050",
+  "green": "#7A9848",
+  "yellow": "#B09040",
+  "blue": "#5A7870",
+  "purple": "#8870A0",
+  "cyan": "#4A8870",
+  "white": "#9A9870",
+  "brightBlack": "#202018",
+  "brightRed": "#D06060",
+  "brightGreen": "#90C058",
+  "brightYellow": "#98B838",
+  "brightBlue": "#909060",
+  "brightPurple": "#A888C0",
+  "brightCyan": "#60A880",
+  "brightWhite": "#E8E0C0"
+}

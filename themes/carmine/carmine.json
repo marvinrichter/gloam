@@ -1,0 +1,47 @@
+{
+  "name": "carmine",
+  "displayName": "Carmine",
+  "type": "dark",
+  "background": "#100808",
+  "foreground": "#F2E4E0",
+  "tokens": {
+    "primary": "#E87070",
+    "accent": "#FFAA70",
+    "muted": "#9A7880",
+    "error": "#FF4A4A"
+  },
+  "ansi": [
+    "#100808",
+    "#C85858",
+    "#5A8A60",
+    "#C08040",
+    "#705870",
+    "#A85878",
+    "#407888",
+    "#B8A0A0",
+    "#2A1818",
+    "#FF4A4A",
+    "#78C878",
+    "#E87070",
+    "#9A7880",
+    "#D08090",
+    "#58A8B8",
+    "#F2E4E0"
+  ],
+  "ui": {
+    "cursor": "#FFAA70",
+    "cursorText": "#100808",
+    "selection": "#281010",
+    "selectionText": "#F2E4E0",
+    "bold": "#F2E4E0",
+    "link": "#E890A0"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "╴",
+    "timePrefix": "◉",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}
