@@ -902,4 +902,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, theme requirements, and the PR
 
 ---
 
-MIT License · Copyright 2025 Marvin Richter
+MIT License · Copyright 2025–2026 Marvin Richter
