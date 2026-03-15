@@ -1,4 +1,3 @@
-import { hex } from "./utils.js";
 import { syntaxColors } from "./syntax-map.js";
 
 /**

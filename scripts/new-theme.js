@@ -42,31 +42,6 @@ async function askChoice(question, choices, defaultVal) {
   return answer;
 }
 
-// ── Uniqueness check helpers ──────────────────────────────────────────────────
-
-/** Convert hex to HSL hue (0-360). */
-function hexToHue(hex) {
-  const c = hex.replace(/^#/, "");
-  const r = parseInt(c.slice(0, 2), 16) / 255;
-  const g = parseInt(c.slice(2, 4), 16) / 255;
-  const b = parseInt(c.slice(4, 6), 16) / 255;
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  const d = max - min;
-  if (d === 0) return 0;
-  let h;
-  if (max === r) h = ((g - b) / d) % 6;
-  else if (max === g) h = (b - r) / d + 2;
-  else h = (r - g) / d + 4;
-  return ((h * 60) + 360) % 360;
-}
-
-/** Angular distance between two hues (0-180). */
-function hueDist(h1, h2) {
-  const d = Math.abs(h1 - h2) % 360;
-  return d > 180 ? 360 - d : d;
-}
-
 // ── WCAG contrast ─────────────────────────────────────────────────────────────
 
 function luminance(hex) {
@@ -84,22 +59,6 @@ function contrast(hex1, hex2) {
   const lighter = Math.max(l1, l2);
   const darker = Math.min(l1, l2);
   return (lighter + 0.05) / (darker + 0.05);
-}
-
-// ── Existing theme data ───────────────────────────────────────────────────────
-
-function loadExistingThemes() {
-  const { readFileSync, globSync } = await import("node:fs");
-  const names = globSync("*/", { cwd: THEMES_DIR }).map((d) => d.replace(/\/$/, ""));
-  const themes = [];
-  for (const n of names) {
-    try {
-      themes.push(JSON.parse(readFileSync(join(THEMES_DIR, n, `${n}.json`), "utf8")));
-    } catch {
-      // skip invalid
-    }
-  }
-  return themes;
 }
 
 // ── Template builder ──────────────────────────────────────────────────────────

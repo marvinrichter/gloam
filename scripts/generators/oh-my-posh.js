@@ -1,4 +1,3 @@
-import { syntaxColors } from "./syntax-map.js";
 
 /**
  * Oh My Posh theme generator.
