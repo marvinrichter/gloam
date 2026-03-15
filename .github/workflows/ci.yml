@@ -35,6 +35,9 @@ jobs:
       - name: Validate theme JSON schemas
         run: npm run validate-schemas
 
+      - name: Validate theme output completeness
+        run: npm run validate-completeness
+
       - name: WCAG AA contrast gate
         run: npm run check-contrast
 

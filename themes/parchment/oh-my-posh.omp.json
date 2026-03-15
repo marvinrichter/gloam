@@ -25,7 +25,7 @@
           "style": "plain",
           "foreground": "#7A3A10",
           "properties": {
-            "branch_icon": " ",
+            "branch_icon": " ",
             "fetch_status": true
           },
           "template": " {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "

@@ -54,6 +54,8 @@ function scaffoldFakeTheme(repoDir, meta) {
   writeFileSync(join(themeDir, "wezterm.lua"), `-- ${meta.name} wezterm config\n`);
   writeFileSync(join(themeDir, "ghostty"), `# ${meta.name} ghostty config\n`);
   writeFileSync(join(themeDir, "neovim.lua"), `-- ${meta.name} neovim config\n`);
+  writeFileSync(join(themeDir, "helix.toml"), `# ${meta.name} helix config\n`);
+  writeFileSync(join(themeDir, "tmux.conf"), `# ${meta.name} tmux config\n`);
   writeFileSync(
     join(themeDir, "vscode.json"),
     JSON.stringify({ name: meta.displayName, type: meta.type, colors: {}, tokenColors: [] }),
@@ -355,6 +357,141 @@ describe("installWindowsTerminal", async () => {
       assert.match(msg, /skip/i);
     },
   );
+});
+
+// ── helix ─────────────────────────────────────────────────────────────────────
+
+describe("installHelix", async () => {
+  const { installHelix } = await installers();
+
+  it("copies helix.toml into ~/.config/helix/themes/", () => {
+    installHelix("testtheme");
+    assert.ok(existsSync(join(TMP_HOME, ".config", "helix", "themes", "testtheme.toml")));
+  });
+
+  it("returns a message containing the destination path", () => {
+    const msg = installHelix("testtheme");
+    assert.match(msg, /helix\/themes\/testtheme\.toml/);
+  });
+
+  it("returns a message reminding user to set theme in config.toml", () => {
+    const msg = installHelix("testtheme");
+    assert.match(msg, /config\.toml/);
+  });
+});
+
+// ── tmux ──────────────────────────────────────────────────────────────────────
+
+describe("installTmux", async () => {
+  const { installTmux } = await installers();
+
+  it("appends source-file line to ~/.tmux.conf when none exists", () => {
+    const tmuxConf = join(TMP_HOME, ".tmux.conf");
+    if (existsSync(tmuxConf)) rmSync(tmuxConf);
+    installTmux("testtheme");
+    assert.match(readFileSync(tmuxConf, "utf8"), /source-file.*testtheme/);
+  });
+
+  it("replaces existing source-file line on re-install", () => {
+    const tmuxConf = join(TMP_HOME, ".tmux.conf");
+    const snippet = join(TMP_REPO, "themes", "testtheme", "tmux.conf");
+    writeFileSync(tmuxConf, `source-file "${snippet}"\n`);
+    installTmux("testtheme");
+    const content = readFileSync(tmuxConf, "utf8");
+    assert.strictEqual((content.match(/source-file/g) ?? []).length, 1);
+  });
+
+  it("returns a message containing the tmux.conf path", () => {
+    const msg = installTmux("testtheme");
+    assert.match(msg, /\.tmux\.conf/);
+  });
+
+  it("returns a message with reload instructions", () => {
+    const msg = installTmux("testtheme");
+    assert.match(msg, /tmux source-file/);
+  });
+});
+
+// ── windows-terminal (IS_WIN = true path) ─────────────────────────────────────
+
+describe("installWindowsTerminal — IS_WIN=true paths", async () => {
+  const { create } = await import("../installers/windows-terminal.js");
+
+  it("returns skip message when settings.json cannot be found", () => {
+    const install = create({
+      src: (name) => join(TMP_REPO, "themes", name),
+      home: TMP_HOME,
+      IS_WIN: true,
+    });
+    // LOCALAPPDATA points nowhere, so neither candidate exists
+    const original = process.env.LOCALAPPDATA;
+    process.env.LOCALAPPDATA = join(TMP_HOME, "nonexistent");
+    const msg = install("testtheme");
+    if (original === undefined) delete process.env.LOCALAPPDATA;
+    else process.env.LOCALAPPDATA = original;
+    assert.match(msg, /skip/i);
+  });
+
+  it("adds scheme when settings.json exists but has no schemes array", () => {
+    const settingsDir = join(
+      TMP_HOME,
+      "AppData",
+      "Local",
+      "Packages",
+      "Microsoft.WindowsTerminal_8wekyb3d8bbwe",
+      "LocalState",
+    );
+    mkdirSync(settingsDir, { recursive: true });
+    const settingsPath = join(settingsDir, "settings.json");
+    writeFileSync(settingsPath, JSON.stringify({ defaultProfile: "{abc}" }));
+
+    const install = create({
+      src: (name) => join(TMP_REPO, "themes", name),
+      home: TMP_HOME,
+      IS_WIN: true,
+    });
+    const original = process.env.LOCALAPPDATA;
+    process.env.LOCALAPPDATA = join(TMP_HOME, "AppData", "Local");
+    install("testtheme");
+    if (original === undefined) delete process.env.LOCALAPPDATA;
+    else process.env.LOCALAPPDATA = original;
+
+    const settings = JSON.parse(readFileSync(settingsPath, "utf8"));
+    assert.ok(Array.isArray(settings.schemes));
+    assert.ok(settings.schemes.length > 0);
+  });
+
+  it("updates existing scheme entry instead of duplicating", () => {
+    const settingsDir = join(
+      TMP_HOME,
+      "AppData",
+      "Local",
+      "Packages",
+      "Microsoft.WindowsTerminal_8wekyb3d8bbwe",
+      "LocalState",
+    );
+    mkdirSync(settingsDir, { recursive: true });
+    const settingsPath = join(settingsDir, "settings.json");
+    writeFileSync(
+      settingsPath,
+      JSON.stringify({ schemes: [{ name: "Testtheme", background: "#000000" }] }),
+    );
+
+    const install = create({
+      src: (name) => join(TMP_REPO, "themes", name),
+      home: TMP_HOME,
+      IS_WIN: true,
+    });
+    const original = process.env.LOCALAPPDATA;
+    process.env.LOCALAPPDATA = join(TMP_HOME, "AppData", "Local");
+    install("testtheme");
+    if (original === undefined) delete process.env.LOCALAPPDATA;
+    else process.env.LOCALAPPDATA = original;
+
+    const settings = JSON.parse(readFileSync(settingsPath, "utf8"));
+    assert.strictEqual(settings.schemes.length, 1);
+    assert.strictEqual(settings.schemes[0].background, "#0D0F1A");
+  });
 });
 
 // ── error handling ────────────────────────────────────────────────────────────

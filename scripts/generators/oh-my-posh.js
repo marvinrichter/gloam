@@ -67,7 +67,7 @@ export function generateOhMyPosh(theme) {
             style: "plain",
             foreground: t.accent,
             properties: {
-              branch_icon: " ",
+              branch_icon: " ",
               fetch_status: true,
             },
             template:
