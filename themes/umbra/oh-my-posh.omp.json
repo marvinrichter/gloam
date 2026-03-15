@@ -1,9 +1,3 @@
-// Umbra — Oh My Posh theme
-// Generated from umbra.json — do not edit by hand
-//
-// Install: copy to ~/.config/oh-my-posh/themes/umbra.omp.json
-//          then set: oh-my-posh init <shell> --config ~/.config/oh-my-posh/themes/umbra.omp.json
-
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 2,

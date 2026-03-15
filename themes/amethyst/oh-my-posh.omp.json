@@ -1,9 +1,3 @@
-// Amethyst — Oh My Posh theme
-// Generated from amethyst.json — do not edit by hand
-//
-// Install: copy to ~/.config/oh-my-posh/themes/amethyst.omp.json
-//          then set: oh-my-posh init <shell> --config ~/.config/oh-my-posh/themes/amethyst.omp.json
-
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 2,

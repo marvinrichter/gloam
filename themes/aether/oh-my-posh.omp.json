@@ -1,9 +1,3 @@
-// Aether — Oh My Posh theme
-// Generated from aether.json — do not edit by hand
-//
-// Install: copy to ~/.config/oh-my-posh/themes/aether.omp.json
-//          then set: oh-my-posh init <shell> --config ~/.config/oh-my-posh/themes/aether.omp.json
-
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 2,

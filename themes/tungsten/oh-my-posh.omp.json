@@ -1,9 +1,3 @@
-// Tungsten — Oh My Posh theme
-// Generated from tungsten.json — do not edit by hand
-//
-// Install: copy to ~/.config/oh-my-posh/themes/tungsten.omp.json
-//          then set: oh-my-posh init <shell> --config ~/.config/oh-my-posh/themes/tungsten.omp.json
-
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 2,

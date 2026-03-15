@@ -5,8 +5,7 @@
  * Oh My Posh theme docs: https://ohmyposh.dev/docs/configuration/overview
  */
 export function generateOhMyPosh(theme) {
-  const { name, displayName, background: bg, foreground: fg, tokens, prompt } = theme;
-  const title = displayName || name;
+  const { background: bg, foreground: fg, tokens, prompt } = theme;
 
   // Segment text colors follow the same semantic rule as Starship:
   //   muted  → chrome (left/right decorators, time)
@@ -142,12 +141,5 @@ export function generateOhMyPosh(theme) {
     },
   };
 
-  return `// ${title} — Oh My Posh theme
-// Generated from ${name}.json — do not edit by hand
-//
-// Install: copy to ~/.config/oh-my-posh/themes/${name}.omp.json
-//          then set: oh-my-posh init <shell> --config ~/.config/oh-my-posh/themes/${name}.omp.json
-
-${JSON.stringify(omp, null, 2)}
-`;
+  return JSON.stringify(omp, null, 2) + "\n";
 }
