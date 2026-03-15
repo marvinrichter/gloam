@@ -63,7 +63,7 @@ export function createInstallers(home, repo) {
     try {
       return JSON.parse(readFileSync(metaPath, "utf8"));
     } catch (err) {
-      throw new Error(`Theme "${name}" has invalid JSON: ${err.message}`);
+      throw new Error(`Theme "${name}" has invalid JSON: ${err.message}`, { cause: err });
     }
   };
 
