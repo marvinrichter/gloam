@@ -1,6 +1,6 @@
 import { describe, it, before, after } from "node:test";
 import assert from "node:assert/strict";
-import { mkdirSync, rmSync, existsSync, readFileSync } from "node:fs";
+import { mkdirSync, rmSync, existsSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { generate } from "../generate.js";
@@ -128,5 +128,17 @@ describe("generate() — invalid theme is skipped", () => {
     generate([invalidTheme, validTheme], TMP_ERR);
     process.exitCode = savedCode;
     assert.ok(existsSync(join(TMP_ERR, "goodtheme")));
+  });
+
+  it("catches per-file generator errors and sets exitCode=1", () => {
+    // Pre-create starship.toml as a directory so writeFileSync throws EISDIR
+    const themeDir = join(TMP_ERR, theme.name);
+    mkdirSync(join(themeDir, "starship.toml"), { recursive: true });
+    const savedCode = process.exitCode;
+    generate([theme], TMP_ERR);
+    const result = process.exitCode;
+    process.exitCode = savedCode;
+    assert.strictEqual(result, 1);
+    rmSync(themeDir, { recursive: true, force: true });
   });
 });

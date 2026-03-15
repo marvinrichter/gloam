@@ -364,4 +364,67 @@ describe("new-theme.js CLI — happy path", () => {
       rmSync(realDir, { recursive: true, force: true });
     }
   });
+
+  it("stdout includes FAIL and Warning when a token fails WCAG AA", async () => {
+    const slug = "test-cli-wcag-fail-tmp";
+    // answer[5] = primary — send a low-contrast color (#505050 ~2.5:1 on dark bg)
+    const FAIL_ANSWERS = ["", "test concept", "", "", "", "#505050", "", "", "", "", "", ""];
+    const { stdout, realDir } = await runCli(slug, FAIL_ANSWERS);
+    try {
+      assert.match(stdout, /FAIL/);
+      assert.match(stdout, /Warning/);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
+
+  it("stdout includes invalid-hex marker when a non-hex color is entered", async () => {
+    const slug = "test-cli-invalid-hex-tmp";
+    // answer[5] = primary — send a non-hex string
+    const INVALID_HEX_ANSWERS = [
+      "",
+      "test concept",
+      "",
+      "",
+      "",
+      "notahexcolor",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ];
+    const { stdout, realDir } = await runCli(slug, INVALID_HEX_ANSWERS);
+    try {
+      assert.match(stdout, /invalid hex/i);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
+
+  it("stdout includes 'Invalid choice' when an invalid option is entered for askChoice", async () => {
+    const slug = "test-cli-bad-choice-tmp";
+    // answer[2] = type — send an invalid choice; answer[9] = layout — also invalid
+    const INVALID_ANSWERS = [
+      "",
+      "test concept",
+      "notdark",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "notlayout",
+      "",
+      "",
+    ];
+    const { stdout, realDir } = await runCli(slug, INVALID_ANSWERS);
+    try {
+      assert.match(stdout, /Invalid choice/);
+    } finally {
+      rmSync(realDir, { recursive: true, force: true });
+    }
+  });
 });

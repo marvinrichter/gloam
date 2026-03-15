@@ -105,4 +105,18 @@ describe("syntaxColors()", () => {
       );
     }
   });
+
+  it("throws when ansi is not an array", () => {
+    assert.throws(
+      () => syntaxColors({ name: "bad", tokens: {}, ansi: null }),
+      /ansi array must have at least 16 entries/,
+    );
+  });
+
+  it("throws when ansi has fewer than 16 entries", () => {
+    assert.throws(
+      () => syntaxColors({ name: "short", tokens: {}, ansi: ["#000000", "#111111"] }),
+      /ansi array must have at least 16 entries/,
+    );
+  });
 });
