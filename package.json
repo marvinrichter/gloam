@@ -46,7 +46,7 @@
     "validate-completeness": "node scripts/ci/validate-theme-completeness.js"
   },
   "devDependencies": {
-    "@eslint/js": "^9.0.0",
+    "@eslint/js": "^10.0.1",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "eslint": "^10.0.3",
