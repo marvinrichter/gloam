@@ -11,6 +11,21 @@ This file is maintained automatically by [release-please](https://github.com/goo
 
 <!-- releases will be prepended here by release-please -->
 
+## [1.4.0] — CI quality gates and coverage reporting
+
+### Features
+
+* add coverage comment bot — posts per-file 🟢/🟡/🔴 breakdown on every PR (zero dependencies)
+* add WCAG AA contrast gate — CI fails if any theme token drops below 4.5:1
+* add JSON schema validation — all 21 theme source files validated against `docs/specifications/theme-schema.json` on every push
+* split generator check into dedicated job — runs once after tests pass instead of redundantly across the full matrix
+
+### Fixes
+
+* fix Oh My Posh generator to emit pure JSON (removed invalid `//` comment header)
+* fix ESLint violations in `helix.js`, `oh-my-posh.js`, and `new-theme.js`
+* apply Prettier formatting across all generator scripts
+
 ## [1.3.0] — Five new target formats
 
 ### Features
