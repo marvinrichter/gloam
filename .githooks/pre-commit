@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+# Check that staged JS files pass Prettier formatting.
+# Run `npm run format` to fix any issues before committing.
+
+STAGED_JS=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.js$' | grep '^scripts/' || true)
+
+if [ -z "$STAGED_JS" ]; then
+  exit 0
+fi
+
+if ! npx prettier --check $STAGED_JS 2>/dev/null; then
+  echo ""
+  echo "pre-commit: staged JS files need formatting."
+  echo "Run the formatter and re-stage:"
+  echo ""
+  echo "  npm run format && git add $STAGED_JS"
+  echo ""
+  exit 1
+fi

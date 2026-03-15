@@ -5,12 +5,10 @@ import { syntaxColors } from "./syntax-map.js";
 const h6 = (c) => hex(c).toUpperCase().padStart(6, "0");
 
 // An <option name="..." value="..." /> element
-const opt = (name, value, indent = "    ") =>
-  `${indent}<option name="${name}" value="${value}" />`;
+const opt = (name, value, indent = "    ") => `${indent}<option name="${name}" value="${value}" />`;
 
 // A color option (value is 6-digit hex)
-const colorOpt = (name, color, indent = "    ") =>
-  opt(name, h6(color), indent);
+const colorOpt = (name, color, indent = "    ") => opt(name, h6(color), indent);
 
 export function generateIntellij(theme) {
   const { name, displayName, type, background: bg, foreground: fg, ansi, ui, tokens } = theme;
@@ -18,9 +16,7 @@ export function generateIntellij(theme) {
   const schemeParent = type === "light" ? "Default" : "Darcula";
   const fullName = displayName || name;
 
-  const ansiColorOpts = ansi
-    .map((c, i) => colorOpt(`ANSI_COLOR_${i}`, c))
-    .join("\n");
+  const ansiColorOpts = ansi.map((c, i) => colorOpt(`ANSI_COLOR_${i}`, c)).join("\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <scheme name="${fullName}" version="142" parent_scheme="${schemeParent}">
@@ -34,12 +30,12 @@ export function generateIntellij(theme) {
   </metaInfo>
 
   <colors>
-${colorOpt("CONSOLE_BACKGROUND_KEY",  bg)}
-${colorOpt("GUTTER_BACKGROUND",       ansi[8])}
-${colorOpt("SELECTION_BACKGROUND",    ui.selection)}
-${colorOpt("SELECTION_FOREGROUND",    ui.selectionText)}
-${colorOpt("CARET_COLOR",             ui.cursor)}
-${colorOpt("LINE_NUMBERS_COLOR",      tokens.muted)}
+${colorOpt("CONSOLE_BACKGROUND_KEY", bg)}
+${colorOpt("GUTTER_BACKGROUND", ansi[8])}
+${colorOpt("SELECTION_BACKGROUND", ui.selection)}
+${colorOpt("SELECTION_FOREGROUND", ui.selectionText)}
+${colorOpt("CARET_COLOR", ui.cursor)}
+${colorOpt("LINE_NUMBERS_COLOR", tokens.muted)}
 ${colorOpt("LINE_NUMBER_ON_CARET_ROW_COLOR", fg)}
 ${ansiColorOpts}
   </colors>

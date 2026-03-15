@@ -276,16 +276,16 @@
 	</dict>
 
 	<key>Link Color</key>
-	<!-- #9EE878 -->
+	<!-- #6EE8C8 -->
 	<dict>
 		<key>Blue Component</key>
-		<real>0.47059</real>
+		<real>0.78431</real>
 		<key>Color Space</key>
 		<string>Calibrated</string>
 		<key>Green Component</key>
 		<real>0.90980</real>
 		<key>Red Component</key>
-		<real>0.61961</real>
+		<real>0.43137</real>
 	</dict>
 
 	<key>Selected Text Color</key>

@@ -1,0 +1,37 @@
+# basalt — Alacritty color theme
+# Generated from basalt.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/basalt.toml
+# then add `import = ["~/.config/alacritty/themes/basalt.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#090A0B"
+foreground = "#E0E4E8"
+
+[colors.cursor]
+cursor = "#E8B040"
+text   = "#090A0B"
+
+[colors.selection]
+background = "#181A20"
+text       = "#E0E4E8"
+
+[colors.normal]
+black   = "#090A0B"
+red     = "#804848"
+green   = "#408870"
+yellow  = "#988040"
+blue    = "#386890"
+magenta = "#7A4898"
+cyan    = "#3890A0"
+white   = "#7888A0"
+
+[colors.bright]
+black   = "#181A20"
+red     = "#E05858"
+green   = "#40D8D8"
+yellow  = "#C8B050"
+blue    = "#7888A0"
+magenta = "#607888"
+cyan    = "#58C0D8"
+white   = "#E0E4E8"

@@ -1,0 +1,32 @@
+# ochre — Ghostty color theme
+# Generated from ochre.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/ochre
+# then set theme = ochre in ~/.config/ghostty/config
+
+background         = F2E4D0
+foreground         = 220E08
+
+cursor-color       = 1A6068
+cursor-text        = F2E4D0
+
+selection-background = D8C4A8
+selection-foreground = 220E08
+
+# ANSI palette (0–15)
+palette = 0=140804
+palette = 1=621818
+palette = 2=1A4C20
+palette = 3=5A3A10
+palette = 4=183060
+palette = 5=482050
+palette = 6=185058
+palette = 7=68503A
+palette = 8=4A3020
+palette = 9=7A1828
+palette = 10=2A6030
+palette = 11=722018
+palette = 12=705040
+palette = 13=1A6068
+palette = 14=2A7878
+palette = 15=F5EAD8

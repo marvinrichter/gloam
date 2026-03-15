@@ -1,0 +1,47 @@
+{
+  "name": "saffron",
+  "displayName": "Saffron",
+  "type": "light",
+  "background": "#FAF0D8",
+  "foreground": "#281808",
+  "tokens": {
+    "primary": "#5E3008",
+    "accent": "#3A2880",
+    "muted": "#806040",
+    "error": "#802028"
+  },
+  "ansi": [
+    "#160C04",
+    "#6A1E20",
+    "#205024",
+    "#604810",
+    "#1C2070",
+    "#482858",
+    "#185858",
+    "#685840",
+    "#503C28",
+    "#802028",
+    "#287040",
+    "#5E3008",
+    "#806040",
+    "#3A2880",
+    "#287080",
+    "#FDF8EC"
+  ],
+  "ui": {
+    "cursor": "#3A2880",
+    "cursorText": "#FAF0D8",
+    "selection": "#EAD8B0",
+    "selectionText": "#281808",
+    "bold": "#160C04",
+    "link": "#3A2880"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "─",
+    "timePrefix": "◈",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

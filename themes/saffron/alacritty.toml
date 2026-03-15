@@ -1,0 +1,37 @@
+# saffron — Alacritty color theme
+# Generated from saffron.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/saffron.toml
+# then add `import = ["~/.config/alacritty/themes/saffron.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#FAF0D8"
+foreground = "#281808"
+
+[colors.cursor]
+cursor = "#3A2880"
+text   = "#FAF0D8"
+
+[colors.selection]
+background = "#EAD8B0"
+text       = "#281808"
+
+[colors.normal]
+black   = "#160C04"
+red     = "#6A1E20"
+green   = "#205024"
+yellow  = "#604810"
+blue    = "#1C2070"
+magenta = "#482858"
+cyan    = "#185858"
+white   = "#685840"
+
+[colors.bright]
+black   = "#503C28"
+red     = "#802028"
+green   = "#287040"
+yellow  = "#5E3008"
+blue    = "#806040"
+magenta = "#3A2880"
+cyan    = "#287080"
+white   = "#FDF8EC"

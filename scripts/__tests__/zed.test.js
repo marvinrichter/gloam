@@ -54,14 +54,22 @@ describe("generateZed", () => {
     const obj = JSON.parse(generateZed(theme));
     const style = obj.themes[0].style;
     const expected = [
-      "terminal.ansi.black",       "terminal.ansi.red",
-      "terminal.ansi.green",       "terminal.ansi.yellow",
-      "terminal.ansi.blue",        "terminal.ansi.magenta",
-      "terminal.ansi.cyan",        "terminal.ansi.white",
-      "terminal.ansi.bright_black","terminal.ansi.bright_red",
-      "terminal.ansi.bright_green","terminal.ansi.bright_yellow",
-      "terminal.ansi.bright_blue", "terminal.ansi.bright_magenta",
-      "terminal.ansi.bright_cyan", "terminal.ansi.bright_white",
+      "terminal.ansi.black",
+      "terminal.ansi.red",
+      "terminal.ansi.green",
+      "terminal.ansi.yellow",
+      "terminal.ansi.blue",
+      "terminal.ansi.magenta",
+      "terminal.ansi.cyan",
+      "terminal.ansi.white",
+      "terminal.ansi.bright_black",
+      "terminal.ansi.bright_red",
+      "terminal.ansi.bright_green",
+      "terminal.ansi.bright_yellow",
+      "terminal.ansi.bright_blue",
+      "terminal.ansi.bright_magenta",
+      "terminal.ansi.bright_cyan",
+      "terminal.ansi.bright_white",
     ];
     expected.forEach((k) => assert.ok(k in style, `missing ${k}`));
   });
@@ -69,8 +77,8 @@ describe("generateZed", () => {
   it("maps ANSI colors correctly", () => {
     const obj = JSON.parse(generateZed(theme));
     const style = obj.themes[0].style;
-    assert.strictEqual(style["terminal.ansi.black"].toLowerCase(),       "#0d0f1a");
-    assert.strictEqual(style["terminal.ansi.bright_white"].toLowerCase(),"#f0ead6");
+    assert.strictEqual(style["terminal.ansi.black"].toLowerCase(), "#0d0f1a");
+    assert.strictEqual(style["terminal.ansi.bright_white"].toLowerCase(), "#f0ead6");
   });
 
   it("sets syntax colors", () => {

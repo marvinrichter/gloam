@@ -3,8 +3,14 @@ import { hex } from "./utils.js";
 export function generateWezterm(theme) {
   const { name, background, foreground, ansi, ui } = theme;
 
-  const ansiNormal  = ansi.slice(0, 8).map((c) => `    "#${hex(c)}"`).join(",\n");
-  const ansiBrights = ansi.slice(8, 16).map((c) => `    "#${hex(c)}"`).join(",\n");
+  const ansiNormal = ansi
+    .slice(0, 8)
+    .map((c) => `    "#${hex(c)}"`)
+    .join(",\n");
+  const ansiBrights = ansi
+    .slice(8, 16)
+    .map((c) => `    "#${hex(c)}"`)
+    .join(",\n");
 
   return [
     `-- ${name} — WezTerm color scheme`,

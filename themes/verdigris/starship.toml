@@ -68,8 +68,8 @@ truncation_symbol = "…/"
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
-"Music"     = " "
-"Pictures"  = " "
+"Music" = " "
+"Pictures" = " "
 
 # ─── Git ─────────────────────────────────────────────────────────────────────
 
@@ -97,7 +97,7 @@ format     = "([$all_status$ahead_behind ]($style))"
 [cmd_duration]
 min_time = 2000
 style    = "fg:muted dim"
-format   = "[⌘ $duration ]($style)"
+format   = "[⊙ $duration ]($style)"
 
 # ─── Languages & environments ────────────────────────────────────────────────
 
@@ -181,7 +181,7 @@ format = "[ $symbol$context ]($style)"
 disabled    = false
 time_format = "%R"
 style       = "fg:muted"
-format      = "[ ⌘ $time ]($style)"
+format      = "[ ⊙ $time ]($style)"
 
 # ─── Prompt character ────────────────────────────────────────────────────────
 

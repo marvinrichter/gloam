@@ -38,7 +38,7 @@ error      #D46060   hsl(0°,   52%, 60%)  oxidation red       5.5:1  AA
 ### Assignment rules
 
 ```
-╭  user  ~/path   branch status  ──────────────  ⌘ time
+╭  user  ~/path   branch status  ──────────────  ⊙ time
    ↑      ↑        ↑      ↑      ↑               ↑  ↑
    muted  primary  accent accent muted           muted muted
 ╰─›
@@ -57,7 +57,7 @@ The verdigris accent pairing is deliberately unusual. Most terminal themes pair 
 When both appear in the same prompt line:
 
 ```
-╭  marvin  ~/project   main ~2  ─────────────────  ⌘ 14:32
+╭  marvin  ~/project   main ~2  ─────────────────  ⊙ 14:32
 ╰─›
    ↑                         ↑                            ↑
    muted                     accent                       muted
@@ -134,7 +134,7 @@ Links          #52C4A8  verdigris teal — primary token, readable and distincti
 ### Layout
 
 ```
-╭  marvin  ~/gloam   main ~2 +1  ──────────────  ⌘ 14:32
+╭  marvin  ~/gloam   main ~2 +1  ──────────────  ⊙ 14:32
 ╰─›
 ```
 
@@ -146,14 +146,16 @@ Two lines. The first carries all information. The second is the cursor line — 
 ╭   U+256D  BOX DRAWINGS LIGHT ARC DOWN AND RIGHT
 ╰   U+2570  BOX DRAWINGS LIGHT ARC UP AND RIGHT
 ─   U+2500  BOX DRAWINGS LIGHT HORIZONTAL  (fill character — the metal rule)
-⌘   U+2318  PLACE OF INTEREST SIGN  (time prefix, command duration prefix)
+⊙   U+2299  CIRCLED DOT OPERATOR  (time prefix, command duration prefix)
 ›   U+203A  SINGLE RIGHT-POINTING ANGLE QUOTATION MARK  (prompt success)
 ‹   U+2039  SINGLE LEFT-POINTING ANGLE QUOTATION MARK   (vim normal mode)
 ```
 
 `╭` and `╰─` are styled `fg:muted` — same hue as the username and time. They read as frame, not content.
 
-`⌘` appears twice: before the clock, and before slow command durations (`> 2s`). The command sign is appropriate here — it is a marker, like an archaeologist's notation on a dig site. The repetition creates a "time-related info" visual token without requiring a second color.
+`⊙` appears twice: before the clock, and before slow command durations (`> 2s`). The circled dot is an ancient solar and alchemical notation — the symbol for the Sun in both astronomical and alchemical manuscripts, where it marks the source of transformation. On a verdigris patina theme, a solar mark is appropriate: the patina itself is the result of centuries of atmospheric exposure, solar and otherwise. The repetition creates a "time-related info" visual token without requiring a second color.
+
+**Note:** The timePrefix was changed from `⌘` (U+2318 PLACE OF INTEREST SIGN) to `⊙` (U+2299 CIRCLED DOT OPERATOR). The Mac command symbol is a contemporary brand glyph that breaks the archaeological-patina register of this theme — it reads as a keyboard shortcut annotation rather than an artifact marker. The circled dot restores the historical notation vocabulary appropriate to verdigris patina and oxidized-metal aesthetics.
 
 `›` is a lighter, narrower glyph than the Eventide `❯`. It matches the verdigris aesthetic — weathered, worn down, not heavy-handed.
 
@@ -251,7 +253,7 @@ The character itself does not change — only its color. The shape `›` remains
 ### Slow command (> 2s)
 
 ```
-╭  marvin  ~/path  ─────────────  ⌘ 3.2s  ──  ⌘ 14:32
+╭  marvin  ~/path  ─────────────  ⊙ 3.2s  ──  ⊙ 14:32
 ```
 
 Duration appears between languages and fill, styled `fg:muted dim`. It is additional information, not an alert. The threshold is 2000ms — fast commands do not produce noise.

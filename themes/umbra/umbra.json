@@ -39,7 +39,7 @@
   "prompt": {
     "layout": "single-line",
     "showUsername": false,
-    "fill": "·",
+    "fill": "░",
     "timePrefix": "·",
     "successSymbol": "▹",
     "vimSymbol": "◃"

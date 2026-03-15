@@ -1,0 +1,32 @@
+# solano — Ghostty color theme
+# Generated from solano.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/solano
+# then set theme = solano in ~/.config/ghostty/config
+
+background         = F5EDE0
+foreground         = 2A1C10
+
+cursor-color       = 1A4A7A
+cursor-text        = F5EDE0
+
+selection-background = DDD0BC
+selection-foreground = 2A1C10
+
+# ANSI palette (0–15)
+palette = 0=180A04
+palette = 1=642020
+palette = 2=1C5024
+palette = 3=5A3008
+palette = 4=183070
+palette = 5=482860
+palette = 6=185060
+palette = 7=706050
+palette = 8=4A3828
+palette = 9=8B1A2A
+palette = 10=2C7038
+palette = 11=782010
+palette = 12=7A5C40
+palette = 13=1A4A7A
+palette = 14=2C7080
+palette = 15=F8F0E8

@@ -5,7 +5,7 @@
 # then add `import = ["~/.config/alacritty/themes/parchment.toml"]` to alacritty.toml
 
 [colors.primary]
-background = "#EDE0C8"
+background = "#E8D6B4"
 foreground = "#2A1E12"
 
 [colors.cursor]
@@ -13,7 +13,7 @@ cursor = "#7A3A10"
 text   = "#EDE0C8"
 
 [colors.selection]
-background = "#D8C8A8"
+background = "#D4BEA0"
 text       = "#2A1E12"
 
 [colors.normal]

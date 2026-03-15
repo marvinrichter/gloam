@@ -132,7 +132,7 @@ This approach suits workflows where the prompt must recede into the background b
 ### Structural elements
 
 ```
-·   U+00B7  MIDDLE DOT  (fill character — absinthe drops through sugar)
+∙   U+2219  BULLET OPERATOR  (fill character — absinthe drops through sugar)
 ◇   U+25C7  WHITE DIAMOND  (time prefix, command duration prefix — lab notation)
 ▸   U+25B8  SMALL RIGHT-POINTING TRIANGLE  (prompt success)
 ◂   U+25C2  SMALL LEFT-POINTING TRIANGLE   (vim normal mode)
@@ -140,7 +140,7 @@ This approach suits workflows where the prompt must recede into the background b
 
 `◇` appears twice: before the clock, and before slow command durations (`> 2s`). The repetition is intentional — a shared glyph creates a "time-related info" visual token without requiring a second color. In vintage laboratory notation, the diamond marks a measurement.
 
-The fill character `·` (middle dot) reads as falling drops — absinthe dripping through a sugar cube into the glass. It is dim by design: `fg:muted dim`.
+The fill character `∙` (bullet operator) reads as falling drops — absinthe dripping through a sugar cube into the glass. Heavier than a middle dot, it carries more presence in the gap between navigation and time. It is dim by design: `fg:muted dim`.
 
 ### Module order and rationale
 
@@ -426,3 +426,15 @@ The palette hue is 150° (green), 47° (gold), 120° (gray-green), 0° (red). To
 ### Adding a fifth token
 
 Add it to `[palettes.absinthe]` with a name and a hex value. Reference it as `fg:tokenname` in any module format string. Verify contrast ≥ 4.5:1 against `#080D0A` before shipping.
+
+---
+
+## Design Notes
+
+### Primary / accent luminance proximity
+
+Primary `#70E0A0` (L=0.523) and accent `#E8C848` (L=0.518) have near-identical luminances — Δ=0.005, less than 1% difference. This is unusual: most themes pair a high-luminance and a medium-luminance token for primary and accent. In Absinthe, both tokens reach AAA independently (12.4:1 and 12.2:1 respectively) and their separation is achieved through hue contrast alone (hsl 150° vs hsl 47° — a 103° gap). The two primary signals in the absinthe aesthetic — the green liqueur and the golden anise — are co-equal in luminance by design, the way the botanicals are co-equal in the recipe. Token hierarchy in the rendered prompt is established by the bold modifier on directory (making primary heavier in weight) rather than by luminance.
+
+### Cross-collection note (Absinthe / Petrichor)
+
+Absinthe and Petrichor are the two themes in the gloam collection built on a grass-green primary. The key distinction is the accent: Absinthe uses gold (hsl 47°, alchemical-botanical register), Petrichor uses sky-blue (hsl 198°, storm-physics register). Both themes share a dark background with green undertone; all other tokens differ. When choosing between them: Absinthe belongs to the Parisian café interior; Petrichor belongs to the dry field before rain. See also petrichor.md.

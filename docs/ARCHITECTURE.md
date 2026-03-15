@@ -16,13 +16,29 @@ The four tokens map directly to prompt elements: `primary` → directory, langua
 
 ## Why generator-over-manual?
 
-Eleven target formats exist because eleven applications are in common use. Maintaining eleven hand-written files per theme across twelve themes (132 files) with no automation would make any token change a 132-file edit. Generators ensure that a single value change in `<name>.json` propagates correctly to every format in one `npm run generate` run.
+Sixteen target formats exist because sixteen applications are in common use. Maintaining sixteen hand-written files per theme across twenty-one themes (336 files) with no automation would make any token change a 336-file edit. Generators ensure that a single value change in `<name>.json` propagates correctly to every format in one `npm run generate` run.
 
 The generator approach also enforces the constraint that every format derives from the same source of truth. Hand-written files diverge. Generated files cannot.
 
 ## How themes are evaluated for "distinct territory"
 
-The twelve existing themes are distributed across: warm dark (Eventide, Ember, Cordovan, Tungsten), cool dark (Aether, Fjord, Umbra), green (Absinthe, Verdigris), neutral (Sable), purple (Amethyst), and light (Parchment). A new theme must occupy a hue territory not already represented, or a substantially different atmospheric concept within the same hue region. The hue territory table in `CONTRIBUTING.md` is authoritative for this evaluation.
+The twenty-one themes are distributed across: warm dark (Eventide, Ember, Cordovan, Tungsten, Nocturne), cool dark (Aether, Fjord, Umbra), green dark (Absinthe, Verdigris, Petrichor), teal dark (Nacreous, Basalt), neutral dark (Sable), purple dark (Amethyst), and light (Parchment, Daybook, Cirrus, Solano, Saffron, Ochre). A new theme must occupy a hue territory not already represented, or a substantially different atmospheric concept within the same hue region. The hue territory table in `CONTRIBUTING.md` is authoritative for this evaluation.
+
+## Why prompt configuration is shared between Starship and Oh My Posh
+
+The `prompt` section in each theme's JSON (`layout`, `fill`, `timePrefix`, `successSymbol`, `vimSymbol`) is consumed by both the Starship generator (`scripts/generators/starship.js`) and the Oh My Posh generator (`scripts/generators/oh-my-posh.js`). Terminal emulators receive only the color palette; editors receive only the syntax token mapping.
+
+The two prompt tools share the same `prompt` key because they expose the same conceptual controls: prompt layout, fill character, time prefix symbol, and vim mode indicator. The mapping is direct enough that a single flat structure works for both. If a future prompt tool requires fields that conflict with Starship or Oh My Posh, the `prompt` key should be refactored to a keyed object: `"prompt": { "starship": { ... }, "oh-my-posh": { ... } }`.
+
+## ANSI palette design: visual harmony over role-name correctness
+
+The 16-color ANSI palette in each theme is mapped by visual harmony with the semantic tokens, not by ANSI role names. For example, a warm gray-green may be placed in slot 12 ("bright blue") because it complements the primary and muted tokens perceptually, even though a strict reading of ANSI role semantics would expect blue-family colors there.
+
+**The trade-off:** Tools that read ANSI colors by role name rather than by index — some `man` page renderers, file managers, system status tools — may display unexpected colors. A theme that places a teal in the "bright magenta" slot will look wrong to a `man` renderer that maps `manpage headers → bright magenta`. This is a known and accepted consequence of the design approach.
+
+**Why this is correct for gloam:** gloam themes are designed for the Starship prompt and for editor syntax highlighting. Both use colors by index, not by role name. The Starship generator assigns specific ANSI slots to specific prompt elements; VS Code and Neovim generators map ANSI slots to syntax roles via `syntax-map.js`. In these contexts, visual harmony is more important than role-name correctness. The semantic tokens (`primary`, `accent`, `muted`, `error`) carry the authoritative role mapping; the ANSI palette is a harmonized extension of those tokens for syntax contexts.
+
+**Documentation:** This decision is formally recorded in `docs/decisions/ADR-005.md`. Theme guides document the ANSI design logic individually in each `themes/<name>/<name>.md`.
 
 ## File structure decision
 

@@ -3,9 +3,7 @@ import { hex } from "./utils.js";
 export function generateKitty(theme) {
   const { name, background, foreground, ansi, ui } = theme;
 
-  const ansiLines = ansi
-    .map((c, i) => `${"color" + i}`.padEnd(7) + `  #${hex(c)}`)
-    .join("\n");
+  const ansiLines = ansi.map((c, i) => `${"color" + i}`.padEnd(7) + `  #${hex(c)}`).join("\n");
 
   return [
     `# ${name} — Kitty color theme`,

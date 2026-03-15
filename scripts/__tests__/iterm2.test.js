@@ -77,9 +77,9 @@ describe("generateIterm2", () => {
     // #1A = 26, 26/255 ≈ 0.10196 (Blue)
     const out = generateIterm2(theme);
     // Look for these values appearing in the plist (within 3 decimal places)
-    assert.match(out, /0\.05[01]/);   // red component of bg
-    assert.match(out, /0\.058/);      // green component of bg
-    assert.match(out, /0\.10[12]/);   // blue component of bg
+    assert.match(out, /0\.05[01]/); // red component of bg
+    assert.match(out, /0\.058/); // green component of bg
+    assert.match(out, /0\.10[12]/); // blue component of bg
   });
 
   it("ANSI 0 (black) matches background", () => {

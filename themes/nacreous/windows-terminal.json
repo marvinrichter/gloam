@@ -1,0 +1,23 @@
+{
+  "name": "Nacreous",
+  "background": "#0B0C10",
+  "foreground": "#E4E8F0",
+  "cursorColor": "#E890C8",
+  "selectionBackground": "#1A1C28",
+  "black": "#0B0C10",
+  "red": "#8A4A60",
+  "green": "#40A880",
+  "yellow": "#8898A8",
+  "blue": "#5050A8",
+  "purple": "#9850A8",
+  "cyan": "#40A0A8",
+  "white": "#9090B0",
+  "brightBlack": "#1A1C28",
+  "brightRed": "#E06868",
+  "brightGreen": "#78D8C8",
+  "brightYellow": "#90D880",
+  "brightBlue": "#8888A8",
+  "brightPurple": "#E890C8",
+  "brightCyan": "#58C8E8",
+  "brightWhite": "#E4E8F0"
+}

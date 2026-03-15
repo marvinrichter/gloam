@@ -105,7 +105,7 @@ Cursor         #C084FC  nebula violet — accent token, impossible to miss
 Cursor text    #0C0B1A  background inside cursor block
 Selection      #1C1B3A  deep space highlight — visible but not jarring
 Selected text  #D4D8F0  foreground on selection
-Links          #9EE878  bright starlight — readable, distinct from body text
+Links          #6EE8C8  aurora teal derivative — lighter variant of primary, palette-derived
 ```
 
 ---
@@ -410,3 +410,11 @@ The palette hue is 160° (aurora green), 276° (nebula violet), 243° (cosmic du
 ### Adding a fifth token
 
 Add it to `[palettes.aether]` with a name and a hex value. Reference it as `fg:tokenname` in any module format string. Verify contrast ≥ 4.5:1 against `#0C0B1A` before shipping.
+
+---
+
+## Design Notes
+
+### Background proximity to Eventide (Cross-7)
+
+Aether (`#0C0B1A`) and Eventide (`#0D0F1A`) share near-identical background hexes — only 2–4 values apart per channel. At a glance, both backgrounds appear as the same dark blue-black. The two themes are distinguished entirely by their token palettes: Aether uses teal-green primary + violet accent (aurora / nebula vocabulary); Eventide uses warm gold primary + orange-coral accent (sunset / dusk vocabulary). If you switch between these themes frequently, take care to verify which is active by checking the prompt colors rather than the background — the backgrounds are perceptually identical on most displays.

@@ -22,3 +22,9 @@ MD040: false
 # MD041 — First line heading: disabled. Many docs start with a blockquote
 # tagline or a YAML-style separator rather than an H1.
 MD041: false
+
+# MD024 — Duplicate headings: disabled for CHANGELOG.md. Release-please generates
+# identical section headings (e.g. "### Features", "### Bug Fixes") across multiple
+# version entries by design. Enforcing unique headings would break that pattern.
+MD024:
+  siblings_only: true

@@ -1,0 +1,37 @@
+# daybook — Alacritty color theme
+# Generated from daybook.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/daybook.toml
+# then add `import = ["~/.config/alacritty/themes/daybook.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#F2EEE6"
+foreground = "#1E1A14"
+
+[colors.cursor]
+cursor = "#884830"
+text   = "#F4EFE4"
+
+[colors.selection]
+background = "#D8CEB8"
+text       = "#1E1A14"
+
+[colors.normal]
+black   = "#0E0A08"
+red     = "#6A1E1E"
+green   = "#204828"
+yellow  = "#604818"
+blue    = "#183060"
+magenta = "#582858"
+cyan    = "#184848"
+white   = "#A09080"
+
+[colors.bright]
+black   = "#4A4030"
+red     = "#882020"
+green   = "#387038"
+yellow  = "#886028"
+blue    = "#6A5E4E"
+magenta = "#884830"
+cyan    = "#286868"
+white   = "#F0EBE0"

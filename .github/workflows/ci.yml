@@ -8,13 +8,13 @@ on:
 
 jobs:
   test:
-    # NOTE: macOS is the primary user platform for gloam but is not tested in CI.
-    # The generator is pure Node.js with no platform-specific code, so ubuntu-latest
-    # is representative. Add macos-latest to the matrix if installer path logic
-    # (e.g. homedir resolution) ever requires macOS-specific testing.
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    permissions:
+      contents: read
+      pull-requests: write
     strategy:
       matrix:
+        os: [ubuntu-latest, macos-latest]
         node-version: [22, 24]
     steps:
       - uses: actions/checkout@v6
@@ -29,8 +29,58 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Format check
+        run: npm run format:check
+
+      - name: Validate theme JSON schemas
+        run: npm run validate-schemas
+
+      - name: WCAG AA contrast gate
+        run: npm run check-contrast
+
       - name: Run tests
-        run: npm test
+        run: |
+          set -o pipefail
+          npm test -- --test-reporter=spec 2>&1 | tee /tmp/test-output.txt
+
+      # Post a coverage summary comment on PRs — runs once (ubuntu / node 22 only)
+      - name: Post coverage comment
+        if: >
+          github.event_name == 'pull_request' &&
+          matrix.os == 'ubuntu-latest' &&
+          matrix.node-version == 22
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/ci/coverage-comment.js /tmp/test-output.txt > /tmp/coverage-comment.md
+
+          # Update the existing bot comment if one exists; otherwise create a new one
+          EXISTING=$(gh api \
+            repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## 📊 Test Coverage"))) | .id' \
+            | head -1)
+
+          if [ -n "$EXISTING" ]; then
+            gh api repos/${{ github.repository }}/issues/comments/"$EXISTING" \
+              -X PATCH \
+              --field body="$(cat /tmp/coverage-comment.md)"
+          else
+            gh pr comment ${{ github.event.pull_request.number }} \
+              --body-file /tmp/coverage-comment.md
+          fi
+
+  generate-check:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Verify generator output is up to date
         run: |

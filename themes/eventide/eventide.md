@@ -406,3 +406,15 @@ The palette hue is 38° (gold), 18° (coral), 245° (lavender), 0° (red). To sh
 ### Adding a fifth token
 
 Add it to `[palettes.eventide]` with a name and a hex value. Reference it as `fg:tokenname` in any module format string. Verify contrast ≥ 4.5:1 against `#0D0F1A` before shipping.
+
+---
+
+## Design Notes
+
+### Primary / accent hue proximity
+
+Primary `#E8B86D` (hsl 38°) and accent `#FF7F57` (hsl 18°) are 20° apart in hue — the closest primary/accent pairing in the gloam collection. Both tokens are warm (orange-gold and orange-coral), with high contrast against the dark background (11.4:1 and 8.3:1 respectively). On calibrated displays the gold/coral distinction is clear. On warm-shifted displays or for protanomalous users, the 20° gap may narrow perceptually — both tokens could read as undifferentiated orange-warm. The prompt character `❯` uses accent (orange-coral); directory uses primary (gold); git status uses accent. If this distinction matters in your workflow, verify on your hardware. For maximum warm/cool separation, see Fjord or Cordovan.
+
+### Cross-collection note (Eventide / Aether)
+
+Eventide (`#0D0F1A`) and Aether (`#0C0B1A`) share near-identical backgrounds — perceptually indistinguishable on most displays. The themes are distinguished entirely by token palette: Eventide's is warm (gold/coral/lavender); Aether's is cool (teal/violet/blue-gray). See also aether.md.

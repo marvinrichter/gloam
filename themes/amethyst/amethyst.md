@@ -39,7 +39,7 @@ error      #E05858   hsl(0°, 68%, 61%)     crystal fault      5.4:1  AA
 ### Assignment rules
 
 ```
-╭  user  ~/path   branch status  ···············  ✧ time
+╭  user  ~/path   branch status  ···············  ✤ time
    ↑      ↑        ↑      ↑      ↑               ↑  ↑
    muted  primary  accent accent muted dim        muted muted
 ╰─⟫
@@ -131,7 +131,7 @@ Links          #C084F0   primary — amethyst for hyperlinks
 ### Layout
 
 ```
-╭  marvin  ~/gloam   main ~2 +1  ···········  ✧ 14:32
+╭  marvin  ~/gloam   main ~2 +1  ···········  ✤ 14:32
 ╰─⟫
 ```
 
@@ -144,7 +144,7 @@ Two lines. The first carries all information. The second is the cursor line — 
 ╰   U+2570  BOX DRAWINGS LIGHT ARC UP AND RIGHT
 ─   U+2500  BOX DRAWINGS LIGHT HORIZONTAL
 ·   U+00B7  MIDDLE DOT  (fill character)
-✧   U+2727  WHITE FOUR POINTED STAR  (time prefix, command duration prefix)
+✤   U+2724  FOUR TEARDROP-SPOKED ASTERISK  (time prefix, command duration prefix)
 ⟫   U+27EB  MATHEMATICAL RIGHT DOUBLE ANGLE BRACKET
 ⟪   U+27EA  MATHEMATICAL LEFT DOUBLE ANGLE BRACKET  (vim normal mode)
 ```
@@ -161,7 +161,9 @@ The fill character is `·` (middle dot) rather than `─` (box drawing dash). Th
 
 ### The time prefix
 
-`✧` (four-pointed star, the sparkle glyph) replaces the `◆` (black diamond) used in eventide. A geode's crystal faces create a specific optical effect — light enters at one angle and exits at many, producing the characteristic sparkle of mineral surfaces. The `✧` glyph maps to this. It appears before the clock and before slow command durations, creating a "light-related timing information" visual token.
+`✤` (U+2724 FOUR TEARDROP-SPOKED ASTERISK) is the crystallographic spike marker. Each teardrop spike corresponds to a crystal axis — the four-fold symmetry of the amethyst growth structure. Unlike the solid `✦` (U+2726 BLACK FOUR POINTED STAR), which appears as a flat filled star, `✤` has an organic teardrop taper to each point that reads as a growing crystal rather than a geometric shape. It appears before the clock and before slow command durations.
+
+**Note:** The timePrefix was changed from `✦` (U+2726) to `✤` (U+2724) to eliminate a prompt identity collision with the Aether theme, which also uses `✦`. Both themes share deep purple-black backgrounds (`#0C0811` vs `#0C0B1A`) — without distinct chrome elements they are visually interchangeable in peripheral vision. The new glyph is crystallographic (spike pattern) while `✦` was retained by Aether. See also Aether's design guide for the complementary note.
 
 ### The gold cursor on dark purple
 
@@ -261,7 +263,7 @@ The character itself does not change — only its color. The shape `⟫` remains
 ### Slow command (> 2s)
 
 ```
-╭  marvin  ~/path  ·············  ✧ 3.2s  ···  ✧ 14:32
+╭  marvin  ~/path  ·············  ✤ 3.2s  ···  ✤ 14:32
 ```
 
 Duration appears between languages and fill, styled `fg:muted dim`. It is additional information, not an alert. The threshold is 2000ms — fast commands do not produce noise.

@@ -1,0 +1,23 @@
+{
+  "name": "Saffron",
+  "background": "#FAF0D8",
+  "foreground": "#281808",
+  "cursorColor": "#3A2880",
+  "selectionBackground": "#EAD8B0",
+  "black": "#160C04",
+  "red": "#6A1E20",
+  "green": "#205024",
+  "yellow": "#604810",
+  "blue": "#1C2070",
+  "purple": "#482858",
+  "cyan": "#185858",
+  "white": "#685840",
+  "brightBlack": "#503C28",
+  "brightRed": "#802028",
+  "brightGreen": "#287040",
+  "brightYellow": "#5E3008",
+  "brightBlue": "#806040",
+  "brightPurple": "#3A2880",
+  "brightCyan": "#287080",
+  "brightWhite": "#FDF8EC"
+}

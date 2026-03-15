@@ -60,6 +60,25 @@ Before running the installer, verify:
 2. Check that `~/.config/zed/settings.json` contains `"theme": "<Capitalized Name>"`
 3. Reload Zed or select the theme from the command palette
 
+### Windows Terminal
+
+1. Check that the color scheme block `"Gloam <Name>"` exists in `settings.json` under `"schemes"`
+2. Check that the relevant profile's `"colorScheme"` key is set to `"Gloam <Name>"`
+3. Close and reopen Windows Terminal to pick up the change
+
+### Helix
+
+1. Check that `~/.config/helix/themes/<name>.toml` exists
+2. Check that `~/.config/helix/config.toml` contains `theme = "<name>"`
+3. Restart Helix — theme changes are not hot-reloaded
+
+### tmux
+
+1. Check that `~/.tmux.conf` contains a `source-file` line pointing to `themes/<name>/tmux.conf`
+2. Run `tmux source ~/.tmux.conf` to reload without restarting
+3. If colors still look wrong, check that your terminal supports 256 colors: `echo $TERM` should return `xterm-256color` or `tmux-256color`
+4. Add `set -g default-terminal "tmux-256color"` to `~/.tmux.conf` if colors are degraded
+
 ## Display calibration
 
 gloam themes are calibrated for sRGB displays at 200–300 nits. Wide-gamut (P3) displays may render colors more saturated. High-brightness modes (>400 nits) may reduce perceived contrast. The WCAG 4.5:1 guarantee is measured in sRGB.

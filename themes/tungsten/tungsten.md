@@ -33,7 +33,7 @@ Four named tokens cover every prompt use case. All verified against the backgrou
 ```
 primary    #F0D890   hsl(46°,  77%, 75%)  filament white-gold   14.3:1  AAA
 accent     #5A90C8   hsl(210°, 47%, 57%)  scientific blue        5.95:1  AA
-muted      #887A60   hsl(35°,  17%, 46%)  warm gray              4.73:1  AA
+muted      #887A60   hsl(35°,  17%, 46%)  warm gray              5.07:1  AA
 error      #E05858   hsl(0°,   67%, 61%)  instrument alarm        5.4:1  AA
 ```
 
@@ -257,7 +257,7 @@ Token      Hex       Luminance  Contrast  Level
 ─────────  ────────  ─────────  ────────  ──────────
 primary    #F0D890   0.708      14.3:1    AAA ✓
 accent     #5A90C8   0.266       5.95:1   AA  ✓
-muted      #887A60   0.201       4.73:1   AA  ✓
+muted      #887A60   0.201       5.07:1   AA  ✓
 error      #E05858   0.237       5.4:1    AA  ✓
 foreground #F4EED8   0.824      16.6:1    AAA ✓
 ```

@@ -1,0 +1,37 @@
+# cirrus — Alacritty color theme
+# Generated from cirrus.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/cirrus.toml
+# then add `import = ["~/.config/alacritty/themes/cirrus.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#EEF1F6"
+foreground = "#181C28"
+
+[colors.cursor]
+cursor = "#1A7060"
+text   = "#EEF1F6"
+
+[colors.selection]
+background = "#D8E0EC"
+text       = "#181C28"
+
+[colors.normal]
+black   = "#080C18"
+red     = "#702020"
+green   = "#205428"
+yellow  = "#504818"
+blue    = "#182858"
+magenta = "#482858"
+cyan    = "#184050"
+white   = "#9098B8"
+
+[colors.bright]
+black   = "#505870"
+red     = "#882028"
+green   = "#287038"
+yellow  = "#785820"
+blue    = "#506098"
+magenta = "#1A7060"
+cyan    = "#288080"
+white   = "#F0F4F8"

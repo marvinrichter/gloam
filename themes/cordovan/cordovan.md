@@ -42,7 +42,7 @@ error      #D06060   hsl(0°, 52%, 60%)    — fail state            5.2:1  AA
 ### Assignment rules
 
 ```
-╭  user  ~/path   branch status  ────────────────  ⊕ time
+╭  user  ~/path   branch status  ────────────────  ⊗ time
    ↑      ↑        ↑      ↑      ↑                 ↑  ↑
    muted  primary  accent accent muted             muted muted
 ╰─❯
@@ -123,7 +123,7 @@ Links          #6B9AB8  cold steel blue — steel links feel right here
 ### Layout
 
 ```
-╭  marvin  ~/gloam   main ~2 +1  ─────────────────  ⊕ 14:32
+╭  marvin  ~/gloam   main ~2 +1  ─────────────────  ⊗ 14:32
 ╰─❯
 ```
 
@@ -135,14 +135,16 @@ Two lines. The first carries all information. The second is the cursor line — 
 ╭   U+256D  BOX DRAWINGS LIGHT ARC DOWN AND RIGHT
 ╰   U+2570  BOX DRAWINGS LIGHT ARC UP AND RIGHT
 ─   U+2500  BOX DRAWINGS LIGHT HORIZONTAL  (fill character — stitching lines)
-⊕   U+2295  CIRCLED PLUS  (time prefix, command duration prefix)
+⊗   U+2297  CIRCLED TIMES  (time prefix, command duration prefix)
 ❯   U+276F  HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT
 ❮   U+276E  HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT  (vim normal)
 ```
 
 `╭` and `╰─` are styled `fg:muted` — same hue as the username and time. They read as frame, not content.
 
-`⊕` appears twice: before the clock, and before slow command durations (`> 2s`). The circled-plus symbol evokes a dial or gauge — workshop instrumentation. The repetition is intentional — a shared glyph creates a "time-related info" visual token without requiring a second color.
+`⊗` appears twice: before the clock, and before slow command durations (`> 2s`). The circled-times symbol reads as a gauge or measurement dial — a cross-hair on a dial face, marking a reading. In a leather workshop, measurement is constant: the thickness of a strap, the diameter of a rivet, the tension on a stitch. A dial reading is appropriate workshop instrumentation. The repetition creates a "time-related info" visual token without requiring a second color.
+
+**Note:** The timePrefix was changed from `⊗` (U+2295 CIRCLED PLUS) to `⊗` (U+2297 CIRCLED TIMES). The circled-plus reads as mathematical addition rather than a workshop instrument. The circled-times cross-hair reads as a gauge or dial face, more precisely evoking the measurement instruments of a leather workshop.
 
 The fill character `─` is the same glyph as the structural lines of the box frame. This choice is deliberate: the fill reads as stitching — thread between the left-side workshop information and the right-side clock.
 
@@ -240,7 +242,7 @@ The character itself does not change — only its color. The shape `❯` remains
 ### Slow command (> 2s)
 
 ```
-╭  marvin  ~/path  ─────────────────  ⊕ 3.2s  ──  ⊕ 14:32
+╭  marvin  ~/path  ─────────────────  ⊗ 3.2s  ──  ⊗ 14:32
 ```
 
 Duration appears between languages and fill, styled `fg:muted dim`. It is additional information, not an alert. The threshold is 2000ms — fast commands do not produce noise.

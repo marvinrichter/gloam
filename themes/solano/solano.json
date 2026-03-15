@@ -1,0 +1,47 @@
+{
+  "name": "solano",
+  "displayName": "Solano",
+  "type": "light",
+  "background": "#F5EDE0",
+  "foreground": "#2A1C10",
+  "tokens": {
+    "primary": "#782010",
+    "accent": "#1A4A7A",
+    "muted": "#7A5C40",
+    "error": "#8B1A2A"
+  },
+  "ansi": [
+    "#180A04",
+    "#642020",
+    "#1C5024",
+    "#5A3008",
+    "#183070",
+    "#482860",
+    "#185060",
+    "#706050",
+    "#4A3828",
+    "#8B1A2A",
+    "#2C7038",
+    "#782010",
+    "#7A5C40",
+    "#1A4A7A",
+    "#2C7080",
+    "#F8F0E8"
+  ],
+  "ui": {
+    "cursor": "#1A4A7A",
+    "cursorText": "#F5EDE0",
+    "selection": "#DDD0BC",
+    "selectionText": "#2A1C10",
+    "bold": "#180A04",
+    "link": "#1A4A7A"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "∿",
+    "timePrefix": "☀",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

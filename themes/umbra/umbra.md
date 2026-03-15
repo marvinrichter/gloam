@@ -143,10 +143,10 @@ Single line. All information on one horizontal plane. The cursor line is minimal
 ```
 ▹   U+25B9  WHITE RIGHT-POINTING SMALL TRIANGLE  (success / error character)
 ◃   U+25C3  WHITE LEFT-POINTING SMALL TRIANGLE   (vim normal mode)
-·   U+00B7  MIDDLE DOT  (fill character, time prefix, duration prefix)
+░   U+2591  LIGHT SHADE  (fill character — the shadow gradient of a penumbra)
 ```
 
-The fill character `·` is used in three positions: as the repeating fill between content and time, as the time prefix (`· 04:47`), and as the duration prefix (`· 3.2s`). A single repeated glyph unifies all chrome — the `·` marks ambient information without introducing a new visual token.
+The fill character `░` is used in three positions: as the repeating fill between content and time, as the time prefix (`· 04:47`), and as the duration prefix (`· 3.2s`). The light shade block evokes the gradient boundary of a penumbra — the half-shadow between full dark and the light source. A single repeated glyph unifies all chrome without introducing a new visual token.
 
 `▹` and `◃` are small, directional, geometric. They do not compete with text. The direction reversal in vim mode maps to mode semantics — forward motion vs. backward editing.
 
@@ -221,7 +221,7 @@ The `bold fg:primary` on directory is the only bold element in the prompt. One b
 fg:accent  (amethyst violet)
 ```
 
-### Error (exit 0)
+### Error (exit ≠ 0)
 
 ```
 ▹

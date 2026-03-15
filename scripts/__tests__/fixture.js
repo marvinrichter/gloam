@@ -7,9 +7,9 @@ export const theme = {
   foreground: "#F0EAD6",
   tokens: {
     primary: "#E8B86D",
-    accent:  "#FF7F57",
-    muted:   "#8B84C4",
-    error:   "#E85D5D",
+    accent: "#FF7F57",
+    muted: "#8B84C4",
+    error: "#E85D5D",
   },
   ansi: [
     "#0D0F1A", // 0  black
@@ -30,12 +30,12 @@ export const theme = {
     "#F0EAD6", // 15 bright white
   ],
   ui: {
-    cursor:        "#FF7F57",
-    cursorText:    "#0D0F1A",
-    selection:     "#1E2040",
+    cursor: "#FF7F57",
+    cursorText: "#0D0F1A",
+    selection: "#1E2040",
     selectionText: "#F0EAD6",
-    bold:          "#F0EAD6",
-    link:          "#B8B4E8",
+    bold: "#F0EAD6",
+    link: "#B8B4E8",
   },
 };
 

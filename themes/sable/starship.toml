@@ -59,8 +59,8 @@ truncation_symbol = "…/"
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
-"Music"     = " "
-"Pictures"  = " "
+"Music" = " "
+"Pictures" = " "
 
 # ─── Git ─────────────────────────────────────────────────────────────────────
 

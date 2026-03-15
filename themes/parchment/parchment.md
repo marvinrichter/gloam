@@ -16,7 +16,7 @@ The scholarly tradition reinterpreted: your codebase is a manuscript. The termin
 
 | Decision | Reasoning |
 |---|---|
-| Background `#EDE0C8` | The specific warm cream-yellow of aged vellum. Cooler yellows read as document; warmer creams read as artificial. This value sits exactly at the temperature of old paper. |
+| Background `#E8D6B4` | The specific warm cream-yellow of aged vellum — more saturated than modern cream paper, distinctly warmer and more amber than Daybook's cooler sizing-white. Cooler yellows read as document; warmer creams read as artificial. |
 | Foreground `#2A1E12` | Iron gall ink in its aged state — deep warm brown, not black. Pure `#000000` would be wrong — too stark, too digital, nothing like a manuscript. |
 | Primary `#4A2E12` | The darkest navigational ink. Where you are in the filesystem is the most important information. This is the ink the scribe used for the main text. |
 | Accent `#7A3A10` | The rubrication ink — the rust-brown used for headings, initials, and annotation in medieval manuscripts. Git status and the cursor glyph use this: they demand slightly more attention than the main text. |
@@ -30,7 +30,7 @@ No light colors appear in the semantic token set. Every prompt element is a dark
 
 ### Semantic tokens
 
-Four named tokens cover every prompt use case. All verified against background `#EDE0C8`. Contrast is measured as **dark token against light background** — the inverse of the other themes in this set.
+Four named tokens cover every prompt use case. All verified against background `#E8D6B4`. Contrast is measured as **dark token against light background** — the inverse of the other themes in this set.
 
 ```
 primary    #4A2E12   hsl(28°,  57%,  18%)  iron gall ink          9.8:1  AAA
@@ -77,7 +77,7 @@ The 16-color ANSI palette in a light theme operates under a constraint absent fr
 
 The foreground `#2A1E12` is not placed in any ANSI slot. It is set via the iTerm2 Foreground Color slot directly, which is separate from the 16-color palette. This is correct behavior for light themes: never rely on ANSI to carry your foreground.
 
-All 16 ANSI colors are dark enough to display legibly on `#EDE0C8`. The normal-vs-bright distinction is achieved by weight (darker vs. slightly lighter) rather than by brightness inversion.
+All 16 ANSI colors are dark enough to display legibly on `#E8D6B4`. The normal-vs-bright distinction is achieved by weight (darker vs. slightly lighter) rather than by brightness inversion.
 
 ### Design logic
 
@@ -116,12 +116,12 @@ Normal                              Bright
 Note on the inversion from standard terminal practice: in a dark theme, Background is dark and Foreground is light. In Parchment, Background is light and Foreground is dark. Every UI color slot participates in this inversion.
 
 ```
-Background     #EDE0C8  aged parchment / vellum
+Background     #E8D6B4  aged parchment / vellum
 Foreground     #2A1E12  iron gall ink — deep warm brown
 Bold           #1A0E08  even darker ink — weight + depth together for bold
 Cursor         #7A3A10  rust-brown accent — the ink nib against the page
-Cursor text    #EDE0C8  background — cursor text matches the paper beneath it
-Selection      #D8C8A8  darker parchment — visible highlight, not jarring
+Cursor text    #E8D6B4  background — cursor text matches the paper beneath it
+Selection      #D4BEA0  darker parchment — visible highlight, not jarring
 Selected text  #2A1E12  foreground — ink remains readable on highlighted paper
 Links          #28407A  ink blue — ANSI 4, manuscript annotation color for links
 ```
@@ -290,22 +290,22 @@ Duration appears between languages and fill, styled `fg:muted dim`. It is a marg
 
 ## Contrast Compliance
 
-All tokens verified against background `#EDE0C8` using the WCAG 2.1 relative luminance formula. Contrast measured as dark token against light background.
+All tokens verified against background `#E8D6B4` using the WCAG 2.1 relative luminance formula. Contrast measured as dark token against light background.
 
 ```
-Background luminance: 0.762  (#EDE0C8)
+Background luminance: 0.686  (#E8D6B4)
 
 Token      Hex       Luminance  Contrast  Level
 ─────────  ────────  ─────────  ────────  ──────────
-primary    #4A2E12   0.033       9.8:1    AAA ✓
-accent     #7A3A10   0.071       6.7:1    AA  ✓
-muted      #6B5A48   0.107       5.2:1    AA  ✓
-error      #8B2020   0.065       7.1:1    AA  ✓
-fg         #2A1E12   0.026      11.0:1    AAA ✓
-bold       #1A0E08   0.016      12.5:1    AAA ✓
+primary    #4A2E12   0.033       8.9:1    AAA ✓
+accent     #7A3A10   0.071       6.1:1    AA  ✓
+muted      #6B5A48   0.107       4.7:1    AA  ✓
+error      #8B2020   0.065       6.4:1    AA  ✓
+fg         #2A1E12   0.026      10.0:1    AAA ✓
+bold       #1A0E08   0.016      11.3:1    AAA ✓
 ```
 
-Minimum threshold: 4.5:1 (WCAG AA for normal text). All tokens exceed this. `primary` and `fg` reach AAA — visible in bright daylight, on reflective screens, on uncalibrated displays. `muted` at 5.2:1 is the lowest value in the set; it passes AA but does not reach AAA. This is intentional — muted text is meant to recede.
+Minimum threshold: 4.5:1 (WCAG AA for normal text). All tokens exceed this. `primary` and `fg` reach AAA — visible in bright daylight, on reflective screens, on uncalibrated displays. `muted` at 4.7:1 is the lowest value in the set; it passes AA with 0.2:1 of margin. On uncalibrated displays running warm (yellow-shifted), the background `#E8D6B4` may appear slightly lighter, narrowing this margin — users relying on muted text in high-glare or warm-shifted environments should test before deploying.
 
 ---
 
@@ -455,11 +455,11 @@ npx github:marvinrichter/gloam parchment zed
 
 ### Changing the base hue
 
-The palette hue sits at approximately 25°–28° (warm brown). To shift the aesthetic cooler — toward a blue-black iron gall at its freshest — push the primary hue toward neutral dark gray. To shift warmer — toward sepia — increase the hue toward 35°–40°. The background `#EDE0C8` can also be shifted: cooler vellum reads more like modern paper; warmer reads more like very old or wax-treated parchment.
+The palette hue sits at approximately 25°–28° (warm brown). To shift the aesthetic cooler — toward a blue-black iron gall at its freshest — push the primary hue toward neutral dark gray. To shift warmer — toward sepia — increase the hue toward 35°–40°. The background `#E8D6B4` can also be shifted: cooler vellum reads more like modern paper; warmer reads more like very old or wax-treated parchment.
 
 ### Adding a fifth token
 
-Add it to `[palettes.parchment]` with a name and a hex value. Reference it as `fg:tokenname` in any module format string. Verify contrast ≥ 4.5:1 against `#EDE0C8` before shipping. Any new token must be **darker** than the background — this is a light theme, and all ink marks are darker than the page they appear on.
+Add it to `[palettes.parchment]` with a name and a hex value. Reference it as `fg:tokenname` in any module format string. Verify contrast ≥ 4.5:1 against `#E8D6B4` before shipping. Any new token must be **darker** than the background — this is a light theme, and all ink marks are darker than the page they appear on.
 
 ### Using Parchment alongside dark themes
 

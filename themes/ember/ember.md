@@ -416,3 +416,15 @@ The palette hue is 32° (ember amber), 26° (active flame), 32° desaturated (sm
 ### Adding a fifth token
 
 Add it to `[palettes.ember]` with a name and a hex value. Reference it as `fg:tokenname` in any module format string. Verify contrast ≥ 4.5:1 against `#111008` before shipping. Any new token should remain within the warm half of the color wheel (hue 0°–60°) to preserve the palette's thermal unity.
+
+---
+
+## Design Notes
+
+### Accent / error hue proximity
+
+Accent `#FF6D00` (hsl 26°) and error `#FF4040` (hsl 0°) are 26° apart in hue. Both tokens are fully saturated (100%) with similar luminances (accent L≈0.240, error L≈0.252 — Δ≈0.012). On calibrated displays the orange vs. red distinction is clear. On warm-shifted displays or for users with protan/deutan color vision deficiencies (~8% of males), this 26° gap may narrow perceptually to near-indistinguishable.
+
+The constraint is structural: this background (`#111008`, L≈0.004) requires any warm red to sit above L≈0.196 to reach WCAG AA (4.5:1). Darkening the error token to create luminance separation — the most common mitigation — reduces contrast below the AA floor before meaningful separation is achieved. The only compliant path is toward brighter, more saturated reds, which moves both tokens in the same direction (warmer, more orange) rather than differentiating them.
+
+Mitigation: the prompt character `›` changes color between accent (success) and error (failure), providing shape-independent state signaling. Users who depend on color discrimination for error detection in low-light conditions or on warm displays should verify this system on their hardware before relying on it in production workflows.

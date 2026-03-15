@@ -2,7 +2,7 @@
   "name": "parchment",
   "displayName": "Parchment",
   "type": "light",
-  "background": "#EDE0C8",
+  "background": "#E8D6B4",
   "foreground": "#2A1E12",
   "tokens": {
     "primary": "#4A2E12",
@@ -31,7 +31,7 @@
   "ui": {
     "cursor": "#7A3A10",
     "cursorText": "#EDE0C8",
-    "selection": "#D8C8A8",
+    "selection": "#D4BEA0",
     "selectionText": "#2A1E12",
     "bold": "#1A0E08",
     "link": "#28407A"

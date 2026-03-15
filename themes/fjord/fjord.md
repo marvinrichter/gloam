@@ -431,6 +431,18 @@ The palette hue is 204° (ice blue), 43° (amber), 207° (fog), 0° (warning). T
 
 Add it to `[palettes.fjord]` with a name and a hex value. Reference it as `fg:tokenname` in any module format string. Verify contrast ≥ 4.5:1 against `#0A0F18` before shipping.
 
+---
+
+## Design Notes
+
+### Muted / error contrast proximity
+
+Muted `#688EAA` (5.5:1) and error `#E06060` (5.5:1) share identical contrast ratios against the `#0A0F18` background. Their visual separation is achieved by hue alone (207° blue-gray vs. 0° red) — no luminance gap. On calibrated displays in normal viewing conditions the blue-gray / red distinction is clear. Users with protanopia (red-blind, ~1% of males) may find these tokens difficult to distinguish; at typical prompt sizes both tokens would render at similar perceived lightness. The `dim` modifier does not apply to error tokens — error is never dimmed. If protanopia accommodation is required, raise the muted contrast above 6:1 to create luminance separation from error.
+
+### Cross-collection note (Fjord / Nocturne)
+
+Fjord and Nocturne are structurally similar: both use two-line arc-box layout (`╭`/`╰─`) with `─` fill and `›`/`❯` cursor family. Both have warm amber-gold accents. Key distinctions: Fjord's background is cool blue-dark (`#0A0F18`), Nocturne's is warm claret-dark (`#100A0C`). Fjord's primary is ice blue (hsl 204°), Nocturne's is candlelight ivory (hsl 43°). Fjord uses `∼` as timePrefix (wave-tilde, Nordic water), Nocturne uses `○` (whole note, piano rest). The Fjord aesthetic is coastal Scandinavian; Nocturne is Parisian interior. See also nocturne.md.
+
 ### Removing username
 
 Username is omitted from the format string by design. This is not a `disabled = true` flag — it is simply absent from the format. To restore it, add `$username\` after `[╭](fg:muted)\` in the format string and configure:

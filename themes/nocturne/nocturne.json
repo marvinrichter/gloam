@@ -1,0 +1,47 @@
+{
+  "name": "nocturne",
+  "displayName": "Nocturne",
+  "type": "dark",
+  "background": "#100A0C",
+  "foreground": "#EEE8E0",
+  "tokens": {
+    "primary": "#E0D0A8",
+    "accent": "#D05A6A",
+    "muted": "#848080",
+    "error": "#E04848"
+  },
+  "ansi": [
+    "#100A0C",
+    "#883040",
+    "#406840",
+    "#B09040",
+    "#484880",
+    "#784878",
+    "#387878",
+    "#848080",
+    "#201820",
+    "#E04848",
+    "#60B870",
+    "#E0D0A8",
+    "#9880A0",
+    "#D05A6A",
+    "#50A8A8",
+    "#EEE8E0"
+  ],
+  "ui": {
+    "cursor": "#D05A6A",
+    "cursorText": "#0C0A0C",
+    "selection": "#201820",
+    "selectionText": "#EEE8E0",
+    "bold": "#F8F4EC",
+    "link": "#E0D0A8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "─",
+    "timePrefix": "○",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

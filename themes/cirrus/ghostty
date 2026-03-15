@@ -1,0 +1,32 @@
+# cirrus — Ghostty color theme
+# Generated from cirrus.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/cirrus
+# then set theme = cirrus in ~/.config/ghostty/config
+
+background         = EEF1F6
+foreground         = 181C28
+
+cursor-color       = 1A7060
+cursor-text        = EEF1F6
+
+selection-background = D8E0EC
+selection-foreground = 181C28
+
+# ANSI palette (0–15)
+palette = 0=080C18
+palette = 1=702020
+palette = 2=205428
+palette = 3=504818
+palette = 4=182858
+palette = 5=482858
+palette = 6=184050
+palette = 7=9098B8
+palette = 8=505870
+palette = 9=882028
+palette = 10=287038
+palette = 11=785820
+palette = 12=506098
+palette = 13=1A7060
+palette = 14=288080
+palette = 15=F0F4F8

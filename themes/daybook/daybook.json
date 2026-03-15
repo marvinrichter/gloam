@@ -1,0 +1,47 @@
+{
+  "name": "daybook",
+  "displayName": "Daybook",
+  "type": "light",
+  "background": "#F2EEE6",
+  "foreground": "#1E1A14",
+  "tokens": {
+    "primary": "#284878",
+    "accent": "#884830",
+    "muted": "#6A5E4E",
+    "error": "#882020"
+  },
+  "ansi": [
+    "#0E0A08",
+    "#6A1E1E",
+    "#204828",
+    "#604818",
+    "#183060",
+    "#582858",
+    "#184848",
+    "#A09080",
+    "#4A4030",
+    "#882020",
+    "#387038",
+    "#886028",
+    "#6A5E4E",
+    "#884830",
+    "#286868",
+    "#F0EBE0"
+  ],
+  "ui": {
+    "cursor": "#884830",
+    "cursorText": "#F4EFE4",
+    "selection": "#D8CEB8",
+    "selectionText": "#1E1A14",
+    "bold": "#0A0806",
+    "link": "#284878"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "·",
+    "timePrefix": "¶",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

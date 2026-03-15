@@ -1,0 +1,23 @@
+{
+  "name": "Cirrus",
+  "background": "#EEF1F6",
+  "foreground": "#181C28",
+  "cursorColor": "#1A7060",
+  "selectionBackground": "#D8E0EC",
+  "black": "#080C18",
+  "red": "#702020",
+  "green": "#205428",
+  "yellow": "#504818",
+  "blue": "#182858",
+  "purple": "#482858",
+  "cyan": "#184050",
+  "white": "#9098B8",
+  "brightBlack": "#505870",
+  "brightRed": "#882028",
+  "brightGreen": "#287038",
+  "brightYellow": "#785820",
+  "brightBlue": "#506098",
+  "brightPurple": "#1A7060",
+  "brightCyan": "#288080",
+  "brightWhite": "#F0F4F8"
+}

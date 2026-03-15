@@ -53,6 +53,8 @@ One rule governs the whole system: **muted for chrome, primary for navigation, a
 
 Language/environment modules (`node`, `python`, `rust`, …) use `primary` — they are navigation-tier information. Command duration uses `muted dim` — it is supporting information.
 
+**Heraldic role convention note:** In this theme, `primary` is silver (`#C0C8D4`) and `accent` is gold (`#D4AA6A`). This inverts the visual dominance pattern used by most other themes, where the accent is the strongest color. In heraldry, gold ("or") is the charge — the object placed on the ground. Silver ("argent") is the ground itself. Sable follows this: the directory path (silver) is the ground you stand on; git status and the cursor (gold) are the active charge, the mark of action. The gold naturally dominates visually, which is the correct behavior here — git status should be the most salient prompt element. The `primary` role carries navigation authority by semantic convention, not by visual weight.
+
 ### Why only four tokens?
 
 A terminal prompt is information density work. More distinct hues create noise, not clarity. Four tokens produce exactly one visual hierarchy:
@@ -271,7 +273,7 @@ Token      Hex       Luminance  Contrast  Level
 primary    #C0C8D4   0.550      12.3:1    AAA ✓
 accent     #D4AA6A   0.431       9.7:1    AAA ✓
 muted      #7A8294   0.234       5.4:1    AA  ✓
-error      #D44848   0.208       4.7:1    AA  ✓
+error      #D44848   0.208       4.98:1   AA  ✓
 foreground #E8E8E8   0.820      16.4:1    AAA ✓
 ```
 

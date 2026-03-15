@@ -42,17 +42,25 @@ describe("generateWindowsTerminal", () => {
 
   it("includes all 8 bright ANSI color keys", () => {
     const obj = JSON.parse(generateWindowsTerminal(theme));
-    const keys = ["brightBlack", "brightRed", "brightGreen", "brightYellow",
-                  "brightBlue", "brightPurple", "brightCyan", "brightWhite"];
+    const keys = [
+      "brightBlack",
+      "brightRed",
+      "brightGreen",
+      "brightYellow",
+      "brightBlue",
+      "brightPurple",
+      "brightCyan",
+      "brightWhite",
+    ];
     keys.forEach((k) => assert.ok(k in obj, `missing key: ${k}`));
   });
 
   it("maps ANSI colors correctly", () => {
     const obj = JSON.parse(generateWindowsTerminal(theme));
-    assert.strictEqual(obj.black.toLowerCase(),       "#0d0f1a");
+    assert.strictEqual(obj.black.toLowerCase(), "#0d0f1a");
     assert.strictEqual(obj.brightWhite.toLowerCase(), "#f0ead6");
-    assert.strictEqual(obj.red.toLowerCase(),         "#c85a5a");
-    assert.strictEqual(obj.brightYellow.toLowerCase(),"#e8b86d");
+    assert.strictEqual(obj.red.toLowerCase(), "#c85a5a");
+    assert.strictEqual(obj.brightYellow.toLowerCase(), "#e8b86d");
   });
 
   it("works for light themes", () => {

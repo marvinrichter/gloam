@@ -1,0 +1,37 @@
+# ochre — Alacritty color theme
+# Generated from ochre.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/ochre.toml
+# then add `import = ["~/.config/alacritty/themes/ochre.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#F2E4D0"
+foreground = "#220E08"
+
+[colors.cursor]
+cursor = "#1A6068"
+text   = "#F2E4D0"
+
+[colors.selection]
+background = "#D8C4A8"
+text       = "#220E08"
+
+[colors.normal]
+black   = "#140804"
+red     = "#621818"
+green   = "#1A4C20"
+yellow  = "#5A3A10"
+blue    = "#183060"
+magenta = "#482050"
+cyan    = "#185058"
+white   = "#68503A"
+
+[colors.bright]
+black   = "#4A3020"
+red     = "#7A1828"
+green   = "#2A6030"
+yellow  = "#722018"
+blue    = "#705040"
+magenta = "#1A6068"
+cyan    = "#2A7878"
+white   = "#F5EAD8"

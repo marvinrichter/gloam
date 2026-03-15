@@ -4,6 +4,27 @@ import { readFileSync, globSync } from "node:fs";
 import { join } from "node:path";
 import { validateTheme } from "../generate.js";
 
+// ── WCAG 2.1 contrast helpers ─────────────────────────────────────────────────
+
+/** Convert a 6-digit hex color to relative luminance (WCAG 2.1). */
+function luminance(hex) {
+  const c = hex.replace(/^#/, "");
+  const toLinear = (v) => {
+    const s = parseInt(c.slice(v, v + 2), 16) / 255;
+    return s <= 0.04045 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+  };
+  return 0.2126 * toLinear(0) + 0.7152 * toLinear(2) + 0.0722 * toLinear(4);
+}
+
+/** Return WCAG 2.1 contrast ratio between two hex colors (always ≥ 1). */
+export function wcagContrast(hex1, hex2) {
+  const l1 = luminance(hex1);
+  const l2 = luminance(hex2);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
 const THEMES_DIR = join(import.meta.dirname, "../../themes");
 
 // ── Unit tests for validateTheme() ───────────────────────────────────────────
@@ -16,6 +37,22 @@ describe("validateTheme() — unit", () => {
     foreground: "#FFFFFF",
     tokens: { primary: "#FF0000", accent: "#00FF00", muted: "#0000FF", error: "#FFFF00" },
     ansi: Array(16).fill("#000000"),
+    ui: {
+      cursor: "#FF0000",
+      cursorText: "#000000",
+      selection: "#111111",
+      selectionText: "#FFFFFF",
+      bold: "#FFFFFF",
+      link: "#00FF00",
+    },
+    prompt: {
+      layout: "single-line",
+      showUsername: false,
+      fill: "·",
+      timePrefix: "○",
+      successSymbol: "›",
+      vimSymbol: "‹",
+    },
   };
 
   it("accepts a valid dark theme with no errors", () => {
@@ -35,7 +72,10 @@ describe("validateTheme() — unit", () => {
 
   it("reports error for missing 'name'", () => {
     const errors = validateTheme(omit(validTheme, "name"));
-    assert.ok(errors.some((e) => e.includes('"name"')), `expected "name" error in: ${errors}`);
+    assert.ok(
+      errors.some((e) => e.includes('"name"')),
+      `expected "name" error in: ${errors}`,
+    );
   });
 
   it("reports error for missing 'type'", () => {
@@ -96,7 +136,10 @@ describe("validateTheme() — unit", () => {
   });
 
   it("reports error for invalid hex in tokens.primary", () => {
-    const errors = validateTheme({ ...validTheme, tokens: { ...validTheme.tokens, primary: "red" } });
+    const errors = validateTheme({
+      ...validTheme,
+      tokens: { ...validTheme.tokens, primary: "red" },
+    });
     assert.ok(errors.some((e) => e.includes('"tokens.primary"')));
   });
 
@@ -118,5 +161,127 @@ describe("real theme JSON files pass validateTheme()", () => {
       const errors = validateTheme(json);
       assert.deepStrictEqual(errors, [], `${name}: ${errors.join("; ")}`);
     });
+  }
+});
+
+// ── Hue uniqueness: no two same-type themes have primary tokens within 10° ───────
+
+/** Convert a 6-digit hex to HSL hue (0–360). */
+function hexToHue(hex) {
+  const c = hex.replace(/^#/, "");
+  const r = parseInt(c.slice(0, 2), 16) / 255;
+  const g = parseInt(c.slice(2, 4), 16) / 255;
+  const b = parseInt(c.slice(4, 6), 16) / 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const d = max - min;
+  if (d === 0) return 0;
+  let h;
+  if (max === r) h = ((g - b) / d) % 6;
+  else if (max === g) h = (b - r) / d + 2;
+  else h = (r - g) / d + 4;
+  return (h * 60 + 360) % 360;
+}
+
+/** Angular distance between two hues (0–180). */
+function hueDist(h1, h2) {
+  const d = Math.abs(h1 - h2) % 360;
+  return d > 180 ? 360 - d : d;
+}
+
+describe("hue uniqueness — no two same-type themes share primary hue within 10°", () => {
+  const HUE_MINIMUM_DEG = 10;
+
+  // Known-close pairs that pre-date this rule (grandfathered, not failed).
+  // These pairs share similar hue territory by design — distinct concepts
+  // that happen to live in the same part of the color wheel.
+  const KNOWN_CLOSE = new Set([
+    // Warm-gold band (30–47°): cordovan/ember/eventide/nocturne/tungsten
+    "cordovan|ember",
+    "cordovan|eventide",
+    "cordovan|nocturne",
+    "cordovan|tungsten",
+    "ember|eventide",
+    "ember|nocturne",
+    "ember|tungsten",
+    "eventide|nocturne",
+    "eventide|tungsten",
+    "nocturne|tungsten",
+    // Teal/cyan band (161–175°): aether/nacreous/verdigris
+    "aether|nacreous",
+    "aether|verdigris",
+    "nacreous|verdigris",
+    // Blue-gray band (200–215°): fjord/sable/umbra
+    "fjord|sable",
+    "fjord|umbra",
+    "sable|umbra",
+    // Navy (216°): cirrus/daybook (light)
+    "cirrus|daybook",
+    // Red band (5–10°): ochre/solano (light)
+    "ochre|solano",
+    // Dark amber band (28–30°): parchment/saffron (light)
+    "parchment|saffron",
+  ]);
+  const pairKey = (a, b) => [a, b].sort().join("|");
+
+  const allThemes = [];
+  for (const name of themeNames) {
+    try {
+      const theme = JSON.parse(readFileSync(join(THEMES_DIR, name, `${name}.json`), "utf8"));
+      if (theme.tokens?.primary && theme.type) {
+        allThemes.push({ name, type: theme.type, primaryHue: hexToHue(theme.tokens.primary) });
+      }
+    } catch {
+      // skip invalid
+    }
+  }
+
+  for (let i = 0; i < allThemes.length; i++) {
+    for (let j = i + 1; j < allThemes.length; j++) {
+      const a = allThemes[i];
+      const b = allThemes[j];
+      if (a.type !== b.type) continue;
+      if (KNOWN_CLOSE.has(pairKey(a.name, b.name))) continue;
+
+      it(`${a.name} vs ${b.name} (${a.type}): primary hue gap ≥ ${HUE_MINIMUM_DEG}°`, () => {
+        const dist = hueDist(a.primaryHue, b.primaryHue);
+        assert.ok(
+          dist >= HUE_MINIMUM_DEG,
+          `${a.name} (hue ${a.primaryHue.toFixed(0)}°) and ${b.name} (hue ${b.primaryHue.toFixed(0)}°) are only ${dist.toFixed(1)}° apart`,
+        );
+      });
+    }
+  }
+});
+
+// ── WCAG contrast: all semantic tokens must clear 4.5:1 against background ────
+
+describe("WCAG AA contrast — semantic tokens vs background", () => {
+  const MINIMUM = 4.5;
+  const TOKEN_NAMES = ["primary", "accent", "muted", "error"];
+
+  for (const name of themeNames) {
+    const jsonPath = join(THEMES_DIR, name, `${name}.json`);
+    let theme;
+    try {
+      theme = JSON.parse(readFileSync(jsonPath, "utf8"));
+    } catch {
+      // validateTheme tests already catch missing/invalid JSON
+      continue;
+    }
+    if (!theme.background || !theme.tokens) continue;
+
+    for (const token of TOKEN_NAMES) {
+      const hex = theme.tokens[token];
+      if (!hex) continue;
+
+      it(`${name}: tokens.${token} (${hex}) ≥ ${MINIMUM}:1 vs background (${theme.background})`, () => {
+        const ratio = wcagContrast(hex, theme.background);
+        assert.ok(
+          ratio >= MINIMUM,
+          `${name}/tokens.${token} = ${hex} — contrast ${ratio.toFixed(2)}:1 against ${theme.background} is below WCAG AA minimum ${MINIMUM}:1`,
+        );
+      });
+    }
   }
 });

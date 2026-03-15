@@ -28,13 +28,15 @@ export function generateIterm2(theme) {
   const { name, displayName, background: bg, foreground: fg, ansi, ui } = theme;
   const title = displayName || name;
 
-  const ansiNormalEntries = ansi.slice(0, 8).map((c, i) =>
-    colorEntry(`Ansi ${i} Color`, c)
-  ).join("\n\n");
+  const ansiNormalEntries = ansi
+    .slice(0, 8)
+    .map((c, i) => colorEntry(`Ansi ${i} Color`, c))
+    .join("\n\n");
 
-  const ansiBrightEntries = ansi.slice(8, 16).map((c, i) =>
-    colorEntry(`Ansi ${i + 8} Color`, c)
-  ).join("\n\n");
+  const ansiBrightEntries = ansi
+    .slice(8, 16)
+    .map((c, i) => colorEntry(`Ansi ${i + 8} Color`, c))
+    .join("\n\n");
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -60,21 +62,21 @@ ${ansiBrightEntries}
 
 \t<!-- ── UI Colors ────────────────────────────────────────────────────────── -->
 
-${colorEntry("Background Color",    bg,           `${bg}`)}
+${colorEntry("Background Color", bg, `${bg}`)}
 
-${colorEntry("Foreground Color",    fg,           `${fg}`)}
+${colorEntry("Foreground Color", fg, `${fg}`)}
 
-${colorEntry("Bold Color",          ui.bold,      `same as foreground — weight carries bold, not hue`)}
+${colorEntry("Bold Color", ui.bold, `same as foreground — weight carries bold, not hue`)}
 
-${colorEntry("Cursor Color",        ui.cursor,    `${ui.cursor} — accent color, stands out immediately`)}
+${colorEntry("Cursor Color", ui.cursor, `${ui.cursor} — accent color, stands out immediately`)}
 
-${colorEntry("Cursor Text Color",   ui.cursorText,`dark bg inside cursor block for contrast`)}
+${colorEntry("Cursor Text Color", ui.cursorText, `dark bg inside cursor block for contrast`)}
 
-${colorEntry("Link Color",          ui.link,      `${ui.link}`)}
+${colorEntry("Link Color", ui.link, `${ui.link}`)}
 
 ${colorEntry("Selected Text Color", ui.selectionText, `keep foreground color on selection`)}
 
-${colorEntry("Selection Color",     ui.selection, `${ui.selection} — visible but not jarring`)}
+${colorEntry("Selection Color", ui.selection, `${ui.selection} — visible but not jarring`)}
 
 </dict>
 </plist>

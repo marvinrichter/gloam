@@ -1,0 +1,47 @@
+{
+  "name": "ochre",
+  "displayName": "Ochre",
+  "type": "light",
+  "background": "#F2E4D0",
+  "foreground": "#220E08",
+  "tokens": {
+    "primary": "#722018",
+    "accent": "#1A6068",
+    "muted": "#705040",
+    "error": "#7A1828"
+  },
+  "ansi": [
+    "#140804",
+    "#621818",
+    "#1A4C20",
+    "#5A3A10",
+    "#183060",
+    "#482050",
+    "#185058",
+    "#68503A",
+    "#4A3020",
+    "#7A1828",
+    "#2A6030",
+    "#722018",
+    "#705040",
+    "#1A6068",
+    "#2A7878",
+    "#F5EAD8"
+  ],
+  "ui": {
+    "cursor": "#1A6068",
+    "cursorText": "#F2E4D0",
+    "selection": "#D8C4A8",
+    "selectionText": "#220E08",
+    "bold": "#140804",
+    "link": "#1A6068"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "·",
+    "timePrefix": "◌",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

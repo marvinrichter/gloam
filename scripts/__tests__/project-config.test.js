@@ -9,7 +9,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
-const REPO        = join(import.meta.dirname, "../..");
+const REPO = join(import.meta.dirname, "../..");
 const TARGET_NODE = 22;
 
 describe("Node version pinning", () => {

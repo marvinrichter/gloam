@@ -1,0 +1,32 @@
+# saffron — Ghostty color theme
+# Generated from saffron.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/saffron
+# then set theme = saffron in ~/.config/ghostty/config
+
+background         = FAF0D8
+foreground         = 281808
+
+cursor-color       = 3A2880
+cursor-text        = FAF0D8
+
+selection-background = EAD8B0
+selection-foreground = 281808
+
+# ANSI palette (0–15)
+palette = 0=160C04
+palette = 1=6A1E20
+palette = 2=205024
+palette = 3=604810
+palette = 4=1C2070
+palette = 5=482858
+palette = 6=185858
+palette = 7=685840
+palette = 8=503C28
+palette = 9=802028
+palette = 10=287040
+palette = 11=5E3008
+palette = 12=806040
+palette = 13=3A2880
+palette = 14=287080
+palette = 15=FDF8EC
