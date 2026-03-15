@@ -28,3 +28,9 @@ MD041: false
 # version entries by design. Enforcing unique headings would break that pattern.
 MD024:
   siblings_only: true
+
+# MD060 — Table column style: disabled. Tables in theme docs and CONTRIBUTING use
+# padded columns for visual alignment in raw markdown. Enforcing "compact" style
+# (exactly one space per pipe) would require reformatting every table and degrade
+# readability of the source files.
+MD060: false
