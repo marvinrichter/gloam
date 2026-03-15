@@ -16,6 +16,7 @@ gh label create "new-theme"       --repo "$REPO" --color "7057ff" --description 
 gh label create "new-format"      --repo "$REPO" --color "0075ca" --description "New target application format"                --force
 gh label create "docs"            --repo "$REPO" --color "0052cc" --description "Documentation change"                         --force
 gh label create "chore"           --repo "$REPO" --color "e4e669" --description "Maintenance, dependency updates, tooling"     --force
+gh label create "dependencies"    --repo "$REPO" --color "0075ca" --description "Dependency version bumps (Dependabot)"           --force
 gh label create "question"        --repo "$REPO" --color "d876e3" --description "Further information requested"                --force
 
 # ── Status ────────────────────────────────────────────────────────────
