@@ -9,7 +9,7 @@ Every theme in Gloam captures a specific moment or material quality: the watch f
 ## 1. Name & Wordmark
 
 **Name:** Gloam
-**Tagline:** *Eighteen atmospheres. Each one complete.*
+**Tagline:** *Thirty-eight atmospheres. Each one complete.*
 
 ### Wordmark
 
@@ -241,7 +241,7 @@ Google Fonts: <https://fonts.google.com/specimen/DM+Sans>
 
 - Name the specific atmospheric moment (`the moment between day and night`)
 - Use short, declarative sentences with confident rhythm
-- Let numbers carry weight (`WCAG AA. All eighteen.`)
+- Let numbers carry weight (`WCAG AA. All thirty-eight.`)
 - Use the themes' own language as evidence (`warm gold navigation, twilight lavender chrome`)
 - Leave things slightly unsaid — trust the reader
 
@@ -256,19 +256,19 @@ Google Fonts: <https://fonts.google.com/specimen/DM+Sans>
 ### Copy examples
 
 **Tagline:**
-> Eighteen atmospheres. Each one complete.
+> Thirty-eight atmospheres. Each one complete.
 
 **Theme description (Eventide):**
 > The moment between day and night. Deep indigo sky, warm gold navigation, twilight lavender chrome.
 
 **Feature description:**
-> One JSON file. Eleven formats. Every terminal, every editor — all in the same directory as the source.
+> One JSON file. Sixteen formats. Every terminal, every editor — all in the same directory as the source.
 
 **Contrast claim:**
 > Every token in every theme clears 4.5:1 against its background. Not as a selling point — as a baseline.
 
 **README opening:**
-> Eighteen terminal and editor theme design systems. Each built from a single atmospheric concept.
+> Thirty-eight terminal and editor theme design systems. Each built from a single atmospheric concept.
 
 ---
 

@@ -1,6 +1,6 @@
 # Contributing to gloam
 
-gloam is a collection of twenty-one terminal and editor theme design systems. Contributions are welcome — new themes, new target formats, and fixes to existing ones.
+gloam is a collection of thirty-eight terminal and editor theme design systems. Contributions are welcome — new themes, new target formats, and fixes to existing ones.
 
 ---
 
@@ -47,7 +47,7 @@ themes/<name>/
 1. **Four semantic tokens** — `primary`, `accent`, `muted`, `error` defined in `tokens`
 2. **WCAG AA contrast** — all four tokens must achieve ≥ 4.5:1 against the background. Calculate contrast using the WCAG relative luminance formula: `L = 0.2126 × R + 0.7152 × G + 0.0722 × B` (where R/G/B are linearised 0–1 values), then `ratio = (L1 + 0.05) / (L2 + 0.05)`. Use a calculator such as [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) or [Coolors contrast checker](https://coolors.co/contrast-checker). Include the luminance calculations in `<name>.md` — see `eventide.md` for a worked example.
 3. **Coherent ANSI palette** — ANSI slots must derive from the semantic tokens, not be chosen independently. Syntax highlighting will use these — they must harmonise with the prompt
-4. **Distinct territory** — the theme must occupy a different hue family or atmospheric concept from the existing twenty-one. The table below maps each existing theme to its hue family and atmospheric character. A new theme must not overlap with an existing entry:
+4. **Distinct territory** — the theme must occupy a different hue family or atmospheric concept from the existing thirty-eight. The table below maps each existing theme to its hue family and atmospheric character. A new theme must not overlap with an existing entry:
 
    | Theme | Hue family | Atmospheric character |
    |---|---|---|
@@ -72,10 +72,27 @@ themes/<name>/
    | Solano | Terracotta red + Pacific blue (light theme) | High desert midday — bleached adobe |
    | Saffron | Dark amber + indigo (light theme) | Morning spice market — pale saffron light |
    | Ochre | Iron oxide red + deep teal (light theme) | Dawn on mesa rock — sandstone and fire |
+   | Bamboo | Vermilion + celadon | Hanko seal — red ink on parchment |
+   | Bloom | Carmine rose + dried plum (light theme) | Pressed rose petals — barely-pink paper |
+   | Canopy | Chartreuse + filtered amber | Forest canopy — sunlit undergrowth |
+   | Carmine | Cochineal red + warm coral | Mineral pigment — oldest organic dye |
+   | Cast | Oxidized brass yellow + olive | Industrial mould — cooling brass surface |
+   | Cobalt | Royal periwinkle + electric cyan | Cobalt glass — oxide blue from within |
+   | Dusk | Twilight lavender + last amber | Mid-tone twilight — twenty minutes after sunset |
+   | Fern | Forest green + morning amber (light theme) | Woodland morning — sage light through fronds |
+   | Graphite | Near-neutral mauve + pale gold | Graphite on paper — pencil before ink |
+   | Ironcast | Steel blue-grey + acid yellow | Cast iron — pre-storm foundry sky |
+   | Noir | Incandescent gold + warm amber | Film noir — single bulb in darkness |
+   | Rosewater | Rose-pink + pale lilac | Distilled rosewater — the pink before it fades |
+   | Stark | Deep navy + dark orange (light theme) | Pure white paper — absolute contrast, no atmosphere |
+   | Sumi | Ink-wash indigo + diluted blue | Sumi-e — pigment pooling on wet paper |
+   | Synthwave | Neon magenta + neon cyan | Midnight arcade — synthetic, no material reference |
+   | Tallow | Cream-gold + terracotta | Tallow candle — soft pooled warmth |
+   | Weld | Olive yellow-green + molten amber | Weld seam — oxidation flame on steel |
 
    **Notes on the table:**
-   - Two green-dark themes (Petrichor and Absinthe) coexist intentionally — their accents occupy different hue quadrants (Petrichor: ozone blue 186°; Absinthe: gold 38°), making them visually distinct despite the shared green ground.
-   - The six light themes span cool (Cirrus, Daybook), warm-neutral (Parchment), and warm-saturated (Solano, Saffron, Ochre) territory. New light theme proposals must avoid overlap with these existing atmospheric concepts.
+   - Two green-dark themes (Petrichor and Absinthe) and Canopy coexist intentionally — Petrichor's accent is ozone blue (186°), Absinthe's is gold (38°), and Canopy's primary sits at hue 92° (chartreuse), all visually distinct despite shared green ground.
+   - The nine light themes span cool (Cirrus, Daybook, Fern), warm-neutral (Parchment), warm-saturated (Solano, Saffron, Ochre, Bloom), and high-contrast neutral (Stark). New light theme proposals must avoid overlap with these existing atmospheric concepts.
 
 5. **A concept** — the theme derives from a specific atmospheric or material reference. Color choices must be defensible from that concept, not arbitrary
 6. **Design guide** — `<name>.md` must follow the structure of any existing guide, including the contrast compliance table with luminance calculations
@@ -156,7 +173,7 @@ New formats require:
 2. Register the new target in `scripts/generate.js` — add `{ filename: "<format>.<ext>", fn: generateFormat }` to the `TARGETS` array
 3. Add an installer function in `scripts/install.js` — follow the factory pattern in `createInstallers()`
 4. Register the installer in the `installerMap` inside `run()` in `scripts/install.js`
-5. Tests in `scripts/__tests__/<format>.test.js` — at minimum: output is a string, required color values are present, all 21 themes generate without error
+5. Tests in `scripts/__tests__/<format>.test.js` — at minimum: output is a string, required color values are present, all 38 themes generate without error
 6. Documentation in the README install section and `docs/index.html`
 
 Bug reports and feature requests: [GitHub Issues](https://github.com/marvinrichter/gloam/issues)

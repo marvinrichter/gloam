@@ -16,13 +16,13 @@ The four tokens map directly to prompt elements: `primary` → directory, langua
 
 ## Why generator-over-manual?
 
-Sixteen target formats exist because sixteen applications are in common use. Maintaining sixteen hand-written files per theme across twenty-one themes (336 files) with no automation would make any token change a 336-file edit. Generators ensure that a single value change in `<name>.json` propagates correctly to every format in one `npm run generate` run.
+Sixteen target formats exist because sixteen applications are in common use. Maintaining sixteen hand-written files per theme across thirty-eight themes (608 files) with no automation would make any token change a 608-file edit. Generators ensure that a single value change in `<name>.json` propagates correctly to every format in one `npm run generate` run.
 
 The generator approach also enforces the constraint that every format derives from the same source of truth. Hand-written files diverge. Generated files cannot.
 
 ## How themes are evaluated for "distinct territory"
 
-The twenty-one themes are distributed across: warm dark (Eventide, Ember, Cordovan, Tungsten, Nocturne), cool dark (Aether, Fjord, Umbra), green dark (Absinthe, Verdigris, Petrichor), teal dark (Nacreous, Basalt), neutral dark (Sable), purple dark (Amethyst), and light (Parchment, Daybook, Cirrus, Solano, Saffron, Ochre). A new theme must occupy a hue territory not already represented, or a substantially different atmospheric concept within the same hue region. The hue territory table in `CONTRIBUTING.md` is authoritative for this evaluation.
+The thirty-eight themes are distributed across: warm dark (Eventide, Ember, Cordovan, Tungsten, Nocturne, Tallow, Bamboo, Carmine, Rosewater), cool dark (Aether, Fjord, Umbra, Cobalt, Ironcast, Sumi, Synthwave, Dusk), green dark (Absinthe, Verdigris, Petrichor, Canopy), teal dark (Nacreous, Basalt), neutral dark (Sable, Graphite, Cast, Noir, Weld), purple dark (Amethyst), and light (Parchment, Daybook, Cirrus, Solano, Saffron, Ochre, Bloom, Fern, Stark). A new theme must occupy a hue territory not already represented, or a substantially different atmospheric concept within the same hue region. The hue territory table in `CONTRIBUTING.md` is authoritative for this evaluation.
 
 ## Why prompt configuration is shared between Starship and Oh My Posh
 
