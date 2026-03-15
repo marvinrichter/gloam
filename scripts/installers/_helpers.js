@@ -55,7 +55,9 @@ export function upsertLine(filePath, pattern, line) {
         pattern.flags.includes("g") ? pattern.flags : `${pattern.flags}g`,
       );
     } catch (err) {
-      throw new Error(`upsertLine: invalid regex pattern (${pattern}): ${err.message}`);
+      throw new Error(`upsertLine: invalid regex pattern (${pattern}): ${err.message}`, {
+        cause: err,
+      });
     }
     writeText(filePath, existing.replace(globalPattern, line));
     return "updated";

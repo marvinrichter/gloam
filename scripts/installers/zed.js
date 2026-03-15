@@ -8,7 +8,7 @@ export function create({ src, home }) {
 
     copy(join(src(name), "zed.json"), destTheme);
 
-    let settings = {};
+    let settings;
     try {
       settings = readJson(settingsPath) ?? {};
     } catch {
