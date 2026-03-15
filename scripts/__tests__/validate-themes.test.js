@@ -148,6 +148,56 @@ describe("validateTheme() — unit", () => {
     const errors = validateTheme(empty);
     assert.ok(errors.length > 1, `expected multiple errors, got: ${errors}`);
   });
+
+  it("reports error for missing 'ui'", () => {
+    const errors = validateTheme(omit(validTheme, "ui"));
+    assert.ok(errors.some((e) => e.includes('"ui"')));
+  });
+
+  it("reports error for missing individual ui field (cursor)", () => {
+    const errors = validateTheme({
+      ...validTheme,
+      ui: omit(validTheme.ui, "cursor"),
+    });
+    assert.ok(errors.some((e) => e.includes('"ui.cursor"')));
+  });
+
+  it("reports error for invalid hex in ui.selection", () => {
+    const errors = validateTheme({
+      ...validTheme,
+      ui: { ...validTheme.ui, selection: "blue" },
+    });
+    assert.ok(errors.some((e) => e.includes('"ui.selection"')));
+  });
+
+  it("reports error for missing 'prompt'", () => {
+    const errors = validateTheme(omit(validTheme, "prompt"));
+    assert.ok(errors.some((e) => e.includes('"prompt"')));
+  });
+
+  it("reports error for invalid prompt.layout value", () => {
+    const errors = validateTheme({
+      ...validTheme,
+      prompt: { ...validTheme.prompt, layout: "fancy" },
+    });
+    assert.ok(errors.some((e) => e.includes('"prompt.layout"')));
+  });
+
+  it("reports error for empty prompt.fill string", () => {
+    const errors = validateTheme({
+      ...validTheme,
+      prompt: { ...validTheme.prompt, fill: "" },
+    });
+    assert.ok(errors.some((e) => e.includes('"prompt.fill"')));
+  });
+
+  it("reports error for missing prompt.successSymbol", () => {
+    const errors = validateTheme({
+      ...validTheme,
+      prompt: omit(validTheme.prompt, "successSymbol"),
+    });
+    assert.ok(errors.some((e) => e.includes('"prompt.successSymbol"')));
+  });
 });
 
 // ── Integration: all real theme JSON files must pass validation ───────────────

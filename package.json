@@ -42,7 +42,8 @@
     "lint": "npm run lint:js && npm run lint:md",
     "lint:js": "eslint .",
     "lint:md": "markdownlint-cli2 '**/*.md' '!.claude/**' '!node_modules/**'",
-    "validate-schemas": "node scripts/ci/validate-schemas.js"
+    "validate-schemas": "node scripts/ci/validate-schemas.js",
+    "validate-completeness": "node scripts/ci/validate-theme-completeness.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

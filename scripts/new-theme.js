@@ -18,52 +18,12 @@
 import { createInterface } from "node:readline/promises";
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { stdin as input, stdout as output } from "node:process";
 
-const THEMES_DIR = join(import.meta.dirname, "../themes");
+// ── Template builders (exported for testing) ──────────────────────────────────
 
-// ── Prompt helpers ────────────────────────────────────────────────────────────
-
-const rl = createInterface({ input, output });
-
-async function ask(question, defaultVal) {
-  const hint = defaultVal !== undefined ? ` [${defaultVal}]` : "";
-  const answer = await rl.question(`${question}${hint}: `);
-  return answer.trim() || defaultVal || "";
-}
-
-async function askChoice(question, choices, defaultVal) {
-  const hint = `(${choices.join(" / ")})`;
-  const answer = await ask(`${question} ${hint}`, defaultVal);
-  if (!choices.includes(answer)) {
-    console.log(`  Invalid choice. Using default: ${defaultVal}`);
-    return defaultVal;
-  }
-  return answer;
-}
-
-// ── WCAG contrast ─────────────────────────────────────────────────────────────
-
-function luminance(hex) {
-  const c = hex.replace(/^#/, "");
-  const toLinear = (v) => {
-    const s = parseInt(c.slice(v, v + 2), 16) / 255;
-    return s <= 0.04045 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
-  };
-  return 0.2126 * toLinear(0) + 0.7152 * toLinear(2) + 0.0722 * toLinear(4);
-}
-
-function contrast(hex1, hex2) {
-  const l1 = luminance(hex1);
-  const l2 = luminance(hex2);
-  const lighter = Math.max(l1, l2);
-  const darker = Math.min(l1, l2);
-  return (lighter + 0.05) / (darker + 0.05);
-}
-
-// ── Template builder ──────────────────────────────────────────────────────────
-
-function buildThemeJson(data) {
+export function buildThemeJson(data) {
   return {
     name: data.name,
     displayName: data.displayName,
@@ -113,7 +73,7 @@ function buildThemeJson(data) {
   };
 }
 
-function buildThemeMd(data) {
+export function buildThemeMd(data) {
   return `# ${data.displayName} — Design System
 
 > ${data.concept}
@@ -174,112 +134,156 @@ npx github:marvinrichter/gloam ${data.name} starship
 `;
 }
 
-// ── Main ──────────────────────────────────────────────────────────────────────
+// ── CLI (only runs when executed directly, not when imported as a module) ──────
 
-const cliName = process.argv.find((a, i) => process.argv[i - 1] === "--name");
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const THEMES_DIR = join(import.meta.dirname, "../themes");
 
-console.log(`
+  // ── Prompt helpers ────────────────────────────────────────────────────────────
+
+  const rl = createInterface({ input, output });
+
+  async function ask(question, defaultVal) {
+    const hint = defaultVal !== undefined ? ` [${defaultVal}]` : "";
+    const answer = await rl.question(`${question}${hint}: `);
+    return answer.trim() || defaultVal || "";
+  }
+
+  async function askChoice(question, choices, defaultVal) {
+    const hint = `(${choices.join(" / ")})`;
+    const answer = await ask(`${question} ${hint}`, defaultVal);
+    if (!choices.includes(answer)) {
+      console.log(`  Invalid choice. Using default: ${defaultVal}`);
+      return defaultVal;
+    }
+    return answer;
+  }
+
+  // ── WCAG contrast ─────────────────────────────────────────────────────────────
+
+  function luminance(hex) {
+    const c = hex.replace(/^#/, "");
+    const toLinear = (v) => {
+      const s = parseInt(c.slice(v, v + 2), 16) / 255;
+      return s <= 0.04045 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+    };
+    return 0.2126 * toLinear(0) + 0.7152 * toLinear(2) + 0.0722 * toLinear(4);
+  }
+
+  function contrast(hex1, hex2) {
+    const l1 = luminance(hex1);
+    const l2 = luminance(hex2);
+    const lighter = Math.max(l1, l2);
+    const darker = Math.min(l1, l2);
+    return (lighter + 0.05) / (darker + 0.05);
+  }
+
+  // ── Main ──────────────────────────────────────────────────────────────────────
+
+  const cliName = process.argv.find((a, i) => process.argv[i - 1] === "--name");
+
+  console.log(`
 gloam new-theme scaffold
 ─────────────────────────
 `);
 
-const name = (cliName || (await ask("Theme slug (lowercase, no spaces)", "my-theme")))
-  .toLowerCase()
-  .replace(/\s+/g, "-");
+  const name = (cliName || (await ask("Theme slug (lowercase, no spaces)", "my-theme")))
+    .toLowerCase()
+    .replace(/\s+/g, "-");
 
-if (existsSync(join(THEMES_DIR, name))) {
-  console.error(`\nError: themes/${name}/ already exists.`);
-  rl.close();
-  process.exit(1);
-}
-
-const displayName = await ask("Display name", name.charAt(0).toUpperCase() + name.slice(1));
-const concept = await ask("One-line concept (e.g. 'sunset over a volcanic coastline')");
-const type = await askChoice("Background type", ["dark", "light"], "dark");
-
-console.log(`\nBackground and foreground:`);
-const background = await ask("Background hex (#RRGGBB)", type === "dark" ? "#0D1020" : "#F5EDE0");
-const foreground = await ask("Foreground hex (#RRGGBB)", type === "dark" ? "#E0D8C8" : "#2A1C10");
-
-console.log(`\nSemantic tokens (must each achieve ≥4.5:1 against background ${background}):`);
-const primary = await ask(
-  "primary hex (navigation — directory, languages)",
-  type === "dark" ? "#80C0E0" : "#4A2010",
-);
-const accent = await ask(
-  "accent hex  (action — git, cursor, prompt char)",
-  type === "dark" ? "#E0A060" : "#1A3A70",
-);
-const muted = await ask(
-  "muted hex   (chrome — time, fill, box corners)  ",
-  type === "dark" ? "#7080A0" : "#6A5040",
-);
-const error = await ask(
-  "error hex   (fail state only)                    ",
-  type === "dark" ? "#E06060" : "#7A1820",
-);
-
-console.log(`\nPrompt personality:`);
-const layout = await askChoice("Layout", ["two-line-box", "single-line"], "two-line-box");
-const fill = await ask("Fill character between modules and time", "·");
-const timePrefix = await ask("Time prefix symbol", "◆");
-
-rl.close();
-
-// ── WCAG pre-check ────────────────────────────────────────────────────────────
-
-const tokenChecks = { primary, accent, muted, error };
-let anyFail = false;
-console.log(`\nWCAG AA pre-check (≥4.5:1 vs ${background}):`);
-for (const [token, hex] of Object.entries(tokenChecks)) {
-  let ratio;
-  try {
-    ratio = contrast(hex, background);
-  } catch {
-    console.log(`  ✗  tokens.${token} = ${hex} — invalid hex`);
-    anyFail = true;
-    continue;
+  if (existsSync(join(THEMES_DIR, name))) {
+    console.error(`\nError: themes/${name}/ already exists.`);
+    rl.close();
+    process.exit(1);
   }
-  const pass = ratio >= 4.5;
-  if (!pass) anyFail = true;
-  console.log(
-    `  ${pass ? "✓" : "✗"}  tokens.${token.padEnd(8)} ${hex}  ${ratio.toFixed(2)}:1  ${pass ? "AA" : "FAIL"}`,
+
+  const displayName = await ask("Display name", name.charAt(0).toUpperCase() + name.slice(1));
+  const concept = await ask("One-line concept (e.g. 'sunset over a volcanic coastline')");
+  const type = await askChoice("Background type", ["dark", "light"], "dark");
+
+  console.log(`\nBackground and foreground:`);
+  const background = await ask("Background hex (#RRGGBB)", type === "dark" ? "#0D1020" : "#F5EDE0");
+  const foreground = await ask("Foreground hex (#RRGGBB)", type === "dark" ? "#E0D8C8" : "#2A1C10");
+
+  console.log(`\nSemantic tokens (must each achieve ≥4.5:1 against background ${background}):`);
+  const primary = await ask(
+    "primary hex (navigation — directory, languages)",
+    type === "dark" ? "#80C0E0" : "#4A2010",
   );
-}
-
-if (anyFail) {
-  console.log(
-    `\nWarning: one or more tokens fail WCAG AA. Adjust token colors before running 'npm test'.`,
+  const accent = await ask(
+    "accent hex  (action — git, cursor, prompt char)",
+    type === "dark" ? "#E0A060" : "#1A3A70",
   );
-}
+  const muted = await ask(
+    "muted hex   (chrome — time, fill, box corners)  ",
+    type === "dark" ? "#7080A0" : "#6A5040",
+  );
+  const error = await ask(
+    "error hex   (fail state only)                    ",
+    type === "dark" ? "#E06060" : "#7A1820",
+  );
 
-// ── Write files ───────────────────────────────────────────────────────────────
+  console.log(`\nPrompt personality:`);
+  const layout = await askChoice("Layout", ["two-line-box", "single-line"], "two-line-box");
+  const fill = await ask("Fill character between modules and time", "·");
+  const timePrefix = await ask("Time prefix symbol", "◆");
 
-const data = {
-  name,
-  displayName,
-  concept,
-  type,
-  background,
-  foreground,
-  primary,
-  accent,
-  muted,
-  error,
-  layout,
-  fill,
-  timePrefix,
-};
-const themeDir = join(THEMES_DIR, name);
-mkdirSync(themeDir, { recursive: true });
+  rl.close();
 
-const jsonPath = join(themeDir, `${name}.json`);
-writeFileSync(jsonPath, JSON.stringify(buildThemeJson(data), null, 2) + "\n", "utf8");
+  // ── WCAG pre-check ────────────────────────────────────────────────────────────
 
-const mdPath = join(themeDir, `${name}.md`);
-writeFileSync(mdPath, buildThemeMd(data), "utf8");
+  const tokenChecks = { primary, accent, muted, error };
+  let anyFail = false;
+  console.log(`\nWCAG AA pre-check (≥4.5:1 vs ${background}):`);
+  for (const [token, hex] of Object.entries(tokenChecks)) {
+    let ratio;
+    try {
+      ratio = contrast(hex, background);
+    } catch {
+      console.log(`  ✗  tokens.${token} = ${hex} — invalid hex`);
+      anyFail = true;
+      continue;
+    }
+    const pass = ratio >= 4.5;
+    if (!pass) anyFail = true;
+    console.log(
+      `  ${pass ? "✓" : "✗"}  tokens.${token.padEnd(8)} ${hex}  ${ratio.toFixed(2)}:1  ${pass ? "AA" : "FAIL"}`,
+    );
+  }
 
-console.log(`
+  if (anyFail) {
+    console.log(
+      `\nWarning: one or more tokens fail WCAG AA. Adjust token colors before running 'npm test'.`,
+    );
+  }
+
+  // ── Write files ───────────────────────────────────────────────────────────────
+
+  const data = {
+    name,
+    displayName,
+    concept,
+    type,
+    background,
+    foreground,
+    primary,
+    accent,
+    muted,
+    error,
+    layout,
+    fill,
+    timePrefix,
+  };
+  const themeDir = join(THEMES_DIR, name);
+  mkdirSync(themeDir, { recursive: true });
+
+  const jsonPath = join(themeDir, `${name}.json`);
+  writeFileSync(jsonPath, JSON.stringify(buildThemeJson(data), null, 2) + "\n", "utf8");
+
+  const mdPath = join(themeDir, `${name}.md`);
+  writeFileSync(mdPath, buildThemeMd(data), "utf8");
+
+  console.log(`
 Created:
   themes/${name}/${name}.json
   themes/${name}/${name}.md
@@ -290,3 +294,4 @@ Next steps:
   3. Run: npm test                  — verify WCAG AA contrast + schema
   4. Run: npm run check-contrast    — view contrast ratios for the new theme
 `);
+}

@@ -96,3 +96,37 @@ describe("generate()", () => {
     assert.ok(!existsSync(join(THEMES_DIR, "alacritty", "testtheme.toml")));
   });
 });
+
+// ── generate() error handling ─────────────────────────────────────────────────
+
+describe("generate() — invalid theme is skipped", () => {
+  const TMP_ERR = join(tmpdir(), `generate-error-test-${Date.now()}`);
+
+  before(() => mkdirSync(TMP_ERR, { recursive: true }));
+  after(() => rmSync(TMP_ERR, { recursive: true, force: true }));
+
+  it("skips a theme that fails validation and does not create its directory", () => {
+    const invalidTheme = { name: "badtheme" }; // missing all required fields
+    const savedCode = process.exitCode;
+    generate([invalidTheme], TMP_ERR);
+    process.exitCode = savedCode; // restore so test runner is not affected
+    assert.ok(!existsSync(join(TMP_ERR, "badtheme")));
+  });
+
+  it("sets process.exitCode to 1 when a theme fails validation", () => {
+    const invalidTheme = { name: "badtheme2" };
+    const savedCode = process.exitCode;
+    generate([invalidTheme], TMP_ERR);
+    assert.strictEqual(process.exitCode, 1);
+    process.exitCode = savedCode;
+  });
+
+  it("still processes valid themes after an invalid one", () => {
+    const invalidTheme = { name: "bad" };
+    const validTheme = { ...theme, name: "goodtheme" };
+    const savedCode = process.exitCode;
+    generate([invalidTheme, validTheme], TMP_ERR);
+    process.exitCode = savedCode;
+    assert.ok(existsSync(join(TMP_ERR, "goodtheme")));
+  });
+});

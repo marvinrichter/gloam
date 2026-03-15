@@ -7,7 +7,7 @@ export function create({ src, home }) {
     const tmuxConf = join(home, ".tmux.conf");
     const result = upsertLine(
       tmuxConf,
-      new RegExp(`source-file.*${name}\\.conf`),
+      new RegExp(`source-file.*${name}`),
       `source-file "${snippet}"`,
     );
     return `${result} source-file line in ${tmuxConf}

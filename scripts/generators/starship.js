@@ -113,7 +113,7 @@ format = "[ $symbol($version) ]($style)"
 [cpp]
 symbol = " "
 style  = "fg:primary"
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [elixir]
 symbol = " "
