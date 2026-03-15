@@ -160,7 +160,7 @@ style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [python]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
