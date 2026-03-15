@@ -37,7 +37,9 @@ const block = text.slice(startIdx + START.length, endIdx);
 
 // Strip the "ℹ " info prefix that node:test prepends to every coverage line
 const stripPrefix = (l) => {
-  const m = l.match(/ℹ\s+(.*)/);
+  // spec reporter (TTY): "ℹ  content"
+  // tap reporter (piped): "# content"
+  const m = l.match(/(?:ℹ|#)\s+(.*)/);
   return m ? m[1] : null;
 };
 

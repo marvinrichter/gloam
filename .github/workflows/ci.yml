@@ -41,7 +41,7 @@ jobs:
       - name: Run tests
         run: |
           set -o pipefail
-          npm test 2>&1 | tee /tmp/test-output.txt
+          npm test -- --test-reporter=spec 2>&1 | tee /tmp/test-output.txt
 
       # Post a coverage summary comment on PRs — runs once (ubuntu / node 22 only)
       - name: Post coverage comment
