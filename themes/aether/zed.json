@@ -39,7 +39,7 @@
         "panel.background": "#252448",
         "element.hover": "#1C1B3A",
         "ghost_element.hover": "#1C1B3A",
-        "link_text_hover": "#9EE878",
+        "link_text_hover": "#6EE8C8",
         "syntax": {
           "keyword": {
             "color": "#C084FC"

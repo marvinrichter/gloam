@@ -1,0 +1,37 @@
+# petrichor — Alacritty color theme
+# Generated from petrichor.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/petrichor.toml
+# then add `import = ["~/.config/alacritty/themes/petrichor.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0A0C0A"
+foreground = "#D8DCCC"
+
+[colors.cursor]
+cursor = "#48B8E8"
+text   = "#0A0C0A"
+
+[colors.selection]
+background = "#182018"
+text       = "#D8DCCC"
+
+[colors.normal]
+black   = "#0A0C0A"
+red     = "#804040"
+green   = "#408040"
+yellow  = "#908040"
+blue    = "#384878"
+magenta = "#684878"
+cyan    = "#388888"
+white   = "#788070"
+
+[colors.bright]
+black   = "#181C18"
+red     = "#D05858"
+green   = "#78C888"
+yellow  = "#B0C070"
+blue    = "#78806A"
+magenta = "#48B8E8"
+cyan    = "#60C8A0"
+white   = "#D8DCCC"

@@ -1,0 +1,32 @@
+# nocturne — Ghostty color theme
+# Generated from nocturne.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/nocturne
+# then set theme = nocturne in ~/.config/ghostty/config
+
+background         = 100A0C
+foreground         = EEE8E0
+
+cursor-color       = D05A6A
+cursor-text        = 0C0A0C
+
+selection-background = 201820
+selection-foreground = EEE8E0
+
+# ANSI palette (0–15)
+palette = 0=100A0C
+palette = 1=883040
+palette = 2=406840
+palette = 3=B09040
+palette = 4=484880
+palette = 5=784878
+palette = 6=387878
+palette = 7=848080
+palette = 8=201820
+palette = 9=E04848
+palette = 10=60B870
+palette = 11=E0D0A8
+palette = 12=9880A0
+palette = 13=D05A6A
+palette = 14=50A8A8
+palette = 15=EEE8E0

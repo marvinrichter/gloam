@@ -1,9 +1,9 @@
 {
   "name": "Parchment",
-  "background": "#EDE0C8",
+  "background": "#E8D6B4",
   "foreground": "#2A1E12",
   "cursorColor": "#7A3A10",
-  "selectionBackground": "#D8C8A8",
+  "selectionBackground": "#D4BEA0",
   "black": "#1A0E08",
   "red": "#7A2020",
   "green": "#285820",

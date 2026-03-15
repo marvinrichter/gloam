@@ -1,0 +1,32 @@
+# petrichor — Ghostty color theme
+# Generated from petrichor.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/petrichor
+# then set theme = petrichor in ~/.config/ghostty/config
+
+background         = 0A0C0A
+foreground         = D8DCCC
+
+cursor-color       = 48B8E8
+cursor-text        = 0A0C0A
+
+selection-background = 182018
+selection-foreground = D8DCCC
+
+# ANSI palette (0–15)
+palette = 0=0A0C0A
+palette = 1=804040
+palette = 2=408040
+palette = 3=908040
+palette = 4=384878
+palette = 5=684878
+palette = 6=388888
+palette = 7=788070
+palette = 8=181C18
+palette = 9=D05858
+palette = 10=78C888
+palette = 11=B0C070
+palette = 12=78806A
+palette = 13=48B8E8
+palette = 14=60C8A0
+palette = 15=D8DCCC

@@ -20,57 +20,9 @@ export function generateStarship(theme) {
 
   const usernameModule = showUsername ? `$username\\\n` : ``;
 
-  const twoLineFormat = `format = """
-[╭](fg:muted)\\
-${usernameModule}$directory\\
-$git_branch\\
-$git_status\\
-$c\\
-$cpp\\
-$elixir\\
-$elm\\
-$golang\\
-$gradle\\
-$haskell\\
-$java\\
-$julia\\
-$nodejs\\
-$nim\\
-$python\\
-$rust\\
-$scala\\
-$docker_context\\
-$cmd_duration\\
-$fill\\
-$time
-[╰─](fg:muted)\\
-$character"""`;
-
-  const singleLineFormat = `format = """
-${usernameModule}$directory\\
-$git_branch\\
-$git_status\\
-$c\\
-$cpp\\
-$elixir\\
-$elm\\
-$golang\\
-$gradle\\
-$haskell\\
-$java\\
-$julia\\
-$nodejs\\
-$nim\\
-$python\\
-$rust\\
-$scala\\
-$docker_context\\
-$cmd_duration\\
-$fill\\
-$time
-$character"""`;
-
-  const formatBlock = isTwoLine ? twoLineFormat : singleLineFormat;
+  const formatBlock = isTwoLine
+    ? buildTwoLineBox(usernameModule)
+    : buildSingleLine(usernameModule);
 
   // ── username block ───────────────────────────────────────────────────────
 
@@ -122,8 +74,8 @@ truncation_symbol = "…/"
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
-"Music"     = " "
-"Pictures"  = " "
+"Music" = " "
+"Pictures" = " "
 
 # ─── Git ─────────────────────────────────────────────────────────────────────
 
@@ -244,4 +196,60 @@ success_symbol = "[${successSymbol}](fg:accent)"
 error_symbol   = "[${successSymbol}](fg:error)"
 vimcmd_symbol  = "[${vimSymbol}](fg:primary)"
 `;
+}
+
+// ── Layout builders ───────────────────────────────────────────────────────────
+
+function buildTwoLineBox(usernameModule) {
+  return `format = """
+[╭](fg:muted)\\
+${usernameModule}$directory\\
+$git_branch\\
+$git_status\\
+$c\\
+$cpp\\
+$elixir\\
+$elm\\
+$golang\\
+$gradle\\
+$haskell\\
+$java\\
+$julia\\
+$nodejs\\
+$nim\\
+$python\\
+$rust\\
+$scala\\
+$docker_context\\
+$cmd_duration\\
+$fill\\
+$time
+[╰─](fg:muted)\\
+$character"""`;
+}
+
+function buildSingleLine(usernameModule) {
+  return `format = """
+${usernameModule}$directory\\
+$git_branch\\
+$git_status\\
+$c\\
+$cpp\\
+$elixir\\
+$elm\\
+$golang\\
+$gradle\\
+$haskell\\
+$java\\
+$julia\\
+$nodejs\\
+$nim\\
+$python\\
+$rust\\
+$scala\\
+$docker_context\\
+$cmd_duration\\
+$fill\\
+$time
+$character"""`;
 }

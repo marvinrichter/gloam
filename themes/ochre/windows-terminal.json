@@ -1,0 +1,23 @@
+{
+  "name": "Ochre",
+  "background": "#F2E4D0",
+  "foreground": "#220E08",
+  "cursorColor": "#1A6068",
+  "selectionBackground": "#D8C4A8",
+  "black": "#140804",
+  "red": "#621818",
+  "green": "#1A4C20",
+  "yellow": "#5A3A10",
+  "blue": "#183060",
+  "purple": "#482050",
+  "cyan": "#185058",
+  "white": "#68503A",
+  "brightBlack": "#4A3020",
+  "brightRed": "#7A1828",
+  "brightGreen": "#2A6030",
+  "brightYellow": "#722018",
+  "brightBlue": "#705040",
+  "brightPurple": "#1A6068",
+  "brightCyan": "#2A7878",
+  "brightWhite": "#F5EAD8"
+}

@@ -40,7 +40,7 @@
     "layout": "two-line-box",
     "showUsername": true,
     "fill": "─",
-    "timePrefix": "⌘",
+    "timePrefix": "⊙",
     "successSymbol": "›",
     "vimSymbol": "‹"
   }

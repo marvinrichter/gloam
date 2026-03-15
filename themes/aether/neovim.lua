@@ -66,7 +66,7 @@ vim.g.colors_name = "aether"
   vim.api.nvim_set_hl(0, "Macro", { fg = "#C084FC" })
   vim.api.nvim_set_hl(0, "Error", { fg = "#FF6B6B" })
   vim.api.nvim_set_hl(0, "Todo", { bg = "#C084FC", fg = "#0C0B1A", bold = true })
-  vim.api.nvim_set_hl(0, "Underlined", { fg = "#9EE878", underline = true })
+  vim.api.nvim_set_hl(0, "Underlined", { fg = "#6EE8C8", underline = true })
 
 -- ── Diagnostic ──────────────────────────────────────────────────────────────
   vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#FF6B6B" })

@@ -1,0 +1,112 @@
+// Verdigris — Oh My Posh theme
+// Generated from verdigris.json — do not edit by hand
+//
+// Install: copy to ~/.config/oh-my-posh/themes/verdigris.omp.json
+//          then set: oh-my-posh init <shell> --config ~/.config/oh-my-posh/themes/verdigris.omp.json
+
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#7A9490",
+          "template": "╭"
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#7A9490",
+          "template": " {{ .UserName }} "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#52C4A8",
+          "properties": {
+            "style": "folder",
+            "max_depth": 3,
+            "folder_separator_icon": "/"
+          },
+          "template": " <b>{{ .Path }}</b> "
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#CD8B4A",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_status": true
+          },
+          "template": " {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#7A9490",
+          "properties": {
+            "threshold": 2000,
+            "style": "round"
+          },
+          "template": " ◆ {{ .FormattedMs }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#7A9490",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "template": " ${prompt.timePrefix} {{ .CurrentDate | date .Format }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#7A9490",
+          "template": "╰─"
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#CD8B4A",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}${t.error}{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "template": "› "
+        }
+      ]
+    }
+  ],
+  "palette": {
+    "background": "#0D1210",
+    "foreground": "#D4E0D8",
+    "primary": "#52C4A8",
+    "accent": "#CD8B4A",
+    "muted": "#7A9490",
+    "error": "#D46060"
+  }
+}

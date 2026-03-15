@@ -1,0 +1,32 @@
+# daybook — Ghostty color theme
+# Generated from daybook.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/daybook
+# then set theme = daybook in ~/.config/ghostty/config
+
+background         = F2EEE6
+foreground         = 1E1A14
+
+cursor-color       = 884830
+cursor-text        = F4EFE4
+
+selection-background = D8CEB8
+selection-foreground = 1E1A14
+
+# ANSI palette (0–15)
+palette = 0=0E0A08
+palette = 1=6A1E1E
+palette = 2=204828
+palette = 3=604818
+palette = 4=183060
+palette = 5=582858
+palette = 6=184848
+palette = 7=A09080
+palette = 8=4A4030
+palette = 9=882020
+palette = 10=387038
+palette = 11=886028
+palette = 12=6A5E4E
+palette = 13=884830
+palette = 14=286868
+palette = 15=F0EBE0

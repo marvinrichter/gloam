@@ -45,7 +45,7 @@ error   = "#DC5858"
 # ─── Layout ──────────────────────────────────────────────────────────────────
 
 [fill]
-symbol = "·"
+symbol = "░"
 style  = "fg:muted dim"
 
 # ─── Navigation ──────────────────────────────────────────────────────────────
@@ -59,8 +59,8 @@ truncation_symbol = "…/"
 [directory.substitutions]
 "Documents" = "󰈙 "
 "Downloads" = " "
-"Music"     = " "
-"Pictures"  = " "
+"Music" = " "
+"Pictures" = " "
 
 # ─── Git ─────────────────────────────────────────────────────────────────────
 

@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+# Regenerate all theme format files and abort the push if any outputs changed.
+# This mirrors the CI check (git diff --exit-code -- themes/) locally so you
+# get faster feedback than waiting for CI to fail.
+
+npm run generate
+
+if ! git diff --exit-code -- themes/ > /dev/null 2>&1; then
+  echo ""
+  echo "pre-push: generated files are out of date."
+  echo "Stage the changes and commit them before pushing:"
+  echo ""
+  echo "  git add themes/ && git commit -m 'chore: regenerate theme outputs'"
+  echo ""
+  exit 1
+fi

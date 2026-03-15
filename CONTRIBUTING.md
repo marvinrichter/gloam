@@ -1,22 +1,22 @@
 # Contributing to gloam
 
-gloam is a collection of twelve terminal and editor theme design systems. Contributions are welcome — new themes, new target formats, and fixes to existing ones.
+gloam is a collection of twenty-one terminal and editor theme design systems. Contributions are welcome — new themes, new target formats, and fixes to existing ones.
 
 ---
 
 ## Development setup
 
-**Prerequisites:** Node.js 20+, JetBrains Mono Nerd Font
+**Prerequisites:** Node.js 22+, JetBrains Mono Nerd Font
 
 ```bash
 git clone https://github.com/marvinrichter/gloam.git
 cd gloam
 npm install
 
-# Run the test suite (166 tests, node:test)
+# Run the test suite (node:test)
 npm test
 
-# Regenerate all eleven formats from the theme JSON source files
+# Regenerate all sixteen formats from the theme JSON source files
 npm run generate
 ```
 
@@ -47,7 +47,7 @@ themes/<name>/
 1. **Four semantic tokens** — `primary`, `accent`, `muted`, `error` defined in `tokens`
 2. **WCAG AA contrast** — all four tokens must achieve ≥ 4.5:1 against the background. Calculate contrast using the WCAG relative luminance formula: `L = 0.2126 × R + 0.7152 × G + 0.0722 × B` (where R/G/B are linearised 0–1 values), then `ratio = (L1 + 0.05) / (L2 + 0.05)`. Use a calculator such as [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) or [Coolors contrast checker](https://coolors.co/contrast-checker). Include the luminance calculations in `<name>.md` — see `eventide.md` for a worked example.
 3. **Coherent ANSI palette** — ANSI slots must derive from the semantic tokens, not be chosen independently. Syntax highlighting will use these — they must harmonise with the prompt
-4. **Distinct territory** — the theme must occupy a different hue family or atmospheric concept from the existing twelve. The table below maps each existing theme to its hue family and atmospheric character. A new theme must not overlap with an existing entry:
+4. **Distinct territory** — the theme must occupy a different hue family or atmospheric concept from the existing twenty-one. The table below maps each existing theme to its hue family and atmospheric character. A new theme must not overlap with an existing entry:
 
    | Theme | Hue family | Atmospheric character |
    |---|---|---|
@@ -63,6 +63,19 @@ themes/<name>/
    | Tungsten | Warm gold-white + cold blue | Filament at operating temperature |
    | Amethyst | Purple + rutile gold | Crystal in dark matrix — mineral light |
    | Parchment | Warm cream (light theme) | Manuscript vellum — iron gall ink |
+   | Nacreous | Iridescent teal + polar pink | Nacreous clouds — stratospheric dark |
+   | Petrichor | Grass green + ozone blue | Pre-storm — dry earth before rain |
+   | Nocturne | Candlelight ivory + blood-red velvet | Candlelit dark — piano nocturne |
+   | Basalt | Hawaiian teal + sunset gold | Volcanic dark — lava meets ocean |
+   | Daybook | Ruling blue + rubrication rust (light theme) | Cream paper light — ledger in daylight |
+   | Cirrus | Prussian sky blue + deep teal (light theme) | Sky-white light — high-altitude midday |
+   | Solano | Terracotta red + Pacific blue (light theme) | High desert midday — bleached adobe |
+   | Saffron | Dark amber + indigo (light theme) | Morning spice market — pale saffron light |
+   | Ochre | Iron oxide red + deep teal (light theme) | Dawn on mesa rock — sandstone and fire |
+
+   **Notes on the table:**
+   - Two green-dark themes (Petrichor and Absinthe) coexist intentionally — their accents occupy different hue quadrants (Petrichor: ozone blue 186°; Absinthe: gold 38°), making them visually distinct despite the shared green ground.
+   - The six light themes span cool (Cirrus, Daybook), warm-neutral (Parchment), and warm-saturated (Solano, Saffron, Ochre) territory. New light theme proposals must avoid overlap with these existing atmospheric concepts.
 
 5. **A concept** — the theme derives from a specific atmospheric or material reference. Color choices must be defensible from that concept, not arbitrary
 6. **Design guide** — `<name>.md` must follow the structure of any existing guide, including the contrast compliance table with luminance calculations
@@ -70,7 +83,7 @@ themes/<name>/
 Once both files exist, run:
 
 ```bash
-npm run generate   # produces all 11 format files in themes/<name>/
+npm run generate   # produces all 16 format files in themes/<name>/
 npm test           # must pass with no failures
 ```
 
@@ -103,7 +116,9 @@ The `<name>.json` schema:
 
 `layout` is either `"two-line-box"` or `"single-line"`.
 
-The `prompt` section is Starship-specific — it controls the format string, fill character, time prefix, and prompt symbols used in the generated `starship.toml`. If a second prompt tool is ever supported, this should be refactored to `"prompt": { "starship": { ... } }` keyed by tool name.
+A formal JSON Schema (draft-07) covering all fields, types, and constraints is available at [`docs/specifications/theme-schema.json`](docs/specifications/theme-schema.json).
+
+The `prompt` section is read by both the Starship generator (`scripts/generators/starship.js`) and the Oh My Posh generator (`scripts/generators/oh-my-posh.js`). It controls layout, fill character, time prefix symbol, and vim mode indicator — fields that both tools expose identically. If a future prompt tool requires fields that conflict with these, refactor to `"prompt": { "starship": { ... }, "oh-my-posh": { ... } }` keyed by tool name.
 
 ---
 
@@ -117,16 +132,44 @@ The `prompt` section is Starship-specific — it controls the format string, fil
 
 ---
 
+## Running tests
+
+Run the full test suite:
+
+```bash
+npm test
+```
+
+Run a single test file (e.g. just the VS Code generator tests):
+
+```bash
+node --test scripts/__tests__/vscode.test.js
+```
+
+---
+
 ## Adding a new target format
 
 New formats require:
 
-1. A generator module at `scripts/generators/<format>.js` — follow the pattern of an existing generator
-2. Registration in `scripts/generate.js`
-3. Tests in `scripts/__tests__/` — at minimum one test per theme
-4. Documentation in the README install section and `docs/index.html`
+1. A generator module at `scripts/generators/<format>.js` — follow the pattern of an existing generator (e.g. `scripts/generators/ghostty.js` for a simple key=value format)
+2. Register the new target in `scripts/generate.js` — add `{ filename: "<format>.<ext>", fn: generateFormat }` to the `TARGETS` array
+3. Add an installer function in `scripts/install.js` — follow the factory pattern in `createInstallers()`
+4. Register the installer in the `installerMap` inside `run()` in `scripts/install.js`
+5. Tests in `scripts/__tests__/<format>.test.js` — at minimum: output is a string, required color values are present, all 21 themes generate without error
+6. Documentation in the README install section and `docs/index.html`
 
-The eleven existing generated formats and their target applications:
+Bug reports and feature requests: [GitHub Issues](https://github.com/marvinrichter/gloam/issues)
+
+---
+
+## Design space — open invitations
+
+The following territory is currently unoccupied and would be welcome:
+
+- Any concept not already in the "Distinct territory" table above, subject to the same requirements
+
+The sixteen existing generated formats and their target applications:
 
 | Filename | Application | Notes |
 |---|---|---|
@@ -141,6 +184,11 @@ The eleven existing generated formats and their target applications:
 | `neovim.lua` | Neovim | Copies to `~/.config/nvim/colors/` |
 | `intellij.icls` | IntelliJ / JetBrains IDEs | Manual import via Settings GUI |
 | `zed.json` | Zed editor | Copies to `~/.config/zed/themes/` |
+| `helix.toml` | Helix editor | Copies to `~/.config/helix/themes/` |
+| `tmux.conf` | tmux | Source-file line added to `~/.tmux.conf` |
+| `terminal.terminal` | Apple Terminal | Manual import via Preferences GUI |
+| `oh-my-posh.omp.json` | Oh My Posh prompt | Manual copy to Oh My Posh themes directory |
+| `sublime-text.sublime-color-scheme` | Sublime Text | Manual copy to Packages/User/ |
 
 ---
 

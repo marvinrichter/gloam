@@ -1,0 +1,37 @@
+# nacreous — Alacritty color theme
+# Generated from nacreous.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/nacreous.toml
+# then add `import = ["~/.config/alacritty/themes/nacreous.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0B0C10"
+foreground = "#E4E8F0"
+
+[colors.cursor]
+cursor = "#E890C8"
+text   = "#0B0C10"
+
+[colors.selection]
+background = "#1A1C28"
+text       = "#E4E8F0"
+
+[colors.normal]
+black   = "#0B0C10"
+red     = "#8A4A60"
+green   = "#40A880"
+yellow  = "#8898A8"
+blue    = "#5050A8"
+magenta = "#9850A8"
+cyan    = "#40A0A8"
+white   = "#9090B0"
+
+[colors.bright]
+black   = "#1A1C28"
+red     = "#E06868"
+green   = "#78D8C8"
+yellow  = "#90D880"
+blue    = "#8888A8"
+magenta = "#E890C8"
+cyan    = "#58C8E8"
+white   = "#E4E8F0"

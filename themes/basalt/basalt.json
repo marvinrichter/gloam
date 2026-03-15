@@ -1,0 +1,47 @@
+{
+  "name": "basalt",
+  "displayName": "Basalt",
+  "type": "dark",
+  "background": "#090A0B",
+  "foreground": "#E0E4E8",
+  "tokens": {
+    "primary": "#40D8D8",
+    "accent": "#E8B040",
+    "muted": "#7888A0",
+    "error": "#E05858"
+  },
+  "ansi": [
+    "#090A0B",
+    "#804848",
+    "#408870",
+    "#988040",
+    "#386890",
+    "#7A4898",
+    "#3890A0",
+    "#7888A0",
+    "#181A20",
+    "#E05858",
+    "#40D8D8",
+    "#C8B050",
+    "#7888A0",
+    "#607888",
+    "#58C0D8",
+    "#E0E4E8"
+  ],
+  "ui": {
+    "cursor": "#E8B040",
+    "cursorText": "#090A0B",
+    "selection": "#181A20",
+    "selectionText": "#E0E4E8",
+    "bold": "#E0E4E8",
+    "link": "#40D8D8"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "╌",
+    "timePrefix": "∎",
+    "successSymbol": "▸",
+    "vimSymbol": "◂"
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://marvinrichter.github.io/gloam/specifications/theme-schema.json",
+  "title": "gloam theme source",
+  "description": "Schema for a gloam theme JSON source file (themes/<name>/<name>.json). All 16 output format files are generated from this single source of truth.",
+  "type": "object",
+  "required": ["name", "displayName", "type", "background", "foreground", "tokens", "ansi", "ui", "prompt"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Theme slug — lowercase, no spaces. Must match the containing directory name.",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "examples": ["eventide", "aether", "basalt"]
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Human-readable theme name shown in VS Code and other UIs.",
+      "minLength": 1,
+      "examples": ["Eventide", "Aether", "Basalt"]
+    },
+    "type": {
+      "type": "string",
+      "description": "Background type — controls VS Code uiTheme selection and light-theme ANSI notes.",
+      "enum": ["dark", "light"]
+    },
+    "background": {
+      "type": "string",
+      "description": "Terminal background color (#RRGGBB). All four semantic tokens must achieve ≥4.5:1 contrast against this value.",
+      "$ref": "#/definitions/hexColor"
+    },
+    "foreground": {
+      "type": "string",
+      "description": "Default text color (#RRGGBB).",
+      "$ref": "#/definitions/hexColor"
+    },
+    "tokens": {
+      "type": "object",
+      "description": "The four semantic color tokens. These are the single source of truth for all prompt and syntax colors.",
+      "required": ["primary", "accent", "muted", "error"],
+      "additionalProperties": false,
+      "properties": {
+        "primary": {
+          "type": "string",
+          "description": "Navigation tier — directory path, language badges. Must achieve ≥4.5:1 against background.",
+          "$ref": "#/definitions/hexColor"
+        },
+        "accent": {
+          "type": "string",
+          "description": "State/action tier — git branch, prompt character, cursor. Must achieve ≥4.5:1 against background.",
+          "$ref": "#/definitions/hexColor"
+        },
+        "muted": {
+          "type": "string",
+          "description": "Chrome tier — username, time, box corners, structural separators. Must achieve ≥4.5:1 against background.",
+          "$ref": "#/definitions/hexColor"
+        },
+        "error": {
+          "type": "string",
+          "description": "Exception tier — failed exit status only. Must achieve ≥4.5:1 against background.",
+          "$ref": "#/definitions/hexColor"
+        }
+      }
+    },
+    "ansi": {
+      "type": "array",
+      "description": "16-color ANSI palette (slots 0–15). Derived from semantic tokens by visual harmony — see ADR-005. Must contain exactly 16 entries.",
+      "minItems": 16,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/definitions/hexColor"
+      }
+    },
+    "ui": {
+      "type": "object",
+      "description": "Editor and terminal UI color slots used by VS Code, iTerm2, Alacritty, WezTerm, and other supported targets.",
+      "required": ["cursor", "cursorText", "selection", "selectionText", "bold", "link"],
+      "additionalProperties": false,
+      "properties": {
+        "cursor": {
+          "type": "string",
+          "description": "Cursor block fill color. Typically the accent token.",
+          "$ref": "#/definitions/hexColor"
+        },
+        "cursorText": {
+          "type": "string",
+          "description": "Text color inside the cursor block. Typically the background.",
+          "$ref": "#/definitions/hexColor"
+        },
+        "selection": {
+          "type": "string",
+          "description": "Selected text background.",
+          "$ref": "#/definitions/hexColor"
+        },
+        "selectionText": {
+          "type": "string",
+          "description": "Selected text foreground. Typically the foreground token.",
+          "$ref": "#/definitions/hexColor"
+        },
+        "bold": {
+          "type": "string",
+          "description": "Bold text color. Typically the foreground or a lighter variant.",
+          "$ref": "#/definitions/hexColor"
+        },
+        "link": {
+          "type": "string",
+          "description": "Hyperlink color. Must be palette-derived and distinct from body text.",
+          "$ref": "#/definitions/hexColor"
+        }
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "description": "Starship prompt personality settings. Controls the format string, fill character, time prefix, and prompt symbols in the generated starship.toml.",
+      "required": ["layout", "showUsername", "fill", "timePrefix", "successSymbol", "vimSymbol"],
+      "additionalProperties": false,
+      "properties": {
+        "layout": {
+          "type": "string",
+          "description": "Prompt layout. 'two-line-box' renders a box frame (╭╰─); 'single-line' renders without a frame.",
+          "enum": ["two-line-box", "single-line"]
+        },
+        "showUsername": {
+          "type": "boolean",
+          "description": "Whether to show $username on the first prompt line."
+        },
+        "fill": {
+          "type": "string",
+          "description": "Fill character between information modules and the time display. Must be at least 1 character. Each theme should use a unique fill character derived from its concept.",
+          "minLength": 1
+        },
+        "timePrefix": {
+          "type": "string",
+          "description": "Character shown before the time and slow command duration. Must be unique across all themes.",
+          "minLength": 1
+        },
+        "successSymbol": {
+          "type": "string",
+          "description": "Prompt character shown on successful command exit (styled fg:accent).",
+          "minLength": 1
+        },
+        "vimSymbol": {
+          "type": "string",
+          "description": "Prompt character shown in Vim normal mode (styled fg:primary).",
+          "minLength": 1
+        }
+      }
+    }
+  },
+  "definitions": {
+    "hexColor": {
+      "type": "string",
+      "description": "A 6-digit hex color in #RRGGBB format.",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    }
+  }
+}

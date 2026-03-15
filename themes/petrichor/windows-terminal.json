@@ -1,0 +1,23 @@
+{
+  "name": "Petrichor",
+  "background": "#0A0C0A",
+  "foreground": "#D8DCCC",
+  "cursorColor": "#48B8E8",
+  "selectionBackground": "#182018",
+  "black": "#0A0C0A",
+  "red": "#804040",
+  "green": "#408040",
+  "yellow": "#908040",
+  "blue": "#384878",
+  "purple": "#684878",
+  "cyan": "#388888",
+  "white": "#788070",
+  "brightBlack": "#181C18",
+  "brightRed": "#D05858",
+  "brightGreen": "#78C888",
+  "brightYellow": "#B0C070",
+  "brightBlue": "#78806A",
+  "brightPurple": "#48B8E8",
+  "brightCyan": "#60C8A0",
+  "brightWhite": "#D8DCCC"
+}

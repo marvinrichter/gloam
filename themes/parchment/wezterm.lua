@@ -6,13 +6,13 @@
 
 return {
   foreground    = "#2A1E12",
-  background    = "#EDE0C8",
+  background    = "#E8D6B4",
 
   cursor_bg     = "#7A3A10",
   cursor_fg     = "#EDE0C8",
   cursor_border = "#7A3A10",
 
-  selection_bg  = "#D8C8A8",
+  selection_bg  = "#D4BEA0",
   selection_fg  = "#2A1E12",
 
   ansi = {

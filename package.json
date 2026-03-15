@@ -1,6 +1,29 @@
 {
   "name": "gloam",
   "version": "1.0.0",
+  "description": "Twenty-one terminal and editor theme design systems. Each built from a single atmospheric concept.",
+  "keywords": [
+    "theme",
+    "terminal",
+    "color",
+    "starship",
+    "alacritty",
+    "kitty",
+    "wezterm",
+    "ghostty",
+    "neovim",
+    "vscode",
+    "zed",
+    "prompt"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marvinrichter/gloam.git"
+  },
+  "homepage": "https://marvinrichter.github.io/gloam",
+  "bugs": {
+    "url": "https://github.com/marvinrichter/gloam/issues"
+  },
   "type": "module",
   "license": "MIT",
   "engines": {
@@ -8,9 +31,14 @@
   },
   "bin": "scripts/install.js",
   "scripts": {
+    "prepare": "git config core.hooksPath .githooks",
     "test": "node --test --experimental-test-coverage scripts/__tests__/*.test.js",
     "generate": "node scripts/generate.js",
+    "check-contrast": "node scripts/check-contrast.js",
+    "new-theme": "node scripts/new-theme.js",
     "install-theme": "node scripts/install.js",
+    "format": "prettier --write 'scripts/**/*.js'",
+    "format:check": "prettier --check 'scripts/**/*.js'",
     "lint": "npm run lint:js && npm run lint:md",
     "lint:js": "eslint .",
     "lint:md": "markdownlint-cli2 '**/*.md' '!.claude/**' '!node_modules/**'"
@@ -19,6 +47,7 @@
     "@eslint/js": "^9.0.0",
     "eslint": "^9.0.0",
     "globals": "^17.4.0",
-    "markdownlint-cli2": "^0.17.0"
+    "markdownlint-cli2": "^0.17.0",
+    "prettier": "^3.8.1"
   }
 }

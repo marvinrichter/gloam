@@ -1,0 +1,23 @@
+{
+  "name": "Daybook",
+  "background": "#F2EEE6",
+  "foreground": "#1E1A14",
+  "cursorColor": "#884830",
+  "selectionBackground": "#D8CEB8",
+  "black": "#0E0A08",
+  "red": "#6A1E1E",
+  "green": "#204828",
+  "yellow": "#604818",
+  "blue": "#183060",
+  "purple": "#582858",
+  "cyan": "#184848",
+  "white": "#A09080",
+  "brightBlack": "#4A4030",
+  "brightRed": "#882020",
+  "brightGreen": "#387038",
+  "brightYellow": "#886028",
+  "brightBlue": "#6A5E4E",
+  "brightPurple": "#884830",
+  "brightCyan": "#286868",
+  "brightWhite": "#F0EBE0"
+}

@@ -12,6 +12,11 @@ import { generateVscode }          from "./generators/vscode.js";
 import { generateNeovim }          from "./generators/neovim.js";
 import { generateIntellij }        from "./generators/intellij.js";
 import { generateZed }             from "./generators/zed.js";
+import { generateHelix }           from "./generators/helix.js";
+import { generateTmux }            from "./generators/tmux.js";
+import { generateTerminalApp }     from "./generators/terminal-app.js";
+import { generateOhMyPosh }        from "./generators/oh-my-posh.js";
+import { generateSublimeText }     from "./generators/sublime-text.js";
 
 // Each entry is { filename, fn }.
 // The filename is the app name + its native extension — lives alongside the
@@ -28,6 +33,11 @@ const TARGETS = [
   { filename: "neovim.lua",             fn: generateNeovim },
   { filename: "intellij.icls",          fn: generateIntellij },
   { filename: "zed.json",               fn: generateZed },
+  { filename: "helix.toml",             fn: generateHelix },
+  { filename: "tmux.conf",              fn: generateTmux },
+  { filename: "terminal.terminal",      fn: generateTerminalApp },
+  { filename: "oh-my-posh.omp.json",   fn: generateOhMyPosh },
+  { filename: "sublime-text.sublime-color-scheme", fn: generateSublimeText },
 ];
 
 const HEX_RE = /^#[0-9A-Fa-f]{6}$/;
@@ -73,6 +83,33 @@ export function validateTheme(obj) {
         errors.push(`"tokens.${token}" is required`);
       } else if (!HEX_RE.test(obj.tokens[token])) {
         errors.push(`"tokens.${token}" must be a 6-digit hex color (#RRGGBB), got "${obj.tokens[token]}"`);
+      }
+    }
+  }
+
+  const UI_HEX_FIELDS = ["cursor", "cursorText", "selection", "selectionText", "bold", "link"];
+  if (obj.ui === undefined) {
+    errors.push(`missing required field "ui"`);
+  } else {
+    for (const field of UI_HEX_FIELDS) {
+      if (obj.ui[field] === undefined) {
+        errors.push(`"ui.${field}" is required`);
+      } else if (!HEX_RE.test(obj.ui[field])) {
+        errors.push(`"ui.${field}" must be a 6-digit hex color (#RRGGBB), got "${obj.ui[field]}"`);
+      }
+    }
+  }
+
+  const PROMPT_STRING_FIELDS = ["fill", "timePrefix", "successSymbol", "vimSymbol"];
+  if (obj.prompt === undefined) {
+    errors.push(`missing required field "prompt"`);
+  } else {
+    if (obj.prompt.layout !== "two-line-box" && obj.prompt.layout !== "single-line") {
+      errors.push(`"prompt.layout" must be "two-line-box" or "single-line", got "${obj.prompt.layout}"`);
+    }
+    for (const field of PROMPT_STRING_FIELDS) {
+      if (obj.prompt[field] === undefined || typeof obj.prompt[field] !== "string" || obj.prompt[field].length < 1) {
+        errors.push(`"prompt.${field}" must be a non-empty string`);
       }
     }
   }

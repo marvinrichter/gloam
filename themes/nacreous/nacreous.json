@@ -1,0 +1,47 @@
+{
+  "name": "nacreous",
+  "displayName": "Nacreous",
+  "type": "dark",
+  "background": "#0B0C10",
+  "foreground": "#E4E8F0",
+  "tokens": {
+    "primary": "#78D8C8",
+    "accent": "#E890C8",
+    "muted": "#8888A8",
+    "error": "#E06868"
+  },
+  "ansi": [
+    "#0B0C10",
+    "#8A4A60",
+    "#40A880",
+    "#8898A8",
+    "#5050A8",
+    "#9850A8",
+    "#40A0A8",
+    "#9090B0",
+    "#1A1C28",
+    "#E06868",
+    "#78D8C8",
+    "#90D880",
+    "#8888A8",
+    "#E890C8",
+    "#58C8E8",
+    "#E4E8F0"
+  ],
+  "ui": {
+    "cursor": "#E890C8",
+    "cursorText": "#0B0C10",
+    "selection": "#1A1C28",
+    "selectionText": "#E4E8F0",
+    "bold": "#E4E8F0",
+    "link": "#78D8C8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "⁞",
+    "timePrefix": "✧",
+    "successSymbol": "⟫",
+    "vimSymbol": "⟪"
+  }
+}

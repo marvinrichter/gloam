@@ -1,0 +1,23 @@
+{
+  "name": "Solano",
+  "background": "#F5EDE0",
+  "foreground": "#2A1C10",
+  "cursorColor": "#1A4A7A",
+  "selectionBackground": "#DDD0BC",
+  "black": "#180A04",
+  "red": "#642020",
+  "green": "#1C5024",
+  "yellow": "#5A3008",
+  "blue": "#183070",
+  "purple": "#482860",
+  "cyan": "#185060",
+  "white": "#706050",
+  "brightBlack": "#4A3828",
+  "brightRed": "#8B1A2A",
+  "brightGreen": "#2C7038",
+  "brightYellow": "#782010",
+  "brightBlue": "#7A5C40",
+  "brightPurple": "#1A4A7A",
+  "brightCyan": "#2C7080",
+  "brightWhite": "#F8F0E8"
+}

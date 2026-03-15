@@ -1,0 +1,23 @@
+{
+  "name": "Nocturne",
+  "background": "#100A0C",
+  "foreground": "#EEE8E0",
+  "cursorColor": "#D05A6A",
+  "selectionBackground": "#201820",
+  "black": "#100A0C",
+  "red": "#883040",
+  "green": "#406840",
+  "yellow": "#B09040",
+  "blue": "#484880",
+  "purple": "#784878",
+  "cyan": "#387878",
+  "white": "#848080",
+  "brightBlack": "#201820",
+  "brightRed": "#E04848",
+  "brightGreen": "#60B870",
+  "brightYellow": "#E0D0A8",
+  "brightBlue": "#9880A0",
+  "brightPurple": "#D05A6A",
+  "brightCyan": "#50A8A8",
+  "brightWhite": "#EEE8E0"
+}

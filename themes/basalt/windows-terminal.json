@@ -1,0 +1,23 @@
+{
+  "name": "Basalt",
+  "background": "#090A0B",
+  "foreground": "#E0E4E8",
+  "cursorColor": "#E8B040",
+  "selectionBackground": "#181A20",
+  "black": "#090A0B",
+  "red": "#804848",
+  "green": "#408870",
+  "yellow": "#988040",
+  "blue": "#386890",
+  "purple": "#7A4898",
+  "cyan": "#3890A0",
+  "white": "#7888A0",
+  "brightBlack": "#181A20",
+  "brightRed": "#E05858",
+  "brightGreen": "#40D8D8",
+  "brightYellow": "#C8B050",
+  "brightBlue": "#7888A0",
+  "brightPurple": "#607888",
+  "brightCyan": "#58C0D8",
+  "brightWhite": "#E0E4E8"
+}

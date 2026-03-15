@@ -1,0 +1,37 @@
+# solano — Alacritty color theme
+# Generated from solano.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/solano.toml
+# then add `import = ["~/.config/alacritty/themes/solano.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#F5EDE0"
+foreground = "#2A1C10"
+
+[colors.cursor]
+cursor = "#1A4A7A"
+text   = "#F5EDE0"
+
+[colors.selection]
+background = "#DDD0BC"
+text       = "#2A1C10"
+
+[colors.normal]
+black   = "#180A04"
+red     = "#642020"
+green   = "#1C5024"
+yellow  = "#5A3008"
+blue    = "#183070"
+magenta = "#482860"
+cyan    = "#185060"
+white   = "#706050"
+
+[colors.bright]
+black   = "#4A3828"
+red     = "#8B1A2A"
+green   = "#2C7038"
+yellow  = "#782010"
+blue    = "#7A5C40"
+magenta = "#1A4A7A"
+cyan    = "#2C7080"
+white   = "#F8F0E8"

@@ -1,0 +1,32 @@
+# nacreous — Ghostty color theme
+# Generated from nacreous.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/nacreous
+# then set theme = nacreous in ~/.config/ghostty/config
+
+background         = 0B0C10
+foreground         = E4E8F0
+
+cursor-color       = E890C8
+cursor-text        = 0B0C10
+
+selection-background = 1A1C28
+selection-foreground = E4E8F0
+
+# ANSI palette (0–15)
+palette = 0=0B0C10
+palette = 1=8A4A60
+palette = 2=40A880
+palette = 3=8898A8
+palette = 4=5050A8
+palette = 5=9850A8
+palette = 6=40A0A8
+palette = 7=9090B0
+palette = 8=1A1C28
+palette = 9=E06868
+palette = 10=78D8C8
+palette = 11=90D880
+palette = 12=8888A8
+palette = 13=E890C8
+palette = 14=58C8E8
+palette = 15=E4E8F0

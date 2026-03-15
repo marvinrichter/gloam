@@ -1,0 +1,47 @@
+{
+  "name": "petrichor",
+  "displayName": "Petrichor",
+  "type": "dark",
+  "background": "#0A0C0A",
+  "foreground": "#D8DCCC",
+  "tokens": {
+    "primary": "#78C888",
+    "accent": "#48B8E8",
+    "muted": "#78806A",
+    "error": "#D05858"
+  },
+  "ansi": [
+    "#0A0C0A",
+    "#804040",
+    "#408040",
+    "#908040",
+    "#384878",
+    "#684878",
+    "#388888",
+    "#788070",
+    "#181C18",
+    "#D05858",
+    "#78C888",
+    "#B0C070",
+    "#78806A",
+    "#48B8E8",
+    "#60C8A0",
+    "#D8DCCC"
+  ],
+  "ui": {
+    "cursor": "#48B8E8",
+    "cursorText": "#0A0C0A",
+    "selection": "#182018",
+    "selectionText": "#D8DCCC",
+    "bold": "#D8DCCC",
+    "link": "#78C888"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "─",
+    "timePrefix": "∼",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

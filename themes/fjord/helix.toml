@@ -1,0 +1,153 @@
+# Fjord — Helix colorscheme
+# Generated from fjord.json — do not edit by hand
+#
+# Install: copy to ~/.config/helix/themes/fjord.toml
+#          then set theme = "fjord" in ~/.config/helix/config.toml
+
+# ── Palette ───────────────────────────────────────────────────────────────────
+
+[palette]
+bg        = "#0A0F18"
+fg        = "#D4E0E8"
+primary   = "#6EB5E0"
+accent    = "#E8C46A"
+muted     = "#688EAA"
+error     = "#E06060"
+dim_bg    = "#1E2A38"
+string    = "#60B878"
+number    = "#E8C46A"
+constant  = "#B090C8"
+warning   = "#B09040"
+cursor    = "#E8C46A"
+selection = "#0E1828"
+
+# ── UI ────────────────────────────────────────────────────────────────────────
+
+"ui.background"         = { bg = "bg" }
+"ui.text"               = { fg = "fg" }
+"ui.text.focus"         = { fg = "fg", modifiers = ["bold"] }
+
+"ui.cursor"             = { fg = "bg", bg = "cursor" }
+"ui.cursor.primary"     = { fg = "bg", bg = "cursor" }
+"ui.cursor.insert"      = { fg = "bg", bg = "fg" }
+"ui.cursor.select"      = { fg = "bg", bg = "accent" }
+"ui.cursor.match"       = { bg = "dim_bg", modifiers = ["bold"] }
+
+"ui.selection"          = { bg = "selection" }
+"ui.selection.primary"  = { bg = "selection" }
+
+"ui.linenr"             = { fg = "muted" }
+"ui.linenr.selected"    = { fg = "fg", modifiers = ["bold"] }
+
+"ui.statusbar"          = { fg = "fg", bg = "dim_bg" }
+"ui.statusbar.normal"   = { fg = "fg", bg = "dim_bg" }
+"ui.statusbar.insert"   = { fg = "bg", bg = "accent" }
+"ui.statusbar.select"   = { fg = "bg", bg = "primary" }
+"ui.statusbar.separator" = { fg = "muted" }
+
+"ui.popup"              = { fg = "fg", bg = "dim_bg" }
+"ui.window"             = { fg = "muted" }
+"ui.help"               = { fg = "fg", bg = "dim_bg" }
+
+"ui.menu"               = { fg = "fg", bg = "dim_bg" }
+"ui.menu.selected"      = { fg = "fg", bg = "selection" }
+"ui.menu.scroll"        = { fg = "muted" }
+
+"ui.gutter"             = { bg = "bg" }
+"ui.gutter.selected"    = { bg = "dim_bg" }
+"ui.highlight"          = { bg = "selection" }
+
+"ui.virtual.whitespace"  = { fg = "muted", modifiers = ["dim"] }
+"ui.virtual.ruler"       = { bg = "dim_bg" }
+"ui.virtual.inlay-hint"  = { fg = "muted", modifiers = ["italic"] }
+"ui.virtual.jump-label"  = { fg = "accent", modifiers = ["bold"] }
+
+# ── Syntax ────────────────────────────────────────────────────────────────────
+
+"attribute"             = { fg = "primary" }
+"comment"               = { fg = "muted", modifiers = ["italic"] }
+"comment.line"          = { fg = "muted", modifiers = ["italic"] }
+"comment.block"         = { fg = "muted", modifiers = ["italic"] }
+
+"constant"              = { fg = "constant" }
+"constant.numeric"      = { fg = "number" }
+"constant.builtin"      = { fg = "accent" }
+"constant.character.escape" = { fg = "accent" }
+
+"string"                = { fg = "string" }
+"string.special"        = { fg = "accent" }
+"string.regexp"         = { fg = "accent" }
+
+"keyword"               = { fg = "accent" }
+"keyword.control"       = { fg = "accent" }
+"keyword.control.return"= { fg = "accent" }
+"keyword.function"      = { fg = "accent" }
+"keyword.operator"      = { fg = "muted" }
+"keyword.storage"       = { fg = "accent" }
+"keyword.directive"     = { fg = "primary" }
+
+"type"                  = { fg = "primary" }
+"type.builtin"          = { fg = "primary" }
+"type.enum.variant"     = { fg = "constant" }
+
+"constructor"           = { fg = "primary" }
+
+"function"              = { fg = "primary" }
+"function.builtin"      = { fg = "primary" }
+"function.method"       = { fg = "primary" }
+"function.macro"        = { fg = "accent" }
+"function.special"      = { fg = "accent" }
+
+"namespace"             = { fg = "fg" }
+"module"                = { fg = "primary" }
+
+"variable"              = { fg = "fg" }
+"variable.builtin"      = { fg = "accent" }
+"variable.parameter"    = { fg = "fg" }
+"variable.other.member" = { fg = "fg" }
+
+"label"                 = { fg = "accent" }
+"operator"              = { fg = "muted" }
+"punctuation"           = { fg = "muted" }
+"punctuation.delimiter" = { fg = "muted" }
+"punctuation.bracket"   = { fg = "muted" }
+"punctuation.special"   = { fg = "accent" }
+
+"tag"                   = { fg = "accent" }
+"tag.attribute"         = { fg = "primary" }
+"tag.error"             = { fg = "error" }
+
+# ── Markup (Markdown, etc.) ───────────────────────────────────────────────────
+
+"markup.heading"        = { fg = "primary", modifiers = ["bold"] }
+"markup.heading.marker" = { fg = "muted" }
+"markup.bold"           = { fg = "fg", modifiers = ["bold"] }
+"markup.italic"         = { fg = "fg", modifiers = ["italic"] }
+"markup.strikethrough"  = { fg = "muted", modifiers = ["crossed_out"] }
+"markup.link.url"       = { fg = "accent", modifiers = ["underlined"] }
+"markup.link.label"     = { fg = "primary" }
+"markup.link.text"      = { fg = "fg" }
+"markup.quote"          = { fg = "muted", modifiers = ["italic"] }
+"markup.raw"            = { fg = "string" }
+"markup.raw.block"      = { fg = "string" }
+"markup.list"           = { fg = "accent" }
+
+# ── Diff ──────────────────────────────────────────────────────────────────────
+
+"diff.plus"             = { fg = "string" }
+"diff.minus"            = { fg = "error" }
+"diff.delta"            = { fg = "warning" }
+"diff.plus.gutter"      = { fg = "string" }
+"diff.minus.gutter"     = { fg = "error" }
+"diff.delta.gutter"     = { fg = "warning" }
+
+# ── Diagnostic ────────────────────────────────────────────────────────────────
+
+"diagnostic.error"      = { modifiers = ["underlined"] }
+"diagnostic.warning"    = { modifiers = ["underlined"] }
+"diagnostic.info"       = { modifiers = ["underlined"] }
+"diagnostic.hint"       = { modifiers = ["underlined"] }
+"error"                 = { fg = "error" }
+"warning"               = { fg = "warning" }
+"info"                  = { fg = "primary" }
+"hint"                  = { fg = "muted" }
