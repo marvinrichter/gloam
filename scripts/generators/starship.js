@@ -71,16 +71,16 @@ truncation_symbol = "…/"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
 
 # ─── Git ─────────────────────────────────────────────────────────────────────
 
 [git_branch]
-symbol = " "
+symbol = ""
 style  = "fg:accent"
-format = "[ $symbol$branch ]($style)"
+format = "[ $symbol $branch ]($style)"
 
 [git_status]
 ahead      = "⇡\${count}"
@@ -106,27 +106,27 @@ format   = "[${timePrefix} $duration ]($style)"
 # ─── Languages & environments ────────────────────────────────────────────────
 
 [c]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [cpp]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = '[ $symbol ($version) ]($style)'
 
 [elixir]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [elm]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [golang]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
@@ -135,22 +135,22 @@ style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [haskell]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [java]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [julia]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [nodejs]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
@@ -160,22 +160,22 @@ style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [python]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [rust]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [scala]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol($version) ]($style)"
 
 [docker_context]
-symbol = " "
+symbol = " "
 style  = "fg:primary"
 format = "[ $symbol$context ]($style)"
 
