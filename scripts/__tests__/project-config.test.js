@@ -6,7 +6,7 @@
 
 import { describe, it } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const REPO = join(import.meta.dirname, "../..");
@@ -33,12 +33,9 @@ describe("Node version pinning", () => {
   });
 
   it(`.nvmrc exists and contains >=${TARGET_NODE}`, () => {
-    let content;
-    try {
-      content = readFileSync(join(REPO, ".nvmrc"), "utf8").trim();
-    } catch {
-      assert.fail(".nvmrc does not exist");
-    }
+    const nvmrcPath = join(REPO, ".nvmrc");
+    assert.ok(existsSync(nvmrcPath), ".nvmrc does not exist");
+    const content = readFileSync(nvmrcPath, "utf8").trim();
     assert.ok(
       parseInt(content, 10) >= TARGET_NODE,
       `.nvmrc contains "${content}", expected >=${TARGET_NODE}`,
