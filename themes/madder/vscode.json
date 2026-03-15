@@ -1,0 +1,188 @@
+{
+  "name": "Madder",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#0E0608",
+    "editor.foreground": "#F0E0E8",
+    "editor.lineHighlightBackground": "#38182A",
+    "editor.selectionBackground": "#301020",
+    "editor.selectionForeground": "#F0E0E8",
+    "editorCursor.foreground": "#E04060",
+    "editorCursor.background": "#0E0608",
+    "editorLineNumber.foreground": "#B08098",
+    "editorLineNumber.activeForeground": "#F0E0E8",
+    "sideBar.background": "#38182A",
+    "sideBar.foreground": "#F0E0E8",
+    "activityBar.background": "#0E0608",
+    "activityBar.foreground": "#F0E0E8",
+    "statusBar.background": "#0E0608",
+    "statusBar.foreground": "#B08098",
+    "statusBar.noFolderBackground": "#0E0608",
+    "titleBar.activeBackground": "#0E0608",
+    "titleBar.activeForeground": "#F0E0E8",
+    "input.background": "#38182A",
+    "input.foreground": "#F0E0E8",
+    "input.border": "#B08098",
+    "focusBorder": "#E04060",
+    "tab.activeBackground": "#0E0608",
+    "tab.activeForeground": "#F0E0E8",
+    "tab.inactiveBackground": "#38182A",
+    "tab.inactiveForeground": "#B08098",
+    "scrollbarSlider.background": "#B0809840",
+    "scrollbarSlider.hoverBackground": "#B0809880",
+    "minimap.background": "#0E0608",
+    "diffEditor.insertedTextBackground": "#50805830",
+    "diffEditor.removedTextBackground": "#E0484830",
+    "editorError.foreground": "#E04848",
+    "editorWarning.foreground": "#C09868",
+    "terminal.background": "#0E0608",
+    "terminal.foreground": "#F0E0E8",
+    "terminalCursor.foreground": "#E04060",
+    "terminal.ansiBlack": "#180810",
+    "terminal.ansiRed": "#E04848",
+    "terminal.ansiGreen": "#508058",
+    "terminal.ansiYellow": "#C09868",
+    "terminal.ansiBlue": "#6868B0",
+    "terminal.ansiMagenta": "#E04060",
+    "terminal.ansiCyan": "#809080",
+    "terminal.ansiWhite": "#C08898",
+    "terminal.ansiBrightBlack": "#38182A",
+    "terminal.ansiBrightRed": "#F06878",
+    "terminal.ansiBrightGreen": "#70A878",
+    "terminal.ansiBrightYellow": "#D8B888",
+    "terminal.ansiBrightBlue": "#8898C8",
+    "terminal.ansiBrightMagenta": "#F090C0",
+    "terminal.ansiBrightCyan": "#90A888",
+    "terminal.ansiBrightWhite": "#F8E8F0"
+  },
+  "tokenColors": [
+    {
+      "name": "Comment",
+      "scope": [
+        "comment",
+        "punctuation.definition.comment"
+      ],
+      "settings": {
+        "foreground": "#B08098",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Keyword",
+      "scope": [
+        "keyword",
+        "keyword.control",
+        "keyword.operator.new",
+        "storage.type",
+        "storage.modifier"
+      ],
+      "settings": {
+        "foreground": "#F07898"
+      }
+    },
+    {
+      "name": "Type / Class",
+      "scope": [
+        "entity.name.type",
+        "entity.name.class",
+        "support.type",
+        "support.class"
+      ],
+      "settings": {
+        "foreground": "#E04060"
+      }
+    },
+    {
+      "name": "Function",
+      "scope": [
+        "entity.name.function",
+        "support.function",
+        "meta.function-call"
+      ],
+      "settings": {
+        "foreground": "#E04060"
+      }
+    },
+    {
+      "name": "String",
+      "scope": [
+        "string",
+        "string.quoted",
+        "string.template"
+      ],
+      "settings": {
+        "foreground": "#70A878"
+      }
+    },
+    {
+      "name": "Number / Boolean",
+      "scope": [
+        "constant.numeric",
+        "constant.language.boolean"
+      ],
+      "settings": {
+        "foreground": "#D8B888"
+      }
+    },
+    {
+      "name": "Constant",
+      "scope": [
+        "constant.language",
+        "variable.other.constant",
+        "support.constant"
+      ],
+      "settings": {
+        "foreground": "#F090C0"
+      }
+    },
+    {
+      "name": "Variable",
+      "scope": [
+        "variable",
+        "variable.other"
+      ],
+      "settings": {
+        "foreground": "#F0E0E8"
+      }
+    },
+    {
+      "name": "Operator / Punctuation",
+      "scope": [
+        "keyword.operator",
+        "punctuation"
+      ],
+      "settings": {
+        "foreground": "#B08098"
+      }
+    },
+    {
+      "name": "Tag",
+      "scope": [
+        "entity.name.tag",
+        "meta.tag"
+      ],
+      "settings": {
+        "foreground": "#F07898"
+      }
+    },
+    {
+      "name": "Attribute",
+      "scope": [
+        "entity.other.attribute-name"
+      ],
+      "settings": {
+        "foreground": "#E04060"
+      }
+    },
+    {
+      "name": "Error",
+      "scope": [
+        "invalid",
+        "invalid.illegal"
+      ],
+      "settings": {
+        "foreground": "#E04848"
+      }
+    }
+  ]
+}

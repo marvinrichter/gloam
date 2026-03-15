@@ -1,0 +1,47 @@
+{
+  "name": "brume",
+  "displayName": "Brume",
+  "type": "light",
+  "background": "#EEF2F0",
+  "foreground": "#1C3030",
+  "tokens": {
+    "primary": "#1A6068",
+    "accent": "#1A7880",
+    "muted": "#486878",
+    "error": "#8A1A28"
+  },
+  "ansi": [
+    "#EEF2F0",
+    "#8A1A28",
+    "#1A5038",
+    "#705810",
+    "#1A6068",
+    "#482870",
+    "#1A7880",
+    "#486878",
+    "#B8C8C8",
+    "#C04048",
+    "#207850",
+    "#906800",
+    "#2068A8",
+    "#603890",
+    "#2090A0",
+    "#1C3030"
+  ],
+  "ui": {
+    "cursor": "#1A6068",
+    "cursorText": "#EEF2F0",
+    "selection": "#C0D8D8",
+    "selectionText": "#1C3030",
+    "bold": "#1C3030",
+    "link": "#1A7880"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": true,
+    "fill": "≈",
+    "timePrefix": "◌",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

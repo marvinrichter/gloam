@@ -1,0 +1,37 @@
+# iris — Alacritty color theme
+# Generated from iris.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/iris.toml
+# then add `import = ["~/.config/alacritty/themes/iris.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#08060E"
+foreground = "#E0D8F8"
+
+[colors.cursor]
+cursor = "#9060E0"
+text   = "#08060E"
+
+[colors.selection]
+background = "#201030"
+text       = "#E0D8F8"
+
+[colors.normal]
+black   = "#100810"
+red     = "#D06868"
+green   = "#508878"
+yellow  = "#C0A048"
+blue    = "#5870C8"
+magenta = "#9060E0"
+cyan    = "#7898D0"
+white   = "#9088B0"
+
+[colors.bright]
+black   = "#281838"
+red     = "#E08888"
+green   = "#70B098"
+yellow  = "#D8C068"
+blue    = "#7898E0"
+magenta = "#B088F8"
+cyan    = "#98C0E0"
+white   = "#F0E8FF"

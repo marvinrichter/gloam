@@ -1,0 +1,23 @@
+{
+  "name": "Brume",
+  "background": "#EEF2F0",
+  "foreground": "#1C3030",
+  "cursorColor": "#1A6068",
+  "selectionBackground": "#C0D8D8",
+  "black": "#EEF2F0",
+  "red": "#8A1A28",
+  "green": "#1A5038",
+  "yellow": "#705810",
+  "blue": "#1A6068",
+  "purple": "#482870",
+  "cyan": "#1A7880",
+  "white": "#486878",
+  "brightBlack": "#B8C8C8",
+  "brightRed": "#C04048",
+  "brightGreen": "#207850",
+  "brightYellow": "#906800",
+  "brightBlue": "#2068A8",
+  "brightPurple": "#603890",
+  "brightCyan": "#2090A0",
+  "brightWhite": "#1C3030"
+}

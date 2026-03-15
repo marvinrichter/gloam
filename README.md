@@ -1,6 +1,6 @@
 # gloam
 
-Thirty-eight terminal and editor theme design systems. Each built from a single atmospheric concept: semantic color tokens, a matched 16-color ANSI palette, and generated configs for every major terminal emulator and IDE.
+Forty-four terminal and editor theme design systems. Each built from a single atmospheric concept: semantic color tokens, a matched 16-color ANSI palette, and generated configs for every major terminal emulator and IDE.
 
 Every token in every theme clears 4.5:1 contrast against its background. Not as a selling point — as a baseline.
 
@@ -216,6 +216,51 @@ Background `#FFF0F0` · Foreground `#2A1420` · Layout: single-line · Fill: `�
 > **Light theme.** All tokens are dark colors on a barely-pink white background. See [bloom.md](themes/bloom/bloom.md) for light theme setup notes — iTerm2 requires one additional setting.
 
 [Design system guide →](themes/bloom/bloom.md)
+
+---
+
+### Boreal
+
+> Aurora borealis — the blue-green curtain that begins at the treeline and rises until it fills the sky. The shimmering 557nm line of excited oxygen.
+
+```
+╭  user  ~/gloam  ›  main ~2  ···············  ✦ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#18A8C8` | aurora cyan — directory, languages |
+| accent | `#40D0E0` | ice glow — git, cursor |
+| muted | `#5890A0` | cold steel — chrome, time |
+| error | `#C05868` | muted coral |
+
+Background `#060A10` · Foreground `#C8D8E8` · Layout: two-line box · Fill: `·` · Cursor: `❯`
+
+[Design system guide →](themes/boreal/boreal.md)
+
+---
+
+### Brume
+
+> The seafront before the fog burns off — everything reduced to values, the boundary between sea and sky erased.
+
+```
+◌ 14:32  ~/gloam  main ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈ ›
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#1A6068` | sea-teal — directory, languages |
+| accent | `#1A7880` | deep teal — git, cursor |
+| muted | `#486878` | slate — chrome, time |
+| error | `#8A1A28` | deep crimson |
+
+Background `#EEF2F0` · Foreground `#1C3030` · Layout: single-line · Fill: `≈` · Cursor: `›`
+
+> **Light theme.** All tokens are dark colors on a pale fog-gray background. See [brume.md](themes/brume/brume.md) for light theme setup notes — iTerm2 requires one additional setting.
+
+[Design system guide →](themes/brume/brume.md)
 
 ---
 
@@ -529,6 +574,50 @@ Background `#0C0C0C` · Foreground `#E0E0E0` · Layout: two-line box · Fill: `�
 Background `#0B0D10` · Foreground `#CDD4DC` · Layout: two-line box · Fill: `═` · Cursor: `❯`
 
 [Design system guide →](themes/ironcast/ironcast.md)
+
+---
+
+### Iris
+
+> The heart of a Siberian iris in July — a violet so saturated it seems to vibrate. The yellow-orange signal patch of the falls against absolute darkness.
+
+```
+╭  user  ~/gloam  ›  main ~2  ⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯  ✦ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#9060E0` | iris violet — directory, languages |
+| accent | `#B088F8` | bright iris — git, cursor |
+| muted | `#8070B0` | violet-gray — chrome, time |
+| error | `#D06868` | warm red |
+
+Background `#08060E` · Foreground `#E0D8F8` · Layout: two-line box · Fill: `⋯` · Cursor: `❯`
+
+[Design system guide →](themes/iris/iris.md)
+
+---
+
+### Madder
+
+> The dye vat at a medieval cloth workshop — *Rubia tinctorum* in water. The oldest cultivated red. Not vermilion — garnet, the cooler red with violet in it.
+
+```
+╭  user  ~/gloam  ›  main ~2  ╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼  ✶ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#E04060` | garnet crimson — directory, languages |
+| accent | `#F07898` | bright rose — git, cursor |
+| muted | `#B08098` | dusty pink — chrome, time |
+| error | `#E04848` | warm red |
+
+Background `#0E0608` · Foreground `#F0E0E8` · Layout: two-line box · Fill: `╼` · Cursor: `❯`
+
+[Design system guide →](themes/madder/madder.md)
 
 ---
 
@@ -911,6 +1000,28 @@ Background `#0D1210` · Foreground `#D4E0D8` · Layout: two-line box · Fill: `�
 
 ---
 
+### Verdure
+
+> The first green of April — wet grass in morning light. Not the settled green of summer. The electric, almost aggressive green of things that have just emerged from the ground.
+
+```
+╭  user  ~/gloam  ›  main ~2  ∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿  ❧ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#60C848` | spring green — directory, languages |
+| accent | `#90E060` | vivid lime — git, cursor |
+| muted | `#709048` | olive — chrome, time |
+| error | `#D06060` | warm red |
+
+Background `#080E08` · Foreground `#D0E0C0` · Layout: two-line box · Fill: `∿` · Cursor: `❯`
+
+[Design system guide →](themes/verdure/verdure.md)
+
+---
+
 ### Weld
 
 > Molten metal oxidizing — yellow-green flame at the seam where steel fuses.
@@ -933,9 +1044,32 @@ Background `#0E0E08` · Foreground `#E8E0C0` · Layout: two-line box · Fill: `�
 
 ---
 
+### Wisteria
+
+> Wisteria draped over a pergola in May — the pale lavender, the warm light through papery petals. The purple that doesn't resolve.
+
+```
+✿ 14:32  ~/gloam  main ·················· ›
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#4828A0` | iris violet — directory, languages |
+| accent | `#782870` | plum — git, cursor |
+| muted | `#4A3868` | dark violet-gray — chrome, time |
+| error | `#882020` | deep crimson |
+
+Background `#F4F0F8` · Foreground `#2A1A40` · Layout: single-line · Fill: `·` · Cursor: `›`
+
+> **Light theme.** All tokens are dark colors on a pale lavender background. See [wisteria.md](themes/wisteria/wisteria.md) for light theme setup notes — iTerm2 requires one additional setting.
+
+[Design system guide →](themes/wisteria/wisteria.md)
+
+---
+
 ## Choosing a theme
 
-All 38 themes share the same structural model — four semantic tokens, 16-color ANSI palette, identical targets. The differences are concept, color temperature, and prompt layout.
+All 44 themes share the same structural model — four semantic tokens, 16-color ANSI palette, identical targets. The differences are concept, color temperature, and prompt layout.
 
 ### By color temperature
 
@@ -943,8 +1077,9 @@ All 38 themes share the same structural model — four semantic tokens, 16-color
 |---|---|---|
 | Eventide, Ember, Cordovan, Nocturne | Aether, Fjord, Basalt, Verdigris | Tungsten, Sable, Umbra, Absinthe |
 | Solano, Saffron, Ochre, Tallow | Nacreous, Petrichor, Amethyst, Cobalt | Noir, Cast, Graphite, Weld |
-| Bamboo, Carmine, Rosewater, Bloom | Ironcast, Sumi, Synthwave, Dusk | Stark |
-| | Canopy, Cirrus, Fern | |
+| Bamboo, Carmine, Rosewater, Madder | Ironcast, Sumi, Synthwave, Dusk | Stark |
+| Bloom | Boreal, Iris, Canopy, Cirrus | |
+| | Fern, Brume, Wisteria, Verdure | |
 
 ### By background type
 
@@ -953,9 +1088,10 @@ All 38 themes share the same structural model — four semantic tokens, 16-color
 | Eventide, Aether, Ember, Absinthe, Verdigris | Parchment, Daybook, Cirrus |
 | Sable, Fjord, Umbra, Cordovan, Tungsten | Solano, Saffron, Ochre |
 | Amethyst, Nacreous, Petrichor, Nocturne, Basalt | Bloom, Fern, Stark |
-| Bamboo, Canopy, Carmine, Cast, Cobalt | |
+| Bamboo, Canopy, Carmine, Cast, Cobalt | Brume, Wisteria |
 | Dusk, Graphite, Ironcast, Noir, Rosewater | |
-| Sumi, Synthwave, Tallow, Weld | |
+| Sumi, Synthwave, Tallow, Weld, Madder | |
+| Boreal, Verdure, Iris | |
 
 ### By prompt layout
 
@@ -965,12 +1101,12 @@ All 38 themes share the same structural model — four semantic tokens, 16-color
 | Cordovan, Amethyst, Nacreous, Nocturne | Parchment, Petrichor, Basalt, Daybook |
 | Saffron, Aether, Canopy, Carmine | Cirrus, Solano, Ochre, Bamboo |
 | Cast, Cobalt, Dusk, Graphite | Bloom, Fern, Noir, Sumi |
-| Ironcast, Rosewater, Stark, Synthwave | Tallow |
-| Weld | |
+| Ironcast, Rosewater, Stark, Synthwave | Tallow, Brume, Wisteria |
+| Weld, Boreal, Iris, Madder, Verdure | |
 
 ### Picking a light theme
 
-All nine light themes use dark tokens on a light background. Key differences:
+All eleven light themes use dark tokens on a light background. Key differences:
 
 | Theme | Background | Primary | Feel |
 |---|---|---|---|
@@ -983,6 +1119,8 @@ All nine light themes use dark tokens on a light background. Key differences:
 | Bloom | `#FFF0F0` barely-pink white | `#7A1840` carmine rose | pressed rose petals |
 | Fern | `#EEF2EC` pale sage-grey | `#1A4A2A` fern stem | woodland morning |
 | Stark | `#FFFFFF` pure white | `#001A8C` deep navy | pure contrast, no atmosphere |
+| Brume | `#EEF2F0` fog gray | `#1A6068` sea-teal | coastal mist, values only |
+| Wisteria | `#F4F0F8` pale lavender | `#4828A0` iris violet | wisteria in bloom |
 
 **All light themes require one extra iTerm2 setting:** uncheck _Use bright colors for bold text_ (`Preferences › Profiles › Colors`).
 
@@ -1009,6 +1147,8 @@ Structural and layout choices vary per theme:
 | Bamboo | single-line | — | `┄` | `›` |
 | Basalt | single-line | — | `╌` | `▸` |
 | Bloom | single-line | — | `∵` | `›` |
+| Boreal | two-line | `╭╰─` | `·` | `❯` |
+| Brume | single-line | — | `≈` | `›` |
 | Canopy | two-line | `╭╰─` | `⋅` | `❯` |
 | Carmine | two-line | `╭╰─` | `╴` | `❯` |
 | Cast | two-line | `╭╰─` | `∴` | `❯` |
@@ -1022,7 +1162,9 @@ Structural and layout choices vary per theme:
 | Fern | single-line | — | `≀` | `›` |
 | Fjord | two-line | `╭╰─` | `·` | `›` |
 | Graphite | two-line | `╭╰─` | `⋯` | `❯` |
+| Iris | two-line | `╭╰─` | `⋯` | `❯` |
 | Ironcast | two-line | `╭╰─` | `═` | `❯` |
+| Madder | two-line | `╭╰─` | `╼` | `❯` |
 | Nacreous | two-line | `╭╰─` | `·` | `⟫` |
 | Noir | single-line | — | `∶` | `›` |
 | Nocturne | two-line | `╭╰─` | `─` | `❯` |
@@ -1039,8 +1181,10 @@ Structural and layout choices vary per theme:
 | Tallow | single-line | — | `⠿` | `›` |
 | Tungsten | single-line | — | `·` | `▸` |
 | Umbra | single-line | — | `·` | `▹` |
+| Verdure | two-line | `╭╰─` | `∿` | `❯` |
 | Verdigris | two-line | `╭╰─` | `─` | `›` |
 | Weld | two-line | `╭╰─` | `≡` | `❯` |
+| Wisteria | single-line | — | `·` | `›` |
 
 Each theme's JSON file is the single source of truth. The generator produces all 16 format files from it.
 
@@ -1054,7 +1198,7 @@ npx github:marvinrichter/gloam <theme> <target>
 
 The installer copies the theme config and wires it into your existing config file — no clone required.
 
-**Themes:** `absinthe` · `aether` · `amethyst` · `bamboo` · `basalt` · `bloom` · `canopy` · `carmine` · `cast` · `cirrus` · `cobalt` · `cordovan` · `daybook` · `dusk` · `ember` · `eventide` · `fern` · `fjord` · `graphite` · `ironcast` · `nacreous` · `noir` · `nocturne` · `ochre` · `parchment` · `petrichor` · `rosewater` · `sable` · `saffron` · `solano` · `stark` · `sumi` · `synthwave` · `tallow` · `tungsten` · `umbra` · `verdigris` · `weld`
+**Themes:** `absinthe` · `aether` · `amethyst` · `bamboo` · `basalt` · `bloom` · `boreal` · `brume` · `canopy` · `carmine` · `cast` · `cirrus` · `cobalt` · `cordovan` · `daybook` · `dusk` · `ember` · `eventide` · `fern` · `fjord` · `graphite` · `iris` · `ironcast` · `madder` · `nacreous` · `noir` · `nocturne` · `ochre` · `parchment` · `petrichor` · `rosewater` · `sable` · `saffron` · `solano` · `stark` · `sumi` · `synthwave` · `tallow` · `tungsten` · `umbra` · `verdure` · `verdigris` · `weld` · `wisteria`
 
 **Targets:** `vscode` · `starship` · `neovim` · `alacritty` · `kitty` · `wezterm` · `ghostty` · `tmux` · `zed` · `windows-terminal` · `helix`
 
@@ -1120,7 +1264,7 @@ The installer does not support iTerm2. Import manually:
 2. Select `themes/<name>/iterm2.itermcolors`
 3. `Color Presets ▾` → select the imported theme name
 
-**Light themes only:** uncheck **Use bright colors for bold text** (`Preferences › Profiles › Colors`). Without this, bold text is invisible against the light background. Applies to: Parchment, Daybook, Cirrus, Solano, Saffron, Ochre, Bloom, Fern, Stark.
+**Light themes only:** uncheck **Use bright colors for bold text** (`Preferences › Profiles › Colors`). Without this, bold text is invisible against the light background. Applies to: Parchment, Daybook, Cirrus, Solano, Saffron, Ochre, Bloom, Fern, Stark, Brume, Wisteria.
 
 ---
 
@@ -1303,7 +1447,7 @@ gloam themes are calibrated for sRGB displays at typical brightness (200–300 n
 
 ### Light theme looks wrong in iTerm2
 
-Uncheck **Use bright colors for bold text** in Preferences › Profiles › Colors. Without this, bold text is invisible against the light background. This applies to all nine light themes: Parchment, Daybook, Cirrus, Solano, Saffron, Ochre, Bloom, Fern, Stark.
+Uncheck **Use bright colors for bold text** in Preferences › Profiles › Colors. Without this, bold text is invisible against the light background. This applies to all eleven light themes: Parchment, Daybook, Cirrus, Solano, Saffron, Ochre, Bloom, Fern, Stark, Brume, Wisteria.
 
 ---
 

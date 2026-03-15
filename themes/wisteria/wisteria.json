@@ -1,0 +1,47 @@
+{
+  "name": "wisteria",
+  "displayName": "Wisteria",
+  "type": "light",
+  "background": "#F4F0F8",
+  "foreground": "#2A1A40",
+  "tokens": {
+    "primary": "#4828A0",
+    "accent": "#782870",
+    "muted": "#4A3868",
+    "error": "#882020"
+  },
+  "ansi": [
+    "#F4F0F8",
+    "#882020",
+    "#1A5028",
+    "#705010",
+    "#2A3888",
+    "#4828A0",
+    "#286080",
+    "#4A3868",
+    "#C8B8D8",
+    "#C04848",
+    "#287840",
+    "#906820",
+    "#3850B8",
+    "#6838C0",
+    "#30809A",
+    "#2A1A40"
+  ],
+  "ui": {
+    "cursor": "#4828A0",
+    "cursorText": "#F4F0F8",
+    "selection": "#D8C8F0",
+    "selectionText": "#2A1A40",
+    "bold": "#2A1A40",
+    "link": "#782870"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "✿",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

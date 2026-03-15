@@ -1,0 +1,23 @@
+{
+  "name": "Iris",
+  "background": "#08060E",
+  "foreground": "#E0D8F8",
+  "cursorColor": "#9060E0",
+  "selectionBackground": "#201030",
+  "black": "#100810",
+  "red": "#D06868",
+  "green": "#508878",
+  "yellow": "#C0A048",
+  "blue": "#5870C8",
+  "purple": "#9060E0",
+  "cyan": "#7898D0",
+  "white": "#9088B0",
+  "brightBlack": "#281838",
+  "brightRed": "#E08888",
+  "brightGreen": "#70B098",
+  "brightYellow": "#D8C068",
+  "brightBlue": "#7898E0",
+  "brightPurple": "#B088F8",
+  "brightCyan": "#98C0E0",
+  "brightWhite": "#F0E8FF"
+}

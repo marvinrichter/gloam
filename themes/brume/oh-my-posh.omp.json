@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#486878",
+          "template": " {{ .UserName }} "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#1A6068",
+          "properties": {
+            "style": "folder",
+            "max_depth": 3,
+            "folder_separator_icon": "/"
+          },
+          "template": " <b>{{ .Path }}</b> "
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#1A7880",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_status": true
+          },
+          "template": " {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#486878",
+          "properties": {
+            "threshold": 2000,
+            "style": "round"
+          },
+          "template": " ◆ {{ .FormattedMs }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#486878",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "template": " ${prompt.timePrefix} {{ .CurrentDate | date .Format }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#1A7880",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}${t.error}{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "template": "› "
+        }
+      ]
+    }
+  ],
+  "palette": {
+    "background": "#EEF2F0",
+    "foreground": "#1C3030",
+    "primary": "#1A6068",
+    "accent": "#1A7880",
+    "muted": "#486878",
+    "error": "#8A1A28"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "boreal",
+  "displayName": "Boreal",
+  "type": "dark",
+  "background": "#060A10",
+  "foreground": "#C8D8E8",
+  "tokens": {
+    "primary": "#18A8C8",
+    "accent": "#40D0E0",
+    "muted": "#5890A0",
+    "error": "#C05868"
+  },
+  "ansi": [
+    "#0C1218",
+    "#C05868",
+    "#38A890",
+    "#88A8C0",
+    "#4878C0",
+    "#7070C8",
+    "#18A8C8",
+    "#7898A8",
+    "#182838",
+    "#D87888",
+    "#50C8B0",
+    "#A8C8E0",
+    "#5898E0",
+    "#8888D8",
+    "#40D0E0",
+    "#E0EEF8"
+  ],
+  "ui": {
+    "cursor": "#18A8C8",
+    "cursorText": "#060A10",
+    "selection": "#102030",
+    "selectionText": "#C8D8E8",
+    "bold": "#E0EEFA",
+    "link": "#40D0E0"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "✦",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

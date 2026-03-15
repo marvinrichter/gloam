@@ -1,0 +1,32 @@
+# iris — Ghostty color theme
+# Generated from iris.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/iris
+# then set theme = iris in ~/.config/ghostty/config
+
+background         = 08060E
+foreground         = E0D8F8
+
+cursor-color       = 9060E0
+cursor-text        = 08060E
+
+selection-background = 201030
+selection-foreground = E0D8F8
+
+# ANSI palette (0–15)
+palette = 0=100810
+palette = 1=D06868
+palette = 2=508878
+palette = 3=C0A048
+palette = 4=5870C8
+palette = 5=9060E0
+palette = 6=7898D0
+palette = 7=9088B0
+palette = 8=281838
+palette = 9=E08888
+palette = 10=70B098
+palette = 11=D8C068
+palette = 12=7898E0
+palette = 13=B088F8
+palette = 14=98C0E0
+palette = 15=F0E8FF

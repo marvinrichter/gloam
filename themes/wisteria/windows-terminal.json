@@ -1,0 +1,23 @@
+{
+  "name": "Wisteria",
+  "background": "#F4F0F8",
+  "foreground": "#2A1A40",
+  "cursorColor": "#4828A0",
+  "selectionBackground": "#D8C8F0",
+  "black": "#F4F0F8",
+  "red": "#882020",
+  "green": "#1A5028",
+  "yellow": "#705010",
+  "blue": "#2A3888",
+  "purple": "#4828A0",
+  "cyan": "#286080",
+  "white": "#4A3868",
+  "brightBlack": "#C8B8D8",
+  "brightRed": "#C04848",
+  "brightGreen": "#287840",
+  "brightYellow": "#906820",
+  "brightBlue": "#3850B8",
+  "brightPurple": "#6838C0",
+  "brightCyan": "#30809A",
+  "brightWhite": "#2A1A40"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "iris",
+  "displayName": "Iris",
+  "type": "dark",
+  "background": "#08060E",
+  "foreground": "#E0D8F8",
+  "tokens": {
+    "primary": "#9060E0",
+    "accent": "#B088F8",
+    "muted": "#8070B0",
+    "error": "#D06868"
+  },
+  "ansi": [
+    "#100810",
+    "#D06868",
+    "#508878",
+    "#C0A048",
+    "#5870C8",
+    "#9060E0",
+    "#7898D0",
+    "#9088B0",
+    "#281838",
+    "#E08888",
+    "#70B098",
+    "#D8C068",
+    "#7898E0",
+    "#B088F8",
+    "#98C0E0",
+    "#F0E8FF"
+  ],
+  "ui": {
+    "cursor": "#9060E0",
+    "cursorText": "#08060E",
+    "selection": "#201030",
+    "selectionText": "#E0D8F8",
+    "bold": "#F0E8FF",
+    "link": "#B088F8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "⋯",
+    "timePrefix": "✦",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

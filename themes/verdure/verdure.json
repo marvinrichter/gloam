@@ -1,0 +1,47 @@
+{
+  "name": "verdure",
+  "displayName": "Verdure",
+  "type": "dark",
+  "background": "#080E08",
+  "foreground": "#D0E0C0",
+  "tokens": {
+    "primary": "#60C848",
+    "accent": "#90E060",
+    "muted": "#709048",
+    "error": "#D06060"
+  },
+  "ansi": [
+    "#0C140C",
+    "#D06060",
+    "#60C848",
+    "#C0B840",
+    "#6090A8",
+    "#9870C0",
+    "#50C0A0",
+    "#90A878",
+    "#203020",
+    "#E08070",
+    "#80E058",
+    "#E0D050",
+    "#80B0C8",
+    "#B890E0",
+    "#70D8B8",
+    "#E0F0D0"
+  ],
+  "ui": {
+    "cursor": "#60C848",
+    "cursorText": "#080E08",
+    "selection": "#182818",
+    "selectionText": "#D0E0C0",
+    "bold": "#E0F0D0",
+    "link": "#90E060"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "∿",
+    "timePrefix": "❧",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

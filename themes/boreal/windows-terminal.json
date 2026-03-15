@@ -1,0 +1,23 @@
+{
+  "name": "Boreal",
+  "background": "#060A10",
+  "foreground": "#C8D8E8",
+  "cursorColor": "#18A8C8",
+  "selectionBackground": "#102030",
+  "black": "#0C1218",
+  "red": "#C05868",
+  "green": "#38A890",
+  "yellow": "#88A8C0",
+  "blue": "#4878C0",
+  "purple": "#7070C8",
+  "cyan": "#18A8C8",
+  "white": "#7898A8",
+  "brightBlack": "#182838",
+  "brightRed": "#D87888",
+  "brightGreen": "#50C8B0",
+  "brightYellow": "#A8C8E0",
+  "brightBlue": "#5898E0",
+  "brightPurple": "#8888D8",
+  "brightCyan": "#40D0E0",
+  "brightWhite": "#E0EEF8"
+}

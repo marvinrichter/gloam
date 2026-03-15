@@ -1,0 +1,32 @@
+# verdure — Ghostty color theme
+# Generated from verdure.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/verdure
+# then set theme = verdure in ~/.config/ghostty/config
+
+background         = 080E08
+foreground         = D0E0C0
+
+cursor-color       = 60C848
+cursor-text        = 080E08
+
+selection-background = 182818
+selection-foreground = D0E0C0
+
+# ANSI palette (0–15)
+palette = 0=0C140C
+palette = 1=D06060
+palette = 2=60C848
+palette = 3=C0B840
+palette = 4=6090A8
+palette = 5=9870C0
+palette = 6=50C0A0
+palette = 7=90A878
+palette = 8=203020
+palette = 9=E08070
+palette = 10=80E058
+palette = 11=E0D050
+palette = 12=80B0C8
+palette = 13=B890E0
+palette = 14=70D8B8
+palette = 15=E0F0D0
