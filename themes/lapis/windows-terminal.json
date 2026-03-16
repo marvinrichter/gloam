@@ -1,0 +1,23 @@
+{
+  "name": "Lapis",
+  "background": "#060810",
+  "foreground": "#D0D8F0",
+  "cursorColor": "#6090FF",
+  "selectionBackground": "#101828",
+  "black": "#060810",
+  "red": "#A83838",
+  "green": "#3080A0",
+  "yellow": "#4870C0",
+  "blue": "#304898",
+  "purple": "#6048A8",
+  "cyan": "#3890B8",
+  "white": "#A0B0E0",
+  "brightBlack": "#151C38",
+  "brightRed": "#E84040",
+  "brightGreen": "#48A8C8",
+  "brightYellow": "#5078F0",
+  "brightBlue": "#6878A8",
+  "brightPurple": "#8868D0",
+  "brightCyan": "#60B8E0",
+  "brightWhite": "#D0D8F0"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "seafoam",
+  "displayName": "Seafoam",
+  "type": "light",
+  "background": "#EEF5F2",
+  "foreground": "#101E18",
+  "tokens": {
+    "primary": "#1A7858",
+    "accent": "#166870",
+    "muted": "#406060",
+    "error": "#C83820"
+  },
+  "ansi": [
+    "#EEF5F2",
+    "#7A2828",
+    "#1A5040",
+    "#706020",
+    "#1A7858",
+    "#583060",
+    "#166870",
+    "#406060",
+    "#C0D8D0",
+    "#C83820",
+    "#207850",
+    "#508040",
+    "#207888",
+    "#604878",
+    "#1A9080",
+    "#101E18"
+  ],
+  "ui": {
+    "cursor": "#166870",
+    "cursorText": "#EEF5F2",
+    "selection": "#C0E8E0",
+    "selectionText": "#101E18",
+    "bold": "#101E18",
+    "link": "#1A7858"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "⬦",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

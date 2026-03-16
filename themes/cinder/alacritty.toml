@@ -1,0 +1,37 @@
+# cinder — Alacritty color theme
+# Generated from cinder.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/cinder.toml
+# then add `import = ["~/.config/alacritty/themes/cinder.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0D0B09"
+foreground = "#E4DCD0"
+
+[colors.cursor]
+cursor = "#B08858"
+text   = "#0D0B09"
+
+[colors.selection]
+background = "#251E14"
+text       = "#E4DCD0"
+
+[colors.normal]
+black   = "#0D0B09"
+red     = "#A84038"
+green   = "#708060"
+yellow  = "#A07840"
+blue    = "#787060"
+magenta = "#907870"
+cyan    = "#708880"
+white   = "#C0B8A8"
+
+[colors.bright]
+black   = "#282218"
+red     = "#D85040"
+green   = "#90A078"
+yellow  = "#C0A070"
+blue    = "#988070"
+magenta = "#B09890"
+cyan    = "#90A898"
+white   = "#E4DCD0"

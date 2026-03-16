@@ -1,0 +1,32 @@
+# overcast — Ghostty color theme
+# Generated from overcast.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/overcast
+# then set theme = overcast in ~/.config/ghostty/config
+
+background         = F0F2F5
+foreground         = 181C28
+
+cursor-color       = 3060C8
+cursor-text        = F0F2F5
+
+selection-background = D0D8F0
+selection-foreground = 181C28
+
+# ANSI palette (0–15)
+palette = 0=F0F2F5
+palette = 1=901828
+palette = 2=1A5A30
+palette = 3=705010
+palette = 4=4040C8
+palette = 5=583878
+palette = 6=3060C8
+palette = 7=505870
+palette = 8=C8CDD8
+palette = 9=C02030
+palette = 10=287840
+palette = 11=A06020
+palette = 12=4060B0
+palette = 13=7858A0
+palette = 14=405880
+palette = 15=181C28

@@ -1,0 +1,32 @@
+# lapis — Ghostty color theme
+# Generated from lapis.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/lapis
+# then set theme = lapis in ~/.config/ghostty/config
+
+background         = 060810
+foreground         = D0D8F0
+
+cursor-color       = 6090FF
+cursor-text        = 060810
+
+selection-background = 101828
+selection-foreground = D0D8F0
+
+# ANSI palette (0–15)
+palette = 0=060810
+palette = 1=A83838
+palette = 2=3080A0
+palette = 3=4870C0
+palette = 4=304898
+palette = 5=6048A8
+palette = 6=3890B8
+palette = 7=A0B0E0
+palette = 8=151C38
+palette = 9=E84040
+palette = 10=48A8C8
+palette = 11=5078F0
+palette = 12=6878A8
+palette = 13=8868D0
+palette = 14=60B8E0
+palette = 15=D0D8F0

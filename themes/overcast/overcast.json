@@ -1,0 +1,47 @@
+{
+  "name": "overcast",
+  "displayName": "Overcast",
+  "type": "light",
+  "background": "#F0F2F5",
+  "foreground": "#181C28",
+  "tokens": {
+    "primary": "#4040C8",
+    "accent": "#3060C8",
+    "muted": "#505870",
+    "error": "#C02030"
+  },
+  "ansi": [
+    "#F0F2F5",
+    "#901828",
+    "#1A5A30",
+    "#705010",
+    "#4040C8",
+    "#583878",
+    "#3060C8",
+    "#505870",
+    "#C8CDD8",
+    "#C02030",
+    "#287840",
+    "#A06020",
+    "#4060B0",
+    "#7858A0",
+    "#405880",
+    "#181C28"
+  ],
+  "ui": {
+    "cursor": "#3060C8",
+    "cursorText": "#F0F2F5",
+    "selection": "#D0D8F0",
+    "selectionText": "#181C28",
+    "bold": "#181C28",
+    "link": "#3060C8"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "─",
+    "timePrefix": "◦",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

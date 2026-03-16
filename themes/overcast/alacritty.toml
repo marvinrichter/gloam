@@ -1,0 +1,37 @@
+# overcast — Alacritty color theme
+# Generated from overcast.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/overcast.toml
+# then add `import = ["~/.config/alacritty/themes/overcast.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#F0F2F5"
+foreground = "#181C28"
+
+[colors.cursor]
+cursor = "#3060C8"
+text   = "#F0F2F5"
+
+[colors.selection]
+background = "#D0D8F0"
+text       = "#181C28"
+
+[colors.normal]
+black   = "#F0F2F5"
+red     = "#901828"
+green   = "#1A5A30"
+yellow  = "#705010"
+blue    = "#4040C8"
+magenta = "#583878"
+cyan    = "#3060C8"
+white   = "#505870"
+
+[colors.bright]
+black   = "#C8CDD8"
+red     = "#C02030"
+green   = "#287840"
+yellow  = "#A06020"
+blue    = "#4060B0"
+magenta = "#7858A0"
+cyan    = "#405880"
+white   = "#181C28"

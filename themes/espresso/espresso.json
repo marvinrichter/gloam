@@ -1,0 +1,47 @@
+{
+  "name": "espresso",
+  "displayName": "Espresso",
+  "type": "dark",
+  "background": "#0D0906",
+  "foreground": "#F0E4D0",
+  "tokens": {
+    "primary": "#C87030",
+    "accent": "#E89840",
+    "muted": "#A07860",
+    "error": "#DC4030"
+  },
+  "ansi": [
+    "#0D0906",
+    "#A83028",
+    "#588040",
+    "#A06020",
+    "#607890",
+    "#886050",
+    "#507870",
+    "#C0A880",
+    "#2A1E14",
+    "#DC4030",
+    "#70A850",
+    "#C87030",
+    "#A07860",
+    "#C09080",
+    "#78A898",
+    "#F0E4D0"
+  ],
+  "ui": {
+    "cursor": "#E89840",
+    "cursorText": "#0D0906",
+    "selection": "#2A1810",
+    "selectionText": "#F0E4D0",
+    "bold": "#F0E4D0",
+    "link": "#D8B890"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "◔",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

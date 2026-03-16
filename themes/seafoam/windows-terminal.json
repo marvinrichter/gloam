@@ -1,0 +1,23 @@
+{
+  "name": "Seafoam",
+  "background": "#EEF5F2",
+  "foreground": "#101E18",
+  "cursorColor": "#166870",
+  "selectionBackground": "#C0E8E0",
+  "black": "#EEF5F2",
+  "red": "#7A2828",
+  "green": "#1A5040",
+  "yellow": "#706020",
+  "blue": "#1A7858",
+  "purple": "#583060",
+  "cyan": "#166870",
+  "white": "#406060",
+  "brightBlack": "#C0D8D0",
+  "brightRed": "#C83820",
+  "brightGreen": "#207850",
+  "brightYellow": "#508040",
+  "brightBlue": "#207888",
+  "brightPurple": "#604878",
+  "brightCyan": "#1A9080",
+  "brightWhite": "#101E18"
+}

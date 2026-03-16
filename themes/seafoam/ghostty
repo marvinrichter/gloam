@@ -1,0 +1,32 @@
+# seafoam — Ghostty color theme
+# Generated from seafoam.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/seafoam
+# then set theme = seafoam in ~/.config/ghostty/config
+
+background         = EEF5F2
+foreground         = 101E18
+
+cursor-color       = 166870
+cursor-text        = EEF5F2
+
+selection-background = C0E8E0
+selection-foreground = 101E18
+
+# ANSI palette (0–15)
+palette = 0=EEF5F2
+palette = 1=7A2828
+palette = 2=1A5040
+palette = 3=706020
+palette = 4=1A7858
+palette = 5=583060
+palette = 6=166870
+palette = 7=406060
+palette = 8=C0D8D0
+palette = 9=C83820
+palette = 10=207850
+palette = 11=508040
+palette = 12=207888
+palette = 13=604878
+palette = 14=1A9080
+palette = 15=101E18

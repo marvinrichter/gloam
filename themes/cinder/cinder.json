@@ -1,0 +1,47 @@
+{
+  "name": "cinder",
+  "displayName": "Cinder",
+  "type": "dark",
+  "background": "#0D0B09",
+  "foreground": "#E4DCD0",
+  "tokens": {
+    "primary": "#C0A070",
+    "accent": "#B08858",
+    "muted": "#988070",
+    "error": "#D85040"
+  },
+  "ansi": [
+    "#0D0B09",
+    "#A84038",
+    "#708060",
+    "#A07840",
+    "#787060",
+    "#907870",
+    "#708880",
+    "#C0B8A8",
+    "#282218",
+    "#D85040",
+    "#90A078",
+    "#C0A070",
+    "#988070",
+    "#B09890",
+    "#90A898",
+    "#E4DCD0"
+  ],
+  "ui": {
+    "cursor": "#B08858",
+    "cursorText": "#0D0B09",
+    "selection": "#251E14",
+    "selectionText": "#E4DCD0",
+    "bold": "#E4DCD0",
+    "link": "#D8C090"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "◒",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "lichen",
+  "displayName": "Lichen",
+  "type": "dark",
+  "background": "#0A0D0B",
+  "foreground": "#D8E0D4",
+  "tokens": {
+    "primary": "#759075",
+    "accent": "#90B878",
+    "muted": "#708868",
+    "error": "#C07060"
+  },
+  "ansi": [
+    "#0A0D0B",
+    "#886058",
+    "#508050",
+    "#888050",
+    "#507878",
+    "#786868",
+    "#509888",
+    "#A8B8A4",
+    "#1C2A20",
+    "#C07060",
+    "#759075",
+    "#A0A860",
+    "#708868",
+    "#A89080",
+    "#70C0A0",
+    "#D8E0D4"
+  ],
+  "ui": {
+    "cursor": "#90B878",
+    "cursorText": "#0A0D0B",
+    "selection": "#182820",
+    "selectionText": "#D8E0D4",
+    "bold": "#D8E0D4",
+    "link": "#A8C890"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "∴",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "lapis",
+  "displayName": "Lapis",
+  "type": "dark",
+  "background": "#060810",
+  "foreground": "#D0D8F0",
+  "tokens": {
+    "primary": "#5078F0",
+    "accent": "#6090FF",
+    "muted": "#6878A8",
+    "error": "#E84040"
+  },
+  "ansi": [
+    "#060810",
+    "#A83838",
+    "#3080A0",
+    "#4870C0",
+    "#304898",
+    "#6048A8",
+    "#3890B8",
+    "#A0B0E0",
+    "#151C38",
+    "#E84040",
+    "#48A8C8",
+    "#5078F0",
+    "#6878A8",
+    "#8868D0",
+    "#60B8E0",
+    "#D0D8F0"
+  ],
+  "ui": {
+    "cursor": "#6090FF",
+    "cursorText": "#060810",
+    "selection": "#101828",
+    "selectionText": "#D0D8F0",
+    "bold": "#D0D8F0",
+    "link": "#90B0FF"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "✸",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

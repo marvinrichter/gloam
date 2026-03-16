@@ -1,0 +1,23 @@
+{
+  "name": "Lichen",
+  "background": "#0A0D0B",
+  "foreground": "#D8E0D4",
+  "cursorColor": "#90B878",
+  "selectionBackground": "#182820",
+  "black": "#0A0D0B",
+  "red": "#886058",
+  "green": "#508050",
+  "yellow": "#888050",
+  "blue": "#507878",
+  "purple": "#786868",
+  "cyan": "#509888",
+  "white": "#A8B8A4",
+  "brightBlack": "#1C2A20",
+  "brightRed": "#C07060",
+  "brightGreen": "#759075",
+  "brightYellow": "#A0A860",
+  "brightBlue": "#708868",
+  "brightPurple": "#A89080",
+  "brightCyan": "#70C0A0",
+  "brightWhite": "#D8E0D4"
+}

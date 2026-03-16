@@ -1,0 +1,47 @@
+{
+  "name": "phosphor",
+  "displayName": "Phosphor",
+  "type": "dark",
+  "background": "#040804",
+  "foreground": "#C0E8B8",
+  "tokens": {
+    "primary": "#00D848",
+    "accent": "#40FF80",
+    "muted": "#50A860",
+    "error": "#FF4040"
+  },
+  "ansi": [
+    "#040804",
+    "#A83030",
+    "#209040",
+    "#38A040",
+    "#208840",
+    "#508040",
+    "#28C878",
+    "#80C090",
+    "#182818",
+    "#FF4040",
+    "#00D848",
+    "#50E060",
+    "#50A860",
+    "#60C060",
+    "#40FF80",
+    "#C0E8B8"
+  ],
+  "ui": {
+    "cursor": "#40FF80",
+    "cursorText": "#040804",
+    "selection": "#102010",
+    "selectionText": "#C0E8B8",
+    "bold": "#C0E8B8",
+    "link": "#70F8A8"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": true,
+    "fill": "─",
+    "timePrefix": "▸",
+    "successSymbol": "▸",
+    "vimSymbol": "◂"
+  }
+}

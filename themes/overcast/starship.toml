@@ -1,0 +1,191 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# ┌─────────────────────────────────────────────────────────────────────────────
+# │ overcast — starship prompt
+# │
+# │ Generated from overcast.json — do not edit by hand
+# │
+# │ Install:  cp overcast.toml ~/.config/starship.toml
+# └─────────────────────────────────────────────────────────────────────────────
+
+add_newline = true
+
+format = """
+[╭](fg:muted)\
+$username\
+$directory\
+$git_branch\
+$git_status\
+$c\
+$cpp\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$python\
+$rust\
+$scala\
+$docker_context\
+$cmd_duration\
+$fill\
+$time
+[╰─](fg:muted)\
+$character"""
+
+palette = "overcast"
+
+[palettes.overcast]
+primary = "#4040C8"
+accent  = "#3060C8"
+muted   = "#505870"
+error   = "#C02030"
+
+# ─── Layout ──────────────────────────────────────────────────────────────────
+
+[fill]
+symbol = "─"
+style  = "fg:muted dim"
+
+[username]
+show_always = true
+style_user  = "fg:muted"
+style_root  = "bold fg:error"
+format      = "[ $user ](fg:muted)"
+
+# ─── Navigation ──────────────────────────────────────────────────────────────
+
+[directory]
+style             = "bold fg:primary"
+format            = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+# ─── Git ─────────────────────────────────────────────────────────────────────
+
+[git_branch]
+symbol = ""
+style  = "fg:accent"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+ahead      = "⇡${count}"
+behind     = "⇣${count}"
+diverged   = "⇕"
+conflicted = "!"
+untracked  = "?"
+stashed    = "≡"
+modified   = "~"
+staged     = "+"
+renamed    = "»"
+deleted    = "✕"
+style      = "fg:accent"
+format     = "([$all_status$ahead_behind ]($style))"
+
+# ─── Performance ─────────────────────────────────────────────────────────────
+
+[cmd_duration]
+min_time = 2000
+style    = "fg:muted dim"
+format   = "[◦ $duration ]($style)"
+
+# ─── Languages & environments ────────────────────────────────────────────────
+
+[c]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[cpp]
+symbol = " "
+style  = "fg:primary"
+format = '[ $symbol($version) ]($style)'
+
+[elixir]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[elm]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[golang]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[gradle]
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[haskell]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[java]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[julia]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[nodejs]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[nim]
+symbol = "󰆥 "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[python]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[rust]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[scala]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol($version) ]($style)"
+
+[docker_context]
+symbol = " "
+style  = "fg:primary"
+format = "[ $symbol$context ]($style)"
+
+# ─── Time ────────────────────────────────────────────────────────────────────
+
+[time]
+disabled    = false
+time_format = "%R"
+style       = "fg:muted"
+format      = "[ ◦ $time ]($style)"
+
+# ─── Prompt character ────────────────────────────────────────────────────────
+
+[character]
+success_symbol = "[❯](fg:accent)"
+error_symbol   = "[❯](fg:error)"
+vimcmd_symbol  = "[❮](fg:primary)"

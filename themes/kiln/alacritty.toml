@@ -1,0 +1,37 @@
+# kiln — Alacritty color theme
+# Generated from kiln.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/kiln.toml
+# then add `import = ["~/.config/alacritty/themes/kiln.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#100908"
+foreground = "#F2E0D0"
+
+[colors.cursor]
+cursor = "#F08040"
+text   = "#100908"
+
+[colors.selection]
+background = "#281410"
+text       = "#F2E0D0"
+
+[colors.normal]
+black   = "#100908"
+red     = "#A03028"
+green   = "#508050"
+yellow  = "#C04820"
+blue    = "#6880A0"
+magenta = "#906060"
+cyan    = "#507870"
+white   = "#C8B0A0"
+
+[colors.bright]
+black   = "#281410"
+red     = "#DC4030"
+green   = "#72A860"
+yellow  = "#E05830"
+blue    = "#A87060"
+magenta = "#C08080"
+cyan    = "#709088"
+white   = "#F2E0D0"

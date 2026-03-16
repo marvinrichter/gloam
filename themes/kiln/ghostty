@@ -1,0 +1,32 @@
+# kiln — Ghostty color theme
+# Generated from kiln.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/kiln
+# then set theme = kiln in ~/.config/ghostty/config
+
+background         = 100908
+foreground         = F2E0D0
+
+cursor-color       = F08040
+cursor-text        = 100908
+
+selection-background = 281410
+selection-foreground = F2E0D0
+
+# ANSI palette (0–15)
+palette = 0=100908
+palette = 1=A03028
+palette = 2=508050
+palette = 3=C04820
+palette = 4=6880A0
+palette = 5=906060
+palette = 6=507870
+palette = 7=C8B0A0
+palette = 8=281410
+palette = 9=DC4030
+palette = 10=72A860
+palette = 11=E05830
+palette = 12=A87060
+palette = 13=C08080
+palette = 14=709088
+palette = 15=F2E0D0
