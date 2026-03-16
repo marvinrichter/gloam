@@ -1,0 +1,32 @@
+# cinder — Ghostty color theme
+# Generated from cinder.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/cinder
+# then set theme = cinder in ~/.config/ghostty/config
+
+background         = 0D0B09
+foreground         = E4DCD0
+
+cursor-color       = B08858
+cursor-text        = 0D0B09
+
+selection-background = 251E14
+selection-foreground = E4DCD0
+
+# ANSI palette (0–15)
+palette = 0=0D0B09
+palette = 1=A84038
+palette = 2=708060
+palette = 3=A07840
+palette = 4=787060
+palette = 5=907870
+palette = 6=708880
+palette = 7=C0B8A8
+palette = 8=282218
+palette = 9=D85040
+palette = 10=90A078
+palette = 11=C0A070
+palette = 12=988070
+palette = 13=B09890
+palette = 14=90A898
+palette = 15=E4DCD0

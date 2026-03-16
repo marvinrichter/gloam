@@ -1,0 +1,23 @@
+{
+  "name": "Cinder",
+  "background": "#0D0B09",
+  "foreground": "#E4DCD0",
+  "cursorColor": "#B08858",
+  "selectionBackground": "#251E14",
+  "black": "#0D0B09",
+  "red": "#A84038",
+  "green": "#708060",
+  "yellow": "#A07840",
+  "blue": "#787060",
+  "purple": "#907870",
+  "cyan": "#708880",
+  "white": "#C0B8A8",
+  "brightBlack": "#282218",
+  "brightRed": "#D85040",
+  "brightGreen": "#90A078",
+  "brightYellow": "#C0A070",
+  "brightBlue": "#988070",
+  "brightPurple": "#B09890",
+  "brightCyan": "#90A898",
+  "brightWhite": "#E4DCD0"
+}
