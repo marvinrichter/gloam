@@ -11,6 +11,19 @@ This file is maintained automatically by [release-please](https://github.com/goo
 
 <!-- releases will be prepended here by release-please -->
 
+## [1.5.0](https://github.com/marvinrichter/gloam/compare/v1.4.1...v1.5.0) (2026-03-16)
+
+
+### Features
+
+* add 24 new themes filling design-concept and hue gaps ([#20](https://github.com/marvinrichter/gloam/issues/20)) ([1c952d4](https://github.com/marvinrichter/gloam/commit/1c952d46c230f495cc64208a1975865c36762bf5))
+
+
+### Bug Fixes
+
+* disable MD060 table-column-style for markdownlint-cli2 v0.21 compat ([#18](https://github.com/marvinrichter/gloam/issues/18)) ([2c23ab6](https://github.com/marvinrichter/gloam/commit/2c23ab6208fb651e363ab4b1e1d4c1542a3affd7))
+* resolve ESLint v10 lint errors (preserve-caught-error, no-useless-assignment) ([#17](https://github.com/marvinrichter/gloam/issues/17)) ([b171d16](https://github.com/marvinrichter/gloam/commit/b171d163d3814d9e5aed2612fa63824d93d5c15e))
+
 ## [1.4.0] — CI quality gates and coverage reporting
 
 ### Features
