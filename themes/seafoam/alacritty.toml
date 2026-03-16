@@ -1,0 +1,37 @@
+# seafoam — Alacritty color theme
+# Generated from seafoam.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/seafoam.toml
+# then add `import = ["~/.config/alacritty/themes/seafoam.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#EEF5F2"
+foreground = "#101E18"
+
+[colors.cursor]
+cursor = "#166870"
+text   = "#EEF5F2"
+
+[colors.selection]
+background = "#C0E8E0"
+text       = "#101E18"
+
+[colors.normal]
+black   = "#EEF5F2"
+red     = "#7A2828"
+green   = "#1A5040"
+yellow  = "#706020"
+blue    = "#1A7858"
+magenta = "#583060"
+cyan    = "#166870"
+white   = "#406060"
+
+[colors.bright]
+black   = "#C0D8D0"
+red     = "#C83820"
+green   = "#207850"
+yellow  = "#508040"
+blue    = "#207888"
+magenta = "#604878"
+cyan    = "#1A9080"
+white   = "#101E18"
