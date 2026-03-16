@@ -13,7 +13,6 @@ This file is maintained automatically by [release-please](https://github.com/goo
 
 ## [1.6.0](https://github.com/marvinrichter/gloam/compare/v1.5.0...v1.6.0) (2026-03-16)
 
-
 ### Features
 
 * SEO, accessibility, and copy improvements to docs/index.html ([#22](https://github.com/marvinrichter/gloam/issues/22)) ([420177e](https://github.com/marvinrichter/gloam/commit/420177e5b29f53dc4c92f0c274061aec07ca1521))
