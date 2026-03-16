@@ -12,6 +12,13 @@ This file is maintained automatically by [release-please](https://github.com/goo
 <!-- markdownlint-disable MD012 -- release-please generates double blank lines after version headings -->
 <!-- releases will be prepended here by release-please -->
 
+## [1.8.0](https://github.com/marvinrichter/gloam/compare/v1.7.0...v1.8.0) (2026-03-16)
+
+
+### Features
+
+* add 9 new themes + OKLab palette uniqueness check (54 themes total) ([ba8842a](https://github.com/marvinrichter/gloam/commit/ba8842a89ad2fce4688419dc261df1dac924b85f))
+
 ## [1.7.0](https://github.com/marvinrichter/gloam/compare/v1.6.0...v1.7.0) (2026-03-16)
 
 
