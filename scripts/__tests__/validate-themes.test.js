@@ -291,6 +291,24 @@ describe("hue uniqueness — no two same-type themes share primary hue within 10
     "fjord|ironcast",
     "ironcast|sable",
     "ironcast|umbra",
+    // Coral-terracotta band (~12–14°): kiln and bamboo are distinct concepts (ceramic vs seal)
+    "bamboo|kiln",
+    // Warm brown band (~25–36°): espresso (coffee) joins the amber cluster with cordovan/ember
+    "cordovan|espresso",
+    "ember|espresso",
+    // Warm ash band (~32–45°): cinder (post-fire charcoal) joins warm-gold cluster
+    "cinder|cordovan",
+    "cinder|ember",
+    "cinder|eventide",
+    "cinder|nocturne",
+    "cinder|tallow",
+    "cinder|tungsten",
+    // Ultramarine band (~225°): lapis (pigment) joins blue-gray cluster with sable/cobalt
+    "cobalt|lapis",
+    "lapis|sable",
+    // CRT-phosphor green (~140°): phosphor joins organic-green band with petrichor/absinthe
+    "absinthe|phosphor",
+    "petrichor|phosphor",
   ]);
   const pairKey = (a, b) => [a, b].sort().join("|");
 
