@@ -1144,7 +1144,7 @@ All eleven light themes use dark tokens on a light background. Key differences:
 | Brume | `#EEF2F0` fog gray | `#1A6068` sea-teal | coastal mist, values only |
 | Wisteria | `#F4F0F8` pale lavender | `#4828A0` iris violet | wisteria in bloom |
 
-**All light themes require one extra iTerm2 setting:** uncheck _Use bright colors for bold text_ (`Preferences › Profiles › Colors`).
+**All light themes require one extra iTerm2 setting:** uncheck *Use bright colors for bold text* (`Preferences › Profiles › Colors`).
 
 ---
 
