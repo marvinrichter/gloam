@@ -1,0 +1,25 @@
+# Development-only files — not needed in the published package
+scripts/__tests__/
+scripts/ci/
+scripts/check-contrast.js
+scripts/generate.js
+scripts/generators/
+scripts/labels.sh
+scripts/new-theme.js
+
+# CI, GitHub, and docs
+.github/
+.githooks/
+docs/
+
+# Config files
+.editorconfig
+.markdownlint.yaml
+.nvmrc
+.prettierignore
+.prettierrc.json
+eslint.config.js
+
+# Misc
+.DS_Store
+*.log
