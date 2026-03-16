@@ -1,0 +1,23 @@
+{
+  "name": "Apricot",
+  "background": "#FDF6ED",
+  "foreground": "#200E06",
+  "cursorColor": "#904018",
+  "selectionBackground": "#F0D8B8",
+  "black": "#FDF6ED",
+  "red": "#781808",
+  "green": "#386030",
+  "yellow": "#804010",
+  "blue": "#7A5810",
+  "purple": "#7A3838",
+  "cyan": "#904018",
+  "white": "#806050",
+  "brightBlack": "#EDD8B8",
+  "brightRed": "#B01818",
+  "brightGreen": "#487840",
+  "brightYellow": "#A86030",
+  "brightBlue": "#A86038",
+  "brightPurple": "#A05060",
+  "brightCyan": "#507880",
+  "brightWhite": "#200E06"
+}

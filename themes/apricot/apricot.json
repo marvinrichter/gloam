@@ -1,0 +1,47 @@
+{
+  "name": "apricot",
+  "displayName": "Apricot",
+  "type": "light",
+  "background": "#FDF6ED",
+  "foreground": "#200E06",
+  "tokens": {
+    "primary": "#7A5810",
+    "accent": "#904018",
+    "muted": "#806050",
+    "error": "#B01818"
+  },
+  "ansi": [
+    "#FDF6ED",
+    "#781808",
+    "#386030",
+    "#804010",
+    "#7A5810",
+    "#7A3838",
+    "#904018",
+    "#806050",
+    "#EDD8B8",
+    "#B01818",
+    "#487840",
+    "#A86030",
+    "#A86038",
+    "#A05060",
+    "#507880",
+    "#200E06"
+  ],
+  "ui": {
+    "cursor": "#904018",
+    "cursorText": "#FDF6ED",
+    "selection": "#F0D8B8",
+    "selectionText": "#200E06",
+    "bold": "#200E06",
+    "link": "#A04820"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": true,
+    "fill": "·",
+    "timePrefix": "◯",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

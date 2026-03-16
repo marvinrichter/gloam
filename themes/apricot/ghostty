@@ -1,0 +1,32 @@
+# apricot — Ghostty color theme
+# Generated from apricot.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/apricot
+# then set theme = apricot in ~/.config/ghostty/config
+
+background         = FDF6ED
+foreground         = 200E06
+
+cursor-color       = 904018
+cursor-text        = FDF6ED
+
+selection-background = F0D8B8
+selection-foreground = 200E06
+
+# ANSI palette (0–15)
+palette = 0=FDF6ED
+palette = 1=781808
+palette = 2=386030
+palette = 3=804010
+palette = 4=7A5810
+palette = 5=7A3838
+palette = 6=904018
+palette = 7=806050
+palette = 8=EDD8B8
+palette = 9=B01818
+palette = 10=487840
+palette = 11=A86030
+palette = 12=A86038
+palette = 13=A05060
+palette = 14=507880
+palette = 15=200E06

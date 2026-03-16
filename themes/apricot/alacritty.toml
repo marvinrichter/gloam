@@ -1,0 +1,37 @@
+# apricot — Alacritty color theme
+# Generated from apricot.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/apricot.toml
+# then add `import = ["~/.config/alacritty/themes/apricot.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#FDF6ED"
+foreground = "#200E06"
+
+[colors.cursor]
+cursor = "#904018"
+text   = "#FDF6ED"
+
+[colors.selection]
+background = "#F0D8B8"
+text       = "#200E06"
+
+[colors.normal]
+black   = "#FDF6ED"
+red     = "#781808"
+green   = "#386030"
+yellow  = "#804010"
+blue    = "#7A5810"
+magenta = "#7A3838"
+cyan    = "#904018"
+white   = "#806050"
+
+[colors.bright]
+black   = "#EDD8B8"
+red     = "#B01818"
+green   = "#487840"
+yellow  = "#A86030"
+blue    = "#A86038"
+magenta = "#A05060"
+cyan    = "#507880"
+white   = "#200E06"
