@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gloam — forty-five atmospheres</title>
-  <meta name="description" content="Forty-five terminal and editor theme design systems. Each built from a single atmospheric concept.">
-  <meta property="og:title" content="gloam">
+  <link rel="canonical" href="https://marvinrichter.github.io/gloam/">
+  <meta name="description" content="Forty-five terminal and editor color schemes for VS Code, Neovim, Starship, Alacritty, and more. Each theme is a complete design system built from a single atmospheric concept.">
+  <meta name="author" content="Marvin Richter">
+  <meta name="theme-color" content="#0D0D14">
+  <meta property="og:title" content="gloam — 45 terminal &amp; editor themes">
   <meta property="og:description" content="Forty-five atmospheres. Each one complete.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marvinrichter.github.io/gloam/">
   <meta property="og:image" content="https://marvinrichter.github.io/gloam/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="gloam">
+  <meta name="twitter:title" content="gloam — 45 terminal &amp; editor themes">
   <meta name="twitter:description" content="Forty-five atmospheres. Each one complete.">
   <meta name="twitter:image" content="https://marvinrichter.github.io/gloam/assets/og-image.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -18,7 +22,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/tokens.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "gloam",
+    "description": "Forty-five terminal and editor color themes. Each built from a single atmospheric concept.",
+    "url": "https://marvinrichter.github.io/gloam/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "macOS, Linux, Windows",
+    "author": {
+      "@type": "Person",
+      "name": "Marvin Richter",
+      "url": "https://github.com/marvinrichter"
+    },
+    "license": "https://github.com/marvinrichter/gloam/blob/main/LICENSE",
+    "codeRepository": "https://github.com/marvinrichter/gloam"
+  }
+  </script>
   <style>
+    /* ── Screen-reader only ─────────────────────────────────────────── */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
     /* ── Reset ─────────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { font-size: 16px; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
@@ -418,15 +443,20 @@
   <ul class="nav-links">
     <li><a href="#themes">Themes</a></li>
     <li><a href="#install">Install</a></li>
-    <li><a href="https://github.com/marvinrichter/gloam">GitHub</a></li>
+    <li><a href="#design">Design</a></li>
+    <li><a href="https://github.com/marvinrichter/gloam" rel="noopener noreferrer">GitHub</a></li>
   </ul>
 </nav>
 
+<!-- ── Main content ──────────────────────────────────────────────────── -->
+<main>
+
 <!-- ── Header ───────────────────────────────────────────────────────── -->
 <header>
-  <h1 class="wordmark">gloam</h1>
+  <h1 class="wordmark">gloam<span class="sr-only"> — terminal and editor color themes</span></h1>
   <div class="wordmark-rule"></div>
   <p class="tagline">Forty-five atmospheres. Each one complete.</p>
+  <p style="color:var(--color-neutral-500);font-size:var(--text-sm);margin-top:0.75rem;letter-spacing:0.02em;">A collection of terminal and editor color themes. Each built from a single atmospheric source.</p>
   <div class="header-meta">
     <span class="meta-item"><b>45</b> themes</span>
     <span class="meta-item"><b>16</b> formats per theme</span>
@@ -435,16 +465,16 @@
 </header>
 
 <!-- ── Themes ───────────────────────────────────────────────────────── -->
-<section class="themes-section" id="themes">
-  <h2 class="section-label">Forty-five atmospheres</h2>
+<section class="themes-section" id="themes" aria-labelledby="themes-heading">
+  <h2 class="section-label" id="themes-heading">Forty-five atmospheres</h2>
   <div class="themes-grid">
 
     
     <!-- Absinthe ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/absinthe/absinthe.md" style="background:#080D0A;color:#D8E8D4;--card-accent-glow:rgba(112,224,160,0.05);--card-text-muted:#7A9278;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/absinthe/absinthe.md" style="background:#080D0A;color:#D8E8D4;--card-accent-glow:rgba(112,224,160,0.05);--card-text-muted:#7A9278;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#70E0A0">~/gloam</span>   <span style="color:#E8C848">main ~2</span>  <span style="color:#7A8A7A">∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙</span>  <span style="color:#7A8A7A">◇ 14:32</span>
 <span style="color:#E8C848">▸</span></div>
-      <div class="card-name" style="color:#70E0A0">Absinthe</div>
+      <h3 class="card-name" style="color:#70E0A0">Absinthe</h3>
       <div class="card-desc">La fée verte. Vintage chemistry lab, art nouveau, the forbidden liqueur glowing green in candlelight.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#70E0A0"></div>
@@ -456,10 +486,10 @@
     </a>
 
     <!-- Aether ───────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/aether/aether.md" style="background:#0C0B1A;color:#D4D8F0;--card-accent-glow:rgba(94,232,184,0.05);--card-text-muted:#8A8EA6;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/aether/aether.md" style="background:#0C0B1A;color:#D4D8F0;--card-accent-glow:rgba(94,232,184,0.05);--card-text-muted:#8A8EA6;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#8886B0">╭  user  </span><span style="color:#5EE8B8">~/gloam</span>  <span style="color:#C084FC">⟫</span>  <span style="color:#C084FC">main ~2</span>  <span style="color:#8886B0">················</span>  <span style="color:#8886B0">✦ 14:32</span>
 <span style="color:#8886B0">╰─</span><span style="color:#C084FC">⟫</span></div>
-      <div class="card-name" style="color:#5EE8B8">Aether</div>
+      <h3 class="card-name" style="color:#5EE8B8">Aether</h3>
       <div class="card-desc">Deep space observatory. Running code at the edge of the universe. The void between galaxies.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#5EE8B8"></div>
@@ -471,10 +501,10 @@
     </a>
 
     <!-- Amethyst ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/amethyst/amethyst.md" style="background:#0C0811;color:#EAD8F8;--card-accent-glow:rgba(192,132,240,0.05);--card-text-muted:#8E7EA8;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/amethyst/amethyst.md" style="background:#0C0811;color:#EAD8F8;--card-accent-glow:rgba(192,132,240,0.05);--card-text-muted:#8E7EA8;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#9080A8">╭  user  </span><span style="color:#C084F0">~/gloam</span>  <span style="color:#E8B84A">⟫</span>  <span style="color:#E8B84A">main ~2</span>  <span style="color:#9080A8">················</span>  <span style="color:#9080A8">✤ 14:32</span>
 <span style="color:#9080A8">╰─</span><span style="color:#E8B84A">⟫</span></div>
-      <div class="card-name" style="color:#C084F0">Amethyst</div>
+      <h3 class="card-name" style="color:#C084F0">Amethyst</h3>
       <div class="card-desc">Purple quartz crystal in a dark matrix. Rutile gold inclusions catching light from inside.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#C084F0"></div>
@@ -486,9 +516,9 @@
     </a>
 
     <!-- Bamboo ───────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/bamboo/bamboo.md" style="background:#090C08;color:#E0DDD4;--card-accent-glow:rgba(224,104,72,0.05);--card-text-muted:#888A90;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/bamboo/bamboo.md" style="background:#090C08;color:#E0DDD4;--card-accent-glow:rgba(224,104,72,0.05);--card-text-muted:#888A90;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#E06848">~/gloam</span>   <span style="color:#80B8A0">main ~2</span>  <span style="color:#888A90">┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄</span>  <span style="color:#888A90">⊛ 14:32</span><span style="color:#80B8A0">›</span></div>
-      <div class="card-name" style="color:#E06848">Bamboo</div>
+      <h3 class="card-name" style="color:#E06848">Bamboo</h3>
       <div class="card-desc">Hanko seal pressed in vermilion. The red stamp, not the grove. Dry ink on parchment.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#E06848"></div>
@@ -500,10 +530,10 @@
     </a>
 
     <!-- Basalt ───────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/basalt/basalt.md" style="background:#090A0B;color:#E0E4E8;--card-accent-glow:rgba(64,216,216,0.05);--card-text-muted:#8898B0;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/basalt/basalt.md" style="background:#090A0B;color:#E0E4E8;--card-accent-glow:rgba(64,216,216,0.05);--card-text-muted:#8898B0;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#40D8D8">~/gloam</span>   <span style="color:#E8B040">main ~2</span>  <span style="color:#7888A0">╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌</span>  <span style="color:#7888A0">∎ 14:32</span>
 <span style="color:#E8B040">▸</span></div>
-      <div class="card-name" style="color:#40D8D8">Basalt</div>
+      <h3 class="card-name" style="color:#40D8D8">Basalt</h3>
       <div class="card-desc">Hawaiian lava reaching the Pacific. Black volcanic rock, teal water, twenty minutes of gold before the sun drops.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#40D8D8"></div>
@@ -515,9 +545,9 @@
     </a>
 
     <!-- Bloom ────────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/bloom/bloom.md" style="background:#FFF0F0;color:#2A1420;--card-accent-glow:rgba(122,24,64,0.03);--card-text-muted:#7A5868;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/bloom/bloom.md" style="background:#FFF0F0;color:#2A1420;--card-accent-glow:rgba(122,24,64,0.03);--card-text-muted:#7A5868;">
       <div class="card-terminal" aria-hidden="true" style="color:#7A5868"> <span style="color:#7A1840">~/gloam</span>   <span style="color:#5A2080">main ~2</span>  <span style="color:#7A5868">∵∵∵∵∵∵∵∵∵∵∵∵∵∵∵∵∵∵∵</span>  <span style="color:#7A5868">✽ 14:32</span><span style="color:#5A2080">›</span></div>
-      <div class="card-name" style="color:#7A1840">Bloom</div>
+      <h3 class="card-name" style="color:#7A1840">Bloom</h3>
       <div class="card-desc">Pale roses pressed between book pages — blush petals drying on cream paper.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#7A1840"></div>
@@ -529,10 +559,10 @@
     </a>
 
     <!-- Boreal ───────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/boreal/boreal.md" style="background:#060A10;color:#C8D8E8;--card-accent-glow:rgba(24,168,200,0.05);--card-text-muted:#5890A0;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/boreal/boreal.md" style="background:#060A10;color:#C8D8E8;--card-accent-glow:rgba(24,168,200,0.05);--card-text-muted:#5890A0;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#5890A0">╭  </span><span style="color:#18A8C8">~/gloam</span>   <span style="color:#40D0E0">main ~2</span>  <span style="color:#5890A0">·················</span>  <span style="color:#5890A0">✦ 14:32</span>
 <span style="color:#5890A0">╰─</span><span style="color:#40D0E0">❯</span></div>
-      <div class="card-name" style="color:#18A8C8">Boreal</div>
+      <h3 class="card-name" style="color:#18A8C8">Boreal</h3>
       <div class="card-desc">Aurora borealis — the blue-green curtain above the treeline. The shimmering 557nm line of excited oxygen.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#18A8C8"></div>
@@ -544,9 +574,9 @@
     </a>
 
     <!-- Brume ────────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/brume/brume.md" style="background:#EEF2F0;color:#1C3030;--card-accent-glow:rgba(26,96,104,0.03);--card-text-muted:#486878;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/brume/brume.md" style="background:#EEF2F0;color:#1C3030;--card-accent-glow:rgba(26,96,104,0.03);--card-text-muted:#486878;">
       <div class="card-terminal" aria-hidden="true" style="color:#486878"> <span style="color:#1A6068">~/gloam</span>   <span style="color:#1A7880">main ~2</span>  <span style="color:#486878">≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈</span>  <span style="color:#486878">◌ 14:32</span><span style="color:#1A7880">›</span></div>
-      <div class="card-name" style="color:#1A6068">Brume</div>
+      <h3 class="card-name" style="color:#1A6068">Brume</h3>
       <div class="card-desc">The seafront before the fog burns off — everything reduced to values, the boundary between sea and sky erased.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#1A6068"></div>
@@ -558,10 +588,10 @@
     </a>
 
     <!-- Canopy ───────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/canopy/canopy.md" style="background:#080E0A;color:#D4E0C8;--card-accent-glow:rgba(144,200,96,0.05);--card-text-muted:#709068;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/canopy/canopy.md" style="background:#080E0A;color:#D4E0C8;--card-accent-glow:rgba(144,200,96,0.05);--card-text-muted:#709068;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#709068">╭  </span><span style="color:#90C860">~/gloam</span>   <span style="color:#C8A060">main ~2</span>  <span style="color:#709068">⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅</span>  <span style="color:#709068">❧ 14:32</span>
 <span style="color:#709068">╰─</span><span style="color:#C8A060">❯</span></div>
-      <div class="card-name" style="color:#90C860">Canopy</div>
+      <h3 class="card-name" style="color:#90C860">Canopy</h3>
       <div class="card-desc">Sunlight through a forest canopy at midday — chartreuse patches of light on dark undergrowth.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#90C860"></div>
@@ -573,10 +603,10 @@
     </a>
 
     <!-- Carmine ──────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/carmine/carmine.md" style="background:#100808;color:#F2E4E0;--card-accent-glow:rgba(232,112,112,0.05);--card-text-muted:#9A7880;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/carmine/carmine.md" style="background:#100808;color:#F2E4E0;--card-accent-glow:rgba(232,112,112,0.05);--card-text-muted:#9A7880;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#9A7880">╭  </span><span style="color:#E87070">~/gloam</span>   <span style="color:#FFAA70">main ~2</span>  <span style="color:#9A7880">╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴</span>  <span style="color:#9A7880">◉ 14:32</span>
 <span style="color:#9A7880">╰─</span><span style="color:#FFAA70">❯</span></div>
-      <div class="card-name" style="color:#E87070">Carmine</div>
+      <h3 class="card-name" style="color:#E87070">Carmine</h3>
       <div class="card-desc">Cochineal pigment ground from dried insects — the oldest organic red dye, dark and mineral.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#E87070"></div>
@@ -588,10 +618,10 @@
     </a>
 
     <!-- Cast ─────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/cast/cast.md" style="background:#101010;color:#C8C8C0;--card-accent-glow:rgba(200,192,96,0.05);--card-text-muted:#888880;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/cast/cast.md" style="background:#101010;color:#C8C8C0;--card-accent-glow:rgba(200,192,96,0.05);--card-text-muted:#888880;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#888880">╭  </span><span style="color:#C8C060">~/gloam</span>   <span style="color:#D8C040">main ~2</span>  <span style="color:#888880">∴∴∴∴∴∴∴∴∴∴∴∴∴∴∴∴</span>  <span style="color:#888880">∅ 14:32</span>
 <span style="color:#888880">╰─</span><span style="color:#D8C040">❯</span></div>
-      <div class="card-name" style="color:#C8C060">Cast</div>
+      <h3 class="card-name" style="color:#C8C060">Cast</h3>
       <div class="card-desc">Molten brass cooling in an industrial mould — the oxidized yellow-green that forms on the surface.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#C8C060"></div>
@@ -603,10 +633,10 @@
     </a>
 
     <!-- Cirrus ───────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/cirrus/cirrus.md" style="background:#EEF1F6;color:#181C28;--card-accent-glow:rgba(30,72,136,0.03);--card-text-muted:#506098;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/cirrus/cirrus.md" style="background:#EEF1F6;color:#181C28;--card-accent-glow:rgba(30,72,136,0.03);--card-text-muted:#506098;">
       <div class="card-terminal" aria-hidden="true" style="color:#506098"> <span style="color:#1E4888">~/gloam</span>   <span style="color:#1A7060">main ~2</span>  <span style="color:#506098">·························</span>  <span style="color:#506098">∘ 14:32</span>
 <span style="color:#1A7060">›</span></div>
-      <div class="card-name" style="color:#1E4888">Cirrus</div>
+      <h3 class="card-name" style="color:#1E4888">Cirrus</h3>
       <div class="card-desc">High-altitude ice crystal clouds at midday. Cold precision. Prussian blue sky, deep teal horizon, lavender shadows.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#1E4888"></div>
@@ -618,10 +648,10 @@
     </a>
 
     <!-- Cobalt ───────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/cobalt/cobalt.md" style="background:#080C18;color:#D8E0F0;--card-accent-glow:rgba(104,120,240,0.05);--card-text-muted:#7888B8;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/cobalt/cobalt.md" style="background:#080C18;color:#D8E0F0;--card-accent-glow:rgba(104,120,240,0.05);--card-text-muted:#7888B8;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#7888B8">╭  </span><span style="color:#6878F0">~/gloam</span>   <span style="color:#70D8F0">main ~2</span>  <span style="color:#7888B8">╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍</span>  <span style="color:#7888B8">⊕ 14:32</span>
 <span style="color:#7888B8">╰─</span><span style="color:#70D8F0">❯</span></div>
-      <div class="card-name" style="color:#6878F0">Cobalt</div>
+      <h3 class="card-name" style="color:#6878F0">Cobalt</h3>
       <div class="card-desc">Cobalt glass in a dark room — the specific blue of cobalt oxide, glowing with internal light.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#6878F0"></div>
@@ -633,10 +663,10 @@
     </a>
 
     <!-- Cordovan ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/cordovan/cordovan.md" style="background:#120A06;color:#EAE0D4;--card-accent-glow:rgba(196,154,106,0.06);--card-text-muted:#968A80;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/cordovan/cordovan.md" style="background:#120A06;color:#EAE0D4;--card-accent-glow:rgba(196,154,106,0.06);--card-text-muted:#968A80;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#9A7D6A">╭  user  </span><span style="color:#C49A6A">~/gloam</span>  <span style="color:#6B9AB8">❯</span>  <span style="color:#6B9AB8">main ~2</span>  <span style="color:#9A7D6A">────────────────</span>  <span style="color:#9A7D6A">⊗ 14:32</span>
 <span style="color:#9A7D6A">╰─</span><span style="color:#6B9AB8">❯</span></div>
-      <div class="card-name" style="color:#C49A6A">Cordovan</div>
+      <h3 class="card-name" style="color:#C49A6A">Cordovan</h3>
       <div class="card-desc">A cordovan leather workshop. Tan-caramel leather. Cold blue-steel buckles and clasps.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#C49A6A"></div>
@@ -648,10 +678,10 @@
     </a>
 
     <!-- Damson ────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/damson/damson.md" style="background:#090610;color:#E8D8F8;--card-accent-glow:rgba(212,40,188,0.05);--card-text-muted:#887898;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/damson/damson.md" style="background:#090610;color:#E8D8F8;--card-accent-glow:rgba(212,40,188,0.05);--card-text-muted:#887898;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#887898">╭─ ✦ 09:41  </span><span style="color:#D428BC">~/gloam</span>  <span style="color:#887898">∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙</span>  <span style="color:#887898">main</span>
 <span style="color:#887898">╰─</span><span style="color:#FF60D8">❯</span></div>
-      <div class="card-name" style="color:#D428BC">Damson</div>
+      <h3 class="card-name" style="color:#D428BC">Damson</h3>
       <div class="card-desc">The small oval plum that stains your fingers before you can put it down. The color between violet and magenta that doesn't resolve.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#D428BC"></div>
@@ -663,10 +693,10 @@
     </a>
 
     <!-- Daybook ─────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/daybook/daybook.md" style="background:#F2EEE6;color:#1E1A14;--card-accent-glow:rgba(40,72,120,0.03);--card-text-muted:#6A5E4E;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/daybook/daybook.md" style="background:#F2EEE6;color:#1E1A14;--card-accent-glow:rgba(40,72,120,0.03);--card-text-muted:#6A5E4E;">
       <div class="card-terminal" aria-hidden="true" style="color:#6A5E4E"> <span style="color:#284878">~/gloam</span>   <span style="color:#884830">main ~2</span>  <span style="color:#6A5E4E">·····················</span>  <span style="color:#6A5E4E">¶ 14:32</span>
 <span style="color:#884830">›</span></div>
-      <div class="card-name" style="color:#284878">Daybook</div>
+      <h3 class="card-name" style="color:#284878">Daybook</h3>
       <div class="card-desc">A Georgian merchant's daily ledger. Cream paper, ruling blue, rubrication rust. Afternoon light through a tall window.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#284878"></div>
@@ -678,10 +708,10 @@
     </a>
 
     <!-- Dusk ─────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/dusk/dusk.md" style="background:#282834;color:#C8C4BC;--card-accent-glow:rgba(196,144,200,0.05);--card-text-muted:#9098A8;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/dusk/dusk.md" style="background:#282834;color:#C8C4BC;--card-accent-glow:rgba(196,144,200,0.05);--card-text-muted:#9098A8;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#9098A8">╭  </span><span style="color:#C490C8">~/gloam</span>   <span style="color:#E8A860">main ~2</span>  <span style="color:#9098A8">⋰⋰⋰⋰⋰⋰⋰⋰⋰⋰⋰⋰⋰⋰⋰⋰</span>  <span style="color:#9098A8">◓ 14:32</span>
 <span style="color:#9098A8">╰─</span><span style="color:#E8A860">❯</span></div>
-      <div class="card-name" style="color:#C490C8">Dusk</div>
+      <h3 class="card-name" style="color:#C490C8">Dusk</h3>
       <div class="card-desc">Mid-tone twilight — the sky twenty minutes after sunset, lavender-grey with the last warmth still in it.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#C490C8"></div>
@@ -693,10 +723,10 @@
     </a>
 
     <!-- Ember ────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/ember/ember.md" style="background:#111008;color:#F5EDD4;--card-accent-glow:rgba(255,171,64,0.06);--card-text-muted:#9E9585;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/ember/ember.md" style="background:#111008;color:#F5EDD4;--card-accent-glow:rgba(255,171,64,0.06);--card-text-muted:#9E9585;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#9E8E78">╭  user  </span><span style="color:#FFAB40">~/gloam</span>  <span style="color:#FF6D00">❯</span>  <span style="color:#FF6D00">main ~2</span>  <span style="color:#9E8E78">················</span>  <span style="color:#9E8E78">◈ 14:32</span>
 <span style="color:#9E8E78">╰─</span><span style="color:#FF6D00">❯</span></div>
-      <div class="card-name" style="color:#FFAB40">Ember</div>
+      <h3 class="card-name" style="color:#FFAB40">Ember</h3>
       <div class="card-desc">The watch fire at 3am. The entire world is orange and black. Warm, like cooling coal.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#FFAB40"></div>
@@ -708,10 +738,10 @@
     </a>
 
     <!-- Eventide ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/eventide/eventide.md" style="background:#0D0F1A;color:#F0EAD6;--card-accent-glow:rgba(232,184,109,0.06);--card-text-muted:#9E9888;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/eventide/eventide.md" style="background:#0D0F1A;color:#F0EAD6;--card-accent-glow:rgba(232,184,109,0.06);--card-text-muted:#9E9888;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#8B84C4">╭  user  </span><span style="color:#E8B86D">~/gloam</span>  <span style="color:#FF7F57"> </span> <span style="color:#FF7F57">main ~2</span>  <span style="color:#8B84C4">────────────────</span>  <span style="color:#8B84C4">◆ 14:32</span>
 <span style="color:#8B84C4">╰─</span><span style="color:#FF7F57">❯</span></div>
-      <div class="card-name" style="color:#E8B86D">Eventide</div>
+      <h3 class="card-name" style="color:#E8B86D">Eventide</h3>
       <div class="card-desc">The moment between day and night. Deep indigo sky, warm gold navigation, twilight lavender chrome.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#E8B86D"></div>
@@ -723,9 +753,9 @@
     </a>
 
     <!-- Fern ─────────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/fern/fern.md" style="background:#EEF2EC;color:#1A2E1A;--card-accent-glow:rgba(26,74,42,0.03);--card-text-muted:#4A5E50;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/fern/fern.md" style="background:#EEF2EC;color:#1A2E1A;--card-accent-glow:rgba(26,74,42,0.03);--card-text-muted:#4A5E50;">
       <div class="card-terminal" aria-hidden="true" style="color:#4A5E50"> <span style="color:#1A4A2A">~/gloam</span>   <span style="color:#604A10">main ~2</span>  <span style="color:#4A5E50">≀≀≀≀≀≀≀≀≀≀≀≀≀≀≀≀≀≀≀</span>  <span style="color:#4A5E50">❄ 14:32</span><span style="color:#604A10">›</span></div>
-      <div class="card-name" style="color:#1A4A2A">Fern</div>
+      <h3 class="card-name" style="color:#1A4A2A">Fern</h3>
       <div class="card-desc">Morning light through fern fronds — soft sage-green filtering warm amber sun.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#1A4A2A"></div>
@@ -737,10 +767,10 @@
     </a>
 
     <!-- Fjord ────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/fjord/fjord.md" style="background:#0A0F18;color:#D4E0E8;--card-accent-glow:rgba(110,181,224,0.05);--card-text-muted:#7E8E9C;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/fjord/fjord.md" style="background:#0A0F18;color:#D4E0E8;--card-accent-glow:rgba(110,181,224,0.05);--card-text-muted:#7E8E9C;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#688EAA">╭  </span><span style="color:#6EB5E0">~/gloam</span>   <span style="color:#E8C46A">main ~2</span>  <span style="color:#688EAA">················</span>  <span style="color:#688EAA">∼ 14:32</span>
 <span style="color:#688EAA">╰─</span><span style="color:#E8C46A">›</span></div>
-      <div class="card-name" style="color:#6EB5E0">Fjord</div>
+      <h3 class="card-name" style="color:#6EB5E0">Fjord</h3>
       <div class="card-desc">Norwegian fjord at dusk. Cold deep-blue water, perfectly still. A single amber light from a distant farmhouse.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#6EB5E0"></div>
@@ -752,10 +782,10 @@
     </a>
 
     <!-- Graphite ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/graphite/graphite.md" style="background:#0C0C0C;color:#E0E0E0;--card-accent-glow:rgba(196,184,200,0.04);--card-text-muted:#808888;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/graphite/graphite.md" style="background:#0C0C0C;color:#E0E0E0;--card-accent-glow:rgba(196,184,200,0.04);--card-text-muted:#808888;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#808888">╭  </span><span style="color:#C4B8C8">~/gloam</span>   <span style="color:#D8C8A0">main ~2</span>  <span style="color:#808888">⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯</span>  <span style="color:#808888">◑ 14:32</span>
 <span style="color:#808888">╰─</span><span style="color:#D8C8A0">❯</span></div>
-      <div class="card-name" style="color:#C4B8C8">Graphite</div>
+      <h3 class="card-name" style="color:#C4B8C8">Graphite</h3>
       <div class="card-desc">Dry graphite on smooth paper — near-neutral, the faint mauve sheen of the pencil mark before ink.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#C4B8C8"></div>
@@ -769,10 +799,10 @@
 
 
     <!-- Iris ─────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/iris/iris.md" style="background:#08060E;color:#E0D8F8;--card-accent-glow:rgba(144,96,224,0.05);--card-text-muted:#8070B0;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/iris/iris.md" style="background:#08060E;color:#E0D8F8;--card-accent-glow:rgba(144,96,224,0.05);--card-text-muted:#8070B0;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#8070B0">╭  </span><span style="color:#9060E0">~/gloam</span>   <span style="color:#B088F8">main ~2</span>  <span style="color:#8070B0">⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯</span>  <span style="color:#8070B0">✦ 14:32</span>
 <span style="color:#8070B0">╰─</span><span style="color:#B088F8">❯</span></div>
-      <div class="card-name" style="color:#9060E0">Iris</div>
+      <h3 class="card-name" style="color:#9060E0">Iris</h3>
       <div class="card-desc">The heart of a Siberian iris in July — a violet so saturated it vibrates. The amber signal patch against absolute darkness.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#9060E0"></div>
@@ -784,10 +814,10 @@
     </a>
 
     <!-- Ironcast ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/ironcast/ironcast.md" style="background:#0B0D10;color:#CDD4DC;--card-accent-glow:rgba(120,168,200,0.05);--card-text-muted:#7090A8;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/ironcast/ironcast.md" style="background:#0B0D10;color:#CDD4DC;--card-accent-glow:rgba(120,168,200,0.05);--card-text-muted:#7090A8;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#7090A8">╭  </span><span style="color:#78A8C8">~/gloam</span>   <span style="color:#C8D838">main ~2</span>  <span style="color:#7090A8">══════════════════</span>  <span style="color:#7090A8">▪ 14:32</span>
 <span style="color:#7090A8">╰─</span><span style="color:#C8D838">❯</span></div>
-      <div class="card-name" style="color:#78A8C8">Ironcast</div>
+      <h3 class="card-name" style="color:#78A8C8">Ironcast</h3>
       <div class="card-desc">Cast iron under a pre-storm sky — the cold blue-grey of heavy cloud seen through a foundry window.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#78A8C8"></div>
@@ -797,10 +827,10 @@
         <span class="card-tag" aria-hidden="true">two-line layout</span>
       </div>
     </a>    <!-- Madder ───────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/madder/madder.md" style="background:#0E0608;color:#F0E0E8;--card-accent-glow:rgba(224,64,96,0.05);--card-text-muted:#B08098;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/madder/madder.md" style="background:#0E0608;color:#F0E0E8;--card-accent-glow:rgba(224,64,96,0.05);--card-text-muted:#B08098;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#B08098">╭  </span><span style="color:#E04060">~/gloam</span>   <span style="color:#F07898">main ~2</span>  <span style="color:#B08098">╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼╼</span>  <span style="color:#B08098">✶ 14:32</span>
 <span style="color:#B08098">╰─</span><span style="color:#F07898">❯</span></div>
-      <div class="card-name" style="color:#E04060">Madder</div>
+      <h3 class="card-name" style="color:#E04060">Madder</h3>
       <div class="card-desc">The dye vat at a medieval cloth workshop. <i>Rubia tinctorum</i> in water. The oldest cultivated red — garnet, not vermilion.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#E04060"></div>
@@ -812,10 +842,10 @@
     </a>
 
     <!-- Nacreous ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/nacreous/nacreous.md" style="background:#0B0C10;color:#E4E8F0;--card-accent-glow:rgba(120,216,200,0.05);--card-text-muted:#9090B0;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/nacreous/nacreous.md" style="background:#0B0C10;color:#E4E8F0;--card-accent-glow:rgba(120,216,200,0.05);--card-text-muted:#9090B0;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#8888A8">╭  marvin  </span><span style="color:#78D8C8">~/gloam</span>   <span style="color:#E890C8">main ~2</span>  <span style="color:#8888A8">⁞⁞⁞⁞⁞⁞⁞⁞⁞⁞⁞⁞⁞⁞⁞⁞</span>  <span style="color:#8888A8">✧ 14:32</span>
 <span style="color:#8888A8">╰─</span><span style="color:#E890C8">⟫</span></div>
-      <div class="card-name" style="color:#78D8C8">Nacreous</div>
+      <h3 class="card-name" style="color:#78D8C8">Nacreous</h3>
       <div class="card-desc">Nacreous clouds, 15–25 km above the polar surface. Iridescent teal-green shifting to pink, like oil on cold water.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#78D8C8"></div>
@@ -827,10 +857,10 @@
     </a>
 
     <!-- Nocturne ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/nocturne/nocturne.md" style="background:#100A0C;color:#EEE8E0;--card-accent-glow:rgba(224,208,168,0.05);--card-text-muted:#848080;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/nocturne/nocturne.md" style="background:#100A0C;color:#EEE8E0;--card-accent-glow:rgba(224,208,168,0.05);--card-text-muted:#848080;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#848080">╭  marvin  </span><span style="color:#E0D0A8">~/gloam</span>   <span style="color:#D05A6A">main ~2</span>  <span style="color:#848080">──────────────</span>  <span style="color:#848080">○ 14:32</span>
 <span style="color:#848080">╰─</span><span style="color:#D05A6A">❯</span></div>
-      <div class="card-name" style="color:#E0D0A8">Nocturne</div>
+      <h3 class="card-name" style="color:#E0D0A8">Nocturne</h3>
       <div class="card-desc">Chopin at night. Candlelight on ivory keys, blood-red velvet curtain. Everything played pianissimo.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#E0D0A8"></div>
@@ -843,9 +873,9 @@
 
 
     <!-- Noir ─────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/noir/noir.md" style="background:#0A0A0A;color:#E8E0D0;--card-accent-glow:rgba(232,208,128,0.05);--card-text-muted:#909090;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/noir/noir.md" style="background:#0A0A0A;color:#E8E0D0;--card-accent-glow:rgba(232,208,128,0.05);--card-text-muted:#909090;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#E8D080">~/gloam</span>   <span style="color:#E89048">main ~2</span>  <span style="color:#909090">∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶∶</span>  <span style="color:#909090">● 14:32</span><span style="color:#E89048">›</span></div>
-      <div class="card-name" style="color:#E8D080">Noir</div>
+      <h3 class="card-name" style="color:#E8D080">Noir</h3>
       <div class="card-desc">A single incandescent bulb in a dark room — film noir, warm gold light, hard shadows.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#E8D080"></div>
@@ -857,10 +887,10 @@
     </a>
 
     <!-- Ochre ────────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/ochre/ochre.md" style="background:#F2E4D0;color:#220E08;--card-accent-glow:rgba(26,96,104,0.03);--card-text-muted:#705040;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/ochre/ochre.md" style="background:#F2E4D0;color:#220E08;--card-accent-glow:rgba(26,96,104,0.03);--card-text-muted:#705040;">
       <div class="card-terminal" aria-hidden="true" style="color:#705040"> <span style="color:#722018">~/gloam</span>   <span style="color:#1A6068">main ~2</span>  <span style="color:#705040">·····················</span>  <span style="color:#705040">◌ 14:32</span>
 <span style="color:#1A6068">›</span></div>
-      <div class="card-name" style="color:#722018">Ochre</div>
+      <h3 class="card-name" style="color:#722018">Ochre</h3>
       <div class="card-desc">The first twenty minutes after dawn on a desert mesa. Red-clay earth, teal shadow, the air before heat arrives.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#722018"></div>
@@ -872,10 +902,10 @@
     </a>
 
     <!-- Parchment ────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/parchment/parchment.md" style="background:#E8D6B4;color:#2A1E12;--card-accent-glow:rgba(74,46,18,0.04);--card-text-muted:#6B5A48;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/parchment/parchment.md" style="background:#E8D6B4;color:#2A1E12;--card-accent-glow:rgba(74,46,18,0.04);--card-text-muted:#6B5A48;">
       <div class="card-terminal" aria-hidden="true" style="color:#6B5A48"> <span style="color:#4A2E12">~/gloam</span>   <span style="color:#7A3A10">main ~2</span>  <span style="color:#6B5A48">···························</span>  <span style="color:#6B5A48">§ 14:32</span>
 <span style="color:#7A3A10">›</span></div>
-      <div class="card-name" style="color:#4A2E12">Parchment</div>
+      <h3 class="card-name" style="color:#4A2E12">Parchment</h3>
       <div class="card-desc">Aged vellum. The material monks copied manuscripts onto. Iron gall ink on warm cream.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#4A2E12"></div>
@@ -887,10 +917,10 @@
     </a>
 
     <!-- Petrichor ────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/petrichor/petrichor.md" style="background:#0A0C0A;color:#D8DCCC;--card-accent-glow:rgba(120,200,136,0.05);--card-text-muted:#7A8472;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/petrichor/petrichor.md" style="background:#0A0C0A;color:#D8DCCC;--card-accent-glow:rgba(120,200,136,0.05);--card-text-muted:#7A8472;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#78C888">~/gloam</span>   <span style="color:#48B8E8">main ~2</span>  <span style="color:#78806A">────────────────────</span>  <span style="color:#78806A">∼ 14:32</span>
 <span style="color:#48B8E8">›</span></div>
-      <div class="card-name" style="color:#78C888">Petrichor</div>
+      <h3 class="card-name" style="color:#78C888">Petrichor</h3>
       <div class="card-desc">The minute before rain falls. Grass green ground, ozone electric sky, the tension between charge and warm earth.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#78C888"></div>
@@ -902,10 +932,10 @@
     </a>
 
     <!-- Rosewater ────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/rosewater/rosewater.md" style="background:#100A0F;color:#F0E0E8;--card-accent-glow:rgba(232,104,160,0.05);--card-text-muted:#9A7890;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/rosewater/rosewater.md" style="background:#100A0F;color:#F0E0E8;--card-accent-glow:rgba(232,104,160,0.05);--card-text-muted:#9A7890;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#9A7890">╭  </span><span style="color:#E868A0">~/gloam</span>   <span style="color:#C8A0D8">main ~2</span>  <span style="color:#9A7890">≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈</span>  <span style="color:#9A7890">✿ 14:32</span>
 <span style="color:#9A7890">╰─</span><span style="color:#C8A0D8">❯</span></div>
-      <div class="card-name" style="color:#E868A0">Rosewater</div>
+      <h3 class="card-name" style="color:#E868A0">Rosewater</h3>
       <div class="card-desc">Rosewater after distillation — the exact pink before it evaporates, floral and fading.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#E868A0"></div>
@@ -917,10 +947,10 @@
     </a>
 
     <!-- Sable ────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/sable/sable.md" style="background:#080808;color:#E8E8E8;--card-accent-glow:rgba(192,200,212,0.04);--card-text-muted:#8A8A8A;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/sable/sable.md" style="background:#080808;color:#E8E8E8;--card-accent-glow:rgba(192,200,212,0.04);--card-text-muted:#8A8A8A;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#C0C8D4">~/gloam</span>   <span style="color:#D4AA6A">main ~2</span>                               <span style="color:#7A8294">· 14:32</span>
 <span style="color:#D4AA6A">›</span></div>
-      <div class="card-name" style="color:#C0C8D4">Sable</div>
+      <h3 class="card-name" style="color:#C0C8D4">Sable</h3>
       <div class="card-desc">The heraldic color — black, pure and absolute. Silver and gold. The prompt exists because it must.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#C0C8D4"></div>
@@ -934,10 +964,10 @@
 
 
     <!-- Saffron ──────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/saffron/saffron.md" style="background:#FAF0D8;color:#281808;--card-accent-glow:rgba(58,40,128,0.03);--card-text-muted:#806040;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/saffron/saffron.md" style="background:#FAF0D8;color:#281808;--card-accent-glow:rgba(58,40,128,0.03);--card-text-muted:#806040;">
       <div class="card-terminal" aria-hidden="true" style="color:#806040"><span style="color:#806040">╭  user  </span><span style="color:#5E3008">~/gloam</span>  <span style="color:#3A2880">❯</span>  <span style="color:#3A2880">main ~2</span>  <span style="color:#806040">────────────────</span>  <span style="color:#806040">◈ 14:32</span>
 <span style="color:#806040">╰─</span><span style="color:#3A2880">❯</span></div>
-      <div class="card-name" style="color:#5E3008">Saffron</div>
+      <h3 class="card-name" style="color:#5E3008">Saffron</h3>
       <div class="card-desc">A spice market at opening hour. Turmeric gold, indigo shadow, the scent of dried flowers in warm morning air.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#5E3008"></div>
@@ -949,10 +979,10 @@
     </a>
 
     <!-- Solano ───────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/solano/solano.md" style="background:#F5EDE0;color:#2A1C10;--card-accent-glow:rgba(26,74,122,0.03);--card-text-muted:#7A5C40;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/solano/solano.md" style="background:#F5EDE0;color:#2A1C10;--card-accent-glow:rgba(26,74,122,0.03);--card-text-muted:#7A5C40;">
       <div class="card-terminal" aria-hidden="true" style="color:#7A5C40"> <span style="color:#782010">~/gloam</span>   <span style="color:#1A4A7A">main ~2</span>  <span style="color:#7A5C40">∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿</span>  <span style="color:#7A5C40">☀ 14:32</span>
 <span style="color:#1A4A7A">›</span></div>
-      <div class="card-name" style="color:#782010">Solano</div>
+      <h3 class="card-name" style="color:#782010">Solano</h3>
       <div class="card-desc">A Mediterranean coastline at midday. Terracotta earth, ocean blue shadow, warm linen air.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#782010"></div>
@@ -964,10 +994,10 @@
     </a>
 
     <!-- Stark ────────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/stark/stark.md" style="background:#FFFFFF;color:#000000;--card-accent-glow:rgba(0,26,140,0.03);--card-text-muted:#3A3A3A;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/stark/stark.md" style="background:#FFFFFF;color:#000000;--card-accent-glow:rgba(0,26,140,0.03);--card-text-muted:#3A3A3A;">
       <div class="card-terminal" aria-hidden="true" style="color:#3A3A3A"><span style="color:#3A3A3A">╭  </span><span style="color:#001A8C">~/gloam</span>   <span style="color:#8C3000">main ~2</span>  <span style="color:#3A3A3A">┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅</span>  <span style="color:#3A3A3A">⊞ 14:32</span>
 <span style="color:#3A3A3A">╰─</span><span style="color:#8C3000">❯</span></div>
-      <div class="card-name" style="color:#001A8C">Stark</div>
+      <h3 class="card-name" style="color:#001A8C">Stark</h3>
       <div class="card-desc">Absolute contrast — white page, deep navy ink. No atmospheric reference. Pure signal.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#001A8C"></div>
@@ -977,9 +1007,9 @@
         <span class="card-tag" aria-hidden="true" style="color:#000000">two-line · light</span>
       </div>
     </a>    <!-- Sumi ─────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/sumi/sumi.md" style="background:#0A0B0D;color:#D8D0C0;--card-accent-glow:rgba(136,120,200,0.05);--card-text-muted:#788090;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/sumi/sumi.md" style="background:#0A0B0D;color:#D8D0C0;--card-accent-glow:rgba(136,120,200,0.05);--card-text-muted:#788090;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#8878C8">~/gloam</span>   <span style="color:#7898B8">main ~2</span>  <span style="color:#788090">∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷∷</span>  <span style="color:#788090">◎ 14:32</span><span style="color:#7898B8">›</span></div>
-      <div class="card-name" style="color:#8878C8">Sumi</div>
+      <h3 class="card-name" style="color:#8878C8">Sumi</h3>
       <div class="card-desc">Sumi-e ink wash — the deep indigo-purple where pigment pools, the pale wash where it spreads.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#8878C8"></div>
@@ -991,10 +1021,10 @@
     </a>
 
     <!-- Synthwave ────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/synthwave/synthwave.md" style="background:#0D0818;color:#F0E8FF;--card-accent-glow:rgba(255,96,200,0.07);--card-text-muted:#9070C8;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/synthwave/synthwave.md" style="background:#0D0818;color:#F0E8FF;--card-accent-glow:rgba(255,96,200,0.07);--card-text-muted:#9070C8;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#9070C8">╭  </span><span style="color:#FF60C8">~/gloam</span>   <span style="color:#40E8E0">main ~2</span>  <span style="color:#9070C8">▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</span>  <span style="color:#9070C8">⬡ 14:32</span>
 <span style="color:#9070C8">╰─</span><span style="color:#40E8E0">⟫</span></div>
-      <div class="card-name" style="color:#FF60C8">Synthwave</div>
+      <h3 class="card-name" style="color:#FF60C8">Synthwave</h3>
       <div class="card-desc">Neon grids and chrome reflections in a rain-slicked midnight arcade. Pure signal.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#FF60C8"></div>
@@ -1006,9 +1036,9 @@
     </a>
 
     <!-- Tallow ───────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/tallow/tallow.md" style="background:#120E08;color:#F0E8D8;--card-accent-glow:rgba(232,200,136,0.05);--card-text-muted:#9A8870;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/tallow/tallow.md" style="background:#120E08;color:#F0E8D8;--card-accent-glow:rgba(232,200,136,0.05);--card-text-muted:#9A8870;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#E8C888">~/gloam</span>   <span style="color:#D4905A">main ~2</span>  <span style="color:#9A8870">⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿</span>  <span style="color:#9A8870">◐ 14:32</span><span style="color:#D4905A">›</span></div>
-      <div class="card-name" style="color:#E8C888">Tallow</div>
+      <h3 class="card-name" style="color:#E8C888">Tallow</h3>
       <div class="card-desc">Tallow candle burning low — amber light pooling soft on worn wooden surfaces.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#E8C888"></div>
@@ -1020,10 +1050,10 @@
     </a>
 
     <!-- Tungsten ─────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/tungsten/tungsten.md" style="background:#0E0C09;color:#F4EED8;--card-accent-glow:rgba(240,216,144,0.05);--card-text-muted:#98927E;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/tungsten/tungsten.md" style="background:#0E0C09;color:#F4EED8;--card-accent-glow:rgba(240,216,144,0.05);--card-text-muted:#98927E;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#F0D890">~/gloam</span>   <span style="color:#5A90C8">main ~2</span>  <span style="color:#887A60">····················</span>  <span style="color:#887A60">⋄ 14:32</span>
 <span style="color:#5A90C8">▸</span></div>
-      <div class="card-name" style="color:#F0D890">Tungsten</div>
+      <h3 class="card-name" style="color:#F0D890">Tungsten</h3>
       <div class="card-desc">Tungsten filament at operating temperature — past orange, almost white but holding onto gold.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#F0D890"></div>
@@ -1035,10 +1065,10 @@
     </a>
 
     <!-- Umbra ────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/umbra/umbra.md" style="background:#070708;color:#E4E8F0;--card-accent-glow:rgba(139,108,240,0.05);--card-text-muted:#888CA0;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/umbra/umbra.md" style="background:#070708;color:#E4E8F0;--card-accent-glow:rgba(139,108,240,0.05);--card-text-muted:#888CA0;">
       <div class="card-terminal" aria-hidden="true"> <span style="color:#A0B4C8">~/gloam</span>   <span style="color:#8B6CF0">main ~2</span>  <span style="color:#728090">░░░░░░░░░░░░░░░░░░░░░</span>  <span style="color:#728090">· 14:32</span>
 <span style="color:#8B6CF0">▹</span></div>
-      <div class="card-name" style="color:#A0B4C8">Umbra</div>
+      <h3 class="card-name" style="color:#A0B4C8">Umbra</h3>
       <div class="card-desc">The partial shadow at the edge of total darkness. Amethyst violet — the color of transition.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#A0B4C8"></div>
@@ -1050,10 +1080,10 @@
     </a>
 
     <!-- Verdigris ────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/verdigris/verdigris.md" style="background:#0D1210;color:#D4E0D8;--card-accent-glow:rgba(82,196,168,0.05);--card-text-muted:#7E9690;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/verdigris/verdigris.md" style="background:#0D1210;color:#D4E0D8;--card-accent-glow:rgba(82,196,168,0.05);--card-text-muted:#7E9690;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#7A9490">╭  user  </span><span style="color:#52C4A8">~/gloam</span>  <span style="color:#CD8B4A">›</span>  <span style="color:#CD8B4A">main ~2</span>  <span style="color:#7A9490">────────────────</span>  <span style="color:#7A9490">⊙ 14:32</span>
 <span style="color:#7A9490">╰─</span><span style="color:#CD8B4A">›</span></div>
-      <div class="card-name" style="color:#52C4A8">Verdigris</div>
+      <h3 class="card-name" style="color:#52C4A8">Verdigris</h3>
       <div class="card-desc">Ancient bronze turned sea-green by time and salt air. The color of old statues, copper rooftops.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#52C4A8"></div>
@@ -1065,10 +1095,10 @@
     </a>
 
     <!-- Verdure ──────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/verdure/verdure.md" style="background:#080E08;color:#D0E0C0;--card-accent-glow:rgba(96,200,72,0.05);--card-text-muted:#709048;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/verdure/verdure.md" style="background:#080E08;color:#D0E0C0;--card-accent-glow:rgba(96,200,72,0.05);--card-text-muted:#709048;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#709048">╭  </span><span style="color:#60C848">~/gloam</span>   <span style="color:#90E060">main ~2</span>  <span style="color:#709048">∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿</span>  <span style="color:#709048">❧ 14:32</span>
 <span style="color:#709048">╰─</span><span style="color:#90E060">❯</span></div>
-      <div class="card-name" style="color:#60C848">Verdure</div>
+      <h3 class="card-name" style="color:#60C848">Verdure</h3>
       <div class="card-desc">The first green of April — wet grass in morning light. The electric green of things that have just emerged from the ground.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#60C848"></div>
@@ -1080,10 +1110,10 @@
     </a>
 
     <!-- Weld ─────────────────────────────────────────────────────── -->
-    <a class="card" href="https://github.com/marvinrichter/gloam/blob/main/themes/weld/weld.md" style="background:#0E0E08;color:#E8E0C0;--card-accent-glow:rgba(152,184,56,0.05);--card-text-muted:#909060;">
+    <a class="card" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/weld/weld.md" style="background:#0E0E08;color:#E8E0C0;--card-accent-glow:rgba(152,184,56,0.05);--card-text-muted:#909060;">
       <div class="card-terminal" aria-hidden="true"><span style="color:#909060">╭  </span><span style="color:#98B838">~/gloam</span>   <span style="color:#E8B040">main ~2</span>  <span style="color:#909060">≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡</span>  <span style="color:#909060">⬢ 14:32</span>
 <span style="color:#909060">╰─</span><span style="color:#E8B040">❯</span></div>
-      <div class="card-name" style="color:#98B838">Weld</div>
+      <h3 class="card-name" style="color:#98B838">Weld</h3>
       <div class="card-desc">Molten metal oxidizing — yellow-green flame at the seam where steel fuses.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#98B838"></div>
@@ -1095,9 +1125,9 @@
     </a>
 
     <!-- Wisteria ─────────────────────────────────────────────────── -->
-    <a class="card card--light" href="https://github.com/marvinrichter/gloam/blob/main/themes/wisteria/wisteria.md" style="background:#F4F0F8;color:#2A1A40;--card-accent-glow:rgba(72,40,160,0.03);--card-text-muted:#4A3868;">
+    <a class="card card--light" rel="noopener noreferrer" href="https://github.com/marvinrichter/gloam/blob/main/themes/wisteria/wisteria.md" style="background:#F4F0F8;color:#2A1A40;--card-accent-glow:rgba(72,40,160,0.03);--card-text-muted:#4A3868;">
       <div class="card-terminal" aria-hidden="true" style="color:#4A3868"> <span style="color:#4828A0">~/gloam</span>   <span style="color:#782870">main ~2</span>  <span style="color:#4A3868">···················</span>  <span style="color:#4A3868">✿ 14:32</span><span style="color:#782870">›</span></div>
-      <div class="card-name" style="color:#4828A0">Wisteria</div>
+      <h3 class="card-name" style="color:#4828A0">Wisteria</h3>
       <div class="card-desc">Wisteria draped over a pergola in May — the pale lavender, the warm light through papery petals. The purple that doesn't resolve.</div>
       <div class="card-footer">
         <div class="token-dot" style="background:#4828A0"></div>
@@ -1112,13 +1142,13 @@
 </section>
 
 <!-- ── Install ───────────────────────────────────────────────────────── -->
-<section class="install-section" id="install">
-  <h2 class="install-heading">Install</h2>
+<section class="install-section" id="install" aria-labelledby="install-heading">
+  <h2 class="install-heading" id="install-heading">Install</h2>
   <p class="install-intro">One command. No clone required.</p>
 
   <div class="install-block">
     <div class="install-app">Quick start</div>
-    <div class="install-note">Try it now — no clone required.</div>
+    <div class="install-note">Replace <code style="font-family:var(--font-mono);font-size:var(--text-sm)">eventide</code> with any theme name from the collection above.</div>
     <pre><code>npx github:marvinrichter/gloam eventide starship</code></pre>
   </div>
 
@@ -1141,6 +1171,7 @@
     <div class="install-app">Prerequisite</div>
     <div class="install-note">JetBrains Mono Nerd Font — required for all Nerd Font glyphs.</div>
     <pre><code>brew install --cask font-jetbrains-mono-nerd-font</code></pre>
+    <div class="install-note" style="margin-top:0.75rem">Windows: <code style="font-family:var(--font-mono);font-size:var(--text-sm)">winget install DEVCOM.JetBrainsMonoNerdFont</code> or <code style="font-family:var(--font-mono);font-size:var(--text-sm)">scoop bucket add nerd-fonts &amp;&amp; scoop install JetBrainsMono-NF</code></div>
   </div>
 
   <div class="install-block">
@@ -1208,8 +1239,8 @@ npx github:marvinrichter/gloam eventide starship</code></pre>
 </section>
 
 <!-- ── Design system ─────────────────────────────────────────────────── -->
-<section class="design-section">
-  <h2 class="design-heading">One source. Sixteen formats.</h2>
+<section class="design-section" id="design" aria-labelledby="design-heading">
+  <h2 class="design-heading" id="design-heading">One source. Sixteen formats.</h2>
   <p style="color:var(--color-text-secondary);font-size:var(--text-base);line-height:1.65;margin-bottom:2.5rem;">
     Every theme is a single <code style="font-family:var(--font-mono);font-size:var(--text-sm);color:var(--color-primary-400)">name.json</code> — the source of truth for its entire system. Sixteen formats are derived from it, all living in the same directory as the source.
   </p>
@@ -1219,7 +1250,7 @@ npx github:marvinrichter/gloam eventide starship</code></pre>
       <tr>
         <th>Token</th>
         <th>Role</th>
-        <th style="padding-left:1rem">Eventide</th>
+        <th style="padding-left:1rem">Eventide <span style="font-weight:300;opacity:0.65;font-size:0.85em">(example)</span></th>
       </tr>
     </thead>
     <tbody>
@@ -1247,17 +1278,21 @@ npx github:marvinrichter/gloam eventide starship</code></pre>
   </table>
 
   <p style="color:var(--color-neutral-600);font-size:var(--text-sm);margin-top:1.5rem;line-height:1.6;">
-    Four tokens. Consistent across all forty-four themes. WCAG AA ≥ 4.5:1 on every background.
+    Four tokens. Consistent across all forty-five themes. WCAG AA ≥ 4.5:1 on every background.
   </p>
 </section>
+
+</main>
 
 <!-- ── Footer ───────────────────────────────────────────────────────── -->
 <footer>
   <p class="footer-tagline">Every token in every theme verified ≥ 4.5:1 against its background.</p>
   <div class="footer-links">
-    <a href="https://github.com/marvinrichter/gloam">GitHub</a>
-    <a href="https://github.com/marvinrichter/gloam#readme">README</a>
-    <a href="https://github.com/marvinrichter/gloam/blob/main/docs/brand-guidelines.md">Brand</a>
+    <a href="https://github.com/marvinrichter/gloam" rel="noopener noreferrer">GitHub</a>
+    <a href="https://github.com/marvinrichter/gloam#readme" rel="noopener noreferrer">README</a>
+    <a href="https://github.com/marvinrichter/gloam/blob/main/docs/brand-guidelines.md" rel="noopener noreferrer">Brand</a>
+    <a href="https://github.com/marvinrichter/gloam/releases" rel="noopener noreferrer">Releases</a>
+    <a href="https://github.com/marvinrichter/gloam/blob/main/LICENSE" rel="noopener noreferrer">MIT License</a>
   </div>
 </footer>
 

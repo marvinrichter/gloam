@@ -13,11 +13,9 @@ This file is maintained automatically by [release-please](https://github.com/goo
 
 ## [1.5.0](https://github.com/marvinrichter/gloam/compare/v1.4.1...v1.5.0) (2026-03-16)
 
-
 ### Features
 
 * add 24 new themes filling design-concept and hue gaps ([#20](https://github.com/marvinrichter/gloam/issues/20)) ([1c952d4](https://github.com/marvinrichter/gloam/commit/1c952d46c230f495cc64208a1975865c36762bf5))
-
 
 ### Bug Fixes
 
