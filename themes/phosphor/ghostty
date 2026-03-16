@@ -1,0 +1,32 @@
+# phosphor — Ghostty color theme
+# Generated from phosphor.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/phosphor
+# then set theme = phosphor in ~/.config/ghostty/config
+
+background         = 040804
+foreground         = C0E8B8
+
+cursor-color       = 40FF80
+cursor-text        = 040804
+
+selection-background = 102010
+selection-foreground = C0E8B8
+
+# ANSI palette (0–15)
+palette = 0=040804
+palette = 1=A83030
+palette = 2=209040
+palette = 3=38A040
+palette = 4=208840
+palette = 5=508040
+palette = 6=28C878
+palette = 7=80C090
+palette = 8=182818
+palette = 9=FF4040
+palette = 10=00D848
+palette = 11=50E060
+palette = 12=50A860
+palette = 13=60C060
+palette = 14=40FF80
+palette = 15=C0E8B8

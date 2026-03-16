@@ -1,0 +1,37 @@
+# phosphor — Alacritty color theme
+# Generated from phosphor.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/phosphor.toml
+# then add `import = ["~/.config/alacritty/themes/phosphor.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#040804"
+foreground = "#C0E8B8"
+
+[colors.cursor]
+cursor = "#40FF80"
+text   = "#040804"
+
+[colors.selection]
+background = "#102010"
+text       = "#C0E8B8"
+
+[colors.normal]
+black   = "#040804"
+red     = "#A83030"
+green   = "#209040"
+yellow  = "#38A040"
+blue    = "#208840"
+magenta = "#508040"
+cyan    = "#28C878"
+white   = "#80C090"
+
+[colors.bright]
+black   = "#182818"
+red     = "#FF4040"
+green   = "#00D848"
+yellow  = "#50E060"
+blue    = "#50A860"
+magenta = "#60C060"
+cyan    = "#40FF80"
+white   = "#C0E8B8"
