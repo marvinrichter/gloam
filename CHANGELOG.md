@@ -9,9 +9,11 @@ This file is maintained automatically by [release-please](https://github.com/goo
      in this CHANGELOG. The CHANGELOG reflects the intended next release; package.json
      reflects the last published release. -->
 
+<!-- markdownlint-disable MD012 -- release-please generates double blank lines after version headings -->
 <!-- releases will be prepended here by release-please -->
 
 ## [1.6.0](https://github.com/marvinrichter/gloam/compare/v1.5.0...v1.6.0) (2026-03-16)
+
 
 ### Features
 
