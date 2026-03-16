@@ -12,6 +12,13 @@ This file is maintained automatically by [release-please](https://github.com/goo
 <!-- markdownlint-disable MD012 -- release-please generates double blank lines after version headings -->
 <!-- releases will be prepended here by release-please -->
 
+## [1.7.0](https://github.com/marvinrichter/gloam/compare/v1.6.0...v1.7.0) (2026-03-16)
+
+
+### Features
+
+* add apple-touch-icon for iOS home screen ([c60e29e](https://github.com/marvinrichter/gloam/commit/c60e29e417df901aff40b035850dc71423a5efc1))
+
 ## [1.6.0](https://github.com/marvinrichter/gloam/compare/v1.5.0...v1.6.0) (2026-03-16)
 
 
