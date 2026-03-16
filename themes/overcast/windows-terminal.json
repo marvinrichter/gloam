@@ -1,0 +1,23 @@
+{
+  "name": "Overcast",
+  "background": "#F0F2F5",
+  "foreground": "#181C28",
+  "cursorColor": "#3060C8",
+  "selectionBackground": "#D0D8F0",
+  "black": "#F0F2F5",
+  "red": "#901828",
+  "green": "#1A5A30",
+  "yellow": "#705010",
+  "blue": "#4040C8",
+  "purple": "#583878",
+  "cyan": "#3060C8",
+  "white": "#505870",
+  "brightBlack": "#C8CDD8",
+  "brightRed": "#C02030",
+  "brightGreen": "#287840",
+  "brightYellow": "#A06020",
+  "brightBlue": "#4060B0",
+  "brightPurple": "#7858A0",
+  "brightCyan": "#405880",
+  "brightWhite": "#181C28"
+}
