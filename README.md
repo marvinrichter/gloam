@@ -398,6 +398,28 @@ Background `#120A06` · Foreground `#EAE0D4` · Layout: two-line box · Fill: `�
 
 ---
 
+### Damson
+
+> The small oval plum that stains your fingers before you can put it down. Not quite blue, not quite red — the color that exists between violet and magenta without resolving into either.
+
+```
+╭─ ✦ 09:41  ~/gloam ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙╮
+╰─  main ❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#D428BC` | damson skin — directory, languages |
+| accent | `#FF60D8` | bright cerise — git, cursor |
+| muted | `#887898` | bloom on the skin — chrome, time |
+| error | `#C86060` | coral red |
+
+Background `#090610` · Foreground `#E8D8F8` · Layout: two-line box · Fill: `∙` · Cursor: `❯`
+
+[Design system guide →](themes/damson/damson.md)
+
+---
+
 ### Daybook
 
 > A Georgian merchant's daily ledger. Cream paper ruled in faded blue, entries in dark sepia, totals and corrections in rubrication rust-red. Afternoon light through a tall window.
@@ -441,28 +463,6 @@ Background `#F2EEE6` · Foreground `#1E1A14` · Layout: single-line · Fill: `·
 Background `#282834` · Foreground `#C8C4BC` · Layout: two-line box · Fill: `⋰` · Cursor: `❯`
 
 [Design system guide →](themes/dusk/dusk.md)
-
----
-
-### Damson
-
-> The small oval plum that stains your fingers before you can put it down. Not quite blue, not quite red — the color that exists between violet and magenta without resolving into either.
-
-```
-╭─ ✦ 09:41  ~/gloam ∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙∙╮
-╰─  main ❯
-```
-
-| Token | Hex | Role |
-|---|---|---|
-| primary | `#D428BC` | damson skin — directory, languages |
-| accent | `#FF60D8` | bright cerise — git, cursor |
-| muted | `#887898` | bloom on the skin — chrome, time |
-| error | `#C86060` | coral red |
-
-Background `#090610` · Foreground `#E8D8F8` · Layout: two-line box · Fill: `∙` · Cursor: `❯`
-
-[Design system guide →](themes/damson/damson.md)
 
 ---
 
@@ -577,28 +577,6 @@ Background `#0C0C0C` · Foreground `#E0E0E0` · Layout: two-line box · Fill: `�
 
 ---
 
-### Ironcast
-
-> Cast iron under a pre-storm sky — the cold blue-grey of heavy cloud seen through a foundry window.
-
-```
-╭  ~/gloam   main ~2  ══════════════════  ▪ 14:32
-╰─❯
-```
-
-| Token | Hex | Role |
-|---|---|---|
-| primary | `#78A8C8` | storm sky blue — directory, languages |
-| accent | `#C8D838` | acid yellow — git, cursor |
-| muted | `#7090A8` | cold iron grey — chrome, time |
-| error | `#D06060` | danger signal |
-
-Background `#0B0D10` · Foreground `#CDD4DC` · Layout: two-line box · Fill: `═` · Cursor: `❯`
-
-[Design system guide →](themes/ironcast/ironcast.md)
-
----
-
 ### Iris
 
 > The heart of a Siberian iris in July — a violet so saturated it seems to vibrate. The yellow-orange signal patch of the falls against absolute darkness.
@@ -618,6 +596,28 @@ Background `#0B0D10` · Foreground `#CDD4DC` · Layout: two-line box · Fill: `�
 Background `#08060E` · Foreground `#E0D8F8` · Layout: two-line box · Fill: `⋯` · Cursor: `❯`
 
 [Design system guide →](themes/iris/iris.md)
+
+---
+
+### Ironcast
+
+> Cast iron under a pre-storm sky — the cold blue-grey of heavy cloud seen through a foundry window.
+
+```
+╭  ~/gloam   main ~2  ══════════════════  ▪ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#78A8C8` | storm sky blue — directory, languages |
+| accent | `#C8D838` | acid yellow — git, cursor |
+| muted | `#7090A8` | cold iron grey — chrome, time |
+| error | `#D06060` | danger signal |
+
+Background `#0B0D10` · Foreground `#CDD4DC` · Layout: two-line box · Fill: `═` · Cursor: `❯`
+
+[Design system guide →](themes/ironcast/ironcast.md)
 
 ---
 
@@ -821,30 +821,6 @@ Background `#080808` · Foreground `#E8E8E8` · Layout: single-line · Fill: ` `
 
 ---
 
-### Stark
-
-> Absolute contrast — white page, deep navy ink. No atmospheric reference. Pure signal.
-
-```
-╭  ~/gloam   main ~2  ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅  ⊞ 14:32
-╰─❯
-```
-
-| Token | Hex | Role |
-|---|---|---|
-| primary | `#001A8C` | deep navy — directory, languages |
-| accent | `#8C3000` | dark burnt orange — git, cursor |
-| muted | `#3A3A3A` | near-black — chrome, time |
-| error | `#8C0010` | dark crimson |
-
-Background `#FFFFFF` · Foreground `#000000` · Layout: two-line box · Fill: `┅` · Cursor: `❯`
-
-> **Light theme.** Maximum contrast — very dark tokens on pure white. See [stark.md](themes/stark/stark.md) for light theme setup notes — iTerm2 requires one additional setting.
-
-[Design system guide →](themes/stark/stark.md)
-
----
-
 ### Saffron
 
 > Morning spice market. Saffron cloth, indigo dye pots, the hour before the light becomes merciless.
@@ -889,6 +865,30 @@ Background `#F5EDE0` · Foreground `#2A1C10` · Layout: single-line · Fill: `�
 > **Light theme.** All tokens are dark colors on a warm cream background. See [solano.md](themes/solano/solano.md) for light theme setup notes — iTerm2 requires one additional setting.
 
 [Design system guide →](themes/solano/solano.md)
+
+---
+
+### Stark
+
+> Absolute contrast — white page, deep navy ink. No atmospheric reference. Pure signal.
+
+```
+╭  ~/gloam   main ~2  ┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅  ⊞ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#001A8C` | deep navy — directory, languages |
+| accent | `#8C3000` | dark burnt orange — git, cursor |
+| muted | `#3A3A3A` | near-black — chrome, time |
+| error | `#8C0010` | dark crimson |
+
+Background `#FFFFFF` · Foreground `#000000` · Layout: two-line box · Fill: `┅` · Cursor: `❯`
+
+> **Light theme.** Maximum contrast — very dark tokens on pure white. See [stark.md](themes/stark/stark.md) for light theme setup notes — iTerm2 requires one additional setting.
+
+[Design system guide →](themes/stark/stark.md)
 
 ---
 
@@ -1189,8 +1189,8 @@ Structural and layout choices vary per theme:
 | Ironcast | two-line | `╭╰─` | `═` | `❯` |
 | Madder | two-line | `╭╰─` | `╼` | `❯` |
 | Nacreous | two-line | `╭╰─` | `·` | `⟫` |
-| Noir | single-line | — | `∶` | `›` |
 | Nocturne | two-line | `╭╰─` | `─` | `❯` |
+| Noir | single-line | — | `∶` | `›` |
 | Ochre | single-line | — | `·` | `›` |
 | Parchment | single-line | — | `·` | `›` |
 | Petrichor | single-line | — | `─` | `›` |
@@ -1204,8 +1204,8 @@ Structural and layout choices vary per theme:
 | Tallow | single-line | — | `⠿` | `›` |
 | Tungsten | single-line | — | `·` | `▸` |
 | Umbra | single-line | — | `·` | `▹` |
-| Verdure | two-line | `╭╰─` | `∿` | `❯` |
 | Verdigris | two-line | `╭╰─` | `─` | `›` |
+| Verdure | two-line | `╭╰─` | `∿` | `❯` |
 | Weld | two-line | `╭╰─` | `≡` | `❯` |
 | Wisteria | single-line | — | `·` | `›` |
 
@@ -1221,7 +1221,7 @@ npx github:marvinrichter/gloam <theme> <target>
 
 The installer copies the theme config and wires it into your existing config file — no clone required.
 
-**Themes:** `absinthe` · `aether` · `amethyst` · `bamboo` · `basalt` · `bloom` · `boreal` · `brume` · `canopy` · `carmine` · `cast` · `cirrus` · `cobalt` · `cordovan` · `damson` · `daybook` · `dusk` · `ember` · `eventide` · `fern` · `fjord` · `graphite` · `iris` · `ironcast` · `madder` · `nacreous` · `noir` · `nocturne` · `ochre` · `parchment` · `petrichor` · `rosewater` · `sable` · `saffron` · `solano` · `stark` · `sumi` · `synthwave` · `tallow` · `tungsten` · `umbra` · `verdure` · `verdigris` · `weld` · `wisteria`
+**Themes:** `absinthe` · `aether` · `amethyst` · `bamboo` · `basalt` · `bloom` · `boreal` · `brume` · `canopy` · `carmine` · `cast` · `cirrus` · `cobalt` · `cordovan` · `damson` · `daybook` · `dusk` · `ember` · `eventide` · `fern` · `fjord` · `graphite` · `iris` · `ironcast` · `madder` · `nacreous` · `nocturne` · `noir` · `ochre` · `parchment` · `petrichor` · `rosewater` · `sable` · `saffron` · `solano` · `stark` · `sumi` · `synthwave` · `tallow` · `tungsten` · `umbra` · `verdigris` · `verdure` · `weld` · `wisteria`
 
 **Targets:** `vscode` · `starship` · `neovim` · `alacritty` · `kitty` · `wezterm` · `ghostty` · `tmux` · `zed` · `windows-terminal` · `helix`
 

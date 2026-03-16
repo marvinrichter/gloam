@@ -51,50 +51,50 @@ themes/<name>/
 
    | Theme | Hue family | Atmospheric character |
    |---|---|---|
-   | Eventide | Warm (gold + coral + lavender) | Twilight — day/night threshold |
-   | Aether | Cool (teal + violet) | Deep space — void between galaxies |
-   | Ember | Warm (amber + orange) | Watch fire — coal and flame |
    | Absinthe | Cool-green (green + gold) | Art nouveau chemistry — forbidden liqueur |
-   | Verdigris | Teal + bronze | Oxidised copper — patina and metal |
-   | Sable | Neutral (silver + gold) | Heraldic — pure black, no decoration |
-   | Fjord | Cool blue + amber | Norwegian fjord at dusk |
-   | Umbra | Blue-grey + violet | Penumbra — mathematical shadow edge |
-   | Cordovan | Warm tan + steel blue | Leather workshop — cordovan and clasps |
-   | Tungsten | Warm gold-white + cold blue | Filament at operating temperature |
+   | Aether | Cool (teal + violet) | Deep space — void between galaxies |
    | Amethyst | Purple + rutile gold | Crystal in dark matrix — mineral light |
-   | Parchment | Warm cream (light theme) | Manuscript vellum — iron gall ink |
-   | Nacreous | Iridescent teal + polar pink | Nacreous clouds — stratospheric dark |
-   | Petrichor | Grass green + ozone blue | Pre-storm — dry earth before rain |
-   | Nocturne | Candlelight ivory + blood-red velvet | Candlelit dark — piano nocturne |
-   | Basalt | Hawaiian teal + sunset gold | Volcanic dark — lava meets ocean |
-   | Daybook | Ruling blue + rubrication rust (light theme) | Cream paper light — ledger in daylight |
-   | Cirrus | Prussian sky blue + deep teal (light theme) | Sky-white light — high-altitude midday |
-   | Solano | Terracotta red + Pacific blue (light theme) | High desert midday — bleached adobe |
-   | Saffron | Dark amber + indigo (light theme) | Morning spice market — pale saffron light |
-   | Ochre | Iron oxide red + deep teal (light theme) | Dawn on mesa rock — sandstone and fire |
    | Bamboo | Vermilion + celadon | Hanko seal — red ink on parchment |
-   | Boreal | Aurora cyan + ice-blue | Aurora borealis — the spectral curtain at 557nm |
+   | Basalt | Hawaiian teal + sunset gold | Volcanic dark — lava meets ocean |
    | Bloom | Carmine rose + dried plum (light theme) | Pressed rose petals — barely-pink paper |
+   | Boreal | Aurora cyan + ice-blue | Aurora borealis — the spectral curtain at 557nm |
    | Brume | Sea-teal (light theme) | Coastal sea mist — the fog that erases the horizon |
    | Canopy | Chartreuse + filtered amber | Forest canopy — sunlit undergrowth |
    | Carmine | Cochineal red + warm coral | Mineral pigment — oldest organic dye |
    | Cast | Oxidized brass yellow + olive | Industrial mould — cooling brass surface |
+   | Cirrus | Prussian sky blue + deep teal (light theme) | Sky-white light — high-altitude midday |
    | Cobalt | Royal periwinkle + electric cyan | Cobalt glass — oxide blue from within |
+   | Cordovan | Warm tan + steel blue | Leather workshop — cordovan and clasps |
+   | Damson | Violet-magenta | Damson plum — the color between violet and red |
+   | Daybook | Ruling blue + rubrication rust (light theme) | Cream paper light — ledger in daylight |
    | Dusk | Twilight lavender + last amber | Mid-tone twilight — twenty minutes after sunset |
+   | Ember | Warm (amber + orange) | Watch fire — coal and flame |
+   | Eventide | Warm (gold + coral + lavender) | Twilight — day/night threshold |
    | Fern | Forest green + morning amber (light theme) | Woodland morning — sage light through fronds |
+   | Fjord | Cool blue + amber | Norwegian fjord at dusk |
    | Graphite | Near-neutral mauve + pale gold | Graphite on paper — pencil before ink |
-   | Ironcast | Steel blue-grey + acid yellow | Cast iron — pre-storm foundry sky |
    | Iris | Iris violet + amber signal | Siberian iris — two-color signal structure |
-   | Noir | Incandescent gold + warm amber | Film noir — single bulb in darkness |
-   | Rosewater | Rose-pink + pale lilac | Distilled rosewater — the pink before it fades |
+   | Ironcast | Steel blue-grey + acid yellow | Cast iron — pre-storm foundry sky |
    | Madder | Garnet crimson + rose | Madder root — the oldest cultivated red dye |
+   | Nacreous | Iridescent teal + polar pink | Nacreous clouds — stratospheric dark |
+   | Nocturne | Candlelight ivory + blood-red velvet | Candlelit dark — piano nocturne |
+   | Noir | Incandescent gold + warm amber | Film noir — single bulb in darkness |
+   | Ochre | Iron oxide red + deep teal (light theme) | Dawn on mesa rock — sandstone and fire |
+   | Parchment | Warm cream (light theme) | Manuscript vellum — iron gall ink |
+   | Petrichor | Grass green + ozone blue | Pre-storm — dry earth before rain |
+   | Rosewater | Rose-pink + pale lilac | Distilled rosewater — the pink before it fades |
+   | Sable | Neutral (silver + gold) | Heraldic — pure black, no decoration |
+   | Saffron | Dark amber + indigo (light theme) | Morning spice market — pale saffron light |
+   | Solano | Terracotta red + Pacific blue (light theme) | High desert midday — bleached adobe |
    | Stark | Deep navy + dark orange (light theme) | Pure white paper — absolute contrast, no atmosphere |
    | Sumi | Ink-wash indigo + diluted blue | Sumi-e — pigment pooling on wet paper |
    | Synthwave | Neon magenta + neon cyan | Midnight arcade — synthetic, no material reference |
    | Tallow | Cream-gold + terracotta | Tallow candle — soft pooled warmth |
+   | Tungsten | Warm gold-white + cold blue | Filament at operating temperature |
+   | Umbra | Blue-grey + violet | Penumbra — mathematical shadow edge |
+   | Verdigris | Teal + bronze | Oxidised copper — patina and metal |
    | Verdure | Spring green + lime | April emergence — the first week of new growth |
    | Weld | Olive yellow-green + molten amber | Weld seam — oxidation flame on steel |
-   | Damson | Violet-magenta | Damson plum — the color between violet and red |
    | Wisteria | Iris violet + plum (light theme) | Wisteria in bloom — the three-week purple |
 
    **Notes on the table:**
