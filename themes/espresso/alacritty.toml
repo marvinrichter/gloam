@@ -1,0 +1,37 @@
+# espresso — Alacritty color theme
+# Generated from espresso.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/espresso.toml
+# then add `import = ["~/.config/alacritty/themes/espresso.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0D0906"
+foreground = "#F0E4D0"
+
+[colors.cursor]
+cursor = "#E89840"
+text   = "#0D0906"
+
+[colors.selection]
+background = "#2A1810"
+text       = "#F0E4D0"
+
+[colors.normal]
+black   = "#0D0906"
+red     = "#A83028"
+green   = "#588040"
+yellow  = "#A06020"
+blue    = "#607890"
+magenta = "#886050"
+cyan    = "#507870"
+white   = "#C0A880"
+
+[colors.bright]
+black   = "#2A1E14"
+red     = "#DC4030"
+green   = "#70A850"
+yellow  = "#C87030"
+blue    = "#A07860"
+magenta = "#C09080"
+cyan    = "#78A898"
+white   = "#F0E4D0"

@@ -1,0 +1,32 @@
+# espresso — Ghostty color theme
+# Generated from espresso.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/espresso
+# then set theme = espresso in ~/.config/ghostty/config
+
+background         = 0D0906
+foreground         = F0E4D0
+
+cursor-color       = E89840
+cursor-text        = 0D0906
+
+selection-background = 2A1810
+selection-foreground = F0E4D0
+
+# ANSI palette (0–15)
+palette = 0=0D0906
+palette = 1=A83028
+palette = 2=588040
+palette = 3=A06020
+palette = 4=607890
+palette = 5=886050
+palette = 6=507870
+palette = 7=C0A880
+palette = 8=2A1E14
+palette = 9=DC4030
+palette = 10=70A850
+palette = 11=C87030
+palette = 12=A07860
+palette = 13=C09080
+palette = 14=78A898
+palette = 15=F0E4D0
