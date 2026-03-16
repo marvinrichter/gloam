@@ -1,0 +1,37 @@
+# lapis — Alacritty color theme
+# Generated from lapis.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/lapis.toml
+# then add `import = ["~/.config/alacritty/themes/lapis.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#060810"
+foreground = "#D0D8F0"
+
+[colors.cursor]
+cursor = "#6090FF"
+text   = "#060810"
+
+[colors.selection]
+background = "#101828"
+text       = "#D0D8F0"
+
+[colors.normal]
+black   = "#060810"
+red     = "#A83838"
+green   = "#3080A0"
+yellow  = "#4870C0"
+blue    = "#304898"
+magenta = "#6048A8"
+cyan    = "#3890B8"
+white   = "#A0B0E0"
+
+[colors.bright]
+black   = "#151C38"
+red     = "#E84040"
+green   = "#48A8C8"
+yellow  = "#5078F0"
+blue    = "#6878A8"
+magenta = "#8868D0"
+cyan    = "#60B8E0"
+white   = "#D0D8F0"
