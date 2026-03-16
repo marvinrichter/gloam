@@ -1,0 +1,47 @@
+{
+  "name": "kiln",
+  "displayName": "Kiln",
+  "type": "dark",
+  "background": "#100908",
+  "foreground": "#F2E0D0",
+  "tokens": {
+    "primary": "#E05830",
+    "accent": "#F08040",
+    "muted": "#A87060",
+    "error": "#DC4030"
+  },
+  "ansi": [
+    "#100908",
+    "#A03028",
+    "#508050",
+    "#C04820",
+    "#6880A0",
+    "#906060",
+    "#507870",
+    "#C8B0A0",
+    "#281410",
+    "#DC4030",
+    "#72A860",
+    "#E05830",
+    "#A87060",
+    "#C08080",
+    "#709088",
+    "#F2E0D0"
+  ],
+  "ui": {
+    "cursor": "#F08040",
+    "cursorText": "#100908",
+    "selection": "#281410",
+    "selectionText": "#F2E0D0",
+    "bold": "#F2E0D0",
+    "link": "#F0B080"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "─",
+    "timePrefix": "⊡",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

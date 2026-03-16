@@ -1,0 +1,23 @@
+{
+  "name": "Kiln",
+  "background": "#100908",
+  "foreground": "#F2E0D0",
+  "cursorColor": "#F08040",
+  "selectionBackground": "#281410",
+  "black": "#100908",
+  "red": "#A03028",
+  "green": "#508050",
+  "yellow": "#C04820",
+  "blue": "#6880A0",
+  "purple": "#906060",
+  "cyan": "#507870",
+  "white": "#C8B0A0",
+  "brightBlack": "#281410",
+  "brightRed": "#DC4030",
+  "brightGreen": "#72A860",
+  "brightYellow": "#E05830",
+  "brightBlue": "#A87060",
+  "brightPurple": "#C08080",
+  "brightCyan": "#709088",
+  "brightWhite": "#F2E0D0"
+}
