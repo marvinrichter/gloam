@@ -47,7 +47,9 @@ themes/<name>/
 1. **Four semantic tokens** — `primary`, `accent`, `muted`, `error` defined in `tokens`
 2. **WCAG AA contrast** — all four tokens must achieve ≥ 4.5:1 against the background. Calculate contrast using the WCAG relative luminance formula: `L = 0.2126 × R + 0.7152 × G + 0.0722 × B` (where R/G/B are linearised 0–1 values), then `ratio = (L1 + 0.05) / (L2 + 0.05)`. Use a calculator such as [Colour Contrast Analyser](https://www.tpgi.com/color-contrast-checker/) or [Coolors contrast checker](https://coolors.co/contrast-checker). Include the luminance calculations in `<name>.md` — see `eventide.md` for a worked example.
 3. **Coherent ANSI palette** — ANSI slots must derive from the semantic tokens, not be chosen independently. Syntax highlighting will use these — they must harmonise with the prompt
-4. **Distinct territory** — the theme must occupy a different hue family or atmospheric concept from the existing fifty-four. The table below maps each existing theme to its hue family and atmospheric character. A new theme must not overlap with an existing entry:
+4. **Distinct territory** — the theme must occupy a different hue family or atmospheric concept from the existing fifty-four. The table below maps each existing theme to its hue family and atmospheric character. A new theme must not overlap with an existing entry.
+
+   **Automated enforcement:** `npm test` verifies palette uniqueness using OKLab perceptual distance. OKLab is a perceptually uniform color space, so it measures visible difference rather than hue angle — a near-grey and a vivid blue that share the same hue can be far apart in OKLab. The test checks three tokens simultaneously: `primary`, `accent`, and `muted`. A new theme fails only if **all three** of those tokens are within ΔE < 0.07 of the corresponding tokens of an existing same-type theme. ΔE = 0.07 is approximately 3.5 just-noticeable-differences — themes that fail this check are genuinely hard to distinguish. See `docs/decisions/ADR-008.md` for the full rationale.
 
    | Theme | Hue family | Atmospheric character |
    |---|---|---|
@@ -107,7 +109,7 @@ themes/<name>/
    | Wisteria | Iris violet + plum (light theme) | Wisteria in bloom — the three-week purple |
 
    **Notes on the table:**
-   - Three green-dark themes (Petrichor, Absinthe, and Verdure) and Canopy coexist intentionally — Petrichor's accent is ozone blue (186°), Absinthe's is gold (38°), Canopy's primary sits at hue 92° (chartreuse), and Verdure's primary at 109° (spring green), all visually distinct despite shared green ground.
+   - Three green-dark themes (Petrichor, Absinthe, and Verdure) and Canopy coexist intentionally. Although they share green primary territory, their accent tokens diverge substantially in OKLab space: Petrichor uses ozone blue, Absinthe uses gold, Canopy uses filtered amber, and Verdure uses lime — all visually distinct despite the shared green ground. The automated uniqueness test confirms this.
    - The fourteen light themes span cool (Cirrus, Daybook, Fern, Brume, Overcast, Seafoam), warm-neutral (Parchment, Apricot), warm-saturated (Solano, Saffron, Ochre, Bloom), violet (Wisteria), and high-contrast neutral (Stark). New light theme proposals must avoid overlap with these existing atmospheric concepts.
 
 5. **A concept** — the theme derives from a specific atmospheric or material reference. Color choices must be defensible from that concept, not arbitrary

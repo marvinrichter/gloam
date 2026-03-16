@@ -216,99 +216,57 @@ describe("real theme JSON files pass validateTheme()", () => {
   }
 });
 
-// ── Hue uniqueness: no two same-type themes have primary tokens within 10° ───────
+// ── Palette uniqueness: no two same-type themes are perceptually indistinguishable ───
 
-/** Convert a 6-digit hex to HSL hue (0–360). */
-function hexToHue(hex) {
+/** Convert 6-digit hex to OKLab [L, a, b] (perceptually uniform color space). */
+function hexToOklab(hex) {
   const c = hex.replace(/^#/, "");
-  const r = parseInt(c.slice(0, 2), 16) / 255;
-  const g = parseInt(c.slice(2, 4), 16) / 255;
-  const b = parseInt(c.slice(4, 6), 16) / 255;
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  const d = max - min;
-  if (d === 0) return 0;
-  let h;
-  if (max === r) h = ((g - b) / d) % 6;
-  else if (max === g) h = (b - r) / d + 2;
-  else h = (r - g) / d + 4;
-  return (h * 60 + 360) % 360;
+  const toLinear = (offset) => {
+    const s = parseInt(c.slice(offset, offset + 2), 16) / 255;
+    return s <= 0.04045 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+  };
+  const r = toLinear(0),
+    g = toLinear(2),
+    b = toLinear(4);
+  // Linear sRGB → LMS (OKLab M1 matrix)
+  const l = 0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b;
+  const m = 0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b;
+  const s = 0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b;
+  // Cube root
+  const l_ = Math.cbrt(l),
+    m_ = Math.cbrt(m),
+    s_ = Math.cbrt(s);
+  // LMS → OKLab (M2 matrix)
+  return [
+    0.2104542553 * l_ + 0.793617785 * m_ - 0.0040720468 * s_,
+    1.9779984951 * l_ - 2.428592205 * m_ + 0.4505937099 * s_,
+    0.0259040371 * l_ + 0.7827717662 * m_ - 0.808675766 * s_,
+  ];
 }
 
-/** Angular distance between two hues (0–180). */
-function hueDist(h1, h2) {
-  const d = Math.abs(h1 - h2) % 360;
-  return d > 180 ? 360 - d : d;
+/** Euclidean distance between two colors in OKLab space. */
+function oklabDist(hex1, hex2) {
+  const [L1, a1, b1] = hexToOklab(hex1);
+  const [L2, a2, b2] = hexToOklab(hex2);
+  return Math.sqrt((L1 - L2) ** 2 + (a1 - a2) ** 2 + (b1 - b2) ** 2);
 }
 
-describe("hue uniqueness — no two same-type themes share primary hue within 10°", () => {
-  const HUE_MINIMUM_DEG = 10;
+describe("palette uniqueness — no two same-type themes are perceptually indistinguishable", () => {
+  // A theme pair is distinct if primary, accent, OR muted differs enough.
+  // All three must fall below MIN_DIST (logical AND) to fail.
+  // OKLab is perceptually uniform, so saturation and lightness differences count,
+  // unlike the old hue-only check that required ~35 grandfathered exceptions.
+  // Using three tokens (primary+accent+muted) means a theme that shares primary
+  // and accent territory but has a distinctive muted (e.g. eventide's lavender
+  // muted vs ember's warm brown) passes naturally.
+  const MIN_DIST = 0.07;
 
-  // Known-close pairs that pre-date this rule (grandfathered, not failed).
-  // These pairs share similar hue territory by design — distinct concepts
-  // that happen to live in the same part of the color wheel.
+  // Pairs that pre-date this rule and are accepted as distinct concepts.
+  // Each entry notes the weaker theme (lower min-token WCAG contrast) if removal
+  // is ever considered.
   const KNOWN_CLOSE = new Set([
-    // Warm-gold band (30–47°): cordovan/ember/eventide/nocturne/tungsten
-    "cordovan|ember",
-    "cordovan|eventide",
-    "cordovan|nocturne",
-    "cordovan|tungsten",
-    "ember|eventide",
-    "ember|nocturne",
-    "ember|tungsten",
-    "eventide|nocturne",
-    "eventide|tungsten",
-    "nocturne|tungsten",
-    // Teal/cyan band (161–175°): aether/nacreous/verdigris
-    "aether|nacreous",
-    "aether|verdigris",
-    "nacreous|verdigris",
-    // Blue-gray band (200–215°): fjord/sable/umbra
-    "fjord|sable",
-    "fjord|umbra",
-    "sable|umbra",
-    // Navy (216°): cirrus/daybook (light)
-    "cirrus|daybook",
-    // Red band (5–10°): ochre/solano (light)
-    "ochre|solano",
-    // Dark amber band (28–30°): parchment/saffron (light)
-    "parchment|saffron",
-    // Amber band extension: tallow (40°) and noir (46°) join warm-gold cluster
-    "cordovan|tallow",
-    "ember|tallow",
-    "eventide|tallow",
-    "nocturne|tallow",
-    "tallow|tungsten",
-    "cordovan|noir",
-    "ember|noir",
-    "eventide|noir",
-    "nocturne|noir",
-    "noir|tungsten",
-    "noir|tallow",
-    // Cast (55°) sits just inside the amber cluster boundary with noir (46°)
-    "cast|noir",
-    // Blue-gray band extension: ironcast (204°) joins fjord/sable/umbra cluster
-    "fjord|ironcast",
-    "ironcast|sable",
-    "ironcast|umbra",
-    // Coral-terracotta band (~12–14°): kiln and bamboo are distinct concepts (ceramic vs seal)
-    "bamboo|kiln",
-    // Warm brown band (~25–36°): espresso (coffee) joins the amber cluster with cordovan/ember
-    "cordovan|espresso",
-    "ember|espresso",
-    // Warm ash band (~32–45°): cinder (post-fire charcoal) joins warm-gold cluster
-    "cinder|cordovan",
-    "cinder|ember",
-    "cinder|eventide",
-    "cinder|nocturne",
-    "cinder|tallow",
-    "cinder|tungsten",
-    // Ultramarine band (~225°): lapis (pigment) joins blue-gray cluster with sable/cobalt
-    "cobalt|lapis",
-    "lapis|sable",
-    // CRT-phosphor green (~140°): phosphor joins organic-green band with petrichor/absinthe
-    "absinthe|phosphor",
-    "petrichor|phosphor",
+    "espresso|kiln", // weaker: kiln (WCAG 4.53 vs espresso 4.55) — ceramic vs coffee
+    "noir|tallow", // weaker: noir (WCAG 4.66 vs tallow 5.28)   — film noir vs candle
   ]);
   const pairKey = (a, b) => [a, b].sort().join("|");
 
@@ -316,8 +274,14 @@ describe("hue uniqueness — no two same-type themes share primary hue within 10
   for (const name of themeNames) {
     try {
       const theme = JSON.parse(readFileSync(join(THEMES_DIR, name, `${name}.json`), "utf8"));
-      if (theme.tokens?.primary && theme.type) {
-        allThemes.push({ name, type: theme.type, primaryHue: hexToHue(theme.tokens.primary) });
+      if (theme.tokens?.primary && theme.tokens?.accent && theme.tokens?.muted && theme.type) {
+        allThemes.push({
+          name,
+          type: theme.type,
+          primary: theme.tokens.primary,
+          accent: theme.tokens.accent,
+          muted: theme.tokens.muted,
+        });
       }
     } catch {
       // skip invalid
@@ -331,11 +295,15 @@ describe("hue uniqueness — no two same-type themes share primary hue within 10
       if (a.type !== b.type) continue;
       if (KNOWN_CLOSE.has(pairKey(a.name, b.name))) continue;
 
-      it(`${a.name} vs ${b.name} (${a.type}): primary hue gap ≥ ${HUE_MINIMUM_DEG}°`, () => {
-        const dist = hueDist(a.primaryHue, b.primaryHue);
+      it(`${a.name} vs ${b.name} (${a.type}): palette perceptually distinct`, () => {
+        const dPrimary = oklabDist(a.primary, b.primary);
+        const dAccent = oklabDist(a.accent, b.accent);
+        const dMuted = oklabDist(a.muted, b.muted);
         assert.ok(
-          dist >= HUE_MINIMUM_DEG,
-          `${a.name} (hue ${a.primaryHue.toFixed(0)}°) and ${b.name} (hue ${b.primaryHue.toFixed(0)}°) are only ${dist.toFixed(1)}° apart`,
+          dPrimary >= MIN_DIST || dAccent >= MIN_DIST || dMuted >= MIN_DIST,
+          `${a.name} and ${b.name} are perceptually indistinct: ` +
+            `primary ΔE=${dPrimary.toFixed(3)}, accent ΔE=${dAccent.toFixed(3)}, muted ΔE=${dMuted.toFixed(3)} — ` +
+            `all three below MIN_DIST=${MIN_DIST}`,
         );
       });
     }
