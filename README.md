@@ -1,6 +1,6 @@
 # gloam
 
-Forty-five terminal and editor theme design systems. Each built from a single atmospheric concept: semantic color tokens, a matched 16-color ANSI palette, and generated configs for every major terminal emulator and IDE.
+Fifty-four terminal and editor theme design systems. Each built from a single atmospheric concept: semantic color tokens, a matched 16-color ANSI palette, and generated configs for every major terminal emulator and IDE.
 
 Every token in every theme clears 4.5:1 contrast against its background. Not as a selling point — as a baseline.
 
@@ -15,32 +15,46 @@ Every token in every theme clears 4.5:1 contrast against its background. Not as 
   - [Absinthe](#absinthe)
   - [Aether](#aether)
   - [Amethyst](#amethyst)
+  - [Apricot](#apricot)
   - [Bamboo](#bamboo)
   - [Basalt](#basalt)
   - [Bloom](#bloom)
+  - [Boreal](#boreal)
+  - [Brume](#brume)
   - [Canopy](#canopy)
   - [Carmine](#carmine)
   - [Cast](#cast)
+  - [Cinder](#cinder)
   - [Cirrus](#cirrus)
   - [Cobalt](#cobalt)
   - [Cordovan](#cordovan)
+  - [Damson](#damson)
   - [Daybook](#daybook)
   - [Dusk](#dusk)
   - [Ember](#ember)
+  - [Espresso](#espresso)
   - [Eventide](#eventide)
   - [Fern](#fern)
   - [Fjord](#fjord)
   - [Graphite](#graphite)
   - [Ironcast](#ironcast)
+  - [Iris](#iris)
+  - [Kiln](#kiln)
+  - [Lapis](#lapis)
+  - [Lichen](#lichen)
+  - [Madder](#madder)
   - [Nacreous](#nacreous)
   - [Noir](#noir)
   - [Nocturne](#nocturne)
   - [Ochre](#ochre)
+  - [Overcast](#overcast)
   - [Parchment](#parchment)
   - [Petrichor](#petrichor)
+  - [Phosphor](#phosphor)
   - [Rosewater](#rosewater)
   - [Sable](#sable)
   - [Saffron](#saffron)
+  - [Seafoam](#seafoam)
   - [Solano](#solano)
   - [Stark](#stark)
   - [Sumi](#sumi)
@@ -49,7 +63,9 @@ Every token in every theme clears 4.5:1 contrast against its background. Not as 
   - [Tungsten](#tungsten)
   - [Umbra](#umbra)
   - [Verdigris](#verdigris)
+  - [Verdure](#verdure)
   - [Weld](#weld)
+  - [Wisteria](#wisteria)
 - [Choosing a theme](#choosing-a-theme)
 - [Design System](#design-system)
 - [Install](#install)
@@ -150,6 +166,30 @@ Background `#0C0B1A` · Foreground `#D4D8F0` · Layout: two-line box · Fill: `�
 Background `#0C0811` · Foreground `#EAD8F8` · Layout: two-line box · Fill: `·` · Cursor: `⟫`
 
 [Design system guide →](themes/amethyst/amethyst.md)
+
+---
+
+### Apricot
+
+> First light through an apricot grove — the specific warm golden-peach of morning sun through fruit-laden branches, a warmth that exists for exactly twenty minutes before it becomes ordinary daylight.
+
+```
+  marvin  ~/gloam   main ~2  ·····················  ◯ 14:32
+›
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#7A5810` | golden amber-apricot — directory, languages |
+| accent | `#904018` | warm amber-brown — git, cursor |
+| muted | `#806050` | warm brown-grey — chrome, time |
+| error | `#B01818` | deep red |
+
+Background `#FDF6ED` · Foreground `#200E06` · Layout: single-line · Fill: `·` · Cursor: `›`
+
+> **Light theme.** All tokens are dark colors on a warm cream-peach background. See [apricot.md](themes/apricot/apricot.md) for light theme setup notes — iTerm2 requires one additional setting.
+
+[Design system guide →](themes/apricot/apricot.md)
 
 ---
 
@@ -330,6 +370,28 @@ Background `#101010` · Foreground `#C8C8C0` · Layout: two-line box · Fill: `�
 
 ---
 
+### Cinder
+
+> Post-fire charcoal — the warm ash of a cooling fire, mineral grey and still-warm tones where embers have burned to dust.
+
+```
+  marvin  ~/gloam   main ~2  ·····················  ◒ 14:32
+❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#C0A070` | warm ash gold — directory, languages |
+| accent | `#B08858` | ember-brown — git, cursor |
+| muted | `#988070` | cool ash grey — chrome, time |
+| error | `#D85040` | heat fault |
+
+Background `#0D0B09` · Foreground `#E4DCD0` · Layout: single-line · Fill: `·` · Cursor: `❯`
+
+[Design system guide →](themes/cinder/cinder.md)
+
+---
+
 ### Cirrus
 
 > High-altitude ice crystal clouds at midday. Sky-white background, prussian blue sky, deep teal horizon. Cold precision. The shadows are lavender, not gray.
@@ -488,6 +550,28 @@ Background `#111008` · Foreground `#F5EDD4` · Layout: two-line box · Fill: `�
 
 ---
 
+### Espresso
+
+> A pulled espresso shot — the specific dark amber-brown of coffee crema, warm and bitter, with the near-black depth of the liquid beneath.
+
+```
+  marvin  ~/gloam   main ~2  ·····················  ◔ 14:32
+❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#C87030` | crema amber — directory, languages |
+| accent | `#E89840` | bright gold highlight — git, cursor |
+| muted | `#A07860` | warm coffee brown — chrome, time |
+| error | `#DC4030` | heat fault |
+
+Background `#0D0906` · Foreground `#F0E4D0` · Layout: single-line · Fill: `·` · Cursor: `❯`
+
+[Design system guide →](themes/espresso/espresso.md)
+
+---
+
 ### Eventide
 
 > The moment between day and night. Deep indigo sky, warm gold navigation, twilight lavender chrome, sunset coral git.
@@ -621,6 +705,72 @@ Background `#0B0D10` · Foreground `#CDD4DC` · Layout: two-line box · Fill: `�
 
 ---
 
+### Kiln
+
+> A wood-firing kiln at peak temperature — the specific deep red-orange of ceramic clay at cone 10, the surface just before vitrification.
+
+```
+╭  marvin  ~/gloam   main ~2  ────────────────────────  ⊡ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#E05830` | fired clay red — directory, languages |
+| accent | `#F08040` | kiln glow orange — git, cursor |
+| muted | `#A87060` | terracotta shadow — chrome, time |
+| error | `#DC4030` | overfired fault |
+
+Background `#100908` · Foreground `#F2E0D0` · Layout: two-line box · Fill: `─` · Cursor: `❯`
+
+[Design system guide →](themes/kiln/kiln.md)
+
+---
+
+### Lapis
+
+> Lapis lazuli ground to pigment — the ultramarine blue of medieval manuscripts, dense and mineral, the most expensive color in history.
+
+```
+╭  marvin  ~/gloam   main ~2  ·····················  ✸ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#5078F0` | ultramarine — directory, languages |
+| accent | `#6090FF` | bright cobalt — git, cursor |
+| muted | `#6878A8` | mineral blue-grey — chrome, time |
+| error | `#E84040` | vermilion contrast |
+
+Background `#060810` · Foreground `#D0D8F0` · Layout: two-line box · Fill: `·` · Cursor: `❯`
+
+[Design system guide →](themes/lapis/lapis.md)
+
+---
+
+### Lichen
+
+> Crustose lichen on a granite boulder — the specific grey-green of lichen growth, mineral grey as the substrate, the quiet organic spread of something very slow and very old.
+
+```
+╭  marvin  ~/gloam   main ~2  ·····················  ∴ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#759075` | sage-green-grey — directory, languages |
+| accent | `#90B878` | lighter lichen — git, cursor |
+| muted | `#708868` | grey-green chrome — chrome, time |
+| error | `#C07060` | terracotta-red |
+
+Background `#0A0D0B` · Foreground `#D8E0D4` · Layout: two-line box · Fill: `·` · Cursor: `❯`
+
+[Design system guide →](themes/lichen/lichen.md)
+
+---
+
 ### Madder
 
 > The dye vat at a medieval cloth workshop — *Rubia tinctorum* in water. The oldest cultivated red. Not vermilion — garnet, the cooler red with violet in it.
@@ -731,6 +881,30 @@ Background `#F2E4D0` · Foreground `#220E08` · Layout: single-line · Fill: `·
 
 ---
 
+### Overcast
+
+> An overcast November morning — the specific diffuse silver-grey of total cloud cover, the light that has no direction, no shadow, no warmth.
+
+```
+╭  marvin  ~/gloam   main ~2  ──────────────────────────  ◦ 14:32
+╰─❯
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#4040C8` | pure blue — directory, languages |
+| accent | `#3060C8` | mid blue — git, cursor |
+| muted | `#505870` | blue-grey — chrome, time |
+| error | `#C02030` | warm red |
+
+Background `#F0F2F5` · Foreground `#181C28` · Layout: two-line box · Fill: `─` · Cursor: `❯`
+
+> **Light theme.** All tokens are dark colors on a cool grey background. See [overcast.md](themes/overcast/overcast.md) for light theme setup notes — iTerm2 requires one additional setting.
+
+[Design system guide →](themes/overcast/overcast.md)
+
+---
+
 ### Parchment
 
 > Aged vellum. The material monks copied manuscripts onto. Iron gall ink as primary. Rust-brown as accent. The only light theme in the set — everything inverts.
@@ -774,6 +948,28 @@ Background `#E8D6B4` · Foreground `#2A1E12` · Layout: single-line · Fill: `·
 Background `#0A0C0A` · Foreground `#D8DCCC` · Layout: single-line · Fill: `─` · Cursor: `›`
 
 [Design system guide →](themes/petrichor/petrichor.md)
+
+---
+
+### Phosphor
+
+> A CRT phosphor screen — the specific green of early computer monitors, the glow that defined a generation of computing before color screens existed.
+
+```
+  marvin  ~/gloam   main ~2  ────────────────────  ▸ 14:32
+▸
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#00D848` | phosphor green — directory, languages |
+| accent | `#40FF80` | bright phosphor — git, cursor |
+| muted | `#50A860` | dim phosphor — chrome, time |
+| error | `#FF4040` | alarm red |
+
+Background `#040804` · Foreground `#C0E8B8` · Layout: single-line · Fill: `─` · Cursor: `▸`
+
+[Design system guide →](themes/phosphor/phosphor.md)
 
 ---
 
@@ -842,6 +1038,30 @@ Background `#FAF0D8` · Foreground `#281808` · Layout: two-line box · Fill: `�
 > **Light theme.** All tokens are dark colors on a pale saffron background. See [saffron.md](themes/saffron/saffron.md) for light theme setup notes — iTerm2 requires one additional setting.
 
 [Design system guide →](themes/saffron/saffron.md)
+
+---
+
+### Seafoam
+
+> Seafoam on wet pebbles at low tide — the specific pale green-white of foam just before it recedes, mineral and cool.
+
+```
+  marvin  ~/gloam   main ~2  ·····················  ⬦ 14:32
+›
+```
+
+| Token | Hex | Role |
+|---|---|---|
+| primary | `#1A7858` | sea-green — directory, languages |
+| accent | `#166870` | deep teal — git, cursor |
+| muted | `#406060` | tide-pool grey-green — chrome, time |
+| error | `#C83820` | deep red |
+
+Background `#EEF5F2` · Foreground `#101E18` · Layout: single-line · Fill: `·` · Cursor: `›`
+
+> **Light theme.** All tokens are dark colors on a pale sea-green background. See [seafoam.md](themes/seafoam/seafoam.md) for light theme setup notes — iTerm2 requires one additional setting.
+
+[Design system guide →](themes/seafoam/seafoam.md)
 
 ---
 
@@ -1091,7 +1311,7 @@ Background `#F4F0F8` · Foreground `#2A1A40` · Layout: single-line · Fill: `·
 
 ## Choosing a theme
 
-All 45 themes share the same structural model — four semantic tokens, 16-color ANSI palette, identical targets. The differences are concept, color temperature, and prompt layout.
+All 54 themes share the same structural model — four semantic tokens, 16-color ANSI palette, identical targets. The differences are concept, color temperature, and prompt layout.
 
 ### By color temperature
 
@@ -1099,9 +1319,10 @@ All 45 themes share the same structural model — four semantic tokens, 16-color
 |---|---|---|
 | Eventide, Ember, Cordovan, Nocturne | Aether, Fjord, Basalt, Verdigris | Tungsten, Sable, Umbra, Absinthe |
 | Solano, Saffron, Ochre, Tallow | Nacreous, Petrichor, Amethyst, Cobalt | Noir, Cast, Graphite, Weld |
-| Bamboo, Carmine, Rosewater, Madder | Ironcast, Sumi, Synthwave, Dusk | Stark |
-| Bloom | Boreal, Iris, Damson, Canopy, Cirrus | |
-| | Fern, Brume, Wisteria, Verdure | |
+| Bamboo, Carmine, Rosewater, Madder | Ironcast, Sumi, Synthwave, Dusk | Stark, Cinder |
+| Bloom, Apricot, Espresso, Kiln | Boreal, Iris, Damson, Canopy, Cirrus | Phosphor, Lichen |
+| | Fern, Brume, Wisteria, Verdure, Seafoam | |
+| | Lapis, Overcast | |
 
 ### By background type
 
@@ -1110,10 +1331,11 @@ All 45 themes share the same structural model — four semantic tokens, 16-color
 | Eventide, Aether, Ember, Absinthe, Verdigris | Parchment, Daybook, Cirrus |
 | Sable, Fjord, Umbra, Cordovan, Tungsten | Solano, Saffron, Ochre |
 | Amethyst, Nacreous, Petrichor, Nocturne, Basalt | Bloom, Fern, Stark |
-| Bamboo, Canopy, Carmine, Cast, Cobalt | Brume, Wisteria |
-| Dusk, Graphite, Ironcast, Noir, Rosewater | |
+| Bamboo, Canopy, Carmine, Cast, Cobalt | Brume, Wisteria, Apricot |
+| Dusk, Graphite, Ironcast, Noir, Rosewater | Overcast, Seafoam |
 | Sumi, Synthwave, Tallow, Weld, Madder | |
 | Boreal, Verdure, Iris, Damson | |
+| Espresso, Kiln, Lapis, Lichen, Cinder, Phosphor | |
 
 ### By prompt layout
 
@@ -1124,11 +1346,12 @@ All 45 themes share the same structural model — four semantic tokens, 16-color
 | Saffron, Aether, Canopy, Carmine | Cirrus, Solano, Ochre, Bamboo |
 | Cast, Cobalt, Dusk, Graphite | Bloom, Fern, Noir, Sumi |
 | Ironcast, Rosewater, Stark, Synthwave | Tallow, Brume, Wisteria |
-| Weld, Boreal, Iris, Madder, Verdure, Damson | |
+| Weld, Boreal, Iris, Madder, Verdure, Damson | Apricot, Cinder, Espresso |
+| Kiln, Lapis, Lichen, Overcast | Phosphor, Seafoam |
 
 ### Picking a light theme
 
-All eleven light themes use dark tokens on a light background. Key differences:
+All fourteen light themes use dark tokens on a light background. Key differences:
 
 | Theme | Background | Primary | Feel |
 |---|---|---|---|
@@ -1143,6 +1366,9 @@ All eleven light themes use dark tokens on a light background. Key differences:
 | Stark | `#FFFFFF` pure white | `#001A8C` deep navy | pure contrast, no atmosphere |
 | Brume | `#EEF2F0` fog gray | `#1A6068` sea-teal | coastal mist, values only |
 | Wisteria | `#F4F0F8` pale lavender | `#4828A0` iris violet | wisteria in bloom |
+| Apricot | `#FDF6ED` warm cream-peach | `#7A5810` golden amber | first light through a grove |
+| Overcast | `#F0F2F5` cool grey | `#4040C8` pure blue | overcast November morning |
+| Seafoam | `#EEF5F2` pale sea-green | `#1A7858` sea-green | seafoam at low tide |
 
 **All light themes require one extra iTerm2 setting:** uncheck *Use bright colors for bold text* (`Preferences › Profiles › Colors`).
 
@@ -1166,6 +1392,7 @@ Structural and layout choices vary per theme:
 | Absinthe | single-line | — | `·` | `▸` |
 | Aether | two-line | `╭╰─` | `·` | `⟫` |
 | Amethyst | two-line | `╭╰─` | `·` | `⟫` |
+| Apricot | single-line | — | `·` | `›` |
 | Bamboo | single-line | — | `┄` | `›` |
 | Basalt | single-line | — | `╌` | `▸` |
 | Bloom | single-line | — | `∵` | `›` |
@@ -1174,6 +1401,7 @@ Structural and layout choices vary per theme:
 | Canopy | two-line | `╭╰─` | `⋅` | `❯` |
 | Carmine | two-line | `╭╰─` | `╴` | `❯` |
 | Cast | two-line | `╭╰─` | `∴` | `❯` |
+| Cinder | single-line | — | `·` | `❯` |
 | Cirrus | single-line | — | `·` | `›` |
 | Cobalt | two-line | `╭╰─` | `╍` | `❯` |
 | Cordovan | two-line | `╭╰─` | `─` | `❯` |
@@ -1181,22 +1409,29 @@ Structural and layout choices vary per theme:
 | Daybook | single-line | — | `·` | `›` |
 | Dusk | two-line | `╭╰─` | `⋰` | `❯` |
 | Ember | two-line | `╭╰─` | `·` | `❯` |
+| Espresso | single-line | — | `·` | `❯` |
 | Eventide | two-line | `╭╰─` | `─` | `❯` |
 | Fern | single-line | — | `≀` | `›` |
 | Fjord | two-line | `╭╰─` | `·` | `›` |
 | Graphite | two-line | `╭╰─` | `⋯` | `❯` |
 | Iris | two-line | `╭╰─` | `⋯` | `❯` |
 | Ironcast | two-line | `╭╰─` | `═` | `❯` |
+| Kiln | two-line | `╭╰─` | `─` | `❯` |
+| Lapis | two-line | `╭╰─` | `·` | `❯` |
+| Lichen | two-line | `╭╰─` | `·` | `❯` |
 | Madder | two-line | `╭╰─` | `╼` | `❯` |
 | Nacreous | two-line | `╭╰─` | `·` | `⟫` |
 | Nocturne | two-line | `╭╰─` | `─` | `❯` |
 | Noir | single-line | — | `∶` | `›` |
 | Ochre | single-line | — | `·` | `›` |
+| Overcast | two-line | `╭╰─` | `─` | `❯` |
 | Parchment | single-line | — | `·` | `›` |
 | Petrichor | single-line | — | `─` | `›` |
+| Phosphor | single-line | — | `─` | `▸` |
 | Rosewater | two-line | `╭╰─` | `≈` | `❯` |
 | Sable | single-line | — | ` ` | `›` |
 | Saffron | two-line | `╭╰─` | `─` | `❯` |
+| Seafoam | single-line | — | `·` | `›` |
 | Solano | single-line | — | `∿` | `›` |
 | Stark | two-line | `╭╰─` | `┅` | `❯` |
 | Sumi | single-line | — | `∷` | `›` |
@@ -1221,7 +1456,7 @@ npx github:marvinrichter/gloam <theme> <target>
 
 The installer copies the theme config and wires it into your existing config file — no clone required.
 
-**Themes:** `absinthe` · `aether` · `amethyst` · `bamboo` · `basalt` · `bloom` · `boreal` · `brume` · `canopy` · `carmine` · `cast` · `cirrus` · `cobalt` · `cordovan` · `damson` · `daybook` · `dusk` · `ember` · `eventide` · `fern` · `fjord` · `graphite` · `iris` · `ironcast` · `madder` · `nacreous` · `nocturne` · `noir` · `ochre` · `parchment` · `petrichor` · `rosewater` · `sable` · `saffron` · `solano` · `stark` · `sumi` · `synthwave` · `tallow` · `tungsten` · `umbra` · `verdigris` · `verdure` · `weld` · `wisteria`
+**Themes:** `absinthe` · `aether` · `amethyst` · `apricot` · `bamboo` · `basalt` · `bloom` · `boreal` · `brume` · `canopy` · `carmine` · `cast` · `cinder` · `cirrus` · `cobalt` · `cordovan` · `damson` · `daybook` · `dusk` · `ember` · `espresso` · `eventide` · `fern` · `fjord` · `graphite` · `iris` · `ironcast` · `kiln` · `lapis` · `lichen` · `madder` · `nacreous` · `nocturne` · `noir` · `ochre` · `overcast` · `parchment` · `petrichor` · `phosphor` · `rosewater` · `sable` · `saffron` · `seafoam` · `solano` · `stark` · `sumi` · `synthwave` · `tallow` · `tungsten` · `umbra` · `verdigris` · `verdure` · `weld` · `wisteria`
 
 **Targets:** `vscode` · `starship` · `neovim` · `alacritty` · `kitty` · `wezterm` · `ghostty` · `tmux` · `zed` · `windows-terminal` · `helix`
 
