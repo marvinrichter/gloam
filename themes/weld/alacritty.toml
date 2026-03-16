@@ -1,0 +1,37 @@
+# weld — Alacritty color theme
+# Generated from weld.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/weld.toml
+# then add `import = ["~/.config/alacritty/themes/weld.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0E0E08"
+foreground = "#E8E0C0"
+
+[colors.cursor]
+cursor = "#E8B040"
+text   = "#0E0E08"
+
+[colors.selection]
+background = "#1C1C10"
+text       = "#E8E0C0"
+
+[colors.normal]
+black   = "#0E0E08"
+red     = "#A86050"
+green   = "#7A9848"
+yellow  = "#B09040"
+blue    = "#5A7870"
+magenta = "#8870A0"
+cyan    = "#4A8870"
+white   = "#9A9870"
+
+[colors.bright]
+black   = "#202018"
+red     = "#D06060"
+green   = "#90C058"
+yellow  = "#98B838"
+blue    = "#909060"
+magenta = "#A888C0"
+cyan    = "#60A880"
+white   = "#E8E0C0"

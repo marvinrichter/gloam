@@ -1,0 +1,47 @@
+{
+  "name": "cast",
+  "displayName": "Cast",
+  "type": "dark",
+  "background": "#101010",
+  "foreground": "#C8C8C0",
+  "tokens": {
+    "primary": "#C8C060",
+    "accent": "#D8C040",
+    "muted": "#888880",
+    "error": "#D85858"
+  },
+  "ansi": [
+    "#101010",
+    "#A06060",
+    "#508060",
+    "#909050",
+    "#506080",
+    "#786080",
+    "#407880",
+    "#909088",
+    "#202020",
+    "#D85858",
+    "#68A068",
+    "#C8C060",
+    "#888880",
+    "#908090",
+    "#50A0A8",
+    "#C8C8C0"
+  ],
+  "ui": {
+    "cursor": "#D8C040",
+    "cursorText": "#101010",
+    "selection": "#1C1C1C",
+    "selectionText": "#C8C8C0",
+    "bold": "#C8C8C0",
+    "link": "#90A870"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "∴",
+    "timePrefix": "∅",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

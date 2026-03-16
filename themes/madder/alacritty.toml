@@ -1,0 +1,37 @@
+# madder — Alacritty color theme
+# Generated from madder.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/madder.toml
+# then add `import = ["~/.config/alacritty/themes/madder.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0E0608"
+foreground = "#F0E0E8"
+
+[colors.cursor]
+cursor = "#E04060"
+text   = "#0E0608"
+
+[colors.selection]
+background = "#301020"
+text       = "#F0E0E8"
+
+[colors.normal]
+black   = "#180810"
+red     = "#E04848"
+green   = "#508058"
+yellow  = "#C09868"
+blue    = "#6868B0"
+magenta = "#E04060"
+cyan    = "#809080"
+white   = "#C08898"
+
+[colors.bright]
+black   = "#38182A"
+red     = "#F06878"
+green   = "#70A878"
+yellow  = "#D8B888"
+blue    = "#8898C8"
+magenta = "#F090C0"
+cyan    = "#90A888"
+white   = "#F8E8F0"

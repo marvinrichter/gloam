@@ -1,0 +1,23 @@
+{
+  "name": "Bloom",
+  "background": "#FFF0F0",
+  "foreground": "#2A1420",
+  "cursorColor": "#5A2080",
+  "selectionBackground": "#F0C8D0",
+  "black": "#1A0810",
+  "red": "#7A2020",
+  "green": "#286020",
+  "yellow": "#705A10",
+  "blue": "#28287A",
+  "purple": "#58285A",
+  "cyan": "#1A5058",
+  "white": "#D8B8C0",
+  "brightBlack": "#3A2030",
+  "brightRed": "#8A1020",
+  "brightGreen": "#386028",
+  "brightYellow": "#7A1840",
+  "brightBlue": "#7A5868",
+  "brightPurple": "#703888",
+  "brightCyan": "#285878",
+  "brightWhite": "#F8E8F0"
+}

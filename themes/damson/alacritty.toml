@@ -1,0 +1,37 @@
+# damson — Alacritty color theme
+# Generated from damson.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/damson.toml
+# then add `import = ["~/.config/alacritty/themes/damson.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#090610"
+foreground = "#E8D8F8"
+
+[colors.cursor]
+cursor = "#D428BC"
+text   = "#090610"
+
+[colors.selection]
+background = "#201030"
+text       = "#E8D8F8"
+
+[colors.normal]
+black   = "#130B18"
+red     = "#601828"
+green   = "#285030"
+yellow  = "#604018"
+blue    = "#202860"
+magenta = "#602060"
+cyan    = "#204848"
+white   = "#A898B8"
+
+[colors.bright]
+black   = "#382848"
+red     = "#E06070"
+green   = "#68C880"
+yellow  = "#C8A050"
+blue    = "#6878D0"
+magenta = "#C840B0"
+cyan    = "#70B8D8"
+white   = "#F0E8FF"

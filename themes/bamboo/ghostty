@@ -1,0 +1,32 @@
+# bamboo — Ghostty color theme
+# Generated from bamboo.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/bamboo
+# then set theme = bamboo in ~/.config/ghostty/config
+
+background         = 090C08
+foreground         = E0DDD4
+
+cursor-color       = 80B8A0
+cursor-text        = 090C08
+
+selection-background = 141A12
+selection-foreground = E0DDD4
+
+# ANSI palette (0–15)
+palette = 0=090C08
+palette = 1=A85858
+palette = 2=508060
+palette = 3=A89050
+palette = 4=507090
+palette = 5=90607A
+palette = 6=407880
+palette = 7=909888
+palette = 8=182018
+palette = 9=C86868
+palette = 10=68A870
+palette = 11=E06848
+palette = 12=888A90
+palette = 13=A878A8
+palette = 14=5898A8
+palette = 15=E0DDD4

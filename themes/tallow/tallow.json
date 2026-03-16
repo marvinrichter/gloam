@@ -1,0 +1,47 @@
+{
+  "name": "tallow",
+  "displayName": "Tallow",
+  "type": "dark",
+  "background": "#120E08",
+  "foreground": "#F0E8D8",
+  "tokens": {
+    "primary": "#E8C888",
+    "accent": "#D4905A",
+    "muted": "#9A8870",
+    "error": "#D86060"
+  },
+  "ansi": [
+    "#120E08",
+    "#B06050",
+    "#608050",
+    "#C09858",
+    "#606870",
+    "#907868",
+    "#488078",
+    "#B0A088",
+    "#282018",
+    "#D86060",
+    "#70A860",
+    "#E8C888",
+    "#9A8870",
+    "#B088A0",
+    "#5898A8",
+    "#F0E8D8"
+  ],
+  "ui": {
+    "cursor": "#D4905A",
+    "cursorText": "#120E08",
+    "selection": "#201808",
+    "selectionText": "#F0E8D8",
+    "bold": "#F0E8D8",
+    "link": "#C8A870"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "⠿",
+    "timePrefix": "◐",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

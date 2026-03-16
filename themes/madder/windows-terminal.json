@@ -1,0 +1,23 @@
+{
+  "name": "Madder",
+  "background": "#0E0608",
+  "foreground": "#F0E0E8",
+  "cursorColor": "#E04060",
+  "selectionBackground": "#301020",
+  "black": "#180810",
+  "red": "#E04848",
+  "green": "#508058",
+  "yellow": "#C09868",
+  "blue": "#6868B0",
+  "purple": "#E04060",
+  "cyan": "#809080",
+  "white": "#C08898",
+  "brightBlack": "#38182A",
+  "brightRed": "#F06878",
+  "brightGreen": "#70A878",
+  "brightYellow": "#D8B888",
+  "brightBlue": "#8898C8",
+  "brightPurple": "#F090C0",
+  "brightCyan": "#90A888",
+  "brightWhite": "#F8E8F0"
+}

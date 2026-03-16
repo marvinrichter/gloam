@@ -1,0 +1,32 @@
+# madder — Ghostty color theme
+# Generated from madder.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/madder
+# then set theme = madder in ~/.config/ghostty/config
+
+background         = 0E0608
+foreground         = F0E0E8
+
+cursor-color       = E04060
+cursor-text        = 0E0608
+
+selection-background = 301020
+selection-foreground = F0E0E8
+
+# ANSI palette (0–15)
+palette = 0=180810
+palette = 1=E04848
+palette = 2=508058
+palette = 3=C09868
+palette = 4=6868B0
+palette = 5=E04060
+palette = 6=809080
+palette = 7=C08898
+palette = 8=38182A
+palette = 9=F06878
+palette = 10=70A878
+palette = 11=D8B888
+palette = 12=8898C8
+palette = 13=F090C0
+palette = 14=90A888
+palette = 15=F8E8F0

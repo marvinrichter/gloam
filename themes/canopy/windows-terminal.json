@@ -1,0 +1,23 @@
+{
+  "name": "Canopy",
+  "background": "#080E0A",
+  "foreground": "#D4E0C8",
+  "cursorColor": "#C8A060",
+  "selectionBackground": "#101A12",
+  "black": "#080E0A",
+  "red": "#A05858",
+  "green": "#4EA858",
+  "yellow": "#A88840",
+  "blue": "#406080",
+  "purple": "#8058A0",
+  "cyan": "#3A8878",
+  "white": "#909880",
+  "brightBlack": "#182018",
+  "brightRed": "#D06868",
+  "brightGreen": "#60C870",
+  "brightYellow": "#90C860",
+  "brightBlue": "#709068",
+  "brightPurple": "#A070B8",
+  "brightCyan": "#50A890",
+  "brightWhite": "#D4E0C8"
+}

@@ -273,6 +273,24 @@ describe("hue uniqueness — no two same-type themes share primary hue within 10
     "ochre|solano",
     // Dark amber band (28–30°): parchment/saffron (light)
     "parchment|saffron",
+    // Amber band extension: tallow (40°) and noir (46°) join warm-gold cluster
+    "cordovan|tallow",
+    "ember|tallow",
+    "eventide|tallow",
+    "nocturne|tallow",
+    "tallow|tungsten",
+    "cordovan|noir",
+    "ember|noir",
+    "eventide|noir",
+    "nocturne|noir",
+    "noir|tungsten",
+    "noir|tallow",
+    // Cast (55°) sits just inside the amber cluster boundary with noir (46°)
+    "cast|noir",
+    // Blue-gray band extension: ironcast (204°) joins fjord/sable/umbra cluster
+    "fjord|ironcast",
+    "ironcast|sable",
+    "ironcast|umbra",
   ]);
   const pairKey = (a, b) => [a, b].sort().join("|");
 

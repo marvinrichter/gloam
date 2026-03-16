@@ -1,0 +1,47 @@
+{
+  "name": "bloom",
+  "displayName": "Bloom",
+  "type": "light",
+  "background": "#FFF0F0",
+  "foreground": "#2A1420",
+  "tokens": {
+    "primary": "#7A1840",
+    "accent": "#5A2080",
+    "muted": "#7A5868",
+    "error": "#8A1020"
+  },
+  "ansi": [
+    "#1A0810",
+    "#7A2020",
+    "#286020",
+    "#705A10",
+    "#28287A",
+    "#58285A",
+    "#1A5058",
+    "#D8B8C0",
+    "#3A2030",
+    "#8A1020",
+    "#386028",
+    "#7A1840",
+    "#7A5868",
+    "#703888",
+    "#285878",
+    "#F8E8F0"
+  ],
+  "ui": {
+    "cursor": "#5A2080",
+    "cursorText": "#FFF0F0",
+    "selection": "#F0C8D0",
+    "selectionText": "#2A1420",
+    "bold": "#1A0810",
+    "link": "#28287A"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "∵",
+    "timePrefix": "✽",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

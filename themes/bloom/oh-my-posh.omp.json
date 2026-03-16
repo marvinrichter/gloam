@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#7A1840",
+          "properties": {
+            "style": "folder",
+            "max_depth": 3,
+            "folder_separator_icon": "/"
+          },
+          "template": " <b>{{ .Path }}</b> "
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#5A2080",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_status": true
+          },
+          "template": " {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#7A5868",
+          "properties": {
+            "threshold": 2000,
+            "style": "round"
+          },
+          "template": " ◆ {{ .FormattedMs }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#7A5868",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "template": " ${prompt.timePrefix} {{ .CurrentDate | date .Format }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#5A2080",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}${t.error}{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "template": "› "
+        }
+      ]
+    }
+  ],
+  "palette": {
+    "background": "#FFF0F0",
+    "foreground": "#2A1420",
+    "primary": "#7A1840",
+    "accent": "#5A2080",
+    "muted": "#7A5868",
+    "error": "#8A1020"
+  }
+}

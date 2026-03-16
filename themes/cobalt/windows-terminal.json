@@ -1,0 +1,23 @@
+{
+  "name": "Cobalt",
+  "background": "#080C18",
+  "foreground": "#D8E0F0",
+  "cursorColor": "#70D8F0",
+  "selectionBackground": "#101828",
+  "black": "#080C18",
+  "red": "#B05060",
+  "green": "#3878A0",
+  "yellow": "#8098C8",
+  "blue": "#4858C8",
+  "purple": "#8068B0",
+  "cyan": "#3898C0",
+  "white": "#8898C0",
+  "brightBlack": "#182038",
+  "brightRed": "#D05860",
+  "brightGreen": "#4898A8",
+  "brightYellow": "#6878F0",
+  "brightBlue": "#7888B8",
+  "brightPurple": "#9080D0",
+  "brightCyan": "#40B8D8",
+  "brightWhite": "#D8E0F0"
+}

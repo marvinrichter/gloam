@@ -1,0 +1,32 @@
+# dusk — Ghostty color theme
+# Generated from dusk.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/dusk
+# then set theme = dusk in ~/.config/ghostty/config
+
+background         = 282834
+foreground         = C8C4BC
+
+cursor-color       = E8A860
+cursor-text        = 282834
+
+selection-background = 363648
+selection-foreground = C8C4BC
+
+# ANSI palette (0–15)
+palette = 0=282834
+palette = 1=A87070
+palette = 2=608870
+palette = 3=A89868
+palette = 4=6880A8
+palette = 5=9068A0
+palette = 6=488898
+palette = 7=A0A0A0
+palette = 8=3A3A48
+palette = 9=DC7878
+palette = 10=70B878
+palette = 11=C490C8
+palette = 12=9098A8
+palette = 13=A880C0
+palette = 14=60A8C0
+palette = 15=C8C4BC

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://zed.dev/schema/themes/v0.1.0.json",
+  "name": "Bloom",
+  "author": "gloam",
+  "themes": [
+    {
+      "name": "Bloom",
+      "appearance": "light",
+      "style": {
+        "background": "#FFF0F0",
+        "foreground": "#2A1420",
+        "editor.background": "#FFF0F0",
+        "editor.foreground": "#2A1420",
+        "editor.line_number": "#7A5868",
+        "editor.active_line_number": "#2A1420",
+        "editor.selection.background": "#F0C8D0",
+        "terminal.background": "#FFF0F0",
+        "terminal.foreground": "#2A1420",
+        "terminal.cursor": "#5A2080",
+        "terminal.cursor_text": "#FFF0F0",
+        "terminal.ansi.black": "#1A0810",
+        "terminal.ansi.red": "#7A2020",
+        "terminal.ansi.green": "#286020",
+        "terminal.ansi.yellow": "#705A10",
+        "terminal.ansi.blue": "#28287A",
+        "terminal.ansi.magenta": "#58285A",
+        "terminal.ansi.cyan": "#1A5058",
+        "terminal.ansi.white": "#D8B8C0",
+        "terminal.ansi.bright_black": "#3A2030",
+        "terminal.ansi.bright_red": "#8A1020",
+        "terminal.ansi.bright_green": "#386028",
+        "terminal.ansi.bright_yellow": "#7A1840",
+        "terminal.ansi.bright_blue": "#7A5868",
+        "terminal.ansi.bright_magenta": "#703888",
+        "terminal.ansi.bright_cyan": "#285878",
+        "terminal.ansi.bright_white": "#F8E8F0",
+        "border": "#7A5868",
+        "border.focused": "#7A1840",
+        "panel.background": "#3A2030",
+        "element.hover": "#F0C8D0",
+        "ghost_element.hover": "#F0C8D0",
+        "link_text_hover": "#28287A",
+        "syntax": {
+          "keyword": {
+            "color": "#5A2080"
+          },
+          "type": {
+            "color": "#7A1840"
+          },
+          "class": {
+            "color": "#7A1840"
+          },
+          "function": {
+            "color": "#7A1840"
+          },
+          "string": {
+            "color": "#386028"
+          },
+          "number": {
+            "color": "#7A1840"
+          },
+          "comment": {
+            "color": "#7A5868",
+            "font_style": "italic"
+          },
+          "variable": {
+            "color": "#2A1420"
+          },
+          "constant": {
+            "color": "#703888"
+          },
+          "operator": {
+            "color": "#7A5868"
+          },
+          "punctuation": {
+            "color": "#7A5868"
+          },
+          "tag": {
+            "color": "#5A2080"
+          },
+          "attribute": {
+            "color": "#7A1840"
+          }
+        },
+        "error.background": "#8A1020",
+        "warning.background": "#705A10"
+      }
+    }
+  ]
+}

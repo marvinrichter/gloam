@@ -1,0 +1,37 @@
+# wisteria — Alacritty color theme
+# Generated from wisteria.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/wisteria.toml
+# then add `import = ["~/.config/alacritty/themes/wisteria.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#F4F0F8"
+foreground = "#2A1A40"
+
+[colors.cursor]
+cursor = "#4828A0"
+text   = "#F4F0F8"
+
+[colors.selection]
+background = "#D8C8F0"
+text       = "#2A1A40"
+
+[colors.normal]
+black   = "#F4F0F8"
+red     = "#882020"
+green   = "#1A5028"
+yellow  = "#705010"
+blue    = "#2A3888"
+magenta = "#4828A0"
+cyan    = "#286080"
+white   = "#4A3868"
+
+[colors.bright]
+black   = "#C8B8D8"
+red     = "#C04848"
+green   = "#287840"
+yellow  = "#906820"
+blue    = "#3850B8"
+magenta = "#6838C0"
+cyan    = "#30809A"
+white   = "#2A1A40"

@@ -1,0 +1,32 @@
+# graphite — Ghostty color theme
+# Generated from graphite.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/graphite
+# then set theme = graphite in ~/.config/ghostty/config
+
+background         = 0C0C0C
+foreground         = E0E0E0
+
+cursor-color       = D8C8A0
+cursor-text        = 0C0C0C
+
+selection-background = 1C1C1C
+selection-foreground = E0E0E0
+
+# ANSI palette (0–15)
+palette = 0=0C0C0C
+palette = 1=986868
+palette = 2=508858
+palette = 3=988870
+palette = 4=586878
+palette = 5=887888
+palette = 6=508088
+palette = 7=A0A0A0
+palette = 8=202020
+palette = 9=C86060
+palette = 10=68A870
+palette = 11=C4B8C8
+palette = 12=808888
+palette = 13=9888A8
+palette = 14=5898A0
+palette = 15=E0E0E0

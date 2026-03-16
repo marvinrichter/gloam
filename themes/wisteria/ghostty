@@ -1,0 +1,32 @@
+# wisteria — Ghostty color theme
+# Generated from wisteria.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/wisteria
+# then set theme = wisteria in ~/.config/ghostty/config
+
+background         = F4F0F8
+foreground         = 2A1A40
+
+cursor-color       = 4828A0
+cursor-text        = F4F0F8
+
+selection-background = D8C8F0
+selection-foreground = 2A1A40
+
+# ANSI palette (0–15)
+palette = 0=F4F0F8
+palette = 1=882020
+palette = 2=1A5028
+palette = 3=705010
+palette = 4=2A3888
+palette = 5=4828A0
+palette = 6=286080
+palette = 7=4A3868
+palette = 8=C8B8D8
+palette = 9=C04848
+palette = 10=287840
+palette = 11=906820
+palette = 12=3850B8
+palette = 13=6838C0
+palette = 14=30809A
+palette = 15=2A1A40

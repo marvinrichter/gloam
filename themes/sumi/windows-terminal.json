@@ -1,0 +1,23 @@
+{
+  "name": "Sumi",
+  "background": "#0A0B0D",
+  "foreground": "#D8D0C0",
+  "cursorColor": "#7898B8",
+  "selectionBackground": "#181A20",
+  "black": "#0A0B0D",
+  "red": "#9A5050",
+  "green": "#4A8860",
+  "yellow": "#A09060",
+  "blue": "#587080",
+  "purple": "#806878",
+  "cyan": "#407880",
+  "white": "#909090",
+  "brightBlack": "#202428",
+  "brightRed": "#B86868",
+  "brightGreen": "#60A870",
+  "brightYellow": "#8878C8",
+  "brightBlue": "#788090",
+  "brightPurple": "#9078A0",
+  "brightCyan": "#5898A8",
+  "brightWhite": "#D8D0C0"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Tallow",
+  "background": "#120E08",
+  "foreground": "#F0E8D8",
+  "cursorColor": "#D4905A",
+  "selectionBackground": "#201808",
+  "black": "#120E08",
+  "red": "#B06050",
+  "green": "#608050",
+  "yellow": "#C09858",
+  "blue": "#606870",
+  "purple": "#907868",
+  "cyan": "#488078",
+  "white": "#B0A088",
+  "brightBlack": "#282018",
+  "brightRed": "#D86060",
+  "brightGreen": "#70A860",
+  "brightYellow": "#E8C888",
+  "brightBlue": "#9A8870",
+  "brightPurple": "#B088A0",
+  "brightCyan": "#5898A8",
+  "brightWhite": "#F0E8D8"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "bamboo",
+  "displayName": "Bamboo",
+  "type": "dark",
+  "background": "#090C08",
+  "foreground": "#E0DDD4",
+  "tokens": {
+    "primary": "#E06848",
+    "accent": "#80B8A0",
+    "muted": "#888A90",
+    "error": "#C86868"
+  },
+  "ansi": [
+    "#090C08",
+    "#A85858",
+    "#508060",
+    "#A89050",
+    "#507090",
+    "#90607A",
+    "#407880",
+    "#909888",
+    "#182018",
+    "#C86868",
+    "#68A870",
+    "#E06848",
+    "#888A90",
+    "#A878A8",
+    "#5898A8",
+    "#E0DDD4"
+  ],
+  "ui": {
+    "cursor": "#80B8A0",
+    "cursorText": "#090C08",
+    "selection": "#141A12",
+    "selectionText": "#E0DDD4",
+    "bold": "#E0DDD4",
+    "link": "#98D0B8"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "┄",
+    "timePrefix": "⊛",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

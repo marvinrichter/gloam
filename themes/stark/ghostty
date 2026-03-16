@@ -1,0 +1,32 @@
+# stark — Ghostty color theme
+# Generated from stark.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/stark
+# then set theme = stark in ~/.config/ghostty/config
+
+background         = FFFFFF
+foreground         = 000000
+
+cursor-color       = 8C3000
+cursor-text        = FFFFFF
+
+selection-background = E0E0E0
+selection-foreground = 000000
+
+# ANSI palette (0–15)
+palette = 0=000000
+palette = 1=880000
+palette = 2=005500
+palette = 3=885500
+palette = 4=000088
+palette = 5=880088
+palette = 6=008888
+palette = 7=888888
+palette = 8=444444
+palette = 9=8C0000
+palette = 10=007700
+palette = 11=001A8C
+palette = 12=3A3A3A
+palette = 13=9900AA
+palette = 14=0077AA
+palette = 15=FFFFFF

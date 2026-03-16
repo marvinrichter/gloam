@@ -1,0 +1,37 @@
+# sumi — Alacritty color theme
+# Generated from sumi.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/sumi.toml
+# then add `import = ["~/.config/alacritty/themes/sumi.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0A0B0D"
+foreground = "#D8D0C0"
+
+[colors.cursor]
+cursor = "#7898B8"
+text   = "#0A0B0D"
+
+[colors.selection]
+background = "#181A20"
+text       = "#D8D0C0"
+
+[colors.normal]
+black   = "#0A0B0D"
+red     = "#9A5050"
+green   = "#4A8860"
+yellow  = "#A09060"
+blue    = "#587080"
+magenta = "#806878"
+cyan    = "#407880"
+white   = "#909090"
+
+[colors.bright]
+black   = "#202428"
+red     = "#B86868"
+green   = "#60A870"
+yellow  = "#8878C8"
+blue    = "#788090"
+magenta = "#9078A0"
+cyan    = "#5898A8"
+white   = "#D8D0C0"

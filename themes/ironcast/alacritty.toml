@@ -1,0 +1,37 @@
+# ironcast — Alacritty color theme
+# Generated from ironcast.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/ironcast.toml
+# then add `import = ["~/.config/alacritty/themes/ironcast.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0B0D10"
+foreground = "#CDD4DC"
+
+[colors.cursor]
+cursor = "#C8D838"
+text   = "#0B0D10"
+
+[colors.selection]
+background = "#181C24"
+text       = "#CDD4DC"
+
+[colors.normal]
+black   = "#0B0D10"
+red     = "#B05050"
+green   = "#487858"
+yellow  = "#9A9050"
+blue    = "#4868A0"
+magenta = "#786890"
+cyan    = "#407888"
+white   = "#909898"
+
+[colors.bright]
+black   = "#1C2028"
+red     = "#D05858"
+green   = "#60A878"
+yellow  = "#78A8C8"
+blue    = "#7090A8"
+magenta = "#9880B8"
+cyan    = "#50A0B8"
+white   = "#CDD4DC"

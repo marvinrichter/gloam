@@ -1,0 +1,37 @@
+# synthwave — Alacritty color theme
+# Generated from synthwave.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/synthwave.toml
+# then add `import = ["~/.config/alacritty/themes/synthwave.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0D0818"
+foreground = "#F0E8FF"
+
+[colors.cursor]
+cursor = "#40E8E0"
+text   = "#0D0818"
+
+[colors.selection]
+background = "#1A1030"
+text       = "#F0E8FF"
+
+[colors.normal]
+black   = "#0D0818"
+red     = "#C84060"
+green   = "#40C890"
+yellow  = "#D080C0"
+blue    = "#6050D0"
+magenta = "#C040C8"
+cyan    = "#40C0D8"
+white   = "#B0A0D0"
+
+[colors.bright]
+black   = "#281848"
+red     = "#FF4070"
+green   = "#50E890"
+yellow  = "#FF60C8"
+blue    = "#9070C8"
+magenta = "#E060F0"
+cyan    = "#40E8E0"
+white   = "#F0E8FF"

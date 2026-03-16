@@ -1,0 +1,37 @@
+# canopy — Alacritty color theme
+# Generated from canopy.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/canopy.toml
+# then add `import = ["~/.config/alacritty/themes/canopy.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#080E0A"
+foreground = "#D4E0C8"
+
+[colors.cursor]
+cursor = "#C8A060"
+text   = "#080E0A"
+
+[colors.selection]
+background = "#101A12"
+text       = "#D4E0C8"
+
+[colors.normal]
+black   = "#080E0A"
+red     = "#A05858"
+green   = "#4EA858"
+yellow  = "#A88840"
+blue    = "#406080"
+magenta = "#8058A0"
+cyan    = "#3A8878"
+white   = "#909880"
+
+[colors.bright]
+black   = "#182018"
+red     = "#D06868"
+green   = "#60C870"
+yellow  = "#90C860"
+blue    = "#709068"
+magenta = "#A070B8"
+cyan    = "#50A890"
+white   = "#D4E0C8"

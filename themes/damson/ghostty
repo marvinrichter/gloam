@@ -1,0 +1,32 @@
+# damson — Ghostty color theme
+# Generated from damson.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/damson
+# then set theme = damson in ~/.config/ghostty/config
+
+background         = 090610
+foreground         = E8D8F8
+
+cursor-color       = D428BC
+cursor-text        = 090610
+
+selection-background = 201030
+selection-foreground = E8D8F8
+
+# ANSI palette (0–15)
+palette = 0=130B18
+palette = 1=601828
+palette = 2=285030
+palette = 3=604018
+palette = 4=202860
+palette = 5=602060
+palette = 6=204848
+palette = 7=A898B8
+palette = 8=382848
+palette = 9=E06070
+palette = 10=68C880
+palette = 11=C8A050
+palette = 12=6878D0
+palette = 13=C840B0
+palette = 14=70B8D8
+palette = 15=F0E8FF

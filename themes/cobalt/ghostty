@@ -1,0 +1,32 @@
+# cobalt — Ghostty color theme
+# Generated from cobalt.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/cobalt
+# then set theme = cobalt in ~/.config/ghostty/config
+
+background         = 080C18
+foreground         = D8E0F0
+
+cursor-color       = 70D8F0
+cursor-text        = 080C18
+
+selection-background = 101828
+selection-foreground = D8E0F0
+
+# ANSI palette (0–15)
+palette = 0=080C18
+palette = 1=B05060
+palette = 2=3878A0
+palette = 3=8098C8
+palette = 4=4858C8
+palette = 5=8068B0
+palette = 6=3898C0
+palette = 7=8898C0
+palette = 8=182038
+palette = 9=D05860
+palette = 10=4898A8
+palette = 11=6878F0
+palette = 12=7888B8
+palette = 13=9080D0
+palette = 14=40B8D8
+palette = 15=D8E0F0

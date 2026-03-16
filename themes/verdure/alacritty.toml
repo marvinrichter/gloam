@@ -1,0 +1,37 @@
+# verdure — Alacritty color theme
+# Generated from verdure.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/verdure.toml
+# then add `import = ["~/.config/alacritty/themes/verdure.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#080E08"
+foreground = "#D0E0C0"
+
+[colors.cursor]
+cursor = "#60C848"
+text   = "#080E08"
+
+[colors.selection]
+background = "#182818"
+text       = "#D0E0C0"
+
+[colors.normal]
+black   = "#0C140C"
+red     = "#D06060"
+green   = "#60C848"
+yellow  = "#C0B840"
+blue    = "#6090A8"
+magenta = "#9870C0"
+cyan    = "#50C0A0"
+white   = "#90A878"
+
+[colors.bright]
+black   = "#203020"
+red     = "#E08070"
+green   = "#80E058"
+yellow  = "#E0D050"
+blue    = "#80B0C8"
+magenta = "#B890E0"
+cyan    = "#70D8B8"
+white   = "#E0F0D0"

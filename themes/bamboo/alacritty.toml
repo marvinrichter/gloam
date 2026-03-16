@@ -1,0 +1,37 @@
+# bamboo — Alacritty color theme
+# Generated from bamboo.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/bamboo.toml
+# then add `import = ["~/.config/alacritty/themes/bamboo.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#090C08"
+foreground = "#E0DDD4"
+
+[colors.cursor]
+cursor = "#80B8A0"
+text   = "#090C08"
+
+[colors.selection]
+background = "#141A12"
+text       = "#E0DDD4"
+
+[colors.normal]
+black   = "#090C08"
+red     = "#A85858"
+green   = "#508060"
+yellow  = "#A89050"
+blue    = "#507090"
+magenta = "#90607A"
+cyan    = "#407880"
+white   = "#909888"
+
+[colors.bright]
+black   = "#182018"
+red     = "#C86868"
+green   = "#68A870"
+yellow  = "#E06848"
+blue    = "#888A90"
+magenta = "#A878A8"
+cyan    = "#5898A8"
+white   = "#E0DDD4"

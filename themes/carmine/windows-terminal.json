@@ -1,0 +1,23 @@
+{
+  "name": "Carmine",
+  "background": "#100808",
+  "foreground": "#F2E4E0",
+  "cursorColor": "#FFAA70",
+  "selectionBackground": "#281010",
+  "black": "#100808",
+  "red": "#C85858",
+  "green": "#5A8A60",
+  "yellow": "#C08040",
+  "blue": "#705870",
+  "purple": "#A85878",
+  "cyan": "#407888",
+  "white": "#B8A0A0",
+  "brightBlack": "#2A1818",
+  "brightRed": "#FF4A4A",
+  "brightGreen": "#78C878",
+  "brightYellow": "#E87070",
+  "brightBlue": "#9A7880",
+  "brightPurple": "#D08090",
+  "brightCyan": "#58A8B8",
+  "brightWhite": "#F2E4E0"
+}

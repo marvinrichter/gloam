@@ -1,0 +1,37 @@
+# stark — Alacritty color theme
+# Generated from stark.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/stark.toml
+# then add `import = ["~/.config/alacritty/themes/stark.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#FFFFFF"
+foreground = "#000000"
+
+[colors.cursor]
+cursor = "#8C3000"
+text   = "#FFFFFF"
+
+[colors.selection]
+background = "#E0E0E0"
+text       = "#000000"
+
+[colors.normal]
+black   = "#000000"
+red     = "#880000"
+green   = "#005500"
+yellow  = "#885500"
+blue    = "#000088"
+magenta = "#880088"
+cyan    = "#008888"
+white   = "#888888"
+
+[colors.bright]
+black   = "#444444"
+red     = "#8C0000"
+green   = "#007700"
+yellow  = "#001A8C"
+blue    = "#3A3A3A"
+magenta = "#9900AA"
+cyan    = "#0077AA"
+white   = "#FFFFFF"

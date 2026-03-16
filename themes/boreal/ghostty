@@ -1,0 +1,32 @@
+# boreal — Ghostty color theme
+# Generated from boreal.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/boreal
+# then set theme = boreal in ~/.config/ghostty/config
+
+background         = 060A10
+foreground         = C8D8E8
+
+cursor-color       = 18A8C8
+cursor-text        = 060A10
+
+selection-background = 102030
+selection-foreground = C8D8E8
+
+# ANSI palette (0–15)
+palette = 0=0C1218
+palette = 1=C05868
+palette = 2=38A890
+palette = 3=88A8C0
+palette = 4=4878C0
+palette = 5=7070C8
+palette = 6=18A8C8
+palette = 7=7898A8
+palette = 8=182838
+palette = 9=D87888
+palette = 10=50C8B0
+palette = 11=A8C8E0
+palette = 12=5898E0
+palette = 13=8888D8
+palette = 14=40D0E0
+palette = 15=E0EEF8

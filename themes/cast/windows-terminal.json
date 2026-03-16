@@ -1,0 +1,23 @@
+{
+  "name": "Cast",
+  "background": "#101010",
+  "foreground": "#C8C8C0",
+  "cursorColor": "#D8C040",
+  "selectionBackground": "#1C1C1C",
+  "black": "#101010",
+  "red": "#A06060",
+  "green": "#508060",
+  "yellow": "#909050",
+  "blue": "#506080",
+  "purple": "#786080",
+  "cyan": "#407880",
+  "white": "#909088",
+  "brightBlack": "#202020",
+  "brightRed": "#D85858",
+  "brightGreen": "#68A068",
+  "brightYellow": "#C8C060",
+  "brightBlue": "#888880",
+  "brightPurple": "#908090",
+  "brightCyan": "#50A0A8",
+  "brightWhite": "#C8C8C0"
+}

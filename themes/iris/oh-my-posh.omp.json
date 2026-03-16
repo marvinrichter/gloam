@@ -1,0 +1,106 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#8070B0",
+          "template": "╭"
+        },
+        {
+          "type": "session",
+          "style": "plain",
+          "foreground": "#8070B0",
+          "template": " {{ .UserName }} "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#9060E0",
+          "properties": {
+            "style": "folder",
+            "max_depth": 3,
+            "folder_separator_icon": "/"
+          },
+          "template": " <b>{{ .Path }}</b> "
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "#B088F8",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_status": true
+          },
+          "template": " {{ .HEAD }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#8070B0",
+          "properties": {
+            "threshold": 2000,
+            "style": "round"
+          },
+          "template": " ◆ {{ .FormattedMs }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#8070B0",
+          "properties": {
+            "time_format": "15:04"
+          },
+          "template": " ${prompt.timePrefix} {{ .CurrentDate | date .Format }} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#8070B0",
+          "template": "╰─"
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "#B088F8",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}${t.error}{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "template": "❯ "
+        }
+      ]
+    }
+  ],
+  "palette": {
+    "background": "#08060E",
+    "foreground": "#E0D8F8",
+    "primary": "#9060E0",
+    "accent": "#B088F8",
+    "muted": "#8070B0",
+    "error": "#D06868"
+  }
+}

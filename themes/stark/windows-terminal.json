@@ -1,0 +1,23 @@
+{
+  "name": "Stark",
+  "background": "#FFFFFF",
+  "foreground": "#000000",
+  "cursorColor": "#8C3000",
+  "selectionBackground": "#E0E0E0",
+  "black": "#000000",
+  "red": "#880000",
+  "green": "#005500",
+  "yellow": "#885500",
+  "blue": "#000088",
+  "purple": "#880088",
+  "cyan": "#008888",
+  "white": "#888888",
+  "brightBlack": "#444444",
+  "brightRed": "#8C0000",
+  "brightGreen": "#007700",
+  "brightYellow": "#001A8C",
+  "brightBlue": "#3A3A3A",
+  "brightPurple": "#9900AA",
+  "brightCyan": "#0077AA",
+  "brightWhite": "#FFFFFF"
+}

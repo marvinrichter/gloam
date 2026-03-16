@@ -1,0 +1,37 @@
+# bloom — Alacritty color theme
+# Generated from bloom.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/bloom.toml
+# then add `import = ["~/.config/alacritty/themes/bloom.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#FFF0F0"
+foreground = "#2A1420"
+
+[colors.cursor]
+cursor = "#5A2080"
+text   = "#FFF0F0"
+
+[colors.selection]
+background = "#F0C8D0"
+text       = "#2A1420"
+
+[colors.normal]
+black   = "#1A0810"
+red     = "#7A2020"
+green   = "#286020"
+yellow  = "#705A10"
+blue    = "#28287A"
+magenta = "#58285A"
+cyan    = "#1A5058"
+white   = "#D8B8C0"
+
+[colors.bright]
+black   = "#3A2030"
+red     = "#8A1020"
+green   = "#386028"
+yellow  = "#7A1840"
+blue    = "#7A5868"
+magenta = "#703888"
+cyan    = "#285878"
+white   = "#F8E8F0"

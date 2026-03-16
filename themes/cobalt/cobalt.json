@@ -1,0 +1,47 @@
+{
+  "name": "cobalt",
+  "displayName": "Cobalt",
+  "type": "dark",
+  "background": "#080C18",
+  "foreground": "#D8E0F0",
+  "tokens": {
+    "primary": "#6878F0",
+    "accent": "#70D8F0",
+    "muted": "#7888B8",
+    "error": "#D05860"
+  },
+  "ansi": [
+    "#080C18",
+    "#B05060",
+    "#3878A0",
+    "#8098C8",
+    "#4858C8",
+    "#8068B0",
+    "#3898C0",
+    "#8898C0",
+    "#182038",
+    "#D05860",
+    "#4898A8",
+    "#6878F0",
+    "#7888B8",
+    "#9080D0",
+    "#40B8D8",
+    "#D8E0F0"
+  ],
+  "ui": {
+    "cursor": "#70D8F0",
+    "cursorText": "#080C18",
+    "selection": "#101828",
+    "selectionText": "#D8E0F0",
+    "bold": "#D8E0F0",
+    "link": "#80C0F0"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "╍",
+    "timePrefix": "⊕",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

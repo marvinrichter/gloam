@@ -1,0 +1,32 @@
+# brume — Ghostty color theme
+# Generated from brume.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/brume
+# then set theme = brume in ~/.config/ghostty/config
+
+background         = EEF2F0
+foreground         = 1C3030
+
+cursor-color       = 1A6068
+cursor-text        = EEF2F0
+
+selection-background = C0D8D8
+selection-foreground = 1C3030
+
+# ANSI palette (0–15)
+palette = 0=EEF2F0
+palette = 1=8A1A28
+palette = 2=1A5038
+palette = 3=705810
+palette = 4=1A6068
+palette = 5=482870
+palette = 6=1A7880
+palette = 7=486878
+palette = 8=B8C8C8
+palette = 9=C04048
+palette = 10=207850
+palette = 11=906800
+palette = 12=2068A8
+palette = 13=603890
+palette = 14=2090A0
+palette = 15=1C3030

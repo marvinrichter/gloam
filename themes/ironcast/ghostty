@@ -1,0 +1,32 @@
+# ironcast — Ghostty color theme
+# Generated from ironcast.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/ironcast
+# then set theme = ironcast in ~/.config/ghostty/config
+
+background         = 0B0D10
+foreground         = CDD4DC
+
+cursor-color       = C8D838
+cursor-text        = 0B0D10
+
+selection-background = 181C24
+selection-foreground = CDD4DC
+
+# ANSI palette (0–15)
+palette = 0=0B0D10
+palette = 1=B05050
+palette = 2=487858
+palette = 3=9A9050
+palette = 4=4868A0
+palette = 5=786890
+palette = 6=407888
+palette = 7=909898
+palette = 8=1C2028
+palette = 9=D05858
+palette = 10=60A878
+palette = 11=78A8C8
+palette = 12=7090A8
+palette = 13=9880B8
+palette = 14=50A0B8
+palette = 15=CDD4DC

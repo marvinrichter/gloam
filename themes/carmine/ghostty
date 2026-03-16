@@ -1,0 +1,32 @@
+# carmine — Ghostty color theme
+# Generated from carmine.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/carmine
+# then set theme = carmine in ~/.config/ghostty/config
+
+background         = 100808
+foreground         = F2E4E0
+
+cursor-color       = FFAA70
+cursor-text        = 100808
+
+selection-background = 281010
+selection-foreground = F2E4E0
+
+# ANSI palette (0–15)
+palette = 0=100808
+palette = 1=C85858
+palette = 2=5A8A60
+palette = 3=C08040
+palette = 4=705870
+palette = 5=A85878
+palette = 6=407888
+palette = 7=B8A0A0
+palette = 8=2A1818
+palette = 9=FF4A4A
+palette = 10=78C878
+palette = 11=E87070
+palette = 12=9A7880
+palette = 13=D08090
+palette = 14=58A8B8
+palette = 15=F2E4E0

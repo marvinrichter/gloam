@@ -1,0 +1,47 @@
+{
+  "name": "sumi",
+  "displayName": "Sumi",
+  "type": "dark",
+  "background": "#0A0B0D",
+  "foreground": "#D8D0C0",
+  "tokens": {
+    "primary": "#8878C8",
+    "accent": "#7898B8",
+    "muted": "#788090",
+    "error": "#B86868"
+  },
+  "ansi": [
+    "#0A0B0D",
+    "#9A5050",
+    "#4A8860",
+    "#A09060",
+    "#587080",
+    "#806878",
+    "#407880",
+    "#909090",
+    "#202428",
+    "#B86868",
+    "#60A870",
+    "#8878C8",
+    "#788090",
+    "#9078A0",
+    "#5898A8",
+    "#D8D0C0"
+  ],
+  "ui": {
+    "cursor": "#7898B8",
+    "cursorText": "#0A0B0D",
+    "selection": "#181A20",
+    "selectionText": "#D8D0C0",
+    "bold": "#D8D0C0",
+    "link": "#8AB0C8"
+  },
+  "prompt": {
+    "layout": "single-line",
+    "showUsername": false,
+    "fill": "∷",
+    "timePrefix": "◎",
+    "successSymbol": "›",
+    "vimSymbol": "‹"
+  }
+}

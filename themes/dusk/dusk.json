@@ -1,0 +1,47 @@
+{
+  "name": "dusk",
+  "displayName": "Dusk",
+  "type": "dark",
+  "background": "#282834",
+  "foreground": "#C8C4BC",
+  "tokens": {
+    "primary": "#C490C8",
+    "accent": "#E8A860",
+    "muted": "#9098A8",
+    "error": "#DC7878"
+  },
+  "ansi": [
+    "#282834",
+    "#A87070",
+    "#608870",
+    "#A89868",
+    "#6880A8",
+    "#9068A0",
+    "#488898",
+    "#A0A0A0",
+    "#3A3A48",
+    "#DC7878",
+    "#70B878",
+    "#C490C8",
+    "#9098A8",
+    "#A880C0",
+    "#60A8C0",
+    "#C8C4BC"
+  ],
+  "ui": {
+    "cursor": "#E8A860",
+    "cursorText": "#282834",
+    "selection": "#363648",
+    "selectionText": "#C8C4BC",
+    "bold": "#C8C4BC",
+    "link": "#B898D0"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "⋰",
+    "timePrefix": "◓",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

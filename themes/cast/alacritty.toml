@@ -1,0 +1,37 @@
+# cast — Alacritty color theme
+# Generated from cast.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/cast.toml
+# then add `import = ["~/.config/alacritty/themes/cast.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#101010"
+foreground = "#C8C8C0"
+
+[colors.cursor]
+cursor = "#D8C040"
+text   = "#101010"
+
+[colors.selection]
+background = "#1C1C1C"
+text       = "#C8C8C0"
+
+[colors.normal]
+black   = "#101010"
+red     = "#A06060"
+green   = "#508060"
+yellow  = "#909050"
+blue    = "#506080"
+magenta = "#786080"
+cyan    = "#407880"
+white   = "#909088"
+
+[colors.bright]
+black   = "#202020"
+red     = "#D85858"
+green   = "#68A068"
+yellow  = "#C8C060"
+blue    = "#888880"
+magenta = "#908090"
+cyan    = "#50A0A8"
+white   = "#C8C8C0"

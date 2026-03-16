@@ -1,0 +1,32 @@
+# synthwave — Ghostty color theme
+# Generated from synthwave.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/synthwave
+# then set theme = synthwave in ~/.config/ghostty/config
+
+background         = 0D0818
+foreground         = F0E8FF
+
+cursor-color       = 40E8E0
+cursor-text        = 0D0818
+
+selection-background = 1A1030
+selection-foreground = F0E8FF
+
+# ANSI palette (0–15)
+palette = 0=0D0818
+palette = 1=C84060
+palette = 2=40C890
+palette = 3=D080C0
+palette = 4=6050D0
+palette = 5=C040C8
+palette = 6=40C0D8
+palette = 7=B0A0D0
+palette = 8=281848
+palette = 9=FF4070
+palette = 10=50E890
+palette = 11=FF60C8
+palette = 12=9070C8
+palette = 13=E060F0
+palette = 14=40E8E0
+palette = 15=F0E8FF

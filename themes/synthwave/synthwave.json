@@ -1,0 +1,47 @@
+{
+  "name": "synthwave",
+  "displayName": "Synthwave",
+  "type": "dark",
+  "background": "#0D0818",
+  "foreground": "#F0E8FF",
+  "tokens": {
+    "primary": "#FF60C8",
+    "accent": "#40E8E0",
+    "muted": "#9070C8",
+    "error": "#FF4070"
+  },
+  "ansi": [
+    "#0D0818",
+    "#C84060",
+    "#40C890",
+    "#D080C0",
+    "#6050D0",
+    "#C040C8",
+    "#40C0D8",
+    "#B0A0D0",
+    "#281848",
+    "#FF4070",
+    "#50E890",
+    "#FF60C8",
+    "#9070C8",
+    "#E060F0",
+    "#40E8E0",
+    "#F0E8FF"
+  ],
+  "ui": {
+    "cursor": "#40E8E0",
+    "cursorText": "#0D0818",
+    "selection": "#1A1030",
+    "selectionText": "#F0E8FF",
+    "bold": "#F0E8FF",
+    "link": "#60C8FF"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "▒",
+    "timePrefix": "⬡",
+    "successSymbol": "⟫",
+    "vimSymbol": "⟪"
+  }
+}

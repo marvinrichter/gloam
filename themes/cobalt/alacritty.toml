@@ -1,0 +1,37 @@
+# cobalt — Alacritty color theme
+# Generated from cobalt.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/cobalt.toml
+# then add `import = ["~/.config/alacritty/themes/cobalt.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#080C18"
+foreground = "#D8E0F0"
+
+[colors.cursor]
+cursor = "#70D8F0"
+text   = "#080C18"
+
+[colors.selection]
+background = "#101828"
+text       = "#D8E0F0"
+
+[colors.normal]
+black   = "#080C18"
+red     = "#B05060"
+green   = "#3878A0"
+yellow  = "#8098C8"
+blue    = "#4858C8"
+magenta = "#8068B0"
+cyan    = "#3898C0"
+white   = "#8898C0"
+
+[colors.bright]
+black   = "#182038"
+red     = "#D05860"
+green   = "#4898A8"
+yellow  = "#6878F0"
+blue    = "#7888B8"
+magenta = "#9080D0"
+cyan    = "#40B8D8"
+white   = "#D8E0F0"

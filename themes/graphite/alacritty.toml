@@ -1,0 +1,37 @@
+# graphite — Alacritty color theme
+# Generated from graphite.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/graphite.toml
+# then add `import = ["~/.config/alacritty/themes/graphite.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0C0C0C"
+foreground = "#E0E0E0"
+
+[colors.cursor]
+cursor = "#D8C8A0"
+text   = "#0C0C0C"
+
+[colors.selection]
+background = "#1C1C1C"
+text       = "#E0E0E0"
+
+[colors.normal]
+black   = "#0C0C0C"
+red     = "#986868"
+green   = "#508858"
+yellow  = "#988870"
+blue    = "#586878"
+magenta = "#887888"
+cyan    = "#508088"
+white   = "#A0A0A0"
+
+[colors.bright]
+black   = "#202020"
+red     = "#C86060"
+green   = "#68A870"
+yellow  = "#C4B8C8"
+blue    = "#808888"
+magenta = "#9888A8"
+cyan    = "#5898A0"
+white   = "#E0E0E0"

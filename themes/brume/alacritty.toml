@@ -1,0 +1,37 @@
+# brume — Alacritty color theme
+# Generated from brume.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/brume.toml
+# then add `import = ["~/.config/alacritty/themes/brume.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#EEF2F0"
+foreground = "#1C3030"
+
+[colors.cursor]
+cursor = "#1A6068"
+text   = "#EEF2F0"
+
+[colors.selection]
+background = "#C0D8D8"
+text       = "#1C3030"
+
+[colors.normal]
+black   = "#EEF2F0"
+red     = "#8A1A28"
+green   = "#1A5038"
+yellow  = "#705810"
+blue    = "#1A6068"
+magenta = "#482870"
+cyan    = "#1A7880"
+white   = "#486878"
+
+[colors.bright]
+black   = "#B8C8C8"
+red     = "#C04048"
+green   = "#207850"
+yellow  = "#906800"
+blue    = "#2068A8"
+magenta = "#603890"
+cyan    = "#2090A0"
+white   = "#1C3030"

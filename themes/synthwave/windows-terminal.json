@@ -1,0 +1,23 @@
+{
+  "name": "Synthwave",
+  "background": "#0D0818",
+  "foreground": "#F0E8FF",
+  "cursorColor": "#40E8E0",
+  "selectionBackground": "#1A1030",
+  "black": "#0D0818",
+  "red": "#C84060",
+  "green": "#40C890",
+  "yellow": "#D080C0",
+  "blue": "#6050D0",
+  "purple": "#C040C8",
+  "cyan": "#40C0D8",
+  "white": "#B0A0D0",
+  "brightBlack": "#281848",
+  "brightRed": "#FF4070",
+  "brightGreen": "#50E890",
+  "brightYellow": "#FF60C8",
+  "brightBlue": "#9070C8",
+  "brightPurple": "#E060F0",
+  "brightCyan": "#40E8E0",
+  "brightWhite": "#F0E8FF"
+}

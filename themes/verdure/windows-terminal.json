@@ -1,0 +1,23 @@
+{
+  "name": "Verdure",
+  "background": "#080E08",
+  "foreground": "#D0E0C0",
+  "cursorColor": "#60C848",
+  "selectionBackground": "#182818",
+  "black": "#0C140C",
+  "red": "#D06060",
+  "green": "#60C848",
+  "yellow": "#C0B840",
+  "blue": "#6090A8",
+  "purple": "#9870C0",
+  "cyan": "#50C0A0",
+  "white": "#90A878",
+  "brightBlack": "#203020",
+  "brightRed": "#E08070",
+  "brightGreen": "#80E058",
+  "brightYellow": "#E0D050",
+  "brightBlue": "#80B0C8",
+  "brightPurple": "#B890E0",
+  "brightCyan": "#70D8B8",
+  "brightWhite": "#E0F0D0"
+}

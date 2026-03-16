@@ -1,0 +1,37 @@
+# carmine — Alacritty color theme
+# Generated from carmine.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/carmine.toml
+# then add `import = ["~/.config/alacritty/themes/carmine.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#100808"
+foreground = "#F2E4E0"
+
+[colors.cursor]
+cursor = "#FFAA70"
+text   = "#100808"
+
+[colors.selection]
+background = "#281010"
+text       = "#F2E4E0"
+
+[colors.normal]
+black   = "#100808"
+red     = "#C85858"
+green   = "#5A8A60"
+yellow  = "#C08040"
+blue    = "#705870"
+magenta = "#A85878"
+cyan    = "#407888"
+white   = "#B8A0A0"
+
+[colors.bright]
+black   = "#2A1818"
+red     = "#FF4A4A"
+green   = "#78C878"
+yellow  = "#E87070"
+blue    = "#9A7880"
+magenta = "#D08090"
+cyan    = "#58A8B8"
+white   = "#F2E4E0"

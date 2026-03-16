@@ -1,0 +1,47 @@
+{
+  "name": "stark",
+  "displayName": "Stark",
+  "type": "light",
+  "background": "#FFFFFF",
+  "foreground": "#000000",
+  "tokens": {
+    "primary": "#001A8C",
+    "accent": "#8C3000",
+    "muted": "#3A3A3A",
+    "error": "#8C0000"
+  },
+  "ansi": [
+    "#000000",
+    "#880000",
+    "#005500",
+    "#885500",
+    "#000088",
+    "#880088",
+    "#008888",
+    "#888888",
+    "#444444",
+    "#8C0000",
+    "#007700",
+    "#001A8C",
+    "#3A3A3A",
+    "#9900AA",
+    "#0077AA",
+    "#FFFFFF"
+  ],
+  "ui": {
+    "cursor": "#8C3000",
+    "cursorText": "#FFFFFF",
+    "selection": "#E0E0E0",
+    "selectionText": "#000000",
+    "bold": "#000000",
+    "link": "#000088"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": false,
+    "fill": "┅",
+    "timePrefix": "⊞",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}

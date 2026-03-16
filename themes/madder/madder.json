@@ -1,0 +1,47 @@
+{
+  "name": "madder",
+  "displayName": "Madder",
+  "type": "dark",
+  "background": "#0E0608",
+  "foreground": "#F0E0E8",
+  "tokens": {
+    "primary": "#E04060",
+    "accent": "#F07898",
+    "muted": "#B08098",
+    "error": "#E04848"
+  },
+  "ansi": [
+    "#180810",
+    "#E04848",
+    "#508058",
+    "#C09868",
+    "#6868B0",
+    "#E04060",
+    "#809080",
+    "#C08898",
+    "#38182A",
+    "#F06878",
+    "#70A878",
+    "#D8B888",
+    "#8898C8",
+    "#F090C0",
+    "#90A888",
+    "#F8E8F0"
+  ],
+  "ui": {
+    "cursor": "#E04060",
+    "cursorText": "#0E0608",
+    "selection": "#301020",
+    "selectionText": "#F0E0E8",
+    "bold": "#F8E8F0",
+    "link": "#F07898"
+  },
+  "prompt": {
+    "layout": "two-line-box",
+    "showUsername": true,
+    "fill": "╼",
+    "timePrefix": "✶",
+    "successSymbol": "❯",
+    "vimSymbol": "❮"
+  }
+}
