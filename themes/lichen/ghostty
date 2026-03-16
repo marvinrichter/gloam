@@ -1,0 +1,32 @@
+# lichen — Ghostty color theme
+# Generated from lichen.json — do not edit by hand
+#
+# Install: copy to ~/.config/ghostty/themes/lichen
+# then set theme = lichen in ~/.config/ghostty/config
+
+background         = 0A0D0B
+foreground         = D8E0D4
+
+cursor-color       = 90B878
+cursor-text        = 0A0D0B
+
+selection-background = 182820
+selection-foreground = D8E0D4
+
+# ANSI palette (0–15)
+palette = 0=0A0D0B
+palette = 1=886058
+palette = 2=508050
+palette = 3=888050
+palette = 4=507878
+palette = 5=786868
+palette = 6=509888
+palette = 7=A8B8A4
+palette = 8=1C2A20
+palette = 9=C07060
+palette = 10=759075
+palette = 11=A0A860
+palette = 12=708868
+palette = 13=A89080
+palette = 14=70C0A0
+palette = 15=D8E0D4

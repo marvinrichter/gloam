@@ -1,0 +1,37 @@
+# lichen — Alacritty color theme
+# Generated from lichen.json — do not edit by hand
+#
+# Install: copy this file to ~/.config/alacritty/themes/lichen.toml
+# then add `import = ["~/.config/alacritty/themes/lichen.toml"]` to alacritty.toml
+
+[colors.primary]
+background = "#0A0D0B"
+foreground = "#D8E0D4"
+
+[colors.cursor]
+cursor = "#90B878"
+text   = "#0A0D0B"
+
+[colors.selection]
+background = "#182820"
+text       = "#D8E0D4"
+
+[colors.normal]
+black   = "#0A0D0B"
+red     = "#886058"
+green   = "#508050"
+yellow  = "#888050"
+blue    = "#507878"
+magenta = "#786868"
+cyan    = "#509888"
+white   = "#A8B8A4"
+
+[colors.bright]
+black   = "#1C2A20"
+red     = "#C07060"
+green   = "#759075"
+yellow  = "#A0A860"
+blue    = "#708868"
+magenta = "#A89080"
+cyan    = "#70C0A0"
+white   = "#D8E0D4"
