@@ -52,6 +52,6 @@
     "eslint": "^10.2.0",
     "globals": "^17.4.0",
     "markdownlint-cli2": "^0.22.0",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.2"
   }
 }
