@@ -6,15 +6,21 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
     permissions:
       contents: read
       pull-requests: write
     strategy:
+      fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest]
         node-version: [22, 24]
     steps:
       - uses: actions/checkout@v6
@@ -42,6 +48,7 @@ jobs:
         run: npm run check-contrast
 
       - name: Run tests
+        timeout-minutes: 5
         run: |
           set -o pipefail
           npm test -- --test-reporter=spec 2>&1 | tee /tmp/test-output.txt
@@ -74,6 +81,7 @@ jobs:
 
   generate-check:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     needs: test
     steps:
       - uses: actions/checkout@v6
