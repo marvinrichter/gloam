@@ -100,3 +100,19 @@ jobs:
             echo "Generated files are out of date. Run 'npm run generate' and commit the result."
             exit 1
           }
+
+  gate:
+    # One name a branch rule can require. `needs` alone does not carry the
+    # result: a job whose dependency failed is skipped, and GitHub counts a
+    # skipped required check as passing. So the result is asserted here.
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    if: always()
+    needs: [test, generate-check]
+    steps:
+      - name: Assert every upstream job succeeded
+        run: |
+          printf 'test=%s generate-check=%s\n' \
+            '${{ needs.test.result }}' '${{ needs.generate-check.result }}'
+          [ '${{ needs.test.result }}' = success ] || exit 1
+          [ '${{ needs.generate-check.result }}' = success ] || exit 1
